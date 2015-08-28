@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11  -O0 -Wall -g -ggdb   CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o CMakeFiles/iShare.dir/iShare.pb.cc.o CMakeFiles/iShare.dir/iShare_server.cc.o  -o iShare -rdynamic -lgrpc++_unsecure -lprotobuf -lgrpc -lgpr -lpthread -Wl,-Bstatic -lmysqlclient -Wl,-Bdynamic -ldl -lz 

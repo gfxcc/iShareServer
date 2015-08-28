@@ -1,0 +1,218 @@
+//
+//
+//
+syntax = "proto3";
+
+option java_package = "io.grpc.examples";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+// Sends a greeting
+rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+// A simple RPC
+//
+// login rpc
+rpc Login (Login_m) returns (Inf) {}
+
+// A simple RPC
+//
+// sign in rpc
+rpc Sign_up (Sign_m) returns (Inf) {}
+
+// A simple RPC
+//
+//
+rpc User_inf (Inf) returns (User_detail) {}
+
+// A simple RPC
+//
+// search user by username
+rpc Search_username (Inf) returns (Repeated_string) {}
+
+// A simple RPC
+//
+// add new friend
+rpc Add_friend (Repeated_string) returns (Inf) {}
+
+// A simple RPC
+//
+// delete a friend
+rpc Delete_friend (Repeated_string) returns (Inf) {}
+
+// A simple RPC
+//
+// create a new share record
+rpc Create_share (Share_inf) returns (Inf) {}
+
+// A server-to-client streaming RPC
+//
+// start after terminal finish basic work. keep synchronism with S
+rpc Syn (stream Inf) returns (stream Syn_data) {}
+
+//
+//
+//
+rpc Obtain_bills (Bill_request) returns (stream Share_inf) {}
+
+//
+//
+//
+rpc Send_Img (stream Image) returns (Inf) {}
+
+//
+//
+//
+rpc Receive_Img (Repeated_string) returns (stream Image) {}
+
+// set user synchronism_delete = 0
+// 
+// 
+rpc Reset_Status (Inf) returns (Inf) {}
+
+
+// # request system rpc
+// send request. add friend or payment
+// enum-type : friendInvite, payment
+// from, to use username rather than userID
+// content formate SENDER:%@ RECEVER:%@ FIRSTID:%@ LASTID:%@ COUNT:%ld
+rpc Send_request (Request) returns (Inf) {}
+
+// Inf contain username
+// 
+// 
+rpc Obtain_request (Inf) returns (stream Request) {}
+
+// 
+// 
+// 
+rpc Obtain_requestLog (Inf) returns (stream Request) {}
+
+// 
+// 
+// 
+rpc Obtain_requestLogHistory (Inf) returns (stream Request) {}
+
+// 
+// 
+// 
+rpc Request_response (Response) returns (Inf) {}
+
+// 
+// 
+// 
+rpc MakePayment (stream BillPayment) returns (Inf) {}
+
+// 
+// 
+// 
+rpc IgnoreRequestLog (IgnoreMessage) returns (Inf) {}
+
+// 
+// 
+// 
+rpc Create_requestLog (Request) returns (Inf) {}
+
+}
+
+// The request message contain username and password
+message Login_m {
+string username = 1;
+string password = 2;
+}
+
+message Sign_m {
+string username = 1;
+string password = 2;
+string email = 3;
+}
+
+message Inf {
+string information = 1;
+}
+
+message Repeated_string {
+repeated string content = 1;
+}
+
+message User_detail {
+string username = 1;
+string email = 2;
+repeated string friends = 3;
+
+}
+
+message Share_inf {
+string creater = 1;
+string amount = 2;
+string type = 3;
+string paidBy = 4;
+string data = 5;
+string note = 6;
+string image = 7;
+repeated string members = 8;
+int32 members_count = 9;
+string bill_id = 10;
+string paidStatus = 11;
+}
+
+message Bill_request {
+string username = 1;
+string start = 2;
+string amount = 3;
+}
+
+message Syn_data {
+string friend = 1;
+string bill = 2;
+string delete = 3;
+string request = 4;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+string message = 1;
+}
+
+message Image {
+string name = 1;
+bytes data = 2;
+}
+
+message Request {
+string request_id = 1;
+string sender = 2;
+string receiver = 3;
+string type = 4;
+string content = 5;
+string response = 6;
+string request_date = 7;
+string response_date = 8;
+string ignore_from = 9;
+string ignore_to = 10;
+}
+
+message Response {
+string request_id = 1;
+string sender = 2;
+string receiver = 3;
+string response = 4;
+string response_date = 5;
+}
+
+message IgnoreMessage {
+string requestLog_id = 1;
+string user = 2;
+}
+
+message BillPayment {
+string bill_id = 1;
+string paidStatus = 2;
+}
