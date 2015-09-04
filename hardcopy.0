@@ -1,0 +1,24 @@
+ 1061 ?        00:00:00 kauditd
+ 1656 tty1     00:00:00 getty
+ 1657 ttyS0    00:00:00 getty
+ 1776 ?        00:00:00 screen
+ 1777 pts/1    00:00:00 bash
+ 1789 pts/2    00:00:00 bash
+ 1892 ?        00:00:00 xinetd
+ 1922 ?        00:01:22 mysqld
+ 2588 ?        00:00:31 supervisord
+ 6046 ?        00:00:22 iShare
+ 7005 ?        00:00:00 sshd
+ 7087 ?        00:00:00 sshd
+ 7088 pts/0    00:00:00 bash
+ 7118 pts/0    00:00:00 screen
+ 7119 pts/1    00:00:00 ps
+ubuntu@ip-172-31-17-20:~/iShare$ sudo pkill iShare
+ubuntu@ip-172-31-17-20:~/iShare$
+ubuntu@ip-172-31-17-20:~/iShare$ screen -ls
+There are screens on:
+        15273.pts-0.ip-172-31-17-20     (09/01/2015 09:22:30 PM)        (Attached)
+        13600.pts-0.ip-172-31-17-20     (09/01/2015 07:52:34 PM)        (Attached)
+        1776.pts-0.ip-172-31-17-20      (08/27/2015 03:52:23 PM)        (Attached)
+3 Sockets in /var/run/screen/S-ubuntu.
+ubuntu@ip-172-31-17-20:~/iShare$ screen
