@@ -67,7 +67,7 @@ int sql_pool_create(int c, const char * db_host,
     //参数检查
     if (!(db_host && db_user && db_passwd && db_name))
         return 2;
-    
+
     sql_sock_pool = (POOL_SQL_SOCK *)malloc(sizeof(POOL_SQL_SOCK));
     //内存分配不成功
     if (NULL == sql_sock_pool)
@@ -139,20 +139,19 @@ SQL_SOCK_NODE * get_sock_from_pool()
     //防止出现问题
     if (NULL == last_used)
         return NULL;
-    
+
     ret = last_used->next;
-    
+
     while(ret != last_used) {
         if (ret == NULL)
             ret = sql_sock_pool->sql_pool;
-        
+
         if (0 == pthread_mutex_trylock(&ret->sql_lock)) {
             //决定是否重新连接
-            if ((DB_DISCONN == ret->sql_state) && 
-                (!(ret->sql_sock) || (0 == sql_sock_pool->db_is_connect(ret->sql_sock)))) {
+            if (DB_DISCONN == ret->sql_state) {
                 sql_sock_pool->db_sock_destroy(ret->sql_sock);
-                
-                ret->sql_sock = sql_sock_pool->db_conn_single(sql_sock_pool->db_host, 
+
+                ret->sql_sock = sql_sock_pool->db_conn_single(sql_sock_pool->db_host,
                     sql_sock_pool->db_user, sql_sock_pool->db_passwd, sql_sock_pool->db_name, sql_sock_pool->db_port);
 
                 //数据库不能建立连接，进程应该等待数据库恢复正常
@@ -161,7 +160,7 @@ SQL_SOCK_NODE * get_sock_from_pool()
                     cout << "sql pool used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<< endl;
                     return NULL;
                 }
-                
+
             }
 
             last_used = ret;
@@ -170,8 +169,8 @@ SQL_SOCK_NODE * get_sock_from_pool()
 
         //获取当前连接不成功
         ret = ret->next;
-    } 
-    
+    }
+
     cout << "sql pool used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<< endl;
     //连接池连接被耗尽
     return NULL;
@@ -201,43 +200,43 @@ SQL_SOCK_NODE * check_sock_from_pool()
 {
     static SQL_SOCK_NODE * last_used = sql_sock_pool->sql_pool;
     SQL_SOCK_NODE * ret = NULL;
-    
+
     //防止出现问题
     if (NULL == last_used)
         return NULL;
-    
+
     ret = last_used->next;
-    
+
     while(ret != last_used) {
         if (ret == NULL)
             ret = sql_sock_pool->sql_pool;
-        
+
         if (0 == pthread_mutex_trylock(&ret->sql_lock)) {
             //决定是否重新连接
             if ((DB_DISCONN == ret->sql_state) &&
                 (!(ret->sql_sock) || (0 == sql_sock_pool->db_is_connect(ret->sql_sock)))) {
                 sql_sock_pool->db_sock_destroy(ret->sql_sock);
-                
+
                 ret->sql_sock = sql_sock_pool->db_conn_single(sql_sock_pool->db_host,
                                                               sql_sock_pool->db_user, sql_sock_pool->db_passwd, sql_sock_pool->db_name, sql_sock_pool->db_port);
-                
+
                 //数据库不能建立连接，进程应该等待数据库恢复正常
                 if (NULL == ret->sql_sock) {
                     pthread_mutex_unlock(&ret->sql_lock);
                     cout << "sql pool used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<< endl;
                     return NULL;
                 }
-                
+
             }
-            
+
             last_used = ret;
             return ret;
         }
-        
+
         //获取当前连接不成功
         ret = ret->next;
     }
-    
+
     cout << "sql pool used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<< endl;
     //连接池连接被耗尽
     return NULL;
