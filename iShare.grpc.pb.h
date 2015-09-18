@@ -130,6 +130,10 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncCreate_requestLog(::grpc::ClientContext* context, const ::helloworld::Request& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncCreate_requestLogRaw(context, request, cq));
     }
+    virtual ::grpc::Status Send_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncSend_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncSend_DeviceTokenRaw(context, request, cq));
+    }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncLoginRaw(::grpc::ClientContext* context, const ::helloworld::Login_m& request, ::grpc::CompletionQueue* cq) = 0;
@@ -160,6 +164,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::ClientAsyncWriterInterface< ::helloworld::BillPayment>* AsyncMakePaymentRaw(::grpc::ClientContext* context, ::helloworld::Inf* response, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncIgnoreRequestLogRaw(::grpc::ClientContext* context, const ::helloworld::IgnoreMessage& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncCreate_requestLogRaw(::grpc::ClientContext* context, const ::helloworld::Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncSend_DeviceTokenRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub GRPC_FINAL : public StubInterface {
    public:
@@ -264,6 +269,10 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncCreate_requestLog(::grpc::ClientContext* context, const ::helloworld::Request& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncCreate_requestLogRaw(context, request, cq));
     }
+    ::grpc::Status Send_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncSend_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncSend_DeviceTokenRaw(context, request, cq));
+    }
 
    private:
     std::shared_ptr< ::grpc::Channel> channel_;
@@ -296,6 +305,7 @@ class Greeter GRPC_FINAL {
     ::grpc::ClientAsyncWriter< ::helloworld::BillPayment>* AsyncMakePaymentRaw(::grpc::ClientContext* context, ::helloworld::Inf* response, ::grpc::CompletionQueue* cq, void* tag) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncIgnoreRequestLogRaw(::grpc::ClientContext* context, const ::helloworld::IgnoreMessage& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncCreate_requestLogRaw(::grpc::ClientContext* context, const ::helloworld::Request& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncSend_DeviceTokenRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     const ::grpc::RpcMethod rpcmethod_SayHello_;
     const ::grpc::RpcMethod rpcmethod_Login_;
     const ::grpc::RpcMethod rpcmethod_Sign_up_;
@@ -317,6 +327,7 @@ class Greeter GRPC_FINAL {
     const ::grpc::RpcMethod rpcmethod_MakePayment_;
     const ::grpc::RpcMethod rpcmethod_IgnoreRequestLog_;
     const ::grpc::RpcMethod rpcmethod_Create_requestLog_;
+    const ::grpc::RpcMethod rpcmethod_Send_DeviceToken_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::Channel>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -345,6 +356,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status MakePayment(::grpc::ServerContext* context, ::grpc::ServerReader< ::helloworld::BillPayment>* reader, ::helloworld::Inf* response);
     virtual ::grpc::Status IgnoreRequestLog(::grpc::ServerContext* context, const ::helloworld::IgnoreMessage* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Create_requestLog(::grpc::ServerContext* context, const ::helloworld::Request* request, ::helloworld::Inf* response);
+    virtual ::grpc::Status Send_DeviceToken(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     ::grpc::RpcService* service() GRPC_OVERRIDE GRPC_FINAL;
    private:
     ::grpc::RpcService* service_;
@@ -374,6 +386,7 @@ class Greeter GRPC_FINAL {
     void RequestMakePayment(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::BillPayment>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestIgnoreRequestLog(::grpc::ServerContext* context, ::helloworld::IgnoreMessage* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestCreate_requestLog(::grpc::ServerContext* context, ::helloworld::Request* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
+    void RequestSend_DeviceToken(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
   };
 };
 

@@ -115,6 +115,10 @@ rpc IgnoreRequestLog (IgnoreMessage) returns (Inf) {}
 // 
 rpc Create_requestLog (Request) returns (Inf) {}
 
+// 
+// 
+// 
+rpc Send_DeviceToken (Repeated_string) returns (Inf) {}
 }
 
 // The request message contain username and password

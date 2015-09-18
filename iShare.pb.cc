@@ -449,7 +449,7 @@ void protobuf_AddDesc_iShare_2eproto() {
     " \001(\t\022\020\n\010response\030\004 \001(\t\022\025\n\rresponse_date\030"
     "\005 \001(\t\"4\n\rIgnoreMessage\022\025\n\rrequestLog_id\030"
     "\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n\013BillPayment\022\017\n\007bi"
-    "ll_id\030\001 \001(\t\022\022\n\npaidStatus\030\002 \001(\t2\366\t\n\007Gree"
+    "ll_id\030\001 \001(\t\022\022\n\npaidStatus\030\002 \001(\t2\272\n\n\007Gree"
     "ter\022>\n\010SayHello\022\030.helloworld.HelloReques"
     "t\032\026.helloworld.HelloReply\"\000\022/\n\005Login\022\023.h"
     "elloworld.Login_m\032\017.helloworld.Inf\"\000\0220\n\007"
@@ -481,8 +481,9 @@ void protobuf_AddDesc_iShare_2eproto() {
     "elloworld.Inf\"\000(\001\022@\n\020IgnoreRequestLog\022\031."
     "helloworld.IgnoreMessage\032\017.helloworld.In"
     "f\"\000\022;\n\021Create_requestLog\022\023.helloworld.Re"
-    "quest\032\017.helloworld.Inf\"\000B\022\n\020io.grpc.exam"
-    "plesb\006proto3", 2412);
+    "quest\032\017.helloworld.Inf\"\000\022B\n\020Send_DeviceT"
+    "oken\022\033.helloworld.Repeated_string\032\017.hell"
+    "oworld.Inf\"\000B\022\n\020io.grpc.examplesb\006proto3", 2480);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "iShare.proto", &protobuf_RegisterTypes);
   Login_m::default_instance_ = new Login_m();

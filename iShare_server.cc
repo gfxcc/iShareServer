@@ -50,6 +50,15 @@
 #include "iShare.grpc.pb.h"
 #include "mysql_pool.h"
 
+// include for MMGAPN
+#include "MMGAPN/global.hpp"
+#include "MMGAPN/MMGAPNSConnection.hpp"
+#include "MMGAPN/MMGDevice.hpp"
+#include "MMGAPN/MMGIOSPayload.hpp"
+#include "MMGAPN/MMGTools.hpp"
+#include <vector>
+#include <cstdlib>
+
 using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
@@ -1005,6 +1014,14 @@ class GreeterServiceImpl final : public Greeter::Service {
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
+
+    Status Send_DeviceToken (ServerContext* content, const Repeated_string* request, Inf* reply) override {
+
+
+
+        return Status::OK;
+    }
+
 };
 
 void RunServer() {
@@ -1086,6 +1103,49 @@ int main(int argc, char** argv) {
     //        return 1;
     //    }
     //
+    //
+    //
+
+
+
+// SLL init only once
+    SSL_load_error_strings();
+    SSL_library_init();
+
+    // Get a list of devices
+    std::vector<MMGDevice*> devices;
+    //get_devices_list(devices);
+    MMGDevice* device1 = new MMGDevice("17a612c5fe84f544ebd0c6aa880a0955ca00084a4488dd633d113ef379292f48", 1);
+    devices.push_back(device1);
+
+    // Create a payload object
+    MMGIOSPayload payload("Push message", "Slider label", 1, "sound.caf");
+
+    // Create the APNS connection, empty string if no password for the private key
+    MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
+    // Open the connection
+    if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
+    	return EXIT_FAILURE;
+
+    // Send the payload
+    uint32_t notifId = 1;
+    for (MMGDevice* device : devices)
+    {
+        // Update payload badge number to reflect device's one
+        payload.SetBadgeNumber(device->GetBadge());
+        // Send payload to the device
+        connection.SendPayloadToDevice(payload, *device, notifId++);
+    }
+
+	// Free up memory
+	for (MMGDevice* device : devices)
+		delete device;
+
+	// Close the connection
+	connection.CloseConnection();
+
+
+
     const char* hostname = "localhost";
     const char* username = "root";
     const char* passwd = "19920406Cy";

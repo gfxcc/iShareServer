@@ -36,6 +36,7 @@ static const char* Greeter_method_names[] = {
   "/helloworld.Greeter/MakePayment",
   "/helloworld.Greeter/IgnoreRequestLog",
   "/helloworld.Greeter/Create_requestLog",
+  "/helloworld.Greeter/Send_DeviceToken",
 };
 
 std::unique_ptr< Greeter::Stub> Greeter::NewStub(const std::shared_ptr< ::grpc::Channel>& channel, const ::grpc::StubOptions& options) {
@@ -65,6 +66,7 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   , rpcmethod_MakePayment_(Greeter_method_names[18], ::grpc::RpcMethod::CLIENT_STREAMING, channel)
   , rpcmethod_IgnoreRequestLog_(Greeter_method_names[19], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Create_requestLog_(Greeter_method_names[20], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Send_DeviceToken_(Greeter_method_names[21], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status Greeter::Stub::SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::helloworld::HelloReply* response) {
@@ -235,7 +237,15 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Create_requestLog_, context, request);
 }
 
-Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 21) {}
+::grpc::Status Greeter::Stub::Send_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Send_DeviceToken_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* Greeter::Stub::AsyncSend_DeviceTokenRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Send_DeviceToken_, context, request);
+}
+
+Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 22) {}
 
 Greeter::Service::~Service() {
   delete service_;
@@ -471,6 +481,17 @@ void Greeter::AsyncService::RequestCreate_requestLog(::grpc::ServerContext* cont
   AsynchronousService::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
 }
 
+::grpc::Status Greeter::Service::Send_DeviceToken(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+void Greeter::AsyncService::RequestSend_DeviceToken(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+  AsynchronousService::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
+}
+
 ::grpc::RpcService* Greeter::Service::service() {
   if (service_ != nullptr) {
     return service_;
@@ -581,6 +602,11 @@ void Greeter::AsyncService::RequestCreate_requestLog(::grpc::ServerContext* cont
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Create_requestLog), this)));
+  service_->AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[21],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Send_DeviceToken), this)));
   return service_;
 }
 
