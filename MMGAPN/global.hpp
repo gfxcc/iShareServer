@@ -47,15 +47,15 @@
 
 /* APNS */
 #define MMG_APNS_SERVER "gateway.push.apple.com"
-#define MMG_APNS_SERVER_SANDBOX "gateway.sandbox.push.apple.com"
+#define MMG_APNS_SERVER_SANDBOX "gateway.push.apple.com"
 #define MMG_APNS_PORT 2195
 /* APNS - FEEDBACK */
 #define MMG_APNS_FEEDBACK_SERVER "feedback.push.apple.com"
-#define MMG_APNS_FEEDBACK_SERVER_SANDBOX "feedback.sandbox.push.apple.com"
+#define MMG_APNS_FEEDBACK_SERVER_SANDBOX "feedback.push.apple.com"
 #define MMG_APNS_FEEDBACK_PORT 2196
 /* Certificates paths */
 #define MMG_APNS_CA_PATH "/"
-#define MMG_APNS_CERT_PATH "/home/ubuntu/MacGPusher/src/PushChatCert.pem"
-#define MMG_APNS_PRIVATEKEY_PATH "/home/ubuntu/MacGPusher/src/PushChatKey.pem"
+#define MMG_APNS_CERT_PATH "/home/ubuntu/iShare/iSharePushCert.pem"
+#define MMG_APNS_PRIVATEKEY_PATH "/home/ubuntu/iShare/iSharePushKey.pem"
 
 #endif /* __MMGGLOBAL_H__ */

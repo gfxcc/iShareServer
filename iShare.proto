@@ -47,6 +47,11 @@ rpc Delete_friend (Repeated_string) returns (Inf) {}
 // create a new share record
 rpc Create_share (Share_inf) returns (Inf) {}
 
+// delete a bill
+//
+//
+rpc Delete_bill (Share_inf) returns (Inf) {}
+
 // A server-to-client streaming RPC
 //
 // start after terminal finish basic work. keep synchronism with S
@@ -160,6 +165,7 @@ repeated string members = 8;
 int32 members_count = 9;
 string bill_id = 10;
 string paidStatus = 11;
+string typeIcon = 12;
 }
 
 message Bill_request {

@@ -88,6 +88,7 @@ using namespace std;
 #define CONN_NUM 10
 
 string convertToString(double d);
+bool pushNotificationToDevice (string deviceToken, string message);
 
 
 class GreeterServiceImpl final : public Greeter::Service {
@@ -456,15 +457,16 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
-        //MYSQL_RES *res;
-        //MYSQL_ROW row;
+        MYSQL_RES *res;
+        MYSQL_ROW row;
 
-        string sql_command = "INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9) VALUES ('" + request->creater() + "', '" + request->amount() + "' , '" + request->type() + "' , '" + request->paidby() + "' , '" + request->data() + "' , '" + request->note() + "' , '" + request->image() + "' , '" + request->members(0) + "' , '" + request->members(1) + "' , '" + request->members(2) + "' , '" + request->members(3) + "' , '" + request->members(4) + "' , '" + request->members(5) + "' , '" + request->members(6) + "' , '" + request->members(7) + "' , '" + request->members(8) + "' , '" + request->members(9) + "')";
+        string sql_command = "INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('" + request->creater() + "', '" + request->amount() + "' , '" + request->type() + "' , '" + request->paidby() + "' , '" + request->data() + "' , '" + request->note() + "' , '" + request->image() + "' , '" + request->members(0) + "' , '" + request->members(1) + "' , '" + request->members(2) + "' , '" + request->members(3) + "' , '" + request->members(4) + "' , '" + request->members(5) + "' , '" + request->members(6) + "' , '" + request->members(7) + "' , '" + request->members(8) + "' , '" + request->members(9) + "', '" + request->typeicon() + "')";
 
         printf("%s\n", sql_command.data());
 
         if (mysql_query(conn, sql_command.data())) {
-            printf("error %s\n", mysql_error(conn));
+            printf("error in Create_share Process 1 %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
 
             reply->set_information("insert fail");
             check_sql_sock_normal(sock_node);
@@ -477,7 +479,8 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         printf("%s\n", sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
-            printf("error %s\n", mysql_error(conn));
+            printf("error in Create_share process 2 %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
 
             reply->set_information("update fail");
             //printf("%s\n", );
@@ -486,13 +489,72 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        reply->set_information("OK");
 
+        // push notification
+        sql_command = "SELECT deviceToken FROM User WHERE username = '" + request->members(0) + "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) + "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) + "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) + "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) + "' OR username = '" + request->members(9) + "'";
+        printf("%s\n", sql_command.data());
+        if (mysql_query(conn, sql_command.data())) {
+            printf("error in Create_share process 3 %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
+
+            reply->set_information("push notification fail");
+            //printf("%s\n", );
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        string message = request->creater() + " share a " + request->amount() + "$ bill with you.";
+        while ((row = mysql_fetch_row(res)) != NULL) {
+            if (!row[0]) {
+                 continue;
+            }
+            printf("%s\n", row[0]);
+            pushNotificationToDevice(row[0], message);
+        }
+        mysql_free_result(res);
+
+        reply->set_information("OK");
         printf("*************Create_share OUT*************\n");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
+    Status Delete_bill (ServerContext *context, const Share_inf* request, Inf* reply) override {
+        printf("*************Delete_bill IN*************\n");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
+        //MYSQL_RES *res;
+        //MYSQL_ROW row;
+
+        string sql_command = "DELETE FROM Bills WHERE bill_id = " + request->bill_id();
+        if (mysql_query(conn, sql_command.data())) {
+            printf("delete_bill fail %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
+
+            reply->set_information("delete fail");
+            //printf("%s\n", );
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+
+        sql_command = "UPDATE User SET synchronism_delete = 1 WHERE username = '" + request->members(0) + "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) + "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) + "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) + "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) + "' OR username = '" + request->members(9) + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            printf("delete_bill update process fail %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
+
+            reply->set_information("delete update process fail");
+            //printf("%s\n", );
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+
+        release_sock_to_sql_pool(sock_node);
+        printf("*************Delete_bill OUT*************\n");
+        return Status::OK;
+    }
 
     Status Receive_Img (ServerContext *context, const Repeated_string* request, ServerWriter<Image>* reply) override {
         printf("*************Receive_Image IN*************\n");
@@ -640,7 +702,12 @@ class GreeterServiceImpl final : public Greeter::Service {
             bill.add_members(row[17]);
             bill.add_members(row[18]);
             bill.set_paidstatus(row[19]);
-            //cout << "amout " << row[2] << endl;
+            if (row[20]) {
+                bill.set_typeicon(row[20]);
+            } else {
+                bill.set_typeicon("");
+            }
+            //            //cout << "amout " << row[2] << endl;
             printf("one result\n");
             reply->Write(bill);
         }
@@ -1016,9 +1083,22 @@ class GreeterServiceImpl final : public Greeter::Service {
     }
 
     Status Send_DeviceToken (ServerContext* content, const Repeated_string* request, Inf* reply) override {
+        printf("*************Send_DeviceToken IN*************\n");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
 
+        string sql_command = "UPDATE User SET deviceToken = '" + request->content(1) + "' WHERE username = '" + request->content(0) + "'";
+        printf("DeviceToken:%s\n", request->content(1).data());
+        if (mysql_query(conn, sql_command.data())) {
+            printf("ERROR Send_DeviceToken fail\n");
+            printf("%s\n", sql_command.data());
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
 
-
+        printf("*************Send_DeviceToken OUT*************\n");
+        release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
@@ -1043,6 +1123,47 @@ string convertToString(double d) {
         return os.str();
     return "invalid conversion";
 }
+
+bool pushNotificationToDevice (string deviceToken, string message) {
+    SSL_load_error_strings();
+    SSL_library_init();
+
+    // Get a list of devices
+    std::vector<MMGDevice*> devices;
+    //get_devices_list(devices);
+    MMGDevice* device1 = new MMGDevice(deviceToken.data(), 1);
+    devices.push_back(device1);
+
+    // Create a payload object
+    MMGIOSPayload payload(message.data(), "Slider label", 1, "sound.caf");
+
+    // Create the APNS connection, empty string if no password for the private key
+    MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
+    // Open the connection
+    if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
+        return EXIT_FAILURE;
+
+    // Send the payload
+    uint32_t notifId = 1;
+    for (MMGDevice* device : devices)
+    {
+        // Update payload badge number to reflect device's one
+        payload.SetBadgeNumber(device->GetBadge());
+        // Send payload to the device
+        connection.SendPayloadToDevice(payload, *device, notifId++);
+    }
+
+    // Free up memory
+    for (MMGDevice* device : devices)
+        delete device;
+
+    // Close the connection
+    connection.CloseConnection();
+
+
+    return true;
+}
+
 
 SQL_SOCK* Create_sock(char* db_host, char* db_user, char* db_passwd, char* db_name, unsigned short port) {
     SQL_SOCK* new_sock = NULL;
@@ -1106,7 +1227,7 @@ int main(int argc, char** argv) {
     //
     //
 
-
+/*
 
 // SLL init only once
     SSL_load_error_strings();
@@ -1144,7 +1265,7 @@ int main(int argc, char** argv) {
 	// Close the connection
 	connection.CloseConnection();
 
-
+*/
 
     const char* hostname = "localhost";
     const char* username = "root";

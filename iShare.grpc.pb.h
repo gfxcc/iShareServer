@@ -62,6 +62,10 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncCreate_share(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncCreate_shareRaw(context, request, cq));
     }
+    virtual ::grpc::Status Delete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::helloworld::Inf* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncDelete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncDelete_billRaw(context, request, cq));
+    }
     std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context) {
       return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>>(SynRaw(context));
     }
@@ -143,6 +147,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncAdd_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncDelete_billRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context) = 0;
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientReaderInterface< ::helloworld::Share_inf>* Obtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) = 0;
@@ -200,6 +205,10 @@ class Greeter GRPC_FINAL {
     ::grpc::Status Create_share(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncCreate_share(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncCreate_shareRaw(context, request, cq));
+    }
+    ::grpc::Status Delete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncDelete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncDelete_billRaw(context, request, cq));
     }
     std::unique_ptr< ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context) {
       return std::unique_ptr< ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>>(SynRaw(context));
@@ -284,6 +293,7 @@ class Greeter GRPC_FINAL {
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncAdd_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncDelete_billRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context) GRPC_OVERRIDE;
     ::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) GRPC_OVERRIDE;
     ::grpc::ClientReader< ::helloworld::Share_inf>* Obtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) GRPC_OVERRIDE;
@@ -314,6 +324,7 @@ class Greeter GRPC_FINAL {
     const ::grpc::RpcMethod rpcmethod_Add_friend_;
     const ::grpc::RpcMethod rpcmethod_Delete_friend_;
     const ::grpc::RpcMethod rpcmethod_Create_share_;
+    const ::grpc::RpcMethod rpcmethod_Delete_bill_;
     const ::grpc::RpcMethod rpcmethod_Syn_;
     const ::grpc::RpcMethod rpcmethod_Obtain_bills_;
     const ::grpc::RpcMethod rpcmethod_Send_Img_;
@@ -343,6 +354,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Add_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Delete_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Create_share(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response);
+    virtual ::grpc::Status Delete_bill(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream);
     virtual ::grpc::Status Obtain_bills(::grpc::ServerContext* context, const ::helloworld::Bill_request* request, ::grpc::ServerWriter< ::helloworld::Share_inf>* writer);
     virtual ::grpc::Status Send_Img(::grpc::ServerContext* context, ::grpc::ServerReader< ::helloworld::Image>* reader, ::helloworld::Inf* response);
@@ -373,6 +385,7 @@ class Greeter GRPC_FINAL {
     void RequestAdd_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestDelete_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestCreate_share(::grpc::ServerContext* context, ::helloworld::Share_inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
+    void RequestDelete_bill(::grpc::ServerContext* context, ::helloworld::Share_inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestSyn(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestObtain_bills(::grpc::ServerContext* context, ::helloworld::Bill_request* request, ::grpc::ServerAsyncWriter< ::helloworld::Share_inf>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestSend_Img(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::Image>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
