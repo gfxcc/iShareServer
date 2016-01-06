@@ -155,7 +155,9 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
 
-        string sql_command = "SELECT * FROM User WHERE binary username = '" + request->username() + "' AND binary password = '" + request->password() + "'";
+        //string sql_command = "SELECT * FROM User WHERE binary username = '" + request->username() + "' AND binary password = '" + request->password() + "'";
+        string sql_command = "SELECT password FROM User WHERE binary username = '" + request->username() + "'";
+
         if (mysql_query(conn, sql_command.data())) {
             printf("Login fail\n");
             check_sql_sock_normal(sock_node);
@@ -163,13 +165,22 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
-        while ((row = mysql_fetch_row(res)) != NULL) {
-        }
+        row = mysql_fetch_row(res);
+
         if (res->row_count == 0) {
-            reply->set_information("WRONG");
+            reply->set_information("username incorrect");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+            return Status::OK;
+        }
+
+        // check password
+        printf("node\n");
+        if (row[0] != request->password()) {
+            reply->set_information("password incorrect");
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::OK;
         }
 
         reply->set_information("OK");
@@ -752,8 +763,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         printf("*************Send_request IN*************\n");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
-        //MYSQL_RES *res;
-        //MYSQL_ROW row;
+        MYSQL_RES *res;
+        MYSQL_ROW row;
 
         string sql_command = "INSERT INTO Request (sender, receiver, type, content, request_date) VALUES ('" + request->sender() + "', '" + request->receiver() + "', '" + request->type() + "', '" + request->content() + "', '" + request->request_date() + "')";
 
@@ -772,6 +783,31 @@ class GreeterServiceImpl final : public Greeter::Service {
             printf("%s\n", sql_command.data());
             check_sql_sock_normal(sock_node);
         }
+
+        // push notification
+        sql_command = "SELECT deviceToken FROM User WHERE username = '" + request->receiver() + "'";
+        printf("%s\n", sql_command.data());
+        if (mysql_query(conn, sql_command.data())) {
+            printf("error in create request send notification process %s\n", mysql_error(conn));
+            printf("%s fail\n", sql_command.data());
+
+            reply->set_information("push notification fail");
+            //printf("%s\n", );
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::OK;
+        }
+        res = mysql_use_result(conn);
+        string message = "New request from " + request->sender();
+        while ((row = mysql_fetch_row(res)) != NULL) {
+            if (!row[0]) {
+                 continue;
+            }
+            printf("%s\n", row[0]);
+            pushNotificationToDevice(row[0], message);
+        }
+        mysql_free_result(res);
+
 
         printf("*************Send_request OUT*************\n");
         release_sock_to_sql_pool(sock_node);
