@@ -541,10 +541,10 @@ static void MergeFromFail(int line) {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Login_m::kUsernameFieldNumber;
 const int Login_m::kPasswordFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Login_m::Login_m()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -629,10 +629,10 @@ bool Login_m::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_username()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->username().data(), this->username().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Login_m.username");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Login_m.username"));
         } else {
           goto handle_unusual;
         }
@@ -646,10 +646,10 @@ bool Login_m::MergePartialFromCodedStream(
          parse_password:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_password()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->password().data(), this->password().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Login_m.password");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Login_m.password"));
         } else {
           goto handle_unusual;
         }
@@ -683,9 +683,9 @@ void Login_m::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Login_m)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Login_m.username");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->username(), output);
@@ -693,9 +693,9 @@ void Login_m::SerializeWithCachedSizes(
 
   // optional string password = 2;
   if (this->password().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Login_m.password");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->password(), output);
@@ -709,9 +709,9 @@ void Login_m::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Login_m)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Login_m.username");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -720,9 +720,9 @@ void Login_m::SerializeWithCachedSizes(
 
   // optional string password = 2;
   if (this->password().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Login_m.password");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -909,11 +909,11 @@ void Login_m::clear_password() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Sign_m::kUsernameFieldNumber;
 const int Sign_m::kPasswordFieldNumber;
 const int Sign_m::kEmailFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Sign_m::Sign_m()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -1001,10 +1001,10 @@ bool Sign_m::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_username()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->username().data(), this->username().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Sign_m.username");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Sign_m.username"));
         } else {
           goto handle_unusual;
         }
@@ -1018,10 +1018,10 @@ bool Sign_m::MergePartialFromCodedStream(
          parse_password:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_password()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->password().data(), this->password().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Sign_m.password");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Sign_m.password"));
         } else {
           goto handle_unusual;
         }
@@ -1035,10 +1035,10 @@ bool Sign_m::MergePartialFromCodedStream(
          parse_email:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_email()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->email().data(), this->email().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Sign_m.email");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Sign_m.email"));
         } else {
           goto handle_unusual;
         }
@@ -1072,9 +1072,9 @@ void Sign_m::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Sign_m)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.username");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->username(), output);
@@ -1082,9 +1082,9 @@ void Sign_m::SerializeWithCachedSizes(
 
   // optional string password = 2;
   if (this->password().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.password");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->password(), output);
@@ -1092,9 +1092,9 @@ void Sign_m::SerializeWithCachedSizes(
 
   // optional string email = 3;
   if (this->email().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.email");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->email(), output);
@@ -1108,9 +1108,9 @@ void Sign_m::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Sign_m)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.username");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -1119,9 +1119,9 @@ void Sign_m::SerializeWithCachedSizes(
 
   // optional string password = 2;
   if (this->password().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.password");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -1130,9 +1130,9 @@ void Sign_m::SerializeWithCachedSizes(
 
   // optional string email = 3;
   if (this->email().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Sign_m.email");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -1374,9 +1374,9 @@ void Sign_m::clear_email() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Inf::kInformationFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Inf::Inf()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -1458,10 +1458,10 @@ bool Inf::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_information()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->information().data(), this->information().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Inf.information");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Inf.information"));
         } else {
           goto handle_unusual;
         }
@@ -1495,9 +1495,9 @@ void Inf::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Inf)
   // optional string information = 1;
   if (this->information().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->information().data(), this->information().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Inf.information");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->information(), output);
@@ -1511,9 +1511,9 @@ void Inf::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Inf)
   // optional string information = 1;
   if (this->information().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->information().data(), this->information().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Inf.information");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -1645,9 +1645,9 @@ void Inf::clear_information() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Repeated_string::kContentFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Repeated_string::Repeated_string()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -1728,11 +1728,11 @@ bool Repeated_string::MergePartialFromCodedStream(
          parse_content:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_content()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->content(this->content_size() - 1).data(),
             this->content(this->content_size() - 1).length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Repeated_string.content");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Repeated_string.content"));
         } else {
           goto handle_unusual;
         }
@@ -1767,10 +1767,10 @@ void Repeated_string::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Repeated_string)
   // repeated string content = 1;
   for (int i = 0; i < this->content_size(); i++) {
-  ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-    this->content(i).data(), this->content(i).length(),
-    ::google::protobuf::internal::WireFormat::SERIALIZE,
-    "helloworld.Repeated_string.content");
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->content(i).data(), this->content(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Repeated_string.content");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       1, this->content(i), output);
   }
@@ -1783,9 +1783,9 @@ void Repeated_string::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Repeated_string)
   // repeated string content = 1;
   for (int i = 0; i < this->content_size(); i++) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->content(i).data(), this->content(i).length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Repeated_string.content");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(1, this->content(i), target);
@@ -1924,11 +1924,11 @@ Repeated_string::mutable_content() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int User_detail::kUsernameFieldNumber;
 const int User_detail::kEmailFieldNumber;
 const int User_detail::kFriendsFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 User_detail::User_detail()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -2014,10 +2014,10 @@ bool User_detail::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_username()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->username().data(), this->username().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.User_detail.username");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.username"));
         } else {
           goto handle_unusual;
         }
@@ -2031,10 +2031,10 @@ bool User_detail::MergePartialFromCodedStream(
          parse_email:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_email()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->email().data(), this->email().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.User_detail.email");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.email"));
         } else {
           goto handle_unusual;
         }
@@ -2048,11 +2048,11 @@ bool User_detail::MergePartialFromCodedStream(
          parse_friends:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_friends()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->friends(this->friends_size() - 1).data(),
             this->friends(this->friends_size() - 1).length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.User_detail.friends");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.friends"));
         } else {
           goto handle_unusual;
         }
@@ -2087,9 +2087,9 @@ void User_detail::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.User_detail)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.username");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->username(), output);
@@ -2097,9 +2097,9 @@ void User_detail::SerializeWithCachedSizes(
 
   // optional string email = 2;
   if (this->email().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.email");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->email(), output);
@@ -2107,10 +2107,10 @@ void User_detail::SerializeWithCachedSizes(
 
   // repeated string friends = 3;
   for (int i = 0; i < this->friends_size(); i++) {
-  ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-    this->friends(i).data(), this->friends(i).length(),
-    ::google::protobuf::internal::WireFormat::SERIALIZE,
-    "helloworld.User_detail.friends");
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->friends(i).data(), this->friends(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.friends");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       3, this->friends(i), output);
   }
@@ -2123,9 +2123,9 @@ void User_detail::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.User_detail)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.username");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2134,9 +2134,9 @@ void User_detail::SerializeWithCachedSizes(
 
   // optional string email = 2;
   if (this->email().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.email");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2145,9 +2145,9 @@ void User_detail::SerializeWithCachedSizes(
 
   // repeated string friends = 3;
   for (int i = 0; i < this->friends_size(); i++) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->friends(i).data(), this->friends(i).length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.friends");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(3, this->friends(i), target);
@@ -2396,7 +2396,7 @@ User_detail::mutable_friends() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Share_inf::kCreaterFieldNumber;
 const int Share_inf::kAmountFieldNumber;
 const int Share_inf::kTypeFieldNumber;
@@ -2409,7 +2409,7 @@ const int Share_inf::kMembersCountFieldNumber;
 const int Share_inf::kBillIdFieldNumber;
 const int Share_inf::kPaidStatusFieldNumber;
 const int Share_inf::kTypeIconFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Share_inf::Share_inf()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -2521,10 +2521,10 @@ bool Share_inf::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_creater()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->creater().data(), this->creater().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.creater");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.creater"));
         } else {
           goto handle_unusual;
         }
@@ -2538,10 +2538,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_amount:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_amount()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->amount().data(), this->amount().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.amount");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.amount"));
         } else {
           goto handle_unusual;
         }
@@ -2555,10 +2555,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_type:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_type()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->type().data(), this->type().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.type");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.type"));
         } else {
           goto handle_unusual;
         }
@@ -2572,10 +2572,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_paidBy:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_paidby()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->paidby().data(), this->paidby().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.paidBy");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.paidBy"));
         } else {
           goto handle_unusual;
         }
@@ -2589,10 +2589,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_data:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_data()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->data().data(), this->data().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.data");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.data"));
         } else {
           goto handle_unusual;
         }
@@ -2606,10 +2606,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_note:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_note()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->note().data(), this->note().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.note");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.note"));
         } else {
           goto handle_unusual;
         }
@@ -2623,10 +2623,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_image:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_image()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->image().data(), this->image().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.image");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.image"));
         } else {
           goto handle_unusual;
         }
@@ -2640,11 +2640,11 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_members:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_members()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->members(this->members_size() - 1).data(),
             this->members(this->members_size() - 1).length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.members");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.members"));
         } else {
           goto handle_unusual;
         }
@@ -2674,10 +2674,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_bill_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_bill_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->bill_id().data(), this->bill_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.bill_id");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.bill_id"));
         } else {
           goto handle_unusual;
         }
@@ -2691,10 +2691,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_paidStatus:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_paidstatus()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->paidstatus().data(), this->paidstatus().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.paidStatus");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.paidStatus"));
         } else {
           goto handle_unusual;
         }
@@ -2708,10 +2708,10 @@ bool Share_inf::MergePartialFromCodedStream(
          parse_typeIcon:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_typeicon()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->typeicon().data(), this->typeicon().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Share_inf.typeIcon");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Share_inf.typeIcon"));
         } else {
           goto handle_unusual;
         }
@@ -2745,9 +2745,9 @@ void Share_inf::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Share_inf)
   // optional string creater = 1;
   if (this->creater().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->creater().data(), this->creater().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.creater");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->creater(), output);
@@ -2755,9 +2755,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string amount = 2;
   if (this->amount().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->amount().data(), this->amount().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.amount");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->amount(), output);
@@ -2765,9 +2765,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string type = 3;
   if (this->type().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->type(), output);
@@ -2775,9 +2775,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string paidBy = 4;
   if (this->paidby().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidby().data(), this->paidby().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.paidBy");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->paidby(), output);
@@ -2785,9 +2785,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string data = 5;
   if (this->data().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->data().data(), this->data().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.data");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->data(), output);
@@ -2795,9 +2795,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string note = 6;
   if (this->note().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->note().data(), this->note().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.note");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       6, this->note(), output);
@@ -2805,9 +2805,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string image = 7;
   if (this->image().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image().data(), this->image().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.image");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       7, this->image(), output);
@@ -2815,10 +2815,10 @@ void Share_inf::SerializeWithCachedSizes(
 
   // repeated string members = 8;
   for (int i = 0; i < this->members_size(); i++) {
-  ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-    this->members(i).data(), this->members(i).length(),
-    ::google::protobuf::internal::WireFormat::SERIALIZE,
-    "helloworld.Share_inf.members");
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->members(i).data(), this->members(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Share_inf.members");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       8, this->members(i), output);
   }
@@ -2830,9 +2830,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string bill_id = 10;
   if (this->bill_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill_id().data(), this->bill_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.bill_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       10, this->bill_id(), output);
@@ -2840,9 +2840,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string paidStatus = 11;
   if (this->paidstatus().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidstatus().data(), this->paidstatus().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.paidStatus");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       11, this->paidstatus(), output);
@@ -2850,9 +2850,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string typeIcon = 12;
   if (this->typeicon().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->typeicon().data(), this->typeicon().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.typeIcon");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       12, this->typeicon(), output);
@@ -2866,9 +2866,9 @@ void Share_inf::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Share_inf)
   // optional string creater = 1;
   if (this->creater().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->creater().data(), this->creater().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.creater");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2877,9 +2877,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string amount = 2;
   if (this->amount().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->amount().data(), this->amount().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.amount");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2888,9 +2888,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string type = 3;
   if (this->type().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2899,9 +2899,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string paidBy = 4;
   if (this->paidby().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidby().data(), this->paidby().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.paidBy");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2910,9 +2910,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string data = 5;
   if (this->data().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->data().data(), this->data().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.data");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2921,9 +2921,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string note = 6;
   if (this->note().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->note().data(), this->note().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.note");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2932,9 +2932,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string image = 7;
   if (this->image().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->image().data(), this->image().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.image");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2943,9 +2943,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // repeated string members = 8;
   for (int i = 0; i < this->members_size(); i++) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->members(i).data(), this->members(i).length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.members");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(8, this->members(i), target);
@@ -2958,9 +2958,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string bill_id = 10;
   if (this->bill_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill_id().data(), this->bill_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.bill_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2969,9 +2969,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string paidStatus = 11;
   if (this->paidstatus().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidstatus().data(), this->paidstatus().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.paidStatus");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -2980,9 +2980,9 @@ void Share_inf::SerializeWithCachedSizes(
 
   // optional string typeIcon = 12;
   if (this->typeicon().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->typeicon().data(), this->typeicon().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Share_inf.typeIcon");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -3697,11 +3697,11 @@ void Share_inf::clear_typeicon() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Bill_request::kUsernameFieldNumber;
 const int Bill_request::kStartFieldNumber;
 const int Bill_request::kAmountFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Bill_request::Bill_request()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -3789,10 +3789,10 @@ bool Bill_request::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_username()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->username().data(), this->username().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Bill_request.username");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Bill_request.username"));
         } else {
           goto handle_unusual;
         }
@@ -3806,10 +3806,10 @@ bool Bill_request::MergePartialFromCodedStream(
          parse_start:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_start()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->start().data(), this->start().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Bill_request.start");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Bill_request.start"));
         } else {
           goto handle_unusual;
         }
@@ -3823,10 +3823,10 @@ bool Bill_request::MergePartialFromCodedStream(
          parse_amount:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_amount()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->amount().data(), this->amount().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Bill_request.amount");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Bill_request.amount"));
         } else {
           goto handle_unusual;
         }
@@ -3860,9 +3860,9 @@ void Bill_request::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Bill_request)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.username");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->username(), output);
@@ -3870,9 +3870,9 @@ void Bill_request::SerializeWithCachedSizes(
 
   // optional string start = 2;
   if (this->start().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->start().data(), this->start().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.start");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->start(), output);
@@ -3880,9 +3880,9 @@ void Bill_request::SerializeWithCachedSizes(
 
   // optional string amount = 3;
   if (this->amount().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->amount().data(), this->amount().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.amount");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->amount(), output);
@@ -3896,9 +3896,9 @@ void Bill_request::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Bill_request)
   // optional string username = 1;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.username");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -3907,9 +3907,9 @@ void Bill_request::SerializeWithCachedSizes(
 
   // optional string start = 2;
   if (this->start().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->start().data(), this->start().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.start");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -3918,9 +3918,9 @@ void Bill_request::SerializeWithCachedSizes(
 
   // optional string amount = 3;
   if (this->amount().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->amount().data(), this->amount().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Bill_request.amount");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4162,12 +4162,12 @@ void Bill_request::clear_amount() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Syn_data::kFriendFieldNumber;
 const int Syn_data::kBillFieldNumber;
 const int Syn_data::kDeleteFieldNumber;
 const int Syn_data::kRequestFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Syn_data::Syn_data()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -4258,10 +4258,10 @@ bool Syn_data::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_friend_()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->friend_().data(), this->friend_().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Syn_data.friend");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Syn_data.friend"));
         } else {
           goto handle_unusual;
         }
@@ -4275,10 +4275,10 @@ bool Syn_data::MergePartialFromCodedStream(
          parse_bill:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_bill()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->bill().data(), this->bill().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Syn_data.bill");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Syn_data.bill"));
         } else {
           goto handle_unusual;
         }
@@ -4292,10 +4292,10 @@ bool Syn_data::MergePartialFromCodedStream(
          parse_delete:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_delete_()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->delete_().data(), this->delete_().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Syn_data.delete");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Syn_data.delete"));
         } else {
           goto handle_unusual;
         }
@@ -4309,10 +4309,10 @@ bool Syn_data::MergePartialFromCodedStream(
          parse_request:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_request()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->request().data(), this->request().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Syn_data.request");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Syn_data.request"));
         } else {
           goto handle_unusual;
         }
@@ -4346,9 +4346,9 @@ void Syn_data::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Syn_data)
   // optional string friend = 1;
   if (this->friend_().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->friend_().data(), this->friend_().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.friend");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->friend_(), output);
@@ -4356,9 +4356,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string bill = 2;
   if (this->bill().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill().data(), this->bill().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.bill");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->bill(), output);
@@ -4366,9 +4366,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string delete = 3;
   if (this->delete_().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->delete_().data(), this->delete_().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.delete");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->delete_(), output);
@@ -4376,9 +4376,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string request = 4;
   if (this->request().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request().data(), this->request().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.request");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->request(), output);
@@ -4392,9 +4392,9 @@ void Syn_data::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Syn_data)
   // optional string friend = 1;
   if (this->friend_().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->friend_().data(), this->friend_().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.friend");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4403,9 +4403,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string bill = 2;
   if (this->bill().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill().data(), this->bill().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.bill");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4414,9 +4414,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string delete = 3;
   if (this->delete_().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->delete_().data(), this->delete_().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.delete");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4425,9 +4425,9 @@ void Syn_data::SerializeWithCachedSizes(
 
   // optional string request = 4;
   if (this->request().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request().data(), this->request().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Syn_data.request");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4724,9 +4724,9 @@ void Syn_data::clear_request() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HelloRequest::kNameFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 HelloRequest::HelloRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -4808,10 +4808,10 @@ bool HelloRequest::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->name().data(), this->name().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.HelloRequest.name");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.HelloRequest.name"));
         } else {
           goto handle_unusual;
         }
@@ -4845,9 +4845,9 @@ void HelloRequest::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.HelloRequest)
   // optional string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.HelloRequest.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
@@ -4861,9 +4861,9 @@ void HelloRequest::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.HelloRequest)
   // optional string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.HelloRequest.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -4995,9 +4995,9 @@ void HelloRequest::clear_name() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HelloReply::kMessageFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 HelloReply::HelloReply()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -5079,10 +5079,10 @@ bool HelloReply::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_message()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->message().data(), this->message().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.HelloReply.message");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.HelloReply.message"));
         } else {
           goto handle_unusual;
         }
@@ -5116,9 +5116,9 @@ void HelloReply::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.HelloReply)
   // optional string message = 1;
   if (this->message().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->message().data(), this->message().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.HelloReply.message");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->message(), output);
@@ -5132,9 +5132,9 @@ void HelloReply::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.HelloReply)
   // optional string message = 1;
   if (this->message().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->message().data(), this->message().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.HelloReply.message");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -5266,10 +5266,10 @@ void HelloReply::clear_message() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Image::kNameFieldNumber;
 const int Image::kDataFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Image::Image()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -5354,10 +5354,10 @@ bool Image::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->name().data(), this->name().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Image.name");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Image.name"));
         } else {
           goto handle_unusual;
         }
@@ -5404,9 +5404,9 @@ void Image::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Image)
   // optional string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Image.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
@@ -5426,9 +5426,9 @@ void Image::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Image)
   // optional string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Image.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -5622,7 +5622,7 @@ void Image::clear_data() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request::kRequestIdFieldNumber;
 const int Request::kSenderFieldNumber;
 const int Request::kReceiverFieldNumber;
@@ -5633,7 +5633,7 @@ const int Request::kRequestDateFieldNumber;
 const int Request::kResponseDateFieldNumber;
 const int Request::kIgnoreFromFieldNumber;
 const int Request::kIgnoreToFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request::Request()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -5742,10 +5742,10 @@ bool Request::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_request_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->request_id().data(), this->request_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.request_id");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.request_id"));
         } else {
           goto handle_unusual;
         }
@@ -5759,10 +5759,10 @@ bool Request::MergePartialFromCodedStream(
          parse_sender:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_sender()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->sender().data(), this->sender().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.sender");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.sender"));
         } else {
           goto handle_unusual;
         }
@@ -5776,10 +5776,10 @@ bool Request::MergePartialFromCodedStream(
          parse_receiver:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_receiver()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->receiver().data(), this->receiver().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.receiver");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.receiver"));
         } else {
           goto handle_unusual;
         }
@@ -5793,10 +5793,10 @@ bool Request::MergePartialFromCodedStream(
          parse_type:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_type()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->type().data(), this->type().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.type");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.type"));
         } else {
           goto handle_unusual;
         }
@@ -5810,10 +5810,10 @@ bool Request::MergePartialFromCodedStream(
          parse_content:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_content()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->content().data(), this->content().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.content");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.content"));
         } else {
           goto handle_unusual;
         }
@@ -5827,10 +5827,10 @@ bool Request::MergePartialFromCodedStream(
          parse_response:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_response()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->response().data(), this->response().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.response");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.response"));
         } else {
           goto handle_unusual;
         }
@@ -5844,10 +5844,10 @@ bool Request::MergePartialFromCodedStream(
          parse_request_date:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_request_date()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->request_date().data(), this->request_date().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.request_date");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.request_date"));
         } else {
           goto handle_unusual;
         }
@@ -5861,10 +5861,10 @@ bool Request::MergePartialFromCodedStream(
          parse_response_date:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_response_date()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->response_date().data(), this->response_date().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.response_date");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.response_date"));
         } else {
           goto handle_unusual;
         }
@@ -5878,10 +5878,10 @@ bool Request::MergePartialFromCodedStream(
          parse_ignore_from:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ignore_from()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->ignore_from().data(), this->ignore_from().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.ignore_from");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.ignore_from"));
         } else {
           goto handle_unusual;
         }
@@ -5895,10 +5895,10 @@ bool Request::MergePartialFromCodedStream(
          parse_ignore_to:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ignore_to()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->ignore_to().data(), this->ignore_to().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Request.ignore_to");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Request.ignore_to"));
         } else {
           goto handle_unusual;
         }
@@ -5932,9 +5932,9 @@ void Request::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Request)
   // optional string request_id = 1;
   if (this->request_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_id().data(), this->request_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.request_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->request_id(), output);
@@ -5942,9 +5942,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string sender = 2;
   if (this->sender().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->sender().data(), this->sender().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.sender");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->sender(), output);
@@ -5952,9 +5952,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string receiver = 3;
   if (this->receiver().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->receiver().data(), this->receiver().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.receiver");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->receiver(), output);
@@ -5962,9 +5962,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string type = 4;
   if (this->type().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->type(), output);
@@ -5972,9 +5972,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string content = 5;
   if (this->content().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->content().data(), this->content().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.content");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->content(), output);
@@ -5982,9 +5982,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string response = 6;
   if (this->response().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response().data(), this->response().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.response");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       6, this->response(), output);
@@ -5992,9 +5992,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string request_date = 7;
   if (this->request_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_date().data(), this->request_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.request_date");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       7, this->request_date(), output);
@@ -6002,9 +6002,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string response_date = 8;
   if (this->response_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response_date().data(), this->response_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.response_date");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       8, this->response_date(), output);
@@ -6012,9 +6012,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string ignore_from = 9;
   if (this->ignore_from().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->ignore_from().data(), this->ignore_from().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.ignore_from");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       9, this->ignore_from(), output);
@@ -6022,9 +6022,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string ignore_to = 10;
   if (this->ignore_to().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->ignore_to().data(), this->ignore_to().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.ignore_to");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       10, this->ignore_to(), output);
@@ -6038,9 +6038,9 @@ void Request::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Request)
   // optional string request_id = 1;
   if (this->request_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_id().data(), this->request_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.request_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6049,9 +6049,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string sender = 2;
   if (this->sender().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->sender().data(), this->sender().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.sender");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6060,9 +6060,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string receiver = 3;
   if (this->receiver().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->receiver().data(), this->receiver().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.receiver");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6071,9 +6071,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string type = 4;
   if (this->type().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6082,9 +6082,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string content = 5;
   if (this->content().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->content().data(), this->content().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.content");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6093,9 +6093,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string response = 6;
   if (this->response().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response().data(), this->response().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.response");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6104,9 +6104,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string request_date = 7;
   if (this->request_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_date().data(), this->request_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.request_date");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6115,9 +6115,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string response_date = 8;
   if (this->response_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response_date().data(), this->response_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.response_date");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6126,9 +6126,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string ignore_from = 9;
   if (this->ignore_from().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->ignore_from().data(), this->ignore_from().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.ignore_from");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6137,9 +6137,9 @@ void Request::SerializeWithCachedSizes(
 
   // optional string ignore_to = 10;
   if (this->ignore_to().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->ignore_to().data(), this->ignore_to().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Request.ignore_to");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -6766,13 +6766,13 @@ void Request::clear_ignore_to() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Response::kRequestIdFieldNumber;
 const int Response::kSenderFieldNumber;
 const int Response::kReceiverFieldNumber;
 const int Response::kResponseFieldNumber;
 const int Response::kResponseDateFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Response::Response()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -6866,10 +6866,10 @@ bool Response::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_request_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->request_id().data(), this->request_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Response.request_id");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Response.request_id"));
         } else {
           goto handle_unusual;
         }
@@ -6883,10 +6883,10 @@ bool Response::MergePartialFromCodedStream(
          parse_sender:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_sender()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->sender().data(), this->sender().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Response.sender");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Response.sender"));
         } else {
           goto handle_unusual;
         }
@@ -6900,10 +6900,10 @@ bool Response::MergePartialFromCodedStream(
          parse_receiver:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_receiver()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->receiver().data(), this->receiver().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Response.receiver");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Response.receiver"));
         } else {
           goto handle_unusual;
         }
@@ -6917,10 +6917,10 @@ bool Response::MergePartialFromCodedStream(
          parse_response:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_response()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->response().data(), this->response().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Response.response");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Response.response"));
         } else {
           goto handle_unusual;
         }
@@ -6934,10 +6934,10 @@ bool Response::MergePartialFromCodedStream(
          parse_response_date:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_response_date()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->response_date().data(), this->response_date().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.Response.response_date");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Response.response_date"));
         } else {
           goto handle_unusual;
         }
@@ -6971,9 +6971,9 @@ void Response::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.Response)
   // optional string request_id = 1;
   if (this->request_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_id().data(), this->request_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.request_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->request_id(), output);
@@ -6981,9 +6981,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string sender = 2;
   if (this->sender().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->sender().data(), this->sender().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.sender");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->sender(), output);
@@ -6991,9 +6991,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string receiver = 3;
   if (this->receiver().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->receiver().data(), this->receiver().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.receiver");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->receiver(), output);
@@ -7001,9 +7001,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string response = 4;
   if (this->response().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response().data(), this->response().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.response");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->response(), output);
@@ -7011,9 +7011,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string response_date = 5;
   if (this->response_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response_date().data(), this->response_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.response_date");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->response_date(), output);
@@ -7027,9 +7027,9 @@ void Response::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.Response)
   // optional string request_id = 1;
   if (this->request_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->request_id().data(), this->request_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.request_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7038,9 +7038,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string sender = 2;
   if (this->sender().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->sender().data(), this->sender().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.sender");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7049,9 +7049,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string receiver = 3;
   if (this->receiver().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->receiver().data(), this->receiver().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.receiver");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7060,9 +7060,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string response = 4;
   if (this->response().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response().data(), this->response().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.response");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7071,9 +7071,9 @@ void Response::SerializeWithCachedSizes(
 
   // optional string response_date = 5;
   if (this->response_date().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->response_date().data(), this->response_date().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.Response.response_date");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7425,10 +7425,10 @@ void Response::clear_response_date() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int IgnoreMessage::kRequestLogIdFieldNumber;
 const int IgnoreMessage::kUserFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 IgnoreMessage::IgnoreMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -7513,10 +7513,10 @@ bool IgnoreMessage::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_requestlog_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->requestlog_id().data(), this->requestlog_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.IgnoreMessage.requestLog_id");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.IgnoreMessage.requestLog_id"));
         } else {
           goto handle_unusual;
         }
@@ -7530,10 +7530,10 @@ bool IgnoreMessage::MergePartialFromCodedStream(
          parse_user:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_user()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->user().data(), this->user().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.IgnoreMessage.user");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.IgnoreMessage.user"));
         } else {
           goto handle_unusual;
         }
@@ -7567,9 +7567,9 @@ void IgnoreMessage::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.IgnoreMessage)
   // optional string requestLog_id = 1;
   if (this->requestlog_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->requestlog_id().data(), this->requestlog_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.IgnoreMessage.requestLog_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->requestlog_id(), output);
@@ -7577,9 +7577,9 @@ void IgnoreMessage::SerializeWithCachedSizes(
 
   // optional string user = 2;
   if (this->user().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->user().data(), this->user().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.IgnoreMessage.user");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->user(), output);
@@ -7593,9 +7593,9 @@ void IgnoreMessage::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.IgnoreMessage)
   // optional string requestLog_id = 1;
   if (this->requestlog_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->requestlog_id().data(), this->requestlog_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.IgnoreMessage.requestLog_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7604,9 +7604,9 @@ void IgnoreMessage::SerializeWithCachedSizes(
 
   // optional string user = 2;
   if (this->user().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->user().data(), this->user().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.IgnoreMessage.user");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7793,10 +7793,10 @@ void IgnoreMessage::clear_user() {
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int BillPayment::kBillIdFieldNumber;
 const int BillPayment::kPaidStatusFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 BillPayment::BillPayment()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
@@ -7881,10 +7881,10 @@ bool BillPayment::MergePartialFromCodedStream(
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_bill_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->bill_id().data(), this->bill_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.BillPayment.bill_id");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.BillPayment.bill_id"));
         } else {
           goto handle_unusual;
         }
@@ -7898,10 +7898,10 @@ bool BillPayment::MergePartialFromCodedStream(
          parse_paidStatus:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_paidstatus()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->paidstatus().data(), this->paidstatus().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "helloworld.BillPayment.paidStatus");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.BillPayment.paidStatus"));
         } else {
           goto handle_unusual;
         }
@@ -7935,9 +7935,9 @@ void BillPayment::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_start:helloworld.BillPayment)
   // optional string bill_id = 1;
   if (this->bill_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill_id().data(), this->bill_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.BillPayment.bill_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->bill_id(), output);
@@ -7945,9 +7945,9 @@ void BillPayment::SerializeWithCachedSizes(
 
   // optional string paidStatus = 2;
   if (this->paidstatus().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidstatus().data(), this->paidstatus().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.BillPayment.paidStatus");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->paidstatus(), output);
@@ -7961,9 +7961,9 @@ void BillPayment::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.BillPayment)
   // optional string bill_id = 1;
   if (this->bill_id().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->bill_id().data(), this->bill_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.BillPayment.bill_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
@@ -7972,9 +7972,9 @@ void BillPayment::SerializeWithCachedSizes(
 
   // optional string paidStatus = 2;
   if (this->paidstatus().size() > 0) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->paidstatus().data(), this->paidstatus().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.BillPayment.paidStatus");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(

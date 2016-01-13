@@ -24,7 +24,8 @@ rpc Sign_up (Sign_m) returns (Inf) {}
 
 // A simple RPC
 //
-//
+// input    Username
+// output   friendList
 rpc User_inf (Inf) returns (User_detail) {}
 
 // A simple RPC
@@ -49,27 +50,32 @@ rpc Create_share (Share_inf) returns (Inf) {}
 
 // delete a bill
 //
-//
+// use bill_id to identify bill record
 rpc Delete_bill (Share_inf) returns (Inf) {}
 
 // A server-to-client streaming RPC
 //
 // start after terminal finish basic work. keep synchronism with S
+// input    User.username
+// output   User.synchronism<friend, bill, delete, request>
 rpc Syn (stream Inf) returns (stream Syn_data) {}
 
 //
 //
-//
+// input username amount(??? / all)
+// output Bills()
 rpc Obtain_bills (Bill_request) returns (stream Share_inf) {}
 
 //
 //
-//
+// input Three byte package imageNmae, imagePath, imageData
+// output "Get image"
 rpc Send_Img (stream Image) returns (Inf) {}
 
 //
 //
-//
+// input folderName - imageName - imageName -.........
+// outut Image bytes package filled data and name
 rpc Receive_Img (Repeated_string) returns (stream Image) {}
 
 // set user synchronism_delete = 0

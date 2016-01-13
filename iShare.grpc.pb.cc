@@ -257,8 +257,10 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
 
 Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 23) {}
 
+Greeter::Service::Service() {
+}
+
 Greeter::Service::~Service() {
-  delete service_;
 }
 
 ::grpc::Status Greeter::Service::SayHello(::grpc::ServerContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response) {
@@ -514,10 +516,10 @@ void Greeter::AsyncService::RequestSend_DeviceToken(::grpc::ServerContext* conte
 }
 
 ::grpc::RpcService* Greeter::Service::service() {
-  if (service_ != nullptr) {
-    return service_;
+  if (service_) {
+    return service_.get();
   }
-  service_ = new ::grpc::RpcService();
+  service_ = std::unique_ptr< ::grpc::RpcService>(new ::grpc::RpcService());
   service_->AddMethod(new ::grpc::RpcServiceMethod(
       Greeter_method_names[0],
       ::grpc::RpcMethod::NORMAL_RPC,
@@ -633,7 +635,7 @@ void Greeter::AsyncService::RequestSend_DeviceToken(::grpc::ServerContext* conte
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Send_DeviceToken), this)));
-  return service_;
+  return service_.get();
 }
 
 

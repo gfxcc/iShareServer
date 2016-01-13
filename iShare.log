@@ -1,0 +1,7390 @@
+0Server listening on : 0.0.0.0:50051
+0Server listening on : 0.0.0.0:50051
+Start Syn
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:edd7d19bc75e308f774eacdd6fa2a80d8e85478ec8d189be908730000046ff6a
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Send_DeviceToken IN*************
+DeviceToken:a3dec5158b6ab30af8ec0e9720de3b2a82e5f9589217b1d17270629f7181a863
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+Start Syn
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:a3dec5158b6ab30af8ec0e9720de3b2a82e5f9589217b1d17270629f7181a863
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+0Server listening on : 0.0.0.0:50051
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf IN*************
+*************User_inf IN*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************Obtain_bills IN*************
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf IN*************
+*************Obtain_bills OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_requestLogHistory IN*************
+*************Obtain_request IN*************
+SELECT * FROM RequestLog WHERE sender = 'Yuchi' OR receiver = 'Yuchi' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************User_inf IN*************
+Start Syn
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Send_DeviceToken IN*************
+DeviceToken:a3dec5158b6ab30af8ec0e9720de3b2a82e5f9589217b1d17270629f7181a863
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+END
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+END
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('cy', '11' , 'Dinner' , 'cy' , '2016-01-05 07:21' , 'comment...' , '' , 'cy' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'cy' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'cy' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+a3dec5158b6ab30af8ec0e9720de3b2a82e5f9589217b1d17270629f7181a863
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+Start Syn
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:a3dec5158b6ab30af8ec0e9720de3b2a82e5f9589217b1d17270629f7181a863
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_request IN*************
+*************Obtain_requestLogHistory IN*************
+SELECT * FROM RequestLog WHERE sender = 'Yuchi' OR receiver = 'Yuchi' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+END
+*************Obtain_bills IN*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+END
+END
+END
+Start Syn
+Start Syn
+END
+*************Obtain_bills IN*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Receive_Image OUT*************
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+END
+END
+*************Obtain_bills IN*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+Start Syn
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+END
+*************User_inf IN*************
+*************User_inf IN*************
+*************Obtain_bills IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+Start Syn
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d0Server listening on : 0.0.0.0:50051
+Start Syn
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************User_inf IN*************
+*************User_inf IN*************
+*************Send_DeviceToken OUT*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_requestLogHistory IN*************
+*************Obtain_request IN*************
+SELECT * FROM RequestLog WHERE sender = 'gfxcc' OR receiver = 'gfxcc' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+*************Obtain_requestLogHistory IN*************
+*************Obtain_request IN*************
+SELECT * FROM RequestLog WHERE sender = 'gfxcc' OR receiver = 'gfxcc' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+END
+Start Syn
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+END
+Start Syn
+END
+Start Syn
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+END
+Start Syn
+END
+Start Syn
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+END
+Start Syn
+Start Syn
+*************Obtain_request IN*************
+*************Obtain_requestLogHistory IN*************
+SELECT * FROM RequestLog WHERE sender = 'gfxcc' OR receiver = 'gfxcc' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+END
+Start Syn
+END
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='cy' fail
+END
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Send_DeviceToken OUT*************
+*************Receive_Image OUT*************
+*************Receive_Image OUT*************
+END
+Start Syn
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Send_DeviceToken OUT*************
+*************Receive_Image OUT*************
+*************Receive_Image OUT*************
+*************Obtain_request IN*************
+one request
+*************Obtain_request OUT*************
+*************Obtain_requestLogHistory IN*************
+SELECT * FROM RequestLog WHERE sender = 'xtding' OR receiver = 'xtding' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Add_friend IN*************
+*************Add_friend OUT*************
+*************Request_response IN*************
+UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE username = 'ZhiqingShen' OR username = 'xtding'
+*************Request_response OUT*************
+END
+*************Obtain_requestLog IN*************
+SELECT * FROM RequestLog WHERE (sender = 'xtding' AND ignore_sender = 'FALSE') OR (receiver = 'xtding' AND ignore_receiver = 'FALSE') order by requestLog_id desc
+t
+t
+*************Obtain_requestLog OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '34' , 'Lunch' , 'xtding' , '2016-01-07 12:29' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '20' , 'Dinner' , 'gfxcc' , '2016-01-07 06:12' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+Start Syn
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '16' , 'Shopping' , 'gfxcc' , '2016-01-08 01:06' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ishopping.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '27' , 'Lunch' , 'gfxcc' , '2016-01-08 01:06' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+Start Syn
+END
+Start Syn
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '26' , 'Dinner' , 'gfxcc' , '2016-01-08 07:44' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '39' , 'Lunch' , 'gfxcc' , '2016-01-09 02:04' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '30' , 'Dinner' , 'gfxcc' , '2016-01-09 07:29' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+Start Syn
+END
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('Yuchi', '10' , 'Food and Drind>cafe' , 'gfxcc' , '2016-01-09 20:18' , 'comment...' , '' , 'Yuchi' , '' , '' , '' , '' , '' , '' , '' , '' , '', 'cafe.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+0Server listening on : 0.0.0.0:50051
+Start Syn
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+0Server listening on : 0.0.0.0:50051
+Start Syn
+END
+Start Syn
+*************User_inf IN*************
+Obtain user_inf fail
+SELECT * FROM Friends WHERE username_1 = 'gfxcc' OR username_2 = 'gfxcc'
+*************User_inf IN*************
+Obtain user_inf fail
+SELECT * FROM Friends WHERE username_1 = 'gfxcc' OR username_2 = 'gfxcc'
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='gfxcc' fail
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Send_DeviceToken OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '30' , 'Breakfast' , 'xtding' , '2016-01-10 10:25' , 'comment...' , '' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+Start Syn
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+*************Receive_Image IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:7f4fcc4ed81ef68fb739d026e996d2628d38328b5f0714430a6a6b3253788a38
+*************Receive_Image IN*************
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+END
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+Start Syn
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+0Server listening on : 0.0.0.0:50051
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+Start Syn
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************Obtain_bills IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:82ec4f5357a56197116af4e16770ff1863b6987e0eaacd02599aba4b478de210
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************User_inf IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Send_DeviceToken OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Send_DeviceToken IN*************
+DeviceToken:b17036721c0f732dfe1e3c7b0fda9ca4db5bc61aacb997dd804b9997a784078a
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+Start Syn
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+END
+END
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+Start Syn
+END
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+Start Syn
+END
+Start Syn
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '12.5' , 'Shopping' , 'gfxcc' , '2016-01-10 08:35' , 'comment...' , '' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '' , '', 'ishopping.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+Start Syn
+Start Syn
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Send_DeviceToken OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+one result
+one result
+*************Obtain_bills OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_requestLogHistory IN*************
+*************Obtain_request IN*************
+SELECT * FROM RequestLog WHERE sender = 'xtding' OR receiver = 'xtding' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+END
+END
+Start Syn
+*************Obtain_bills IN*************
+*************User_inf IN*************
+*************User_inf IN*************
+one result
+one result
+one result
+one result
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Obtain_bills OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+*************User_inf IN*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+*************Receive_Image IN*************
+DeviceToken:b17036721c0f732dfe1e3c7b0fda9ca4db5bc61aacb997dd804b9997a784078a
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Create_share IN*************
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '29.5' , 'Lunch' , 'gfxcc' , '2016-01-11 02:23' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+b17036721c0f732dfe1e3c7b0fda9ca4db5bc61aacb997dd804b9997a784078a
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+*************Create_share OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+*************Receive_Image IN*************
+DeviceToken:b17036721c0f732dfe1e3c7b0fda9ca4db5bc61aacb997dd804b9997a784078a
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:2cbbd27c30a15202c05ba07cff1b992129a7dd1f1834a2a94d4ce5c506e46da9
+*************Send_DeviceToken OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:2cbbd27c30a15202c05ba07cff1b992129a7dd1f1834a2a94d4ce5c506e46da9
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:2cbbd27c30a15202c05ba07cff1b992129a7dd1f1834a2a94d4ce5c506e46da9
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Send_DeviceToken IN*************
+DeviceToken:634023c17dab6b0354ee0d70b5999927baf46ea515d01871c2161c75313fc261
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+*************Receive_Image IN*************
+cannot open image./icon/.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:634023c17dab6b0354ee0d70b5999927baf46ea515d01871c2161c75313fc261
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+END
+Start Syn
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:634023c17dab6b0354ee0d70b5999927baf46ea515d01871c2161c75313fc261
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+END
+*************User_inf IN*************
+Start Syn
+*************User_inf IN*************
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Receive_Image IN*************
+*************Send_DeviceToken IN*************
+DeviceToken:634023c17dab6b0354ee0d70b5999927baf46ea515d01871c2161c75313fc261
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+*************Reset_Status IN*************
+*************Reset_Status OUT*************
+*************Obtain_requestLogHistory IN*************
+*************Obtain_request IN*************
+SELECT * FROM RequestLog WHERE sender = 'gfxcc' OR receiver = 'gfxcc' order by requestLog_id desc
+t
+*************Obtain_requestLogHistory OUT*************
+*************Obtain_request OUT*************
+END
+*************User_inf IN*************
+*************User_inf IN*************
+Start Syn
+*************User_inf OUT*************
+*************User_inf OUT*************
+*************Send_DeviceToken IN*************
+DeviceToken:634023c17dab6b0354ee0d70b5999927baf46ea515d01871c2161c75313fc261
+*************Send_DeviceToken OUT*************
+*************Receive_Image IN*************
+*************Receive_Image IN*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+cannot open image./icon/ZhiqingShen.png
+*************Receive_Image OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Login IN*************
+node
+*************Login OUT*************
+*************User_inf IN*************
+*************User_inf OUT*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+*************Obtain_bills OUT*************
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+*************Receive_Image IN*************
+*************Obtain_bills IN*************
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one result
+one re

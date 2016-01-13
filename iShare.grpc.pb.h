@@ -344,7 +344,7 @@ class Greeter GRPC_FINAL {
 
   class Service : public ::grpc::SynchronousService {
    public:
-    Service() : service_(nullptr) {}
+    Service();
     virtual ~Service();
     virtual ::grpc::Status SayHello(::grpc::ServerContext* context, const ::helloworld::HelloRequest* request, ::helloworld::HelloReply* response);
     virtual ::grpc::Status Login(::grpc::ServerContext* context, const ::helloworld::Login_m* request, ::helloworld::Inf* response);
@@ -371,7 +371,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Send_DeviceToken(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     ::grpc::RpcService* service() GRPC_OVERRIDE GRPC_FINAL;
    private:
-    ::grpc::RpcService* service_;
+    std::unique_ptr< ::grpc::RpcService> service_;
   };
   class AsyncService GRPC_FINAL : public ::grpc::AsynchronousService {
    public:

@@ -36,21 +36,21 @@ void protobuf_AddDesc_iShare_2eproto();
 void protobuf_AssignDesc_iShare_2eproto();
 void protobuf_ShutdownFile_iShare_2eproto();
 
-class Login_m;
-class Sign_m;
-class Inf;
-class Repeated_string;
-class User_detail;
-class Share_inf;
+class BillPayment;
 class Bill_request;
-class Syn_data;
-class HelloRequest;
 class HelloReply;
+class HelloRequest;
+class IgnoreMessage;
 class Image;
+class Inf;
+class Login_m;
+class Repeated_string;
 class Request;
 class Response;
-class IgnoreMessage;
-class BillPayment;
+class Share_inf;
+class Sign_m;
+class Syn_data;
+class User_detail;
 
 // ===================================================================
 
