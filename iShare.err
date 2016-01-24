@@ -9,3 +9,13 @@ E0110 03:19:51.336650328   22679 call.c:455]                 Invalid entry in ac
 E0110 23:47:55.064841424   25058 chttp2_transport.c:833]     assertion failed: stream_global->send_message == NULL
 E0110 23:47:55.064458008   25059 chttp2_transport.c:532]     server stream 7 still included in list 9
 E0110 23:49:26.134401619   25065 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0113 01:41:02.497455346   29694 chttp2_transport.c:532]     server stream 43 still included in list 9
+E0113 01:41:02.497758208   29693 chttp2_transport.c:532]     server stream 41 still included in list 9
+E0113 01:41:05.844396297   29702 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0113 03:16:28.507545560   29832 chttp2_transport.c:532]     server stream 9 still included in list 9
+E0113 03:16:34.005011086   29843 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0113 03:20:15.932703805   29892 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0114 22:58:56.202654976   31116 chttp2_transport.c:532]     server stream 5 still included in list 9
+E0115 18:29:00.230021342     525 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0120 20:46:33.198259006   12405 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0120 21:09:36.283890523   12527 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.

@@ -47,6 +47,7 @@ class Login_m;
 class Repeated_string;
 class Request;
 class Response;
+class Setting;
 class Share_inf;
 class Sign_m;
 class Syn_data;
@@ -1750,6 +1751,112 @@ class BillPayment : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static BillPayment* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class Setting : public ::google::protobuf::Message {
+ public:
+  Setting();
+  virtual ~Setting();
+
+  Setting(const Setting& from);
+
+  inline Setting& operator=(const Setting& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Setting& default_instance();
+
+  void Swap(Setting* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Setting* New() const { return New(NULL); }
+
+  Setting* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Setting& from);
+  void MergeFrom(const Setting& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Setting* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 friendInvite = 1;
+  void clear_friendinvite();
+  static const int kFriendInviteFieldNumber = 1;
+  ::google::protobuf::int32 friendinvite() const;
+  void set_friendinvite(::google::protobuf::int32 value);
+
+  // optional int32 newBill = 2;
+  void clear_newbill();
+  static const int kNewBillFieldNumber = 2;
+  ::google::protobuf::int32 newbill() const;
+  void set_newbill(::google::protobuf::int32 value);
+
+  // optional int32 editedDeleteBill = 3;
+  void clear_editeddeletebill();
+  static const int kEditedDeleteBillFieldNumber = 3;
+  ::google::protobuf::int32 editeddeletebill() const;
+  void set_editeddeletebill(::google::protobuf::int32 value);
+
+  // optional int32 commentBill = 4;
+  void clear_commentbill();
+  static const int kCommentBillFieldNumber = 4;
+  ::google::protobuf::int32 commentbill() const;
+  void set_commentbill(::google::protobuf::int32 value);
+
+  // optional int32 paidNotice = 5;
+  void clear_paidnotice();
+  static const int kPaidNoticeFieldNumber = 5;
+  ::google::protobuf::int32 paidnotice() const;
+  void set_paidnotice(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:helloworld.Setting)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int32 friendinvite_;
+  ::google::protobuf::int32 newbill_;
+  ::google::protobuf::int32 editeddeletebill_;
+  ::google::protobuf::int32 commentbill_;
+  ::google::protobuf::int32 paidnotice_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_iShare_2eproto();
+  friend void protobuf_AssignDesc_iShare_2eproto();
+  friend void protobuf_ShutdownFile_iShare_2eproto();
+
+  void InitAsDefaultInstance();
+  static Setting* default_instance_;
 };
 // ===================================================================
 
@@ -4055,7 +4162,83 @@ inline void BillPayment::set_allocated_paidstatus(::std::string* paidstatus) {
   // @@protoc_insertion_point(field_set_allocated:helloworld.BillPayment.paidStatus)
 }
 
+// -------------------------------------------------------------------
+
+// Setting
+
+// optional int32 friendInvite = 1;
+inline void Setting::clear_friendinvite() {
+  friendinvite_ = 0;
+}
+inline ::google::protobuf::int32 Setting::friendinvite() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.friendInvite)
+  return friendinvite_;
+}
+inline void Setting::set_friendinvite(::google::protobuf::int32 value) {
+  
+  friendinvite_ = value;
+  // @@protoc_insertion_point(field_set:helloworld.Setting.friendInvite)
+}
+
+// optional int32 newBill = 2;
+inline void Setting::clear_newbill() {
+  newbill_ = 0;
+}
+inline ::google::protobuf::int32 Setting::newbill() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.newBill)
+  return newbill_;
+}
+inline void Setting::set_newbill(::google::protobuf::int32 value) {
+  
+  newbill_ = value;
+  // @@protoc_insertion_point(field_set:helloworld.Setting.newBill)
+}
+
+// optional int32 editedDeleteBill = 3;
+inline void Setting::clear_editeddeletebill() {
+  editeddeletebill_ = 0;
+}
+inline ::google::protobuf::int32 Setting::editeddeletebill() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.editedDeleteBill)
+  return editeddeletebill_;
+}
+inline void Setting::set_editeddeletebill(::google::protobuf::int32 value) {
+  
+  editeddeletebill_ = value;
+  // @@protoc_insertion_point(field_set:helloworld.Setting.editedDeleteBill)
+}
+
+// optional int32 commentBill = 4;
+inline void Setting::clear_commentbill() {
+  commentbill_ = 0;
+}
+inline ::google::protobuf::int32 Setting::commentbill() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.commentBill)
+  return commentbill_;
+}
+inline void Setting::set_commentbill(::google::protobuf::int32 value) {
+  
+  commentbill_ = value;
+  // @@protoc_insertion_point(field_set:helloworld.Setting.commentBill)
+}
+
+// optional int32 paidNotice = 5;
+inline void Setting::clear_paidnotice() {
+  paidnotice_ = 0;
+}
+inline ::google::protobuf::int32 Setting::paidnotice() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.paidNotice)
+  return paidnotice_;
+}
+inline void Setting::set_paidnotice(::google::protobuf::int32 value) {
+  
+  paidnotice_ = value;
+  // @@protoc_insertion_point(field_set:helloworld.Setting.paidNotice)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

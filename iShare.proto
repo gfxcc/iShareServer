@@ -130,6 +130,16 @@ rpc Create_requestLog (Request) returns (Inf) {}
 // 
 // 
 rpc Send_DeviceToken (Repeated_string) returns (Inf) {}
+
+// send username
+//
+//
+rpc Obtain_setting (Inf) returns (Setting) {}
+
+//
+//
+//
+rpc Reset_setting (Setting) returns (Inf) {}
 }
 
 // The request message contain username and password
@@ -231,4 +241,12 @@ string user = 2;
 message BillPayment {
 string bill_id = 1;
 string paidStatus = 2;
+}
+
+message Setting {
+int32 friendInvite = 1;
+int32 newBill = 2;
+int32 editedDeleteBill = 3;
+int32 commentBill = 4;
+int32 paidNotice = 5;
 }

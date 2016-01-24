@@ -83,17 +83,20 @@ using helloworld::Request;
 using helloworld::Response;
 using helloworld::IgnoreMessage;
 using helloworld::BillPayment;
+using helloworld::Setting;
 using namespace std;
 
+#define LINE_MAX_LENGTH 50
 #define CONN_NUM 10
 
 string convertToString(double d);
+void tabPrint(string str);
 bool pushNotificationToDevice (string deviceToken, string message);
 
 
 class GreeterServiceImpl final : public Greeter::Service {
     Status SayHello(ServerContext* context, const HelloRequest* request,
-                    HelloReply* reply) override {
+            HelloReply* reply) override {
         std::string prefix("Hello ");
         reply->set_message(prefix + request->name());
         std::cout << "get request" << std::endl;
@@ -101,7 +104,7 @@ class GreeterServiceImpl final : public Greeter::Service {
     }
 
     Status User_inf(ServerContext* context, const Inf* request, User_detail* reply) override {
-        printf("*************User_inf IN*************\n");
+        tabPrint("User_inf IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -142,14 +145,13 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         }
 
-        printf("*************User_inf OUT*************\n");
+        tabPrint("User_inf OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Login (ServerContext* context, const Login_m* request, Inf* reply) override {
-        printf("*************Login IN*************\n");
-
+        tabPrint("Login IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -185,14 +187,14 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         reply->set_information("OK");
 
-        printf("*************Login OUT*************\n");
+        tabPrint("Login OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
 
     }
 
     Status Sign_up (ServerContext* context, const Sign_m* request, Inf* reply) override {
-        printf("*************Sign_up IN*************\n");
+        tabPrint("Sign_up IN");
 
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
@@ -213,7 +215,7 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         // usename used
         if (res->row_count != 0) {
-            reply->set_information("WRONG");
+            reply->set_information("invalid_username");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
             return Status::CANCELLED;
@@ -232,14 +234,13 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         reply->set_information("OK");
 
-        printf("*************Sign_up OUT*************\n");
+        tabPrint("Sign_up OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Search_username (ServerContext* context, const Inf* request, Repeated_string* reply) override {
-        printf("*************Search IN*************\n");
-
+        tabPrint("Search IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -260,13 +261,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         }
         printf("%s\n", sql_command.data());
 
-        printf("*************Search OUT*************\n");
+        tabPrint("Search OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Add_friend (ServerContext* context, const Repeated_string* request, Inf* reply) override {
-        printf("*************Add_friend IN*************\n");
+        tabPrint("Add_friend IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -308,14 +309,13 @@ class GreeterServiceImpl final : public Greeter::Service {
 
 
         reply->set_information("OK");
-        printf("*************Add_friend OUT*************\n");
+        tabPrint("Add_friend OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Delete_friend (ServerContext* context, const Repeated_string* request, Inf* reply) override {
-        printf("*************Delete_friend IN*************\n");
-
+        tabPrint("Delete_friend IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
 
@@ -343,12 +343,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         }
 
         reply->set_information("OK");
-        printf("*************Delete_friend OUT*************\n");
+        tabPrint("Delete_friend OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Syn (ServerContext* context, ServerReaderWriter<Syn_data, Inf>* stream) override {
+        tabPrint("Start SYN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -356,7 +357,6 @@ class GreeterServiceImpl final : public Greeter::Service {
 
 
         //cout << "Start Syn" << endl;
-        printf("Start Syn\n");
         string sql_command;
         Inf request;
         Syn_data reply;
@@ -419,16 +419,14 @@ class GreeterServiceImpl final : public Greeter::Service {
             }
 
         }
-        printf("END\n");
 
-
+        tabPrint("SYN OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Send_Img (ServerContext *context, ServerReader<Image>* reader, Inf* reply) override {
-        printf("*************Send_Img IN*************\n");
-
+        tabPrint("Send_Img IN");
         Image image_name;
         Image image_path;
         Image image;
@@ -458,14 +456,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             fprintf(stderr, "cannot close file handler\n");
         }
 
-        printf("*************Send_Img OUT*************\n");
+        tabPrint("Send_Img OUT");
         reply->set_information("Get image");
         return Status::OK;
     }
 
     Status Create_share (ServerContext *context, const Share_inf* request, Inf* reply) override {
-        printf("*************Create_share IN*************\n");
-
+        tabPrint("Create_share IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -518,7 +515,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         string message = request->creater() + " share a " + request->amount() + "$ bill with you.";
         while ((row = mysql_fetch_row(res)) != NULL) {
             if (!row[0]) {
-                 continue;
+                continue;
             }
             printf("%s\n", row[0]);
             pushNotificationToDevice(row[0], message);
@@ -526,13 +523,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         mysql_free_result(res);
 
         reply->set_information("OK");
-        printf("*************Create_share OUT*************\n");
+        tabPrint("Create_share OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Delete_bill (ServerContext *context, const Share_inf* request, Inf* reply) override {
-        printf("*************Delete_bill IN*************\n");
+        tabPrint("Delete_bill IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         //MYSQL_RES *res;
@@ -563,12 +560,12 @@ class GreeterServiceImpl final : public Greeter::Service {
         }
 
         release_sock_to_sql_pool(sock_node);
-        printf("*************Delete_bill OUT*************\n");
+        tabPrint("Delete_bill OUT");
         return Status::OK;
     }
 
-    Status Receive_Img (ServerContext *context, const Repeated_string* request, ServerWriter<Image>* reply) override {
-        printf("*************Receive_Image IN*************\n");
+    Status Receive_Img(ServerContext *context, const Repeated_string* request, ServerWriter<Image>* reply) override {
+        tabPrint("Receive_Img IN");
         Image image;
 
         for (int i = 1; i != request->content_size(); i++) {
@@ -667,12 +664,12 @@ class GreeterServiceImpl final : public Greeter::Service {
             delete []data;
         }
 
-        printf("*************Receive_Image OUT*************\n");
+        tabPrint("Receive_Img OUT");
         return Status::OK;
     }
 
     Status Obtain_bills (ServerContext *context, const Bill_request *request, ServerWriter<Share_inf> *reply) override {
-        printf("*************Obtain_bills IN*************\n");
+        tabPrint("Obtain_bills IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -684,6 +681,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         } else  {
             sql_command = "SELECT * FROM Bills WHERE member_0 = '" + request->username() + "' OR member_1 = '" + request->username() + "' OR member_2 = '" + request->username() + "' OR member_3 = '" + request->username() + "' OR member_4 = '" + request->username() + "' OR member_5 = '" + request->username() + "' OR member_6 = '" + request->username() + "' OR member_7 = '" + request->username() + "' OR member_8 = '" + request->username() + "' OR member_9 = '" + request->username() + "' OR paidBy = '" + request->username() + "' order by bill_id desc LIMIT " + request->amount();
         }
+
+        printf("%s\n", sql_command.data());
 
         if (mysql_query(conn, sql_command.data())) {
             printf("error %s\n", mysql_error(conn));
@@ -719,7 +718,7 @@ class GreeterServiceImpl final : public Greeter::Service {
                 bill.set_typeicon("");
             }
             //            //cout << "amout " << row[2] << endl;
-            printf("one result\n");
+            //printf("one result\n");
             reply->Write(bill);
         }
         mysql_free_result(res);
@@ -733,13 +732,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         }
 
 
-        printf("*************Obtain_bills OUT*************\n");
+        tabPrint("Obtain_bills OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Reset_Status (ServerContext *context, const Inf* request, Inf* reply) override {
-        printf("*************Reset_Status IN*************\n");
+        tabPrint("Reset_Status IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         //MYSQL_RES *res;
@@ -752,7 +751,7 @@ class GreeterServiceImpl final : public Greeter::Service {
             printf("%s\n", sql_command.data());
             check_sql_sock_normal(sock_node);
         }
-        printf("*************Reset_Status OUT*************\n");
+        tabPrint("Reset_Status OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
@@ -760,7 +759,7 @@ class GreeterServiceImpl final : public Greeter::Service {
     // request system
 
     Status Send_request (ServerContext* content, const Request* request, Inf* reply) override {
-        printf("*************Send_request IN*************\n");
+        tabPrint("Send_request IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -801,7 +800,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         string message = "New request from " + request->sender();
         while ((row = mysql_fetch_row(res)) != NULL) {
             if (!row[0]) {
-                 continue;
+                continue;
             }
             printf("%s\n", row[0]);
             pushNotificationToDevice(row[0], message);
@@ -809,13 +808,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         mysql_free_result(res);
 
 
-        printf("*************Send_request OUT*************\n");
+        tabPrint("Send_request OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Obtain_request (ServerContext* content, const Inf* request, ServerWriter<Request>* reply) override {
-        printf("*************Obtain_request IN*************\n");
+        tabPrint("Obtain_request IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -854,13 +853,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        printf("*************Obtain_request OUT*************\n");
+        tabPrint("Obtain_request OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Obtain_requestLog (ServerContext* content, const Inf* request, ServerWriter<Request>* reply) override {
-        printf("*************Obtain_requestLog IN*************\n");
+        tabPrint("Obtain_requestLog IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -921,18 +920,19 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        printf("*************Obtain_requestLog OUT*************\n");
+        tabPrint("Obtain_requestLog OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Obtain_requestLogHistory (ServerContext* content, const Inf* request, ServerWriter<Request>* reply) override {
-        printf("*************Obtain_requestLogHistory IN*************\n");
+        tabPrint("Obtain_requestLogHistory IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
         MYSQL_ROW row;
-        string sql_command = "SELECT * FROM RequestLog WHERE sender = '" + request->information() + "' OR receiver = '" + request->information() + "' order by requestLog_id desc";
+        //string sql_command = "SELECT * FROM RequestLog WHERE sender = '" + request->information() + "' OR receiver = '" + request->information() + "' order by requestLog_id desc";
+        string sql_command = "SELECT * FROM RequestLog WHERE receiver = '" + request->information() + "' order by requestLog_id desc";
 
         if (mysql_query(conn, sql_command.data())) {
             printf("ERROR Obtain_requestLogHistory fail\n");
@@ -961,13 +961,13 @@ class GreeterServiceImpl final : public Greeter::Service {
         }
         mysql_free_result(res);
 
-        printf("*************Obtain_requestLogHistory OUT*************\n");
+        tabPrint("Obtain_requestLogHistory OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Request_response (ServerContext* content, const Response* request, Inf* reply) override {
-        printf("*************Request_response IN*************\n");
+        tabPrint("Request_response IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
@@ -1035,13 +1035,13 @@ class GreeterServiceImpl final : public Greeter::Service {
 
 
 
-        printf("*************Request_response OUT*************\n");
+        tabPrint("Request_response OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status MakePayment (ServerContext* content, ServerReader<BillPayment>* reader, Inf* reply) override {
-        printf("*************MakePayment IN*************\n");
+        tabPrint("MakePayment IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
 
@@ -1060,13 +1060,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             //printf("in");
         }
 
-        printf("*************MakePayment OUT*************\n");
+        tabPrint("MakePayment OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Create_requestLog (ServerContext* content, const Request* request, Inf* reply) override {
-        printf("*************Create_requestLog IN*************\n");
+        tabPrint("Create_requestLog IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         //MYSQL_RES *res;
@@ -1092,13 +1092,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        printf("*************Create_requestLog OUT*************\n");
+        tabPrint("Create_requestLog OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status IgnoreRequestLog (ServerContext* content, const IgnoreMessage* request, Inf* reply) override {
-        printf("*************IgnoreRequestLog IN*************\n");
+        tabPrint("IgnoreRequestLog IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
         //MYSQL_RES *res;
@@ -1113,13 +1113,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        printf("*************IgnoreRequestLog OUT*************\n");
+        tabPrint("IgnoreRequestLog OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
     Status Send_DeviceToken (ServerContext* content, const Repeated_string* request, Inf* reply) override {
-        printf("*************Send_DeviceToken IN*************\n");
+        tabPrint("Send_DeviceToken IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
 
@@ -1133,11 +1133,46 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
 
-        printf("*************Send_DeviceToken OUT*************\n");
+        tabPrint("Send_DeviceToken OUT");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
     }
 
+    // setting
+
+    Status Obtain_setting (ServerContext* content, const Inf* request, Setting* reply) override {
+        tabPrint("Obtain_setting IN");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
+        MYSQL_RES *res;
+        MYSQL_ROW row;
+        string sql_command = "SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE uername = '" + request->information() + "'";
+
+        printf("%s\n", sql_command.data());
+
+        if (mysql_query(conn, sql_command.data())) {
+            printf("error %s\n", mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        row = mysql_fetch_row(res);
+
+        reply->set_friendinvite(atoi(row[0]));
+        reply->set_newbill(atoi(row[1]));
+        reply->set_editeddeletebill(atoi(row[2]));
+        reply->set_commentbill(atoi(row[3]));
+
+        mysql_free_result(res);
+        release_sock_to_sql_pool(sock_node);
+        tabPrint("Obtain_setting OUT");
+        return Status::OK;
+    }
+
+    Status Reset_setting (ServerContext* content, const Setting* request, Inf* reply) override {
+        return Status::OK;
+    }
 };
 
 void RunServer() {
@@ -1152,6 +1187,24 @@ void RunServer() {
     server->Wait();
 }
 
+// tools function
+void tabPrint(string str) {
+    int length = str.length();
+    int pre = (LINE_MAX_LENGTH - length) / 2;
+    for (int i = 0; i != pre; i++) {
+        fprintf(stdout, "-");
+    }
+    fprintf(stdout, "%s", str.data());
+    for (int i = 0; i != pre; i++) {
+        fprintf(stdout, "-");
+    }
+
+    if (((pre * 2) + length) < LINE_MAX_LENGTH) {
+        fprintf(stdout, "-");
+    }
+
+    fprintf(stdout,"\n");
+}
 
 string convertToString(double d) {
     ostringstream os;
@@ -1213,7 +1266,7 @@ SQL_SOCK* Create_sock(char* db_host, char* db_user, char* db_passwd, char* db_na
 
     MYSQL * sock = mysql_init(NULL);
     if (!mysql_real_connect(sock, db_host,
-                            db_user, db_passwd, db_name, 0, 0, 0)) {
+                db_user, db_passwd, db_name, 0, 0, 0)) {
         cout << "mysql_real_connect fail" << endl;
         //cout << db_host << endl << db_user << endl << db_passwd << endl << db_name << endl;
         return NULL;
@@ -1228,95 +1281,95 @@ void Close_sock(SQL_SOCK* sql_sock) {
 }
 
 /*
-void *mySqlHeartBeat(void *ptr)
-{
+   void *mySqlHeartBeat(void *ptr)
+   {
 
-    while (1)
-    {
-        for (int i = 0; i != CONN_NUM; i++) {
-            SQL_SOCK_NODE* sock_node = get_sock_from_pool();
-            MYSQL* conn = sock_node->sql_sock->sock;
-            string sql_command = "SELECT * FROM User";
-            if (mysql_query(conn, sql_command.data())) {
-                printf("%s\n", sql_command.data());
-            }
-            release_sock_to_sql_pool(sock_node);
-        }
+   while (1)
+   {
+   for (int i = 0; i != CONN_NUM; i++) {
+   SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+   MYSQL* conn = sock_node->sql_sock->sock;
+   string sql_command = "SELECT * FROM User";
+   if (mysql_query(conn, sql_command.data())) {
+   printf("%s\n", sql_command.data());
+   }
+   release_sock_to_sql_pool(sock_node);
+   }
 
-        sleep(18000);
-    }
-    return 0;
-}
-*/
-int main(int argc, char** argv) {
+   sleep(18000);
+   }
+   return 0;
+   }
+   */
+    int main(int argc, char** argv) {
 
 
-    //    mysql_init( &mysql );
-    //    conn = mysql_real_connect(  &mysql, "caoyongs-MacBook-Pro.local", "gfxcc", "19920406Cy", "iShare_data", 0, 0, 0 );
-    //    if( !conn )
-    //    {
-    //        cout << "Couldn't connect to MySQL database server!\n" << endl;
-    //        cout << "Error: %s\n" << mysql_error( &mysql ) << endl;
-    //        return 1;
-    //    }
-    //
-    //
-    //
+        //    mysql_init( &mysql );
+        //    conn = mysql_real_connect(  &mysql, "caoyongs-MacBook-Pro.local", "gfxcc", "19920406Cy", "iShare_data", 0, 0, 0 );
+        //    if( !conn )
+        //    {
+        //        cout << "Couldn't connect to MySQL database server!\n" << endl;
+        //        cout << "Error: %s\n" << mysql_error( &mysql ) << endl;
+        //        return 1;
+        //    }
+        //
+        //
+        //
 
-/*
+        /*
 
-// SLL init only once
-    SSL_load_error_strings();
-    SSL_library_init();
+        // SLL init only once
+        SSL_load_error_strings();
+        SSL_library_init();
 
-    // Get a list of devices
-    std::vector<MMGDevice*> devices;
-    //get_devices_list(devices);
-    MMGDevice* device1 = new MMGDevice("17a612c5fe84f544ebd0c6aa880a0955ca00084a4488dd633d113ef379292f48", 1);
-    devices.push_back(device1);
+        // Get a list of devices
+        std::vector<MMGDevice*> devices;
+        //get_devices_list(devices);
+        MMGDevice* device1 = new MMGDevice("17a612c5fe84f544ebd0c6aa880a0955ca00084a4488dd633d113ef379292f48", 1);
+        devices.push_back(device1);
 
-    // Create a payload object
-    MMGIOSPayload payload("Push message", "Slider label", 1, "sound.caf");
+        // Create a payload object
+        MMGIOSPayload payload("Push message", "Slider label", 1, "sound.caf");
 
-    // Create the APNS connection, empty string if no password for the private key
-    MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
-    // Open the connection
-    if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
-    	return EXIT_FAILURE;
+        // Create the APNS connection, empty string if no password for the private key
+        MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
+        // Open the connection
+        if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
+        return EXIT_FAILURE;
 
-    // Send the payload
-    uint32_t notifId = 1;
-    for (MMGDevice* device : devices)
-    {
+        // Send the payload
+        uint32_t notifId = 1;
+        for (MMGDevice* device : devices)
+        {
         // Update payload badge number to reflect device's one
         payload.SetBadgeNumber(device->GetBadge());
-        // Send payload to the device
-        connection.SendPayloadToDevice(payload, *device, notifId++);
+    // Send payload to the device
+    connection.SendPayloadToDevice(payload, *device, notifId++);
     }
 
-	// Free up memory
-	for (MMGDevice* device : devices)
-		delete device;
+        // Free up memory
+        for (MMGDevice* device : devices)
+        delete device;
 
-	// Close the connection
-	connection.CloseConnection();
+        // Close the connection
+        connection.CloseConnection();
 
 */
 
-    const char* hostname = "localhost";
-    const char* username = "root";
-    const char* passwd = "19920406Cy";
-    const char* db = "iShare_data";
-    cout << sql_pool_create(CONN_NUM, hostname, username, passwd, db, 3306, NULL, Create_sock, Close_sock);
-    /*
-    pthread_t id;
-    int err = pthread_create(&id, NULL, mySqlHeartBeat, NULL);
-    if (err != 0)
-    {
-        printf("HeatBeat create Fail!\n");
-        printf("%s\n",strerror(err));
-    }*/
-    RunServer();
-    return 0;
-}
+        const char* hostname = "localhost";
+        const char* username = "root";
+        const char* passwd = "19920406Cy";
+        const char* db = "iShare_data";
+        cout << sql_pool_create(CONN_NUM, hostname, username, passwd, db, 3306, NULL, Create_sock, Close_sock);
+        /*
+           pthread_t id;
+           int err = pthread_create(&id, NULL, mySqlHeartBeat, NULL);
+           if (err != 0)
+           {
+           printf("HeatBeat create Fail!\n");
+           printf("%s\n",strerror(err));
+           }*/
+        RunServer();
+        return 0;
+    }
 
