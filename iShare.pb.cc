@@ -341,12 +341,13 @@ void protobuf_AssignDesc_iShare_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, _is_default_instance_));
   Setting_descriptor_ = file->message_type(15);
-  static const int Setting_offsets_[5] = {
+  static const int Setting_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, friendinvite_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, newbill_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, editeddeletebill_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, commentbill_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, paidnotice_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, username_),
   };
   Setting_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -477,48 +478,49 @@ void protobuf_AddDesc_iShare_2eproto() {
     "\022\025\n\rresponse_date\030\005 \001(\t\"4\n\rIgnoreMessage"
     "\022\025\n\rrequestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n"
     "\013BillPayment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidSta"
-    "tus\030\002 \001(\t\"s\n\007Setting\022\024\n\014friendInvite\030\001 \001"
-    "(\005\022\017\n\007newBill\030\002 \001(\005\022\030\n\020editedDeleteBill\030"
-    "\003 \001(\005\022\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNotice"
-    "\030\005 \001(\0052\346\013\n\007Greeter\022>\n\010SayHello\022\030.hellowo"
-    "rld.HelloRequest\032\026.helloworld.HelloReply"
-    "\"\000\022/\n\005Login\022\023.helloworld.Login_m\032\017.hello"
-    "world.Inf\"\000\0220\n\007Sign_up\022\022.helloworld.Sign"
-    "_m\032\017.helloworld.Inf\"\000\0226\n\010User_inf\022\017.hell"
-    "oworld.Inf\032\027.helloworld.User_detail\"\000\022A\n"
-    "\017Search_username\022\017.helloworld.Inf\032\033.hell"
-    "oworld.Repeated_string\"\000\022<\n\nAdd_friend\022\033"
-    ".helloworld.Repeated_string\032\017.helloworld"
-    ".Inf\"\000\022\?\n\rDelete_friend\022\033.helloworld.Rep"
-    "eated_string\032\017.helloworld.Inf\"\000\0228\n\014Creat"
-    "e_share\022\025.helloworld.Share_inf\032\017.hellowo"
-    "rld.Inf\"\000\0227\n\013Delete_bill\022\025.helloworld.Sh"
-    "are_inf\032\017.helloworld.Inf\"\000\0222\n\003Syn\022\017.hell"
-    "oworld.Inf\032\024.helloworld.Syn_data\"\000(\0010\001\022C"
-    "\n\014Obtain_bills\022\030.helloworld.Bill_request"
-    "\032\025.helloworld.Share_inf\"\0000\001\0222\n\010Send_Img\022"
-    "\021.helloworld.Image\032\017.helloworld.Inf\"\000(\001\022"
-    "A\n\013Receive_Img\022\033.helloworld.Repeated_str"
-    "ing\032\021.helloworld.Image\"\0000\001\0222\n\014Reset_Stat"
-    "us\022\017.helloworld.Inf\032\017.helloworld.Inf\"\000\0226"
-    "\n\014Send_request\022\023.helloworld.Request\032\017.he"
-    "lloworld.Inf\"\000\022:\n\016Obtain_request\022\017.hello"
-    "world.Inf\032\023.helloworld.Request\"\0000\001\022=\n\021Ob"
-    "tain_requestLog\022\017.helloworld.Inf\032\023.hello"
-    "world.Request\"\0000\001\022D\n\030Obtain_requestLogHi"
-    "story\022\017.helloworld.Inf\032\023.helloworld.Requ"
-    "est\"\0000\001\022;\n\020Request_response\022\024.helloworld"
-    ".Response\032\017.helloworld.Inf\"\000\022;\n\013MakePaym"
-    "ent\022\027.helloworld.BillPayment\032\017.helloworl"
-    "d.Inf\"\000(\001\022@\n\020IgnoreRequestLog\022\031.hellowor"
-    "ld.IgnoreMessage\032\017.helloworld.Inf\"\000\022;\n\021C"
-    "reate_requestLog\022\023.helloworld.Request\032\017."
-    "helloworld.Inf\"\000\022B\n\020Send_DeviceToken\022\033.h"
-    "elloworld.Repeated_string\032\017.helloworld.I"
-    "nf\"\000\0228\n\016Obtain_setting\022\017.helloworld.Inf\032"
-    "\023.helloworld.Setting\"\000\0227\n\rReset_setting\022"
-    "\023.helloworld.Setting\032\017.helloworld.Inf\"\000B"
-    "\022\n\020io.grpc.examplesb\006proto3", 2787);
+    "tus\030\002 \001(\t\"\205\001\n\007Setting\022\024\n\014friendInvite\030\001 "
+    "\001(\005\022\017\n\007newBill\030\002 \001(\005\022\030\n\020editedDeleteBill"
+    "\030\003 \001(\005\022\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNotic"
+    "e\030\005 \001(\005\022\020\n\010username\030\006 \001(\t2\346\013\n\007Greeter\022>\n"
+    "\010SayHello\022\030.helloworld.HelloRequest\032\026.he"
+    "lloworld.HelloReply\"\000\022/\n\005Login\022\023.hellowo"
+    "rld.Login_m\032\017.helloworld.Inf\"\000\0220\n\007Sign_u"
+    "p\022\022.helloworld.Sign_m\032\017.helloworld.Inf\"\000"
+    "\0226\n\010User_inf\022\017.helloworld.Inf\032\027.hellowor"
+    "ld.User_detail\"\000\022A\n\017Search_username\022\017.he"
+    "lloworld.Inf\032\033.helloworld.Repeated_strin"
+    "g\"\000\022<\n\nAdd_friend\022\033.helloworld.Repeated_"
+    "string\032\017.helloworld.Inf\"\000\022\?\n\rDelete_frie"
+    "nd\022\033.helloworld.Repeated_string\032\017.hellow"
+    "orld.Inf\"\000\0228\n\014Create_share\022\025.helloworld."
+    "Share_inf\032\017.helloworld.Inf\"\000\0227\n\013Delete_b"
+    "ill\022\025.helloworld.Share_inf\032\017.helloworld."
+    "Inf\"\000\0222\n\003Syn\022\017.helloworld.Inf\032\024.hellowor"
+    "ld.Syn_data\"\000(\0010\001\022C\n\014Obtain_bills\022\030.hell"
+    "oworld.Bill_request\032\025.helloworld.Share_i"
+    "nf\"\0000\001\0222\n\010Send_Img\022\021.helloworld.Image\032\017."
+    "helloworld.Inf\"\000(\001\022A\n\013Receive_Img\022\033.hell"
+    "oworld.Repeated_string\032\021.helloworld.Imag"
+    "e\"\0000\001\0222\n\014Reset_Status\022\017.helloworld.Inf\032\017"
+    ".helloworld.Inf\"\000\0226\n\014Send_request\022\023.hell"
+    "oworld.Request\032\017.helloworld.Inf\"\000\022:\n\016Obt"
+    "ain_request\022\017.helloworld.Inf\032\023.helloworl"
+    "d.Request\"\0000\001\022=\n\021Obtain_requestLog\022\017.hel"
+    "loworld.Inf\032\023.helloworld.Request\"\0000\001\022D\n\030"
+    "Obtain_requestLogHistory\022\017.helloworld.In"
+    "f\032\023.helloworld.Request\"\0000\001\022;\n\020Request_re"
+    "sponse\022\024.helloworld.Response\032\017.helloworl"
+    "d.Inf\"\000\022;\n\013MakePayment\022\027.helloworld.Bill"
+    "Payment\032\017.helloworld.Inf\"\000(\001\022@\n\020IgnoreRe"
+    "questLog\022\031.helloworld.IgnoreMessage\032\017.he"
+    "lloworld.Inf\"\000\022;\n\021Create_requestLog\022\023.he"
+    "lloworld.Request\032\017.helloworld.Inf\"\000\022B\n\020S"
+    "end_DeviceToken\022\033.helloworld.Repeated_st"
+    "ring\032\017.helloworld.Inf\"\000\0228\n\016Obtain_settin"
+    "g\022\017.helloworld.Inf\032\023.helloworld.Setting\""
+    "\000\0227\n\rReset_setting\022\023.helloworld.Setting\032"
+    "\017.helloworld.Inf\"\000B\022\n\020io.grpc.examplesb\006"
+    "proto3", 2806);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "iShare.proto", &protobuf_RegisterTypes);
   Login_m::default_instance_ = new Login_m();
@@ -8201,6 +8203,7 @@ const int Setting::kNewBillFieldNumber;
 const int Setting::kEditedDeleteBillFieldNumber;
 const int Setting::kCommentBillFieldNumber;
 const int Setting::kPaidNoticeFieldNumber;
+const int Setting::kUsernameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Setting::Setting()
@@ -8223,12 +8226,14 @@ Setting::Setting(const Setting& from)
 
 void Setting::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   friendinvite_ = 0;
   newbill_ = 0;
   editeddeletebill_ = 0;
   commentbill_ = 0;
   paidnotice_ = 0;
+  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Setting::~Setting() {
@@ -8237,6 +8242,7 @@ Setting::~Setting() {
 }
 
 void Setting::SharedDtor() {
+  username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -8275,7 +8281,9 @@ void Setting::Clear() {
            ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
 } while (0)
 
-  ZR_(friendinvite_, paidnotice_);
+  ZR_(friendinvite_, commentbill_);
+  paidnotice_ = 0;
+  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 
 #undef ZR_HELPER_
 #undef ZR_
@@ -8362,6 +8370,23 @@ bool Setting::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(50)) goto parse_username;
+        break;
+      }
+
+      // optional string username = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_username:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_username()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->username().data(), this->username().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Setting.username"));
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -8415,6 +8440,16 @@ void Setting::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->paidnotice(), output);
   }
 
+  // optional string username = 6;
+  if (this->username().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->username().data(), this->username().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Setting.username");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->username(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:helloworld.Setting)
 }
 
@@ -8444,6 +8479,17 @@ void Setting::SerializeWithCachedSizes(
   // optional int32 paidNotice = 5;
   if (this->paidnotice() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->paidnotice(), target);
+  }
+
+  // optional string username = 6;
+  if (this->username().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->username().data(), this->username().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Setting.username");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        6, this->username(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:helloworld.Setting)
@@ -8488,6 +8534,13 @@ int Setting::ByteSize() const {
         this->paidnotice());
   }
 
+  // optional string username = 6;
+  if (this->username().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->username());
+  }
+
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = total_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
@@ -8523,6 +8576,10 @@ void Setting::MergeFrom(const Setting& from) {
   if (from.paidnotice() != 0) {
     set_paidnotice(from.paidnotice());
   }
+  if (from.username().size() > 0) {
+
+    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+  }
 }
 
 void Setting::CopyFrom(const ::google::protobuf::Message& from) {
@@ -8552,6 +8609,7 @@ void Setting::InternalSwap(Setting* other) {
   std::swap(editeddeletebill_, other->editeddeletebill_);
   std::swap(commentbill_, other->commentbill_);
   std::swap(paidnotice_, other->paidnotice_);
+  username_.Swap(&other->username_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -8635,6 +8693,49 @@ void Setting::clear_paidnotice() {
   
   paidnotice_ = value;
   // @@protoc_insertion_point(field_set:helloworld.Setting.paidNotice)
+}
+
+// optional string username = 6;
+void Setting::clear_username() {
+  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Setting::username() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.username)
+  return username_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Setting::set_username(const ::std::string& value) {
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.Setting.username)
+}
+ void Setting::set_username(const char* value) {
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.Setting.username)
+}
+ void Setting::set_username(const char* value, size_t size) {
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Setting.username)
+}
+ ::std::string* Setting::mutable_username() {
+  
+  // @@protoc_insertion_point(field_mutable:helloworld.Setting.username)
+  return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Setting::release_username() {
+  
+  return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Setting::set_allocated_username(::std::string* username) {
+  if (username != NULL) {
+    
+  } else {
+    
+  }
+  username_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), username);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.Setting.username)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

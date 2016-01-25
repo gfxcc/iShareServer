@@ -249,4 +249,5 @@ int32 newBill = 2;
 int32 editedDeleteBill = 3;
 int32 commentBill = 4;
 int32 paidNotice = 5;
+string username = 6;
 }

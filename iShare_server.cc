@@ -1146,7 +1146,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
         MYSQL_ROW row;
-        string sql_command = "SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE uername = '" + request->information() + "'";
+        string sql_command = "SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = '" + request->information() + "'";
 
         printf("%s\n", sql_command.data());
 
@@ -1163,6 +1163,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         reply->set_newbill(atoi(row[1]));
         reply->set_editeddeletebill(atoi(row[2]));
         reply->set_commentbill(atoi(row[3]));
+        reply->set_paidnotice(atoi(row[4]));
 
         mysql_free_result(res);
         release_sock_to_sql_pool(sock_node);
@@ -1171,6 +1172,26 @@ class GreeterServiceImpl final : public Greeter::Service {
     }
 
     Status Reset_setting (ServerContext* content, const Setting* request, Inf* reply) override {
+        tabPrint("Reset_setting IN");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
+
+        string v1 = to_string(request->friendinvite());
+        string v2 = to_string(request->newbill());
+        string v3 = to_string(request->editeddeletebill());
+        string v4 = to_string(request->commentbill());
+        string v5 = to_string(request->paidnotice());
+        string sql_command = "UPDATE User SET N_friendInvite = " + v1 + ", N_newBill = " + v2 + ", N_editedDeleteBill = " + v3 + ", N_commentBill = " + v4 + ", N_paidNotice = " + v5 + "WHERE username = '" + request->username() + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            printf("ERROR Reset_setting fail\n");
+            printf("%s\n", sql_command.data());
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+
+        release_sock_to_sql_pool(sock_node);
+        tabPrint("Reset_setting OUT");
         return Status::OK;
     }
 };
