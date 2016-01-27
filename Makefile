@@ -378,6 +378,30 @@ iShare_server.cc.s:
 	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_server.cc.s
 .PHONY : iShare_server.cc.s
 
+tools.o: tools.cc.o
+.PHONY : tools.o
+
+# target to build an object file
+tools.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.o
+.PHONY : tools.cc.o
+
+tools.i: tools.cc.i
+.PHONY : tools.i
+
+# target to preprocess a source file
+tools.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.i
+.PHONY : tools.cc.i
+
+tools.s: tools.cc.s
+.PHONY : tools.s
+
+# target to generate assembly for a file
+tools.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.s
+.PHONY : tools.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -420,6 +444,9 @@ help:
 	@echo "... iShare_server.o"
 	@echo "... iShare_server.i"
 	@echo "... iShare_server.s"
+	@echo "... tools.o"
+	@echo "... tools.i"
+	@echo "... tools.s"
 .PHONY : help
 
 

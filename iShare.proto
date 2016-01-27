@@ -140,6 +140,16 @@ rpc Obtain_setting (Inf) returns (Setting) {}
 //
 //
 rpc Reset_setting (Setting) returns (Inf) {}
+
+//
+//
+//
+rpc Reset_userInfo (UserInfo) returns(Inf) {}
+
+//
+//
+//
+rpc Obtain_userInfo (Inf) returns(UserInfo) {}
 }
 
 // The request message contain username and password
@@ -251,3 +261,11 @@ int32 commentBill = 4;
 int32 paidNotice = 5;
 string username = 6;
 }
+
+message UserInfo {
+string username = 1;
+string password =2;
+string email = 3;
+int32 currency = 4;
+}
+

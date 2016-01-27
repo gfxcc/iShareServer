@@ -1,2 +1,1580 @@
 0Server listening on : 0.0.0.0:50051
 0Server listening on : 0.0.0.0:50051
+0Server listening on : 0.0.0.0:50051
+--------------------Start SYN---------------------
+---------------------SYN OUT----------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+-----------------Create_share IN------------------
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '25' , 'Lunch' , 'xtding' , '2016-01-25 12:50' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+-----------------Create_share OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+------------------Receive_Img IN------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+---------------Send_DeviceToken OUT---------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+-----------------Create_share IN------------------
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '30' , 'Home' , 'xtding' , '2016-01-25 12:55' , '洗衣卡充值' , '' , 'Yuchi' , '' , '' , '' , '' , '' , '' , '' , '' , '', 'ihome.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+-----------------Create_share OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Create_share IN------------------
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '10' , 'Home' , 'xtding' , '2016-01-25 12:56' , 'comment...' , '' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '', 'ihome.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+-----------------Create_share OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Create_share IN------------------
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '30' , 'Home' , 'xtding' , '2016-01-25 12:56' , 'comment...' , '' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '' , '', 'ihome.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+-----------------Create_share OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+---------------------SYN OUT----------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+---------------0Server listening on : 0.0.0.0:50051
+0Server listening on : 0.0.0.0:50051
+--------------------Start SYN---------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+Obtain user_inf fail
+SELECT * FROM Friends WHERE username_1 = 'Yuchi' OR username_2 = 'Yuchi'
+-------------------User_inf IN--------------------
+Obtain user_inf fail
+SELECT * FROM Friends WHERE username_1 = 'Yuchi' OR username_2 = 'Yuchi'
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc
+error MySQL server has gone away
+---------------Send_DeviceToken IN----------------
+DeviceToken:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
+ERROR Send_DeviceToken fail
+UPDATE User SET deviceToken = '340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e' WHERE username = 'Yuchi'
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+error MySQL server has gone away
+SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='Yuchi' fail
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+----------------Obtain_setting IN-----------------
+SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
+----------------Obtain_setting OUT----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-----------------Create_share IN------------------
+INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '30' , 'Lunch' , 'gfxcc' , '2016-01-27 12:18' , 'comment...' , '' , 'gfxcc' , 'xtding' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
+UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+SELECT deviceToken FROM User WHERE username = 'gfxcc' OR username = 'xtding' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
+8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+-----------------Create_share OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------Send_DeviceToken IN----------------
+DeviceToken:8782f9a0ac56ddf2026089beee6702951d0933ba367a8bf09f71309422605577
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------Login IN---------------------
+node
+--------------------Login OUT---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'T1' OR member_1 = 'T1' OR member_2 = 'T1' OR member_3 = 'T1' OR member_4 = 'T1' OR member_5 = 'T1' OR member_6 = 'T1' OR member_7 = 'T1' OR member_8 = 'T1' OR member_9 = 'T1' OR paidBy = 'T1' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+------------------Receive_Img IN------------------
+cannot open image./icon/T1.png
+cannot open image./icon/T2.png
+-----------------Receive_Img OUT------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'T1' OR member_1 = 'T1' OR member_2 = 'T1' OR member_3 = 'T1' OR member_4 = 'T1' OR member_5 = 'T1' OR member_6 = 'T1' OR member_7 = 'T1' OR member_8 = 'T1' OR member_9 = 'T1' OR paidBy = 'T1' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-----------------Delete_friend IN-----------------
+----------------Delete_friend OUT-----------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-------------------User_inf OUT-------------------
+---------------------Login IN---------------------
+node
+--------------------Login OUT---------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'T1' OR member_1 = 'T1' OR member_2 = 'T1' OR member_3 = 'T1' OR member_4 = 'T1' OR member_5 = 'T1' OR member_6 = 'T1' OR member_7 = 'T1' OR member_8 = 'T1' OR member_9 = 'T1' OR paidBy = 'T1' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'T1' OR member_1 = 'T1' OR member_2 = 'T1' OR member_3 = 'T1' OR member_4 = 'T1' OR member_5 = 'T1' OR member_6 = 'T1' OR member_7 = 'T1' OR member_8 = 'T1' OR member_9 = 'T1' OR paidBy = 'T1' order by bill_id desc
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+------------------Receive_Img IN------------------
+cannot open image./icon/.png
+-----------------Receive_Img OUT------------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+---------------Send_DeviceToken OUT---------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------SYN OUT----------------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------Send_DeviceToken IN----------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------Send_DeviceToken IN----------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+-----------------Receive_Img OUT------------------
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+---------------------Login IN---------------------
+node
+--------------------Login OUT---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
+-----------------Obtain_bills OUT-----------------
+------------------Receive_Img IN------------------
+-----------------Obtain_bills IN------------------
+SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
+error row == NULL
+fail SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
+-----------------Obtain_bills OUT-----------------
+-----------------Reset_Status IN------------------
+-----------------Reset_Status OUT-----------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+---------------Send_DeviceToken IN----------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+---------------Send_DeviceToken IN----------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------------SYN OUT----------------------
+-------------------User_inf IN--------------------
+--------------------Start SYN---------------------
+-------------------User_inf IN--------------------
+-------------------User_inf OUT-------------------
+-------------------User_inf OUT-------------------
+---------------Send_DeviceToken IN----------------
+DeviceToken:0ad7837828f9210f70901bc2b93b92a476016c2222d0f7d66198a12b1f163c26
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Receive_Img OUT------------------
+---------------Send_DeviceToken OUT---------------
+------------------Receive_Img IN------------------
+cannot open image./icon/ZhiqingShen.png
+-----------------Re0Server listening on : 0.0.0.0:50051

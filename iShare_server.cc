@@ -49,6 +49,7 @@
 #include <sstream>
 #include "iShare.grpc.pb.h"
 #include "mysql_pool.h"
+#include "iShare_server.h"
 
 // include for MMGAPN
 #include "MMGAPN/global.hpp"
@@ -84,6 +85,7 @@ using helloworld::Response;
 using helloworld::IgnoreMessage;
 using helloworld::BillPayment;
 using helloworld::Setting;
+using helloworld::UserInfo;
 using namespace std;
 
 #define LINE_MAX_LENGTH 50
@@ -1157,13 +1159,13 @@ class GreeterServiceImpl final : public Greeter::Service {
             return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
-        row = mysql_fetch_row(res);
-
-        reply->set_friendinvite(atoi(row[0]));
-        reply->set_newbill(atoi(row[1]));
-        reply->set_editeddeletebill(atoi(row[2]));
-        reply->set_commentbill(atoi(row[3]));
-        reply->set_paidnotice(atoi(row[4]));
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            reply->set_friendinvite(atoi(row[0]));
+            reply->set_newbill(atoi(row[1]));
+            reply->set_editeddeletebill(atoi(row[2]));
+            reply->set_commentbill(atoi(row[3]));
+            reply->set_paidnotice(atoi(row[4]));
+        }
 
         mysql_free_result(res);
         release_sock_to_sql_pool(sock_node);
@@ -1181,17 +1183,70 @@ class GreeterServiceImpl final : public Greeter::Service {
         string v3 = to_string(request->editeddeletebill());
         string v4 = to_string(request->commentbill());
         string v5 = to_string(request->paidnotice());
-        string sql_command = "UPDATE User SET N_friendInvite = " + v1 + ", N_newBill = " + v2 + ", N_editedDeleteBill = " + v3 + ", N_commentBill = " + v4 + ", N_paidNotice = " + v5 + "WHERE username = '" + request->username() + "'";
+        string sql_command = "UPDATE User SET N_friendInvite = " + v1 + ", N_newBill = " + v2 + ", N_editedDeleteBill = " + v3 + ", N_commentBill = " + v4 + ", N_paidNotice = " + v5 + " WHERE username = '" + request->username() + "'";
+        printf("%s\n", sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
-            printf("ERROR Reset_setting fail\n");
-            printf("%s\n", sql_command.data());
+            //printf("error %s\n", mysql_error(conn));
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+
+
+        release_sock_to_sql_pool(sock_node);
+        tabPrint("Reset_setting OUT");
+        return Status::OK;
+    }
+
+    Status Reset_userInfo (ServerContext* content, const UserInfo* request, Inf* reply) override {
+        log(INFO, "Reset_userInfo IN");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
+
+        string sql_command = "UPDATE User SET password = '" + request->password() + "', email = '" +
+            request->email() + "', currency = " + to_string(request->currency()) +
+            " FROM User WHERE username = '" +
+            request->username() + "'";
+
+        log(INFO, sql_command.data());
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
             return Status::CANCELLED;
         }
 
         release_sock_to_sql_pool(sock_node);
-        tabPrint("Reset_setting OUT");
+        log(INFO, "Reset_userInfo OUT");
+        return Status::OK;
+    }
+
+    Status Obtain_userInfo (ServerContext* content, const Inf* request, UserInfo* reply) override {
+        log(INFO, "Obtain_userInfo IN");
+        SQL_SOCK_NODE* sock_node = get_sock_from_pool();
+        MYSQL* conn = sock_node->sql_sock->sock;
+        MYSQL_RES *res;
+        MYSQL_ROW row;
+
+        string sql_command = "SELECT password, email, currency FROM User WHERE username = '" +
+            request->information() + "'";
+        log(INFO, sql_command.data());
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        if((row = mysql_fetch_row(res)) != NULL) {
+            reply->set_password(row[0]);
+            reply->set_email(row[1]);
+            reply->set_currency(atoi(row[2]));
+        }
+
+        release_sock_to_sql_pool(sock_node);
+        log(INFO, "Obatin_userInfo OUT");
         return Status::OK;
     }
 };

@@ -245,6 +245,8 @@ iShare.grpc.pb.h
 /home/ubuntu/iShare/iShare.grpc.pb.h
 mysql_pool.h
 /home/ubuntu/iShare/mysql_pool.h
+iShare_server.h
+/home/ubuntu/iShare/iShare_server.h
 MMGAPN/global.hpp
 /home/ubuntu/iShare/MMGAPN/global.hpp
 MMGAPN/MMGAPNSConnection.hpp
@@ -260,7 +262,15 @@ vector
 cstdlib
 -
 
+/home/ubuntu/iShare/iShare_server.h
+
 /home/ubuntu/iShare/mysql_pool.h
+
+/home/ubuntu/iShare/tools.cc
+stdio.h
+-
+iShare_server.h
+/home/ubuntu/iShare/iShare_server.h
 
 /usr/include/mysql/my_alloc.h
 

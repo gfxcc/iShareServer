@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o"
   "CMakeFiles/iShare.dir/iShare.pb.cc.o"
+  "CMakeFiles/iShare.dir/tools.cc.o"
   "CMakeFiles/iShare.dir/iShare_server.cc.o"
   "CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o"
   "CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o"

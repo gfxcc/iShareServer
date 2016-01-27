@@ -19,3 +19,7 @@ E0114 22:58:56.202654976   31116 chttp2_transport.c:532]     server stream 5 sti
 E0115 18:29:00.230021342     525 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
 E0120 20:46:33.198259006   12405 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
 E0120 21:09:36.283890523   12527 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0125 16:36:26.997314771   24388 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0127 00:13:59.791931949   27720 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0127 04:54:11.590289107   28449 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.
+E0127 19:24:40.244557084   29821 call.c:455]                 Invalid entry in accept encoding metadata: ' gzip'. Ignoring.

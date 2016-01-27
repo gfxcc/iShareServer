@@ -40,6 +40,8 @@ static const char* Greeter_method_names[] = {
   "/helloworld.Greeter/Send_DeviceToken",
   "/helloworld.Greeter/Obtain_setting",
   "/helloworld.Greeter/Reset_setting",
+  "/helloworld.Greeter/Reset_userInfo",
+  "/helloworld.Greeter/Obtain_userInfo",
 };
 
 std::unique_ptr< Greeter::Stub> Greeter::NewStub(const std::shared_ptr< ::grpc::Channel>& channel, const ::grpc::StubOptions& options) {
@@ -73,6 +75,8 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   , rpcmethod_Send_DeviceToken_(Greeter_method_names[22], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Obtain_setting_(Greeter_method_names[23], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Reset_setting_(Greeter_method_names[24], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reset_userInfo_(Greeter_method_names[25], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Obtain_userInfo_(Greeter_method_names[26], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status Greeter::Stub::SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::helloworld::HelloReply* response) {
@@ -275,7 +279,23 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Reset_setting_, context, request);
 }
 
-Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 25) {}
+::grpc::Status Greeter::Stub::Reset_userInfo(::grpc::ClientContext* context, const ::helloworld::UserInfo& request, ::helloworld::Inf* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Reset_userInfo_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* Greeter::Stub::AsyncReset_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::UserInfo& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Reset_userInfo_, context, request);
+}
+
+::grpc::Status Greeter::Stub::Obtain_userInfo(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::UserInfo* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Obtain_userInfo_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::helloworld::UserInfo>* Greeter::Stub::AsyncObtain_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::helloworld::UserInfo>(channel_.get(), cq, rpcmethod_Obtain_userInfo_, context, request);
+}
+
+Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 27) {}
 
 Greeter::Service::Service() {
 }
@@ -557,6 +577,28 @@ void Greeter::AsyncService::RequestReset_setting(::grpc::ServerContext* context,
   AsynchronousService::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
 }
 
+::grpc::Status Greeter::Service::Reset_userInfo(::grpc::ServerContext* context, const ::helloworld::UserInfo* request, ::helloworld::Inf* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+void Greeter::AsyncService::RequestReset_userInfo(::grpc::ServerContext* context, ::helloworld::UserInfo* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+  AsynchronousService::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
+}
+
+::grpc::Status Greeter::Service::Obtain_userInfo(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::UserInfo* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+void Greeter::AsyncService::RequestObtain_userInfo(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::UserInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+  AsynchronousService::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
+}
+
 ::grpc::RpcService* Greeter::Service::service() {
   if (service_) {
     return service_.get();
@@ -687,6 +729,16 @@ void Greeter::AsyncService::RequestReset_setting(::grpc::ServerContext* context,
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Setting, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Reset_setting), this)));
+  service_->AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[25],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::UserInfo, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Reset_userInfo), this)));
+  service_->AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[26],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::UserInfo>(
+          std::mem_fn(&Greeter::Service::Obtain_userInfo), this)));
   return service_.get();
 }
 

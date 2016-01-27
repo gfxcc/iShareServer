@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/iShare/iShare.grpc.pb.cc" "/home/ubuntu/iShare/CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o"
   "/home/ubuntu/iShare/iShare.pb.cc" "/home/ubuntu/iShare/CMakeFiles/iShare.dir/iShare.pb.cc.o"
   "/home/ubuntu/iShare/iShare_server.cc" "/home/ubuntu/iShare/CMakeFiles/iShare.dir/iShare_server.cc.o"
+  "/home/ubuntu/iShare/tools.cc" "/home/ubuntu/iShare/CMakeFiles/iShare.dir/tools.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -56,6 +56,7 @@ CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/global.hpp
 CMakeFiles/iShare.dir/iShare_server.cc.o: iShare.grpc.pb.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: iShare.pb.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: iShare_server.cc
+CMakeFiles/iShare.dir/iShare_server.cc.o: iShare_server.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: mysql_pool.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/my_alloc.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/my_list.h
@@ -64,4 +65,7 @@ CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/mysql_com.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/mysql_time.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/mysql_version.h
 CMakeFiles/iShare.dir/iShare_server.cc.o: /usr/include/mysql/typelib.h
+
+CMakeFiles/iShare.dir/tools.cc.o: iShare_server.h
+CMakeFiles/iShare.dir/tools.cc.o: tools.cc
 
