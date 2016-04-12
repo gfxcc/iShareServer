@@ -1,0 +1,18 @@
+/*
+ * README
+ * This file created by YongCao at 25/Feb/2016
+ * This file contian update log of iShare
+ *
+ *
+*/
+
+
+# Server Update Log
+
+25/FEB/2016
+1. In SYN remove [WARNING] when request->information() == ""
+2. In Search_username match 'm' to 'M' and 'm'
+
+
+
+Bill data transfer at 423

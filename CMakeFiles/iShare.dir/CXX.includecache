@@ -6,77 +6,77 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.cpp
 MMGAPNSConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.hpp
 global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 MMGPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.hpp
 MMGDevice.hpp
-/home/ubuntu/iShare/MMGAPN/MMGDevice.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.hpp
 MMGSSLConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGSSLConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGDevice.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.cpp
 MMGDevice.hpp
-/home/ubuntu/iShare/MMGAPN/MMGDevice.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
 cstring
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGDevice.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
 string
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.cpp
 MMGFeedbackConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.hpp
 global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 MMGDevice.hpp
-/home/ubuntu/iShare/MMGAPN/MMGDevice.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
 MMGTools.hpp
-/home/ubuntu/iShare/MMGAPN/MMGTools.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.hpp
 MMGSSLConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGSSLConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.hpp
 vector
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGIOSPayload.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.cpp
 MMGIOSPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGIOSPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.hpp
 MMGTools.hpp
-/home/ubuntu/iShare/MMGAPN/MMGTools.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.hpp
 global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGIOSPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.hpp
 MMGPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.hpp
 map
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGPayload.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.cpp
 MMGPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.hpp
 string
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGSSLConnection.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.cpp
 MMGSSLConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGSSLConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.hpp
 global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 openssl/err.h
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGSSLConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.hpp
 string
 -
 netdb.h
@@ -96,21 +96,21 @@ openssl/crypto.h
 openssl/ssl.h
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGSafariPayload.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.cpp
 MMGSafariPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGSafariPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.hpp
 global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 
-/home/ubuntu/iShare/MMGAPN/MMGSafariPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.hpp
 MMGPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGPayload.hpp
 vector
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGTools.cpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.cpp
 MMGTools.hpp
-/home/ubuntu/iShare/MMGAPN/MMGTools.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.hpp
 cstdio
 -
 cstring
@@ -118,19 +118,19 @@ cstring
 sstream
 -
 
-/home/ubuntu/iShare/MMGAPN/MMGTools.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.hpp
 string
 -
 vector
 -
 
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 
-/home/ubuntu/iShare/iShare.grpc.pb.cc
+/home/ubuntu/iShare_new/iShare.grpc.pb.cc
 iShare.pb.h
-/home/ubuntu/iShare/iShare.pb.h
+/home/ubuntu/iShare_new/iShare.pb.h
 iShare.grpc.pb.h
-/home/ubuntu/iShare/iShare.grpc.pb.h
+/home/ubuntu/iShare_new/iShare.grpc.pb.h
 grpc++/channel.h
 -
 grpc++/impl/client_unary_call.h
@@ -146,9 +146,9 @@ grpc++/support/async_stream.h
 grpc++/support/sync_stream.h
 -
 
-/home/ubuntu/iShare/iShare.grpc.pb.h
+/home/ubuntu/iShare_new/iShare.grpc.pb.h
 iShare.pb.h
-/home/ubuntu/iShare/iShare.pb.h
+/home/ubuntu/iShare_new/iShare.pb.h
 grpc++/support/async_stream.h
 -
 grpc++/impl/rpc_method.h
@@ -166,9 +166,9 @@ grpc++/support/stub_options.h
 grpc++/support/sync_stream.h
 -
 
-/home/ubuntu/iShare/iShare.pb.cc
+/home/ubuntu/iShare_new/iShare.pb.cc
 iShare.pb.h
-/home/ubuntu/iShare/iShare.pb.h
+/home/ubuntu/iShare_new/iShare.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -188,7 +188,7 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 
-/home/ubuntu/iShare/iShare.pb.h
+/home/ubuntu/iShare_new/iShare.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -210,7 +210,7 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-/home/ubuntu/iShare/iShare_server.cc
+/home/ubuntu/iShare_new/iShare_server.cc
 iostream
 -
 memory
@@ -219,7 +219,7 @@ string
 -
 list
 -
-mysql.h
+mysql/mysql.h
 -
 grpc/grpc.h
 -
@@ -240,75 +240,39 @@ unistd.h
 stdio.h
 -
 iShare.grpc.pb.h
-/home/ubuntu/iShare/iShare.grpc.pb.h
+/home/ubuntu/iShare_new/iShare.grpc.pb.h
 mysql_pool.h
-/home/ubuntu/iShare/mysql_pool.h
+/home/ubuntu/iShare_new/mysql_pool.h
 iShare_server.h
-/home/ubuntu/iShare/iShare_server.h
+/home/ubuntu/iShare_new/iShare_server.h
 MMGAPN/global.hpp
-/home/ubuntu/iShare/MMGAPN/global.hpp
+/home/ubuntu/iShare_new/MMGAPN/global.hpp
 MMGAPN/MMGAPNSConnection.hpp
-/home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.hpp
 MMGAPN/MMGDevice.hpp
-/home/ubuntu/iShare/MMGAPN/MMGDevice.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
 MMGAPN/MMGIOSPayload.hpp
-/home/ubuntu/iShare/MMGAPN/MMGIOSPayload.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.hpp
 MMGAPN/MMGTools.hpp
-/home/ubuntu/iShare/MMGAPN/MMGTools.hpp
+/home/ubuntu/iShare_new/MMGAPN/MMGTools.hpp
 vector
 -
 cstdlib
 -
 
-/home/ubuntu/iShare/iShare_server.h
+/home/ubuntu/iShare_new/iShare_server.h
 string
 -
 sstream
 -
 
-/home/ubuntu/iShare/mysql_pool.h
+/home/ubuntu/iShare_new/mysql_pool.h
 
-/home/ubuntu/iShare/tools.cc
+/home/ubuntu/iShare_new/tools.cc
 stdio.h
 -
 time.h
 -
 iShare_server.h
-/home/ubuntu/iShare/iShare_server.h
-
-/usr/include/mysql/my_alloc.h
-
-/usr/include/mysql/my_list.h
-
-/usr/include/mysql/mysql.h
-standards.h
--
-sys/types.h
--
-winsock2.h
--
-mysql_version.h
-/usr/include/mysql/mysql_version.h
-mysql_com.h
-/usr/include/mysql/mysql_com.h
-mysql_time.h
-/usr/include/mysql/mysql_time.h
-my_list.h
-/usr/include/mysql/my_list.h
-typelib.h
-/usr/include/mysql/typelib.h
-my_alloc.h
-/usr/include/mysql/my_alloc.h
-
-/usr/include/mysql/mysql_com.h
-
-/usr/include/mysql/mysql_time.h
-
-/usr/include/mysql/mysql_version.h
-custom_conf.h
--
-
-/usr/include/mysql/typelib.h
-my_alloc.h
-/usr/include/mysql/my_alloc.h
+/home/ubuntu/iShare_new/iShare_server.h
 

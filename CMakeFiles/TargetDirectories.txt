@@ -1,1 +1,1 @@
-/home/ubuntu/iShare/CMakeFiles/iShare.dir
+/home/ubuntu/iShare_new/CMakeFiles/iShare.dir
