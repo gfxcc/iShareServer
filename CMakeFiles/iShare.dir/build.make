@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/iShare
+CMAKE_SOURCE_DIR = /home/ubuntu/iShare_new
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/iShare
+CMAKE_BINARY_DIR = /home/ubuntu/iShare_new
 
 # Include any dependencies generated for this target.
 include CMakeFiles/iShare.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/iShare.dir/flags.make
 
 CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o: iShare.grpc.pb.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o -c /home/ubuntu/iShare/iShare.grpc.pb.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o -c /home/ubuntu/iShare_new/iShare.grpc.pb.cc
 
 CMakeFiles/iShare.dir/iShare.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/iShare.grpc.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/iShare.grpc.pb.cc > CMakeFiles/iShare.dir/iShare.grpc.pb.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/iShare.grpc.pb.cc > CMakeFiles/iShare.dir/iShare.grpc.pb.cc.i
 
 CMakeFiles/iShare.dir/iShare.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/iShare.grpc.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/iShare.grpc.pb.cc -o CMakeFiles/iShare.dir/iShare.grpc.pb.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/iShare.grpc.pb.cc -o CMakeFiles/iShare.dir/iShare.grpc.pb.cc.s
 
 CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o.requires:
 .PHONY : CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o.provides.build: CMakeFiles/iShare.dir/
 
 CMakeFiles/iShare.dir/iShare.pb.cc.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/iShare.pb.cc.o: iShare.pb.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/iShare.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare.pb.cc.o -c /home/ubuntu/iShare/iShare.pb.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare.pb.cc.o -c /home/ubuntu/iShare_new/iShare.pb.cc
 
 CMakeFiles/iShare.dir/iShare.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/iShare.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/iShare.pb.cc > CMakeFiles/iShare.dir/iShare.pb.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/iShare.pb.cc > CMakeFiles/iShare.dir/iShare.pb.cc.i
 
 CMakeFiles/iShare.dir/iShare.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/iShare.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/iShare.pb.cc -o CMakeFiles/iShare.dir/iShare.pb.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/iShare.pb.cc -o CMakeFiles/iShare.dir/iShare.pb.cc.s
 
 CMakeFiles/iShare.dir/iShare.pb.cc.o.requires:
 .PHONY : CMakeFiles/iShare.dir/iShare.pb.cc.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/iShare.dir/iShare.pb.cc.o.provides.build: CMakeFiles/iShare.dir/iShar
 
 CMakeFiles/iShare.dir/tools.cc.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/tools.cc.o: tools.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/tools.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/tools.cc.o -c /home/ubuntu/iShare/tools.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/tools.cc.o -c /home/ubuntu/iShare_new/tools.cc
 
 CMakeFiles/iShare.dir/tools.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/tools.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/tools.cc > CMakeFiles/iShare.dir/tools.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/tools.cc > CMakeFiles/iShare.dir/tools.cc.i
 
 CMakeFiles/iShare.dir/tools.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/tools.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/tools.cc -o CMakeFiles/iShare.dir/tools.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/tools.cc -o CMakeFiles/iShare.dir/tools.cc.s
 
 CMakeFiles/iShare.dir/tools.cc.o.requires:
 .PHONY : CMakeFiles/iShare.dir/tools.cc.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/iShare.dir/tools.cc.o.provides.build: CMakeFiles/iShare.dir/tools.cc.
 
 CMakeFiles/iShare.dir/iShare_server.cc.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/iShare_server.cc.o: iShare_server.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/iShare_server.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare_server.cc.o -c /home/ubuntu/iShare/iShare_server.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/iShare_server.cc.o -c /home/ubuntu/iShare_new/iShare_server.cc
 
 CMakeFiles/iShare.dir/iShare_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/iShare_server.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/iShare_server.cc > CMakeFiles/iShare.dir/iShare_server.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/iShare_server.cc > CMakeFiles/iShare.dir/iShare_server.cc.i
 
 CMakeFiles/iShare.dir/iShare_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/iShare_server.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/iShare_server.cc -o CMakeFiles/iShare.dir/iShare_server.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/iShare_server.cc -o CMakeFiles/iShare.dir/iShare_server.cc.s
 
 CMakeFiles/iShare.dir/iShare_server.cc.o.requires:
 .PHONY : CMakeFiles/iShare.dir/iShare_server.cc.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/iShare.dir/iShare_server.cc.o.provides.build: CMakeFiles/iShare.dir/i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o: MMGAPN/MMGSafariPayload.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGSafariPayload.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGSafariPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGSafariPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGSafariPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o.provides.build: CMakeFiles/i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o: MMGAPN/MMGAPNSConnection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGAPNSConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o.requires
@@ -189,17 +189,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGAPNSConnection.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o: MMGAPN/MMGSSLConnection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGSSLConnection.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGSSLConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGSSLConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGSSLConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o.requires
@@ -212,17 +212,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGSSLConnection.cpp.o.provides.build: CMakeFiles/i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o: MMGAPN/MMGFeedbackConnection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGFeedbackConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGFeedbackConnection.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o.requires
@@ -235,17 +235,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGFeedbackConnection.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o: MMGAPN/MMGTools.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGTools.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGTools.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGTools.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGTools.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGTools.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGTools.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o.requires
@@ -258,17 +258,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o.provides.build: CMakeFiles/iShare.di
 
 CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o: MMGAPN/MMGDevice.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGDevice.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGDevice.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGDevice.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGDevice.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGDevice.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGDevice.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o.requires
@@ -281,17 +281,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGDevice.cpp.o.provides.build: CMakeFiles/iShare.d
 
 CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o: MMGAPN/MMGPayload.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGPayload.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGPayload.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o.requires
@@ -304,17 +304,17 @@ CMakeFiles/iShare.dir/MMGAPN/MMGPayload.cpp.o.provides.build: CMakeFiles/iShare.
 
 CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o: CMakeFiles/iShare.dir/flags.make
 CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o: MMGAPN/MMGIOSPayload.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/iShare_new/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o -c /home/ubuntu/iShare/MMGAPN/MMGIOSPayload.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o -c /home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.cpp
 
 CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare/MMGAPN/MMGIOSPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.cpp > CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.i
 
 CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare/MMGAPN/MMGIOSPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/iShare_new/MMGAPN/MMGIOSPayload.cpp -o CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.s
 
 CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o.requires:
 .PHONY : CMakeFiles/iShare.dir/MMGAPN/MMGIOSPayload.cpp.o.requires
@@ -384,6 +384,6 @@ CMakeFiles/iShare.dir/clean:
 .PHONY : CMakeFiles/iShare.dir/clean
 
 CMakeFiles/iShare.dir/depend:
-	cd /home/ubuntu/iShare && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/iShare /home/ubuntu/iShare /home/ubuntu/iShare /home/ubuntu/iShare /home/ubuntu/iShare/CMakeFiles/iShare.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/iShare_new && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/iShare_new /home/ubuntu/iShare_new /home/ubuntu/iShare_new /home/ubuntu/iShare_new /home/ubuntu/iShare_new/CMakeFiles/iShare.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/iShare.dir/depend
 

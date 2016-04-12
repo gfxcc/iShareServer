@@ -2,7 +2,6 @@
 # Author: <gfxcc_stevens@outlook.com>
 # created: 2014-08-27
 
-
 PROJECT(iShare)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 

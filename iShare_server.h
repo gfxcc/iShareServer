@@ -6,7 +6,7 @@
 #include <string>
 #include <sstream>
 
-#define CONN_NUM 10
+#define CONN_NUM 5
 #define LINE_MAX_LENGTH 50
 
 enum LOG_LEVEL {

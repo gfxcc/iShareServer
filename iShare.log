@@ -1,916 +1,586 @@
-0Server Start
-Server listening on : 0.0.0.0:50051
-2016-2-17 13:21:53 [INFO]:Start SYN
-2016-2-17 13:21:55 [INFO]:IN Obtain_bills
-2016-2-17 13:21:55 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:21:55 [INFO]:OUT Obtain_bills
-2016-2-17 13:21:57 [INFO]:IN Reset_Status
-2016-2-17 13:21:57 [INFO]:OUT Reset_Status
-2016-2-17 13:22:01 [INFO]:SYN OUT
-2016-2-17 13:22:03 [INFO]:Start SYN
-2016-2-17 13:22:03 [INFO]:IN User_inf
-2016-2-17 13:22:03 [INFO]:IN User_inf
-2016-2-17 13:22:03 [INFO]:OUT User_inf
-2016-2-17 13:22:03 [INFO]:OUT User_inf
-2016-2-17 13:22:04 [INFO]:IN Send_DeviceToken
-2016-2-17 13:22:04 [INFO]:e30c145892ad850554f4a7421d1d9ca97c5685f4e88d229b55c382875903d59f
-2016-2-17 13:22:04 [INFO]:IN Receive_Img
-2016-2-17 13:22:04 [INFO]:OUT Receive_Img
-2016-2-17 13:22:04 [INFO]:OUT Send_DeviceToken
-2016-2-17 13:22:04 [INFO]:IN Receive_Img
-2016-2-17 13:22:04 [INFO]:OUT Receive_Img
-2016-2-17 13:22:07 [INFO]:IN Obtain_bills
-2016-2-17 13:22:07 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:07 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:09 [INFO]:IN Reset_Status
-2016-2-17 13:22:09 [INFO]:OUT Reset_Status
-2016-2-17 13:22:09 [INFO]:IN Obtain_bills
-2016-2-17 13:22:09 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:09 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:11 [INFO]:IN Reset_Status
-2016-2-17 13:22:11 [INFO]:OUT Reset_Status
-2016-2-17 13:22:12 [INFO]:IN Obtain_bills
-2016-2-17 13:22:12 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:12 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:14 [INFO]:IN Reset_Status
-2016-2-17 13:22:14 [INFO]:OUT Reset_Status
-2016-2-17 13:22:14 [INFO]:IN Obtain_bills
-2016-2-17 13:22:14 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:14 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:16 [INFO]:IN Reset_Status
-2016-2-17 13:22:16 [INFO]:OUT Reset_Status
-2016-2-17 13:22:19 [INFO]:IN Obtain_bills
-2016-2-17 13:22:19 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:19 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:21 [INFO]:IN Reset_Status
-2016-2-17 13:22:21 [INFO]:OUT Reset_Status
-2016-2-17 13:22:22 [INFO]:IN Obtain_bills
-2016-2-17 13:22:22 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 13:22:22 [INFO]:OUT Obtain_bills
-2016-2-17 13:22:24 [INFO]:IN Reset_Status
-2016-2-17 13:22:24 [INFO]:OUT Reset_Status
-2016-2-17 13:28:04 [INFO]:SYN OUT
-2016-2-17 13:38:42 [INFO]:Start SYN
-2016-2-17 13:39:03 [INFO]:IN Obtain_request
-2016-2-17 13:39:03 [INFO]:IN Obtain_requestLogHistory
-2016-2-17 13:39:03 [INFO]:SELECT * FROM RequestLog WHERE receiver = 'gfxcc' order by requestLog_id desc
-2016-2-17 13:39:03 [INFO]:OUT Obtain_requestLogHistory
-2016-2-17 13:39:03 [INFO]:OUT Obtain_request
-2016-2-17 13:39:14 [INFO]:SYN OUT
-2016-2-17 17:02:44 [INFO]:Start SYN
-2016-2-17 17:02:52 [INFO]:SYN OUT
-2016-2-17 17:03:07 [INFO]:Start SYN
-2016-2-17 17:03:07 [INFO]:IN User_inf
-2016-2-17 17:03:07 [INFO]:IN User_inf
-2016-2-17 17:03:07 [INFO]:OUT User_inf
-2016-2-17 17:03:07 [INFO]:OUT User_inf
-2016-2-17 17:03:09 [INFO]:IN Send_DeviceToken
-2016-2-17 17:03:09 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-17 17:03:09 [INFO]:OUT Send_DeviceToken
-2016-2-17 17:03:09 [INFO]:IN Receive_Img
-2016-2-17 17:03:09 [WARNING]:cannot open image
-2016-2-17 17:03:09 [WARNING]:./icon/.png
-2016-2-17 17:03:09 [INFO]:OUT Receive_Img
-2016-2-17 17:03:09 [INFO]:IN Receive_Img
-2016-2-17 17:03:09 [INFO]:OUT Receive_Img
-2016-2-17 17:03:27 [INFO]:IN Login
-2016-2-17 17:03:27 [INFO]:OUT Login
-2016-2-17 17:03:27 [INFO]:IN User_inf
-2016-2-17 17:03:27 [INFO]:OUT User_inf
-2016-2-17 17:03:27 [INFO]:IN Obtain_bills
-2016-2-17 17:03:27 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:27 [INFO]:IN Send_DeviceToken
-2016-2-17 17:03:27 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-17 17:03:27 [INFO]:OUT Send_DeviceToken
-2016-2-17 17:03:27 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:27 [INFO]:IN Receive_Img
-2016-2-17 17:03:28 [INFO]:IN Obtain_bills
-2016-2-17 17:03:28 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-17 17:03:28 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:30 [INFO]:IN Reset_Status
-2016-2-17 17:03:30 [INFO]:OUT Reset_Status
-2016-2-17 17:03:30 [INFO]:IN Obtain_bills
-2016-2-17 17:03:30 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:30 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:30 [INFO]:IN Obtain_bills
-2016-2-17 17:03:30 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:30 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:31 [INFO]:IN Obtain_bills
-2016-2-17 17:03:31 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:31 [INFO]:OUT Receive_Img
-2016-2-17 17:03:31 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:32 [INFO]:IN Obtain_bills
-2016-2-17 17:03:32 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:32 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:33 [INFO]:IN Obtain_bills
-2016-2-17 17:03:33 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 17:03:33 [INFO]:OUT Obtain_bills
-2016-2-17 17:03:45 [INFO]:IN Obtain_request
-2016-2-17 17:03:45 [INFO]:IN Obtain_requestLogHistory
-2016-2-17 17:03:45 [INFO]:SELECT * FROM RequestLog WHERE receiver = 'gfxcc' order by requestLog_id desc
-2016-2-17 17:03:45 [INFO]:OUT Obtain_requestLogHistory
-2016-2-17 17:03:45 [INFO]:OUT Obtain_request
-2016-2-17 17:03:57 [INFO]:IN Obtain_requestLogHistory
-2016-2-17 17:03:57 [INFO]:IN Obtain_request
-2016-2-17 17:03:57 [INFO]:SELECT * FROM RequestLog WHERE receiver = 'gfxcc' order by requestLog_id desc
-2016-2-17 17:03:57 [INFO]:OUT Obtain_requestLogHistory
-2016-2-17 17:03:57 [INFO]:OUT Obtain_request
-2016-2-17 17:04:10 [INFO]:SYN OUT
-2016-2-17 20:32:53 [INFO]:Start SYN
-2016-2-17 20:32:53 [INFO]:IN User_inf
-2016-2-17 20:32:53 [INFO]:IN User_inf
-2016-2-17 20:32:53 [INFO]:OUT User_inf
-2016-2-17 20:32:53 [INFO]:OUT User_inf
-2016-2-17 20:32:54 [INFO]:IN Send_DeviceToken
-2016-2-17 20:32:54 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-17 20:32:54 [INFO]:OUT Send_DeviceToken
-2016-2-17 20:32:54 [INFO]:IN Receive_Img
-2016-2-17 20:32:54 [WARNING]:cannot open image
-2016-2-17 20:32:54 [WARNING]:./icon/ZhiqingShen.png
-2016-2-17 20:32:54 [INFO]:OUT Receive_Img
-2016-2-17 20:32:55 [INFO]:IN Receive_Img
-2016-2-17 20:32:55 [WARNING]:cannot open image
-2016-2-17 20:32:55 [WARNING]:./icon/ZhiqingShen.png
-2016-2-17 20:32:55 [INFO]:OUT Receive_Img
-2016-2-17 20:32:56 [INFO]:IN Obtain_bills
-2016-2-17 20:32:56 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-17 20:32:56 [INFO]:OUT Obtain_bills
-2016-2-17 20:32:57 [INFO]:IN Obtain_bills
-2016-2-17 20:32:57 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-17 20:32:57 [INFO]:OUT Obtain_bills
-2016-2-17 20:33:22 [INFO]:SYN OUT
-2016-2-17 22:04:51 [INFO]:Start SYN
-2016-2-17 22:05:08 [INFO]:IN Create_share
-2016-2-17 22:05:08 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '24' , 'Night Food' , 'gfxcc' , '2016-02-17 10:04' , 'comment...' , '' , 'gfxcc' , 'Hao' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-17 22:05:08 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'Hao' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-17 22:05:08 [INFO]:SELECT deviceToken FROM User WHERE (username = 'gfxcc' OR username = 'Hao' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-17 22:05:08 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-17 22:05:08 [INFO]:be4d5c69b62d40ffd937f04cfa53c7c33141d9a49d05d564112bb4b4a7f9884f
-2016-2-17 22:05:08 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-17 22:05:08 [INFO]:OUT Create_share
-2016-2-17 22:05:08 [INFO]:IN Obtain_bills
-2016-2-17 22:05:08 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-17 22:05:08 [INFO]:OUT Obtain_bills
-2016-2-17 22:05:10 [INFO]:SYN OUT
-2016-2-17 22:52:12 [INFO]:Start SYN
-2016-2-17 22:52:37 [INFO]:SYN OUT
-2016-2-18 12:24:14 [INFO]:Start SYN
-2016-2-18 12:24:14 [INFO]:IN User_inf
-2016-2-18 12:24:14 [ERROR]:Obtain user_inf fail
-2016-2-18 12:24:14 [ERROR]:SELECT * FROM Friends WHERE username_1 = 'xtding' OR username_2 = 'xtding'
-2016-2-18 12:24:14 [INFO]:IN User_inf
-2016-2-18 12:24:14 [ERROR]:Obtain user_inf fail
-2016-2-18 12:24:14 [ERROR]:SELECT * FROM Friends WHERE username_1 = 'xtding' OR username_2 = 'xtding'
-2016-2-18 12:24:15 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:15 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:15 [INFO]:IN Send_DeviceToken
-2016-2-18 12:24:15 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-18 12:24:15 [ERROR]:ERROR Send_DeviceToken fail
-2016-2-18 12:24:15 [ERROR]:UPDATE User SET deviceToken = '9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a' WHERE username = 'xtding'
-2016-2-18 12:24:16 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:16 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:17 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:17 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:18 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:18 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:19 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:19 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:20 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:20 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:21 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='xtding'
-2016-2-18 12:24:21 [ERROR]:MySQL server has gone away
-2016-2-18 12:24:29 [INFO]:IN Obtain_bills
-2016-2-18 12:24:29 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc
-2016-2-18 12:24:29 [INFO]:OUT Obtain_bills
-2016-2-18 12:24:30 [INFO]:IN Reset_Status
-2016-2-18 12:24:30 [INFO]:OUT Reset_Status
-2016-2-18 12:24:55 [INFO]:IN Create_share
-2016-2-18 12:24:55 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '41' , 'Lunch' , 'xtding' , '2016-02-18 12:24' , 'comment...' , '' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-18 12:24:55 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-18 12:24:55 [INFO]:SELECT deviceToken FROM User WHERE (username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-18 12:24:55 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-18 12:24:55 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-18 12:24:55 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-18 12:24:55 [INFO]:OUT Create_share
-2016-2-18 12:24:55 [INFO]:IN Obtain_bills
-2016-2-18 12:24:55 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-18 12:24:55 [INFO]:OUT Obtain_bills
-2016-2-18 12:24:58 [INFO]:IN Obtain_bills
-2016-2-18 12:24:58 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-18 12:24:58 [INFO]:OUT Obtain_bills
-2016-2-18 12:25:03 [INFO]:SYN OUT
-2016-2-18 13:06:14 [INFO]:IN User_inf
-2016-2-18 13:06:14 [INFO]:IN User_inf
-2016-2-18 13:06:14 [INFO]:OUT User_inf
-2016-2-18 13:06:14 [INFO]:OUT User_inf
-2016-2-18 13:06:14 [INFO]:Start SYN
-2016-2-18 13:06:15 [INFO]:IN Receive_Img
-2016-2-18 13:06:15 [WARNING]:cannot open image
-2016-2-18 13:06:15 [WARNING]:./icon/.png
-2016-2-18 13:06:15 [INFO]:OUT Receive_Img
-2016-2-18 13:06:15 [INFO]:IN Receive_Img
-2016-2-18 13:06:15 [INFO]:OUT Receive_Img
-2016-2-18 13:07:29 [INFO]:IN Sign_up
-2016-2-18 13:07:29 [INFO]:OUT Sign_up
-2016-2-18 13:07:29 [INFO]:IN User_inf
-2016-2-18 13:07:29 [INFO]:IN Obtain_bills
-2016-2-18 13:07:29 [INFO]:SELECT * FROM Bills WHERE member_0 = 'flyflyerson' OR member_1 = 'flyflyerson' OR member_2 = 'flyflyerson' OR member_3 = 'flyflyerson' OR member_4 = 'flyflyerson' OR member_5 = 'flyflyerson' OR member_6 = 'flyflyerson' OR member_7 = 'flyflyerson' OR member_8 = 'flyflyerson' OR member_9 = 'flyflyerson' OR paidBy = 'flyflyerson' order by bill_id desc LIMIT 4
-2016-2-18 13:07:29 [INFO]:OUT User_inf
-2016-2-18 13:07:29 [INFO]:OUT Obtain_bills
-2016-2-18 13:07:29 [INFO]:IN Receive_Img
-2016-2-18 13:07:29 [WARNING]:cannot open image
-2016-2-18 13:07:29 [WARNING]:./icon/flyflyerson.png
-2016-2-18 13:07:29 [INFO]:OUT Receive_Img
-2016-2-18 13:07:30 [INFO]:IN Obtain_bills
-2016-2-18 13:07:30 [INFO]:SELECT * FROM Bills WHERE member_0 = 'flyflyerson' OR member_1 = 'flyflyerson' OR member_2 = 'flyflyerson' OR member_3 = 'flyflyerson' OR member_4 = 'flyflyerson' OR member_5 = 'flyflyerson' OR member_6 = 'flyflyerson' OR member_7 = 'flyflyerson' OR member_8 = 'flyflyerson' OR member_9 = 'flyflyerson' OR paidBy = 'flyflyerson' order by bill_id desc LIMIT 4
-2016-2-18 13:07:30 [INFO]:OUT Obtain_bills
-2016-2-18 13:07:31 [INFO]:IN Obtain_bills
-2016-2-18 13:07:31 [INFO]:SELECT * FROM Bills WHERE member_0 = 'flyflyerson' OR member_1 = 'flyflyerson' OR member_2 = 'flyflyerson' OR member_3 = 'flyflyerson' OR member_4 = 'flyflyerson' OR member_5 = 'flyflyerson' OR member_6 = 'flyflyerson' OR member_7 = 'flyflyerson' OR member_8 = 'flyflyerson' OR member_9 = 'flyflyerson' OR paidBy = 'flyflyerson' order by bill_id desc LIMIT 4
-2016-2-18 13:07:31 [INFO]:OUT Obtain_bills
-2016-2-18 13:07:32 [INFO]:IN Obtain_bills
-2016-2-18 13:07:32 [INFO]:SELECT * FROM Bills WHERE member_0 = 'flyflyerson' OR member_1 = 'flyflyerson' OR member_2 = 'flyflyerson' OR member_3 = 'flyflyerson' OR member_4 = 'flyflyerson' OR member_5 = 'flyflyerson' OR member_6 = 'flyflyerson' OR member_7 = 'flyflyerson' OR member_8 = 'flyflyerson' OR member_9 = 'flyflyerson' OR paidBy = 'flyflyerson' order by bill_id desc LIMIT 4
-2016-2-18 13:07:32 [INFO]:OUT Obtain_bills
-2016-2-18 13:07:33 [INFO]:IN Obtain_bills
-2016-2-18 13:07:33 [INFO]:SELECT * FROM Bills WHERE member_0 = 'flyflyerson' OR member_1 = 'flyflyerson' OR member_2 = 'flyflyerson' OR member_3 = 'flyflyerson' OR member_4 = 'flyflyerson' OR member_5 = 'flyflyerson' OR member_6 = 'flyflyerson' OR member_7 = 'flyflyerson' OR member_8 = 'flyflyerson' OR member_9 = 'flyflyerson' OR paidBy = 'flyflyerson' order by bill_id desc LIMIT 4
-2016-2-18 13:07:33 [INFO]:OUT Obtain_bills
-2016-2-18 13:07:38 [INFO]:IN Obtain_request
-2016-2-18 13:07:38 [INFO]:IN Obtain_requestLogHistory
-2016-2-18 13:07:38 [INFO]:SELECT * FROM RequestLog WHERE receiver = 'flyflyerson' order by requestLog_id desc
-2016-2-18 13:07:38 [INFO]:OUT Obtain_requestLogHistory
-2016-2-18 13:07:38 [INFO]:OUT Obtain_request
-2016-2-18 13:08:15 [INFO]:IN Search
-2016-2-18 13:08:15 [INFO]:SELECT username FROM User WHERE username like '%I%'
-2016-2-18 13:08:15 [INFO]:OUT Search
-2016-2-18 13:08:15 [INFO]:IN Search
-2016-2-18 13:08:15 [INFO]:SELECT username FROM User WHERE username like '%Ig%'
-2016-2-18 13:08:15 [INFO]:OUT Search
-2016-2-18 13:08:16 [INFO]:IN Search
-2016-2-18 13:08:16 [INFO]:SELECT username FROM User WHERE username like '%G%'
-2016-2-18 13:08:16 [INFO]:OUT Search
-2016-2-18 13:10:56 [INFO]:SYN OUT
-2016-2-18 13:12:25 [INFO]:Start SYN
-2016-2-18 13:12:25 [INFO]:IN User_inf
-2016-2-18 13:12:25 [INFO]:IN User_inf
-2016-2-18 13:12:25 [INFO]:OUT User_inf
-2016-2-18 13:12:25 [INFO]:OUT User_inf
-2016-2-18 13:12:27 [INFO]:IN Receive_Img
-2016-2-18 13:12:27 [INFO]:OUT Receive_Img
-2016-2-18 13:12:27 [INFO]:IN Send_DeviceToken
-2016-2-18 13:12:27 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-18 13:12:27 [INFO]:OUT Send_DeviceToken
-2016-2-18 13:12:27 [INFO]:IN Receive_Img
-2016-2-18 13:12:27 [INFO]:OUT Receive_Img
-2016-2-18 13:12:28 [INFO]:IN Obtain_bills
-2016-2-18 13:12:28 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:12:28 [INFO]:OUT Obtain_bills
-2016-2-18 13:12:29 [INFO]:IN Obtain_bills
-2016-2-18 13:12:29 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:12:29 [INFO]:OUT Obtain_bills
-2016-2-18 13:14:12 [INFO]:SYN OUT
-2016-2-18 13:21:18 [INFO]:Start SYN
-2016-2-18 13:21:30 [INFO]:SYN OUT
-2016-2-18 13:21:34 [INFO]:Start SYN
-2016-2-18 13:21:34 [INFO]:IN User_inf
-2016-2-18 13:21:34 [INFO]:IN User_inf
-2016-2-18 13:21:34 [INFO]:OUT User_inf
-2016-2-18 13:21:34 [INFO]:OUT User_inf
-2016-2-18 13:21:35 [INFO]:IN Receive_Img
-2016-2-18 13:21:35 [INFO]:OUT Receive_Img
-2016-2-18 13:21:35 [INFO]:IN Send_DeviceToken
-2016-2-18 13:21:35 [INFO]:c3e0aa800126e58c44dfe718de037a68c679b834fedf750a7dc466636664f61e
-2016-2-18 13:21:35 [INFO]:OUT Send_DeviceToken
-2016-2-18 13:21:35 [INFO]:IN Receive_Img
-2016-2-18 13:21:35 [INFO]:OUT Receive_Img
-2016-2-18 13:23:12 [INFO]:SYN OUT
-2016-2-18 13:24:23 [INFO]:Start SYN
-2016-2-18 13:24:23 [INFO]:IN User_inf
-2016-2-18 13:24:23 [INFO]:IN User_inf
-2016-2-18 13:24:23 [INFO]:OUT User_inf
-2016-2-18 13:24:23 [INFO]:OUT User_inf
-2016-2-18 13:24:24 [INFO]:IN Send_DeviceToken
-2016-2-18 13:24:24 [INFO]:IN Receive_Img
-2016-2-18 13:24:24 [WARNING]:cannot open image
-2016-2-18 13:24:24 [WARNING]:./icon/.png
-2016-2-18 13:24:24 [INFO]:OUT Receive_Img
-2016-2-18 13:24:24 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-18 13:24:24 [INFO]:OUT Send_DeviceToken
-2016-2-18 13:24:24 [INFO]:IN Receive_Img
-2016-2-18 13:24:24 [INFO]:OUT Receive_Img
-2016-2-18 13:24:51 [INFO]:IN Login
-2016-2-18 13:24:51 [INFO]:OUT Login
-2016-2-18 13:24:51 [INFO]:IN User_inf
-2016-2-18 13:24:51 [INFO]:OUT User_inf
-2016-2-18 13:24:51 [INFO]:IN Obtain_bills
-2016-2-18 13:24:51 [INFO]:IN Send_DeviceToken
-2016-2-18 13:24:51 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:24:51 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-18 13:24:51 [INFO]:OUT Send_DeviceToken
-2016-2-18 13:24:51 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:51 [INFO]:IN Obtain_bills
-2016-2-18 13:24:51 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:24:51 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:51 [INFO]:IN Receive_Img
-2016-2-18 13:24:51 [INFO]:IN Obtain_bills
-2016-2-18 13:24:51 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-18 13:24:51 [INFO]:IN Obtain_bills
-2016-2-18 13:24:51 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-18 13:24:51 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:51 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:53 [INFO]:IN Reset_Status
-2016-2-18 13:24:53 [INFO]:OUT Reset_Status
-2016-2-18 13:24:54 [INFO]:IN Obtain_bills
-2016-2-18 13:24:54 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:24:54 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:58 [INFO]:IN Reset_Status
-2016-2-18 13:24:58 [INFO]:OUT Reset_Status
-2016-2-18 13:24:58 [INFO]:IN Obtain_bills
-2016-2-18 13:24:58 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:24:58 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:58 [INFO]:IN Obtain_bills
-2016-2-18 13:24:58 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-18 13:24:58 [INFO]:OUT Obtain_bills
-2016-2-18 13:24:59 [INFO]:OUT Receive_Img
-2016-2-18 13:25:17 [INFO]:IN Obtain_bills
-2016-2-18 13:25:17 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-18 13:25:17 [INFO]:OUT Obtain_bills
-2016-2-18 13:25:19 [INFO]:IN Reset_Status
-2016-2-18 13:25:19 [INFO]:OUT Reset_Status
-2016-2-18 13:25:51 [INFO]:IN Obtain_userInfo
-2016-2-18 13:25:51 [INFO]:SELECT password, email, currency FROM User WHERE username = 'gfxcc'
-2016-2-18 13:25:51 [INFO]:OUT Obatin_userInfo
-2016-2-18 13:25:54 [INFO]:IN Obtain_setting
-2016-2-18 13:25:54 [INFO]:SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
-2016-2-18 13:25:54 [INFO]:OUT Obtain_setting
-2016-2-18 13:26:06 [INFO]:SYN OUT
-2016-2-18 15:11:14 [INFO]:Start SYN
-2016-2-18 15:12:20 [INFO]:SYN OUT
-2016-2-18 19:42:26 [INFO]:Start SYN
-2016-2-18 19:42:26 [INFO]:IN User_inf
-2016-2-18 19:42:26 [INFO]:IN User_inf
-2016-2-18 19:42:26 [INFO]:OUT User_inf
-2016-2-18 19:42:26 [INFO]:OUT User_inf
-2016-2-18 19:42:28 [INFO]:IN Send_DeviceToken
-2016-2-18 19:42:28 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-18 19:42:28 [INFO]:OUT Send_DeviceToken
-2016-2-18 19:42:28 [INFO]:IN Receive_Img
-2016-2-18 19:42:28 [WARNING]:cannot open image
-2016-2-18 19:42:28 [WARNING]:./icon/ZhiqingShen.png
-2016-2-18 19:42:28 [INFO]:OUT Receive_Img
-2016-2-18 19:42:28 [INFO]:IN Receive_Img
-2016-2-18 19:42:28 [WARNING]:cannot open image
-2016-2-18 19:42:28 [WARNING]:./icon/ZhiqingShen.png
-2016-2-18 19:42:28 [INFO]:OUT Receive_Img
-2016-2-18 19:42:47 [INFO]:SYN OUT
-2016-2-19 13:19:02 [INFO]:Start SYN
-2016-2-19 13:19:02 [INFO]:IN User_inf
-2016-2-19 13:19:02 [INFO]:IN User_inf
-2016-2-19 13:19:02 [INFO]:OUT User_inf
-2016-2-19 13:19:02 [INFO]:OUT User_inf
-2016-2-19 13:19:04 [INFO]:IN Send_DeviceToken
-2016-2-19 13:19:04 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-19 13:19:04 [INFO]:OUT Send_DeviceToken
-2016-2-19 13:19:04 [INFO]:IN Receive_Img
-2016-2-19 13:19:04 [INFO]:OUT Receive_Img
-2016-2-19 13:19:04 [INFO]:IN Receive_Img
-2016-2-19 13:19:04 [INFO]:OUT Receive_Img
-2016-2-19 13:19:21 [INFO]:Start SYN
-2016-2-19 13:19:21 [INFO]:IN User_inf
-2016-2-19 13:19:21 [INFO]:OUT User_inf
-2016-2-19 13:19:21 [INFO]:IN User_inf
-2016-2-19 13:19:21 [INFO]:OUT User_inf
-2016-2-19 13:19:22 [INFO]:IN Receive_Img
-2016-2-19 13:19:22 [WARNING]:cannot open image
-2016-2-19 13:19:22 [WARNING]:./icon/ZhiqingShen.png
-2016-2-19 13:19:22 [INFO]:OUT Receive_Img
-2016-2-19 13:19:22 [INFO]:IN Receive_Img
-2016-2-19 13:19:22 [WARNING]:cannot open image
-2016-2-19 13:19:22 [WARNING]:./icon/ZhiqingShen.png
-2016-2-19 13:19:22 [INFO]:OUT Receive_Img
-2016-2-19 13:19:22 [INFO]:IN Send_DeviceToken
-2016-2-19 13:19:22 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-19 13:19:22 [INFO]:OUT Send_DeviceToken
-2016-2-19 13:19:23 [INFO]:IN Create_share
-2016-2-19 13:19:23 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '43.6' , 'Lunch' , 'gfxcc' , '2016-02-19 01:18' , 'comment...' , '' , 'gfxcc' , 'xtding' , 'Yuchi' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-19 13:19:23 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = 'xtding' OR username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-19 13:19:23 [INFO]:SELECT deviceToken FROM User WHERE (username = 'gfxcc' OR username = 'xtding' OR username = 'Yuchi' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-19 13:19:23 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-19 13:19:23 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-19 13:19:23 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-19 13:19:24 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-19 13:19:24 [INFO]:OUT Create_share
-2016-2-19 13:19:24 [INFO]:IN Obtain_bills
-2016-2-19 13:19:24 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-19 13:19:24 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:26 [INFO]:IN Obtain_bills
-2016-2-19 13:19:26 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-19 13:19:26 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:27 [INFO]:IN Obtain_bills
-2016-2-19 13:19:27 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-19 13:19:27 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:28 [INFO]:IN Obtain_bills
-2016-2-19 13:19:28 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-19 13:19:28 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:28 [INFO]:Start SYN
-2016-2-19 13:19:28 [INFO]:IN User_inf
-2016-2-19 13:19:28 [INFO]:IN User_inf
-2016-2-19 13:19:28 [INFO]:OUT User_inf
-2016-2-19 13:19:28 [INFO]:OUT User_inf
-2016-2-19 13:19:29 [INFO]:IN Receive_Img
-2016-2-19 13:19:29 [WARNING]:cannot open image
-2016-2-19 13:19:29 [WARNING]:./icon/ZhiqingShen.png
-2016-2-19 13:19:29 [INFO]:OUT Receive_Img
-2016-2-19 13:19:29 [INFO]:IN Send_DeviceToken
-2016-2-19 13:19:29 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-19 13:19:29 [INFO]:OUT Send_DeviceToken
-2016-2-19 13:19:30 [INFO]:IN Receive_Img
-2016-2-19 13:19:30 [WARNING]:cannot open image
-2016-2-19 13:19:30 [WARNING]:./icon/ZhiqingShen.png
-2016-2-19 13:19:30 [INFO]:OUT Receive_Img
-2016-2-19 13:19:31 [INFO]:IN Obtain_bills
-2016-2-19 13:19:31 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-19 13:19:31 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:32 [INFO]:IN Obtain_bills
-2016-2-19 13:19:32 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-19 13:19:32 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:33 [INFO]:IN Obtain_bills
-2016-2-19 13:19:33 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-19 13:19:33 [INFO]:OUT Obtain_bills
-2016-2-19 13:19:35 [INFO]:SYN OUT
-2016-2-19 13:19:48 [INFO]:SYN OUT
-2016-2-19 13:24:03 [INFO]:SYN OUT
-2016-2-20 01:50:41 [INFO]:Start SYN
-2016-2-20 01:50:41 [INFO]:IN User_inf
-2016-2-20 01:50:41 [INFO]:IN User_inf
-2016-2-20 01:50:41 [INFO]:OUT User_inf
-2016-2-20 01:50:41 [INFO]:OUT User_inf
-2016-2-20 01:50:43 [INFO]:IN Receive_Img
-2016-2-20 01:50:43 [INFO]:OUT Receive_Img
-2016-2-20 01:50:43 [INFO]:IN Send_DeviceToken
-2016-2-20 01:50:43 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 01:50:43 [INFO]:OUT Send_DeviceToken
-2016-2-20 01:50:43 [INFO]:IN Receive_Img
-2016-2-20 01:50:43 [INFO]:OUT Receive_Img
-2016-2-20 01:53:51 [INFO]:SYN OUT
-2016-2-20 15:26:21 [INFO]:IN User_inf
-2016-2-20 15:26:21 [INFO]:IN User_inf
-2016-2-20 15:26:21 [INFO]:OUT User_inf
-2016-2-20 15:26:21 [INFO]:OUT User_inf
-2016-2-20 15:26:21 [INFO]:Start SYN
-2016-2-20 15:26:23 [INFO]:IN Send_DeviceToken
-2016-2-20 15:26:23 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-20 15:26:23 [INFO]:OUT Send_DeviceToken
-2016-2-20 15:26:23 [INFO]:IN Receive_Img
-2016-2-20 15:26:23 [WARNING]:cannot open image
-2016-2-20 15:26:23 [WARNING]:./icon/ZhiqingShen.png
-2016-2-20 15:26:23 [INFO]:OUT Receive_Img
-2016-2-20 15:26:24 [INFO]:IN Receive_Img
-2016-2-20 15:26:24 [WARNING]:cannot open image
-2016-2-20 15:26:24 [WARNING]:./icon/ZhiqingShen.png
-2016-2-20 15:26:24 [INFO]:OUT Receive_Img
-2016-2-20 15:26:51 [INFO]:IN Create_share
-2016-2-20 15:26:51 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('Yuchi', '50' , 'Lunch' , 'Yuchi' , '2016-02-20 15:31' , 'comment...' , '' , 'Yuchi' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-20 15:26:51 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'Yuchi' OR username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-20 15:26:51 [INFO]:SELECT deviceToken FROM User WHERE (username = 'Yuchi' OR username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-20 15:26:51 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 15:26:51 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-20 15:26:51 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-20 15:26:52 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 15:26:52 [INFO]:OUT Create_share
-2016-2-20 15:26:52 [INFO]:IN Obtain_bills
-2016-2-20 15:26:52 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-20 15:26:52 [INFO]:OUT Obtain_bills
-2016-2-20 15:26:54 [INFO]:IN Obtain_bills
-2016-2-20 15:26:54 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-20 15:26:54 [INFO]:OUT Obtain_bills
-2016-2-20 15:28:08 [INFO]:SYN OUT
-2016-2-20 15:31:16 [INFO]:Start SYN
-2016-2-20 15:31:19 [INFO]:SYN OUT
-2016-2-20 16:49:58 [INFO]:Start SYN
-2016-2-20 16:49:58 [INFO]:IN User_inf
-2016-2-20 16:49:58 [INFO]:IN User_inf
-2016-2-20 16:49:58 [INFO]:OUT User_inf
-2016-2-20 16:49:58 [INFO]:OUT User_inf
-2016-2-20 16:49:59 [INFO]:IN Receive_Img
-2016-2-20 16:49:59 [WARNING]:cannot open image
-2016-2-20 16:49:59 [WARNING]:./icon/ZhiqingShen.png
-2016-2-20 16:49:59 [INFO]:OUT Receive_Img
-2016-2-20 16:49:59 [INFO]:IN Receive_Img
-2016-2-20 16:49:59 [WARNING]:cannot open image
-2016-2-20 16:49:59 [WARNING]:./icon/ZhiqingShen.png
-2016-2-20 16:49:59 [INFO]:OUT Receive_Img
-2016-2-20 16:50:00 [INFO]:IN Send_DeviceToken
-2016-2-20 16:50:00 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-20 16:50:00 [INFO]:OUT Send_DeviceToken
-2016-2-20 16:50:01 [INFO]:IN Obtain_bills
-2016-2-20 16:50:01 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-20 16:50:01 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:02 [INFO]:IN Obtain_bills
-2016-2-20 16:50:02 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-20 16:50:02 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:03 [INFO]:IN Obtain_bills
-2016-2-20 16:50:03 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-20 16:50:03 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:33 [INFO]:IN Create_share
-2016-2-20 16:50:33 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('xtding', '22' , 'Dinner' , 'xtding' , '2016-02-20 16:50' , '小面' , '' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-20 16:50:33 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-20 16:50:33 [INFO]:SELECT deviceToken FROM User WHERE (username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-20 16:50:33 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 16:50:33 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-20 16:50:34 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 16:50:34 [INFO]:OUT Create_share
-2016-2-20 16:50:34 [INFO]:IN Obtain_bills
-2016-2-20 16:50:34 [INFO]:SELECT * FROM Bills WHERE member_0 = 'xtding' OR member_1 = 'xtding' OR member_2 = 'xtding' OR member_3 = 'xtding' OR member_4 = 'xtding' OR member_5 = 'xtding' OR member_6 = 'xtding' OR member_7 = 'xtding' OR member_8 = 'xtding' OR member_9 = 'xtding' OR paidBy = 'xtding' order by bill_id desc LIMIT 4
-2016-2-20 16:50:34 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:41 [INFO]:IN User_inf
-2016-2-20 16:50:41 [INFO]:Start SYN
-2016-2-20 16:50:41 [INFO]:IN User_inf
-2016-2-20 16:50:41 [INFO]:OUT User_inf
-2016-2-20 16:50:41 [INFO]:OUT User_inf
-2016-2-20 16:50:42 [INFO]:IN Send_DeviceToken
-2016-2-20 16:50:42 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-20 16:50:42 [INFO]:IN Receive_Img
-2016-2-20 16:50:42 [INFO]:OUT Receive_Img
-2016-2-20 16:50:42 [INFO]:OUT Send_DeviceToken
-2016-2-20 16:50:43 [INFO]:IN Receive_Img
-2016-2-20 16:50:43 [INFO]:OUT Receive_Img
-2016-2-20 16:50:44 [INFO]:IN Obtain_bills
-2016-2-20 16:50:44 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-20 16:50:44 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:45 [INFO]:IN Obtain_bills
-2016-2-20 16:50:45 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-20 16:50:45 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:46 [INFO]:IN Obtain_bills
-2016-2-20 16:50:46 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-20 16:50:46 [INFO]:OUT Obtain_bills
-2016-2-20 16:50:54 [INFO]:SYN OUT
-2016-2-20 16:52:32 [INFO]:SYN OUT
-2016-2-20 18:12:52 [INFO]:Start SYN
-2016-2-20 18:13:12 [INFO]:IN Search
-2016-2-20 18:13:12 [INFO]:SELECT username FROM User WHERE username like '%g%'
-2016-2-20 18:13:12 [INFO]:OUT Search
-2016-2-20 18:13:12 [INFO]:IN Search
-2016-2-20 18:13:12 [INFO]:SELECT username FROM User WHERE username like '%gf%'
-2016-2-20 18:13:12 [INFO]:OUT Search
-2016-2-20 18:13:12 [INFO]:IN Search
-2016-2-20 18:13:12 [INFO]:SELECT username FROM User WHERE username like '%gfx%'
-2016-2-20 18:13:12 [INFO]:OUT Search
-2016-2-20 18:13:13 [INFO]:IN Search
-2016-2-20 18:13:13 [INFO]:SELECT username FROM User WHERE username like '%gfxc%'
-2016-2-20 18:13:13 [INFO]:OUT Search
-2016-2-20 18:13:13 [INFO]:IN Search
-2016-2-20 18:13:13 [INFO]:SELECT username FROM User WHERE username like '%gfxcc%'
-2016-2-20 18:13:13 [INFO]:OUT Search
-2016-2-20 18:13:14 [INFO]:IN Search
-2016-2-20 18:13:14 [INFO]:SELECT username FROM User WHERE username like '%gfxc%'
-2016-2-20 18:13:14 [INFO]:OUT Search
-2016-2-20 18:13:14 [INFO]:IN Search
-2016-2-20 18:13:14 [INFO]:SELECT username FROM User WHERE username like '%gfx%'
-2016-2-20 18:13:14 [INFO]:OUT Search
-2016-2-20 18:13:14 [INFO]:IN Search
-2016-2-20 18:13:14 [INFO]:SELECT username FROM User WHERE username like '%gf%'
-2016-2-20 18:13:14 [INFO]:OUT Search
-2016-2-20 18:13:14 [INFO]:IN Search
-2016-2-20 18:13:14 [INFO]:SELECT username FROM User WHERE username like '%g%'
-2016-2-20 18:13:14 [INFO]:OUT Search
-2016-2-20 18:13:27 [INFO]:SYN OUT
-2016-2-21 11:05:12 [INFO]:Start SYN
-2016-2-21 11:05:12 [INFO]:IN User_inf
-2016-2-21 11:05:12 [INFO]:IN User_inf
-2016-2-21 11:05:12 [INFO]:OUT User_inf
-2016-2-21 11:05:12 [INFO]:OUT User_inf
-2016-2-21 11:05:14 [INFO]:IN Send_DeviceToken
-2016-2-21 11:05:14 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-21 11:05:14 [INFO]:IN Receive_Img
-2016-2-21 11:05:14 [INFO]:OUT Receive_Img
-2016-2-21 11:05:14 [INFO]:OUT Send_DeviceToken
-2016-2-21 11:05:14 [INFO]:IN Receive_Img
-2016-2-21 11:05:14 [INFO]:OUT Receive_Img
-2016-2-21 11:05:44 [INFO]:IN Obtain_userInfo
-2016-2-21 11:05:44 [INFO]:SELECT password, email, currency FROM User WHERE username = 'gfxcc'
-2016-2-21 11:05:44 [INFO]:OUT Obatin_userInfo
-2016-2-21 11:06:19 [INFO]:SYN OUT
-2016-2-21 19:49:40 [INFO]:Start SYN
-2016-2-21 19:49:59 [INFO]:IN Create_share
-2016-2-21 19:49:59 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('gfxcc', '20' , 'Dinner' , 'xtding' , '2016-02-21 07:49' , 'comment...' , '' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-21 19:49:59 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-21 19:49:59 [INFO]:SELECT deviceToken FROM User WHERE (username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-21 19:49:59 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-21 19:49:59 [INFO]:OUT Create_share
-2016-2-21 19:49:59 [INFO]:IN Obtain_bills
-2016-2-21 19:49:59 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-21 19:49:59 [INFO]:OUT Obtain_bills
-2016-2-21 19:50:08 [INFO]:IN Search
-2016-2-21 19:50:08 [INFO]:SELECT username FROM User WHERE username like '%f%'
-2016-2-21 19:50:08 [INFO]:OUT Search
-2016-2-21 19:50:13 [INFO]:SYN OUT
-2016-2-21 20:08:30 [INFO]:Start SYN
-2016-2-21 20:08:49 [INFO]:SYN OUT
-2016-2-22 12:34:04 [INFO]:Start SYN
-2016-2-22 12:34:04 [INFO]:IN User_inf
-2016-2-22 12:34:04 [INFO]:OUT User_inf
-2016-2-22 12:34:04 [INFO]:IN User_inf
-2016-2-22 12:34:04 [INFO]:OUT User_inf
-2016-2-22 12:34:06 [INFO]:IN Send_DeviceToken
-2016-2-22 12:34:06 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-22 12:34:06 [INFO]:OUT Send_DeviceToken
-2016-2-22 12:34:06 [INFO]:IN Receive_Img
-2016-2-22 12:34:06 [WARNING]:cannot open image
-2016-2-22 12:34:06 [WARNING]:./icon/ZhiqingShen.png
-2016-2-22 12:34:06 [INFO]:OUT Receive_Img
-2016-2-22 12:34:06 [INFO]:IN Receive_Img
-2016-2-22 12:34:06 [WARNING]:cannot open image
-2016-2-22 12:34:06 [WARNING]:./icon/ZhiqingShen.png
-2016-2-22 12:34:06 [INFO]:OUT Receive_Img
-2016-2-22 12:34:15 [INFO]:SYN OUT
-2016-2-22 12:35:31 [INFO]:Start SYN
-2016-2-22 12:35:44 [INFO]:IN Create_share
-2016-2-22 12:35:44 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('Yuchi', '48' , 'Lunch' , 'Yuchi' , '2016-02-22 12:40' , 'comment...' , '' , 'Yuchi' , 'xtding' , 'gfxcc' , '' , '' , '' , '' , '' , '' , '', 'ifood.png')
-2016-2-22 12:35:44 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE username = 'Yuchi' OR username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = ''
-2016-2-22 12:35:44 [INFO]:SELECT deviceToken FROM User WHERE (username = 'Yuchi' OR username = 'xtding' OR username = 'gfxcc' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '' OR username = '') AND N_newBill = 1
-2016-2-22 12:35:44 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-22 12:35:44 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
-2016-2-22 12:35:44 [INFO]:340aff3556030999aba9baff6529f8d9c15d316bf6316f045a04eaa40a39f88e
-2016-2-22 12:35:45 [INFO]:OUT Create_share
-2016-2-22 12:35:45 [INFO]:IN Obtain_bills
-2016-2-22 12:35:45 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-22 12:35:45 [INFO]:OUT Obtain_bills
-2016-2-22 12:35:47 [INFO]:IN Obtain_bills
-2016-2-22 12:35:47 [INFO]:SELECT * FROM Bills WHERE member_0 = 'Yuchi' OR member_1 = 'Yuchi' OR member_2 = 'Yuchi' OR member_3 = 'Yuchi' OR member_4 = 'Yuchi' OR member_5 = 'Yuchi' OR member_6 = 'Yuchi' OR member_7 = 'Yuchi' OR member_8 = 'Yuchi' OR member_9 = 'Yuchi' OR paidBy = 'Yuchi' order by bill_id desc LIMIT 4
-2016-2-22 12:35:47 [INFO]:OUT Obtain_bills
-2016-2-22 12:35:51 [INFO]:SYN OUT
-2016-2-22 12:38:31 [INFO]:Start SYN
-2016-2-22 12:39:05 [INFO]:SYN OUT
-2016-2-22 12:42:34 [INFO]:Start SYN
-2016-2-22 12:45:10 [INFO]:SYN OUT
-2016-2-22 13:37:50 [INFO]:Start SYN
-2016-2-22 13:37:50 [INFO]:IN User_inf
-2016-2-22 13:37:50 [INFO]:IN User_inf
-2016-2-22 13:37:50 [INFO]:OUT User_inf
-2016-2-22 13:37:50 [INFO]:OUT User_inf
-2016-2-22 13:37:51 [INFO]:IN Send_DeviceToken
-2016-2-22 13:37:51 [INFO]:IN Receive_Img
-2016-2-22 13:37:51 [INFO]:OUT Receive_Img
-2016-2-22 13:37:51 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-22 13:37:51 [INFO]:OUT Send_DeviceToken
-2016-2-22 13:37:51 [INFO]:IN Receive_Img
-2016-2-22 13:37:51 [INFO]:OUT Receive_Img
-2016-2-22 13:37:53 [INFO]:IN Obtain_bills
-2016-2-22 13:37:53 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-22 13:37:53 [INFO]:OUT Obtain_bills
-2016-2-22 13:37:54 [INFO]:IN Obtain_bills
-2016-2-22 13:37:54 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-22 13:37:54 [INFO]:OUT Obtain_bills
-2016-2-22 13:37:55 [INFO]:IN Obtain_bills
-2016-2-22 13:37:55 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-22 13:37:55 [INFO]:OUT Obtain_bills
-2016-2-22 13:40:14 [INFO]:IN Receive_Img
-2016-2-22 13:40:14 [INFO]:OUT Receive_Img
-2016-2-22 13:40:28 [INFO]:IN Receive_Img
-2016-2-22 13:40:28 [INFO]:OUT Receive_Img
-2016-2-22 13:40:58 [INFO]:IN Receive_Img
-2016-2-22 13:40:58 [INFO]:OUT Receive_Img
-2016-2-22 13:41:17 [INFO]:SYN OUT
-2016-2-22 16:48:07 [INFO]:Start SYN
-2016-2-22 16:48:10 [WARNING]:error row == NULL
-2016-2-22 16:48:10 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:11 [WARNING]:error row == NULL
-2016-2-22 16:48:11 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:12 [WARNING]:error row == NULL
-2016-2-22 16:48:12 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:13 [WARNING]:error row == NULL
-2016-2-22 16:48:13 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:14 [WARNING]:error row == NULL
-2016-2-22 16:48:14 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:15 [WARNING]:error row == NULL
-2016-2-22 16:48:15 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:16 [WARNING]:error row == NULL
-2016-2-22 16:48:16 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:17 [WARNING]:error row == NULL
-2016-2-22 16:48:17 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:18 [WARNING]:error row == NULL
-2016-2-22 16:48:18 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:19 [WARNING]:error row == NULL
-2016-2-22 16:48:19 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:20 [WARNING]:error row == NULL
-2016-2-22 16:48:20 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:21 [WARNING]:error row == NULL
-2016-2-22 16:48:21 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:22 [INFO]:IN Login
-2016-2-22 16:48:22 [INFO]:OUT Login
-2016-2-22 16:48:22 [WARNING]:error row == NULL
-2016-2-22 16:48:22 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:22 [INFO]:IN User_inf
-2016-2-22 16:48:22 [INFO]:OUT User_inf
-2016-2-22 16:48:22 [INFO]:IN Obtain_bills
-2016-2-22 16:48:22 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc LIMIT 4
-2016-2-22 16:48:22 [INFO]:OUT Obtain_bills
-2016-2-22 16:48:22 [INFO]:IN Send_DeviceToken
-2016-2-22 16:48:22 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-22 16:48:22 [INFO]:OUT Send_DeviceToken
-2016-2-22 16:48:22 [INFO]:IN Receive_Img
-2016-2-22 16:48:22 [INFO]:OUT Receive_Img
-2016-2-22 16:48:22 [INFO]:IN Obtain_bills
-2016-2-22 16:48:22 [INFO]:SELECT * FROM Bills WHERE member_0 = 'gfxcc' OR member_1 = 'gfxcc' OR member_2 = 'gfxcc' OR member_3 = 'gfxcc' OR member_4 = 'gfxcc' OR member_5 = 'gfxcc' OR member_6 = 'gfxcc' OR member_7 = 'gfxcc' OR member_8 = 'gfxcc' OR member_9 = 'gfxcc' OR paidBy = 'gfxcc' order by bill_id desc
-2016-2-22 16:48:22 [INFO]:OUT Obtain_bills
-2016-2-22 16:48:23 [WARNING]:error row == NULL
-2016-2-22 16:48:23 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-22 16:48:24 [INFO]:IN Reset_Status
-2016-2-22 16:48:24 [INFO]:OUT Reset_Status
-2016-2-22 16:48:33 [INFO]:IN Obtain_userInfo
-2016-2-22 16:48:33 [INFO]:SELECT password, email, currency FROM User WHERE username = 'gfxcc'
-2016-2-22 16:48:33 [INFO]:OUT Obatin_userInfo
-2016-2-22 16:48:36 [INFO]:IN Obtain_setting
-2016-2-22 16:48:36 [INFO]:SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = 'gfxcc'
-2016-2-22 16:48:36 [INFO]:OUT Obtain_setting
-2016-2-22 16:48:54 [INFO]:SYN OUT
-2016-2-22 20:18:12 [INFO]:IN User_inf
-2016-2-22 20:18:12 [INFO]:IN User_inf
-2016-2-22 20:18:12 [INFO]:OUT User_inf
-2016-2-22 20:18:12 [INFO]:OUT User_inf
-2016-2-22 20:18:12 [INFO]:Start SYN
-2016-2-22 20:18:14 [INFO]:IN Send_DeviceToken
-2016-2-22 20:18:14 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-22 20:18:14 [INFO]:OUT Send_DeviceToken
-2016-2-22 20:18:14 [INFO]:IN Receive_Img
-2016-2-22 20:18:14 [INFO]:OUT Receive_Img
-2016-2-22 20:18:14 [INFO]:IN Receive_Img
-2016-2-22 20:18:14 [INFO]:OUT Receive_Img
-2016-2-22 20:18:20 [INFO]:SYN OUT
-2016-2-22 20:33:27 [INFO]:Start SYN
-2016-2-22 20:33:42 [INFO]:SYN OUT
-2016-2-23 16:03:24 [INFO]:Start SYN
-2016-2-23 16:03:24 [INFO]:IN User_inf
-2016-2-23 16:03:24 [INFO]:IN User_inf
-2016-2-23 16:03:24 [INFO]:OUT User_inf
-2016-2-23 16:03:24 [INFO]:OUT User_inf
-2016-2-23 16:03:25 [INFO]:IN Send_DeviceToken
-2016-2-23 16:03:25 [INFO]:0c8aa59d7a8454affe338d28eadb290e66dc0121277e27f4bd219ce5e6f534aa
-2016-2-23 16:03:25 [INFO]:OUT Send_DeviceToken
-2016-2-23 16:03:25 [INFO]:IN Receive_Img
-2016-2-23 16:03:25 [INFO]:OUT Receive_Img
-2016-2-23 16:03:25 [INFO]:IN Receive_Img
-2016-2-23 16:03:25 [INFO]:OUT Receive_Img
-2016-2-23 16:03:30 [WARNING]:error row == NULL
-2016-2-23 16:03:30 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:31 [WARNING]:error row == NULL
-2016-2-23 16:03:31 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:32 [WARNING]:error row == NULL
-2016-2-23 16:03:32 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:33 [WARNING]:error row == NULL
-2016-2-23 16:03:33 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:34 [WARNING]:error row == NULL
-2016-2-23 16:03:34 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:35 [WARNING]:error row == NULL
-2016-2-23 16:03:35 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:36 [WARNING]:error row == NULL
-2016-2-23 16:03:36 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:37 [WARNING]:error row == NULL
-2016-2-23 16:03:37 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:38 [WARNING]:error row == NULL
-2016-2-23 16:03:38 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:39 [WARNING]:error row == NULL
-2016-2-23 16:03:39 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:40 [WARNING]:error row == NULL
-2016-2-23 16:03:40 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:41 [WARNING]:error row == NULL
-2016-2-23 16:03:41 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:42 [WARNING]:error row == NULL
-2016-2-23 16:03:42 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:43 [WARNING]:error row == NULL
-2016-2-23 16:03:43 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:44 [WARNING]:error row == NULL
-2016-2-23 16:03:44 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:45 [WARNING]:error row == NULL
-2016-2-23 16:03:45 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:46 [WARNING]:error row == NULL
-2016-2-23 16:03:46 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:47 [WARNING]:error row == NULL
-2016-2-23 16:03:47 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:48 [WARNING]:error row == NULL
-2016-2-23 16:03:48 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:03:49 [WARNING]:error row == NULL
-2016-2-23 16:03:49 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:51 [WARNING]:error row == NULL
-2016-2-23 16:04:51 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:52 [WARNING]:error row == NULL
-2016-2-23 16:04:52 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:53 [WARNING]:error row == NULL
-2016-2-23 16:04:53 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:54 [WARNING]:error row == NULL
-2016-2-23 16:04:54 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:55 [WARNING]:error row == NULL
-2016-2-23 16:04:55 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:56 [WARNING]:error row == NULL
-2016-2-23 16:04:56 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:57 [WARNING]:error row == NULL
-2016-2-23 16:04:57 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:58 [WARNING]:error row == NULL
-2016-2-23 16:04:58 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:04:59 [WARNING]:error row == NULL
-2016-2-23 16:04:59 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:00 [WARNING]:error row == NULL
-2016-2-23 16:05:00 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:01 [WARNING]:error row == NULL
-2016-2-23 16:05:01 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:02 [WARNING]:error row == NULL
-2016-2-23 16:05:02 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:03 [WARNING]:error row == NULL
-2016-2-23 16:05:03 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:04 [WARNING]:error row == NULL
-2016-2-23 16:05:04 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:05 [WARNING]:error row == NULL
-2016-2-23 16:05:05 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:06 [WARNING]:error row == NULL
-2016-2-23 16:05:06 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:07 [WARNING]:error row == NULL
-2016-2-23 16:05:07 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:08 [WARNING]:error row == NULL
-2016-2-23 16:05:08 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:09 [WARNING]:error row == NULL
-2016-2-23 16:05:09 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:10 [WARNING]:error row == NULL
-2016-2-23 16:05:10 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:11 [WARNING]:error row == NULL
-2016-2-23 16:05:11 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:12 [WARNING]:error row == NULL
-2016-2-23 16:05:12 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:13 [WARNING]:error row == NULL
-2016-2-23 16:05:13 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:14 [WARNING]:error row == NULL
-2016-2-23 16:05:14 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:15 [WARNING]:error row == NULL
-2016-2-23 16:05:15 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:16 [WARNING]:error row == NULL
-2016-2-23 16:05:16 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:17 [WARNING]:error row == NULL
-2016-2-23 16:05:17 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:18 [WARNING]:error row == NULL
-2016-2-23 16:05:18 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:19 [WARNING]:error row == NULL
-2016-2-23 16:05:19 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:20 [WARNING]:error row == NULL
-2016-2-23 16:05:20 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:21 [WARNING]:error row == NULL
-2016-2-23 16:05:21 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:22 [WARNING]:error row == NULL
-2016-2-23 16:05:22 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:23 [WARNING]:error row == NULL
-2016-2-23 16:05:23 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:24 [WARNING]:error row == NULL
-2016-2-23 16:05:24 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:25 [WARNING]:error row == NULL
-2016-2-23 16:05:25 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:26 [WARNING]:error row == NULL
-2016-2-23 16:05:26 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:27 [WARNING]:error row == NULL
-2016-2-23 16:05:27 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:28 [WARNING]:error row == NULL
-2016-2-23 16:05:28 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:29 [WARNING]:error row == NULL
-2016-2-23 16:05:29 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:30 [WARNING]:error row == NULL
-2016-2-23 16:05:30 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:31 [WARNING]:error row == NULL
-2016-2-23 16:05:31 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:32 [WARNING]:error row == NULL
-2016-2-23 16:05:32 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:33 [WARNING]:error row == NULL
-2016-2-23 16:05:33 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:34 [WARNING]:error row == NULL
-2016-2-23 16:05:34 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:35 [WARNING]:error row == NULL
-2016-2-23 16:05:35 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:36 [INFO]:IN Sign_up
-2016-2-23 16:05:36 [WARNING]:invalid username
-2016-2-23 16:05:36 [INFO]:OUT Sign_up
-2016-2-23 16:05:36 [WARNING]:error row == NULL
-2016-2-23 16:05:36 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:37 [WARNING]:error row == NULL
-2016-2-23 16:05:37 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:38 [WARNING]:error row == NULL
-2016-2-23 16:05:38 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:39 [WARNING]:error row == NULL
-2016-2-23 16:05:39 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:40 [WARNING]:error row == NULL
-2016-2-23 16:05:40 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:41 [WARNING]:error row == NULL
-2016-2-23 16:05:41 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:42 [WARNING]:error row == NULL
-2016-2-23 16:05:42 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:43 [WARNING]:error row == NULL
-2016-2-23 16:05:43 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:44 [INFO]:IN Sign_up
-2016-2-23 16:05:44 [INFO]:OUT Sign_up
-2016-2-23 16:05:44 [INFO]:IN User_inf
-2016-2-23 16:05:44 [INFO]:OUT User_inf
-2016-2-23 16:05:44 [INFO]:IN Obtain_bills
-2016-2-23 16:05:44 [INFO]:SELECT * FROM Bills WHERE member_0 = 'hello' OR member_1 = 'hello' OR member_2 = 'hello' OR member_3 = 'hello' OR member_4 = 'hello' OR member_5 = 'hello' OR member_6 = 'hello' OR member_7 = 'hello' OR member_8 = 'hello' OR member_9 = 'hello' OR paidBy = 'hello' order by bill_id desc LIMIT 4
-2016-2-23 16:05:44 [INFO]:OUT Obtain_bills
-2016-2-23 16:05:44 [WARNING]:error row == NULL
-2016-2-23 16:05:44 [INFO]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username =''
-2016-2-23 16:05:44 [INFO]:IN Receive_Img
-2016-2-23 16:05:44 [WARNING]:cannot open image
-2016-2-23 16:05:44 [WARNING]:./icon/hello.png
-2016-2-23 16:05:44 [INFO]:OUT Receive_Img
-2016-2-23 16:05:45 [INFO]:IN Obtain_bills
-2016-2-23 16:05:45 [INFO]:SELECT * FROM Bills WHERE member_0 = 'hello' OR member_1 = 'hello' OR member_2 = 'hello' OR member_3 = 'hello' OR member_4 = 'hello' OR member_5 = 'hello' OR member_6 = 'hello' OR member_7 
+2016-4-7 19:45:16 [INFO]:Server Start
+2016-4-7 19:45:16 [INFO]:Server listening on : 0.0.0.0:50052
+2016-4-7 19:45:18 [INFO]:Start SYN
+2016-4-7 19:45:19 [INFO]:IN Obtain_bills
+2016-4-7 19:45:19 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:22 [INFO]:IN Reset_Status
+2016-4-7 19:45:22 [INFO]:OUT Reset_Status
+2016-4-7 19:45:24 [INFO]:IN Obtain_bills
+2016-4-7 19:45:24 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:26 [INFO]:IN Reset_Status
+2016-4-7 19:45:26 [INFO]:OUT Reset_Status
+2016-4-7 19:45:27 [INFO]:IN Obtain_bills
+2016-4-7 19:45:27 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:30 [INFO]:IN Reset_Status
+2016-4-7 19:45:30 [INFO]:OUT Reset_Status
+2016-4-7 19:45:31 [INFO]:IN Obtain_bills
+2016-4-7 19:45:31 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:33 [INFO]:IN Reset_Status
+2016-4-7 19:45:33 [INFO]:OUT Reset_Status
+2016-4-7 19:45:34 [INFO]:IN Obtain_bills
+2016-4-7 19:45:34 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:37 [INFO]:IN Reset_Status
+2016-4-7 19:45:37 [INFO]:OUT Reset_Status
+2016-4-7 19:45:45 [INFO]:IN Obtain_bills
+2016-4-7 19:45:45 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:47 [INFO]:IN Reset_Status
+2016-4-7 19:45:47 [INFO]:OUT Reset_Status
+2016-4-7 19:45:48 [INFO]:IN Obtain_bills
+2016-4-7 19:45:48 [INFO]:OUT Obtain_bills
+2016-4-7 19:45:51 [INFO]:IN Reset_Status
+2016-4-7 19:45:51 [INFO]:OUT Reset_Status
+2016-4-7 19:46:01 [INFO]:SYN OUT
+2016-4-7 19:46:03 [INFO]:IN User_inf
+2016-4-7 19:46:03 [INFO]:Start SYN
+2016-4-7 19:46:03 [INFO]:IN User_inf
+2016-4-7 19:46:03 [INFO]:OUT User_inf
+2016-4-7 19:46:03 [INFO]:OUT User_inf
+2016-4-7 19:46:04 [INFO]:IN Obtain_bills
+2016-4-7 19:46:04 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:04 [INFO]:IN Send_DeviceToken
+2016-4-7 19:46:04 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-7 19:46:04 [INFO]:IN Receive_Img
+2016-4-7 19:46:04 [INFO]:OUT Receive_Img
+2016-4-7 19:46:04 [INFO]:OUT Send_DeviceToken
+2016-4-7 19:46:04 [INFO]:IN Receive_Img
+2016-4-7 19:46:04 [INFO]:OUT Receive_Img
+2016-4-7 19:46:06 [INFO]:IN Obtain_bills
+2016-4-7 19:46:06 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:09 [INFO]:IN Reset_Status
+2016-4-7 19:46:09 [INFO]:OUT Reset_Status
+2016-4-7 19:46:10 [INFO]:IN Obtain_bills
+2016-4-7 19:46:10 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:13 [INFO]:IN Reset_Status
+2016-4-7 19:46:13 [INFO]:OUT Reset_Status
+2016-4-7 19:46:13 [INFO]:IN Obtain_bills
+2016-4-7 19:46:13 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:16 [INFO]:IN Reset_Status
+2016-4-7 19:46:16 [INFO]:OUT Reset_Status
+2016-4-7 19:46:17 [INFO]:IN Obtain_bills
+2016-4-7 19:46:17 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:19 [INFO]:IN Reset_Status
+2016-4-7 19:46:19 [INFO]:OUT Reset_Status
+2016-4-7 19:46:20 [INFO]:IN Obtain_bills
+2016-4-7 19:46:20 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:22 [INFO]:IN Reset_Status
+2016-4-7 19:46:22 [INFO]:OUT Reset_Status
+2016-4-7 19:46:24 [INFO]:IN Obtain_bills
+2016-4-7 19:46:24 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:26 [INFO]:IN Reset_Status
+2016-4-7 19:46:26 [INFO]:OUT Reset_Status
+2016-4-7 19:46:27 [INFO]:IN Obtain_bills
+2016-4-7 19:46:27 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:30 [INFO]:IN Reset_Status
+2016-4-7 19:46:30 [INFO]:OUT Reset_Status
+2016-4-7 19:46:31 [INFO]:IN Obtain_bills
+2016-4-7 19:46:31 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:33 [INFO]:IN Reset_Status
+2016-4-7 19:46:33 [INFO]:OUT Reset_Status
+2016-4-7 19:46:39 [INFO]:IN Obtain_bills
+2016-4-7 19:46:39 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:41 [INFO]:IN Reset_Status
+2016-4-7 19:46:41 [INFO]:OUT Reset_Status
+2016-4-7 19:46:45 [INFO]:SYN OUT
+2016-4-7 19:46:46 [INFO]:IN User_inf
+2016-4-7 19:46:46 [INFO]:Start SYN
+2016-4-7 19:46:46 [INFO]:IN User_inf
+2016-4-7 19:46:46 [INFO]:OUT User_inf
+2016-4-7 19:46:46 [INFO]:OUT User_inf
+2016-4-7 19:46:47 [INFO]:IN Obtain_bills
+2016-4-7 19:46:47 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:47 [INFO]:IN Send_DeviceToken
+2016-4-7 19:46:47 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-7 19:46:47 [INFO]:IN Receive_Img
+2016-4-7 19:46:47 [INFO]:OUT Receive_Img
+2016-4-7 19:46:47 [INFO]:OUT Send_DeviceToken
+2016-4-7 19:46:47 [INFO]:IN Receive_Img
+2016-4-7 19:46:47 [INFO]:OUT Receive_Img
+2016-4-7 19:46:49 [INFO]:SYN OUT
+2016-4-7 19:46:51 [INFO]:Start SYN
+2016-4-7 19:46:51 [INFO]:IN User_inf
+2016-4-7 19:46:51 [INFO]:IN User_inf
+2016-4-7 19:46:51 [INFO]:OUT User_inf
+2016-4-7 19:46:51 [INFO]:OUT User_inf
+2016-4-7 19:46:52 [INFO]:IN Obtain_bills
+2016-4-7 19:46:52 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:52 [INFO]:IN Send_DeviceToken
+2016-4-7 19:46:52 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-7 19:46:52 [INFO]:IN Receive_Img
+2016-4-7 19:46:52 [INFO]:OUT Receive_Img
+2016-4-7 19:46:52 [INFO]:OUT Send_DeviceToken
+2016-4-7 19:46:52 [INFO]:IN Receive_Img
+2016-4-7 19:46:52 [INFO]:OUT Receive_Img
+2016-4-7 19:46:54 [INFO]:SYN OUT
+2016-4-7 19:46:56 [INFO]:Start SYN
+2016-4-7 19:46:56 [INFO]:IN User_inf
+2016-4-7 19:46:56 [INFO]:IN User_inf
+2016-4-7 19:46:56 [INFO]:OUT User_inf
+2016-4-7 19:46:56 [INFO]:OUT User_inf
+2016-4-7 19:46:57 [INFO]:IN Obtain_bills
+2016-4-7 19:46:57 [INFO]:OUT Obtain_bills
+2016-4-7 19:46:57 [INFO]:IN Send_DeviceToken
+2016-4-7 19:46:57 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-7 19:46:57 [INFO]:IN Receive_Img
+2016-4-7 19:46:57 [INFO]:OUT Receive_Img
+2016-4-7 19:46:57 [INFO]:OUT Send_DeviceToken
+2016-4-7 19:46:57 [INFO]:IN Receive_Img
+2016-4-7 19:46:57 [INFO]:OUT Receive_Img
+2016-4-7 19:46:59 [INFO]:SYN OUT
+2016-4-7 19:47:01 [INFO]:Start SYN
+2016-4-7 19:47:01 [INFO]:IN User_inf
+2016-4-7 19:47:01 [INFO]:IN User_inf
+2016-4-7 19:47:01 [INFO]:OUT User_inf
+2016-4-7 19:47:01 [INFO]:OUT User_inf
+2016-4-7 19:47:02 [INFO]:IN Obtain_bills
+2016-4-7 19:47:02 [INFO]:OUT Obtain_bills
+2016-4-7 19:47:02 [INFO]:IN Send_DeviceToken
+2016-4-7 19:47:02 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-7 19:47:02 [INFO]:IN Receive_Img
+2016-4-7 19:47:02 [INFO]:OUT Receive_Img
+2016-4-7 19:47:02 [INFO]:OUT Send_DeviceToken
+2016-4-7 19:47:02 [INFO]:IN Receive_Img
+2016-4-7 19:47:02 [INFO]:OUT Receive_Img
+2016-4-7 19:47:06 [INFO]:SYN OUT
+2016-4-8 15:45:47 [INFO]:Start SYN
+2016-4-8 15:45:47 [INFO]:IN User_inf
+2016-4-8 15:45:47 [ERROR]:MySQL server has gone away
+2016-4-8 15:45:47 [ERROR]:SELECT * FROM Friends WHERE user1_id = '00000000001' OR user2_id = '00000000001'
+2016-4-8 15:45:47 [INFO]:IN User_inf
+2016-4-8 15:45:47 [ERROR]:MySQL server has gone away
+2016-4-8 15:45:47 [ERROR]:SELECT * FROM Friends WHERE user1_id = '00000000001' OR user2_id = '00000000001'
+2016-4-8 15:45:48 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 15:45:48 [ERROR]:MySQL server has gone away
+2016-4-8 15:45:48 [INFO]:IN Obtain_bills
+2016-4-8 15:45:48 [ERROR]:SELECT * FROM Bills WHERE member_0 = 00000000001 OR member_1 = 00000000001 OR member_2 = 00000000001 OR member_3 = 00000000001 OR member_4 = 00000000001 OR member_5 = 00000000001 OR member_6 = 00000000001 OR member_7 = 00000000001 OR member_8 = 00000000001 OR member_9 = 00000000001 OR paidBy = 00000000001 order by bill_id desc LIMIT 4
+2016-4-8 15:45:48 [ERROR]:MySQL server has gone away
+2016-4-8 15:45:48 [INFO]:IN Send_DeviceToken
+2016-4-8 15:45:48 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-8 15:45:48 [INFO]:OUT Send_DeviceToken
+2016-4-8 15:45:49 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 15:45:49 [ERROR]:MySQL server has gone away
+2016-4-8 15:45:56 [INFO]:SYN OUT
+2016-4-8 15:45:58 [INFO]:IN User_inf
+2016-4-8 15:45:58 [INFO]:Start SYN
+2016-4-8 15:45:58 [INFO]:IN User_inf
+2016-4-8 15:45:58 [INFO]:OUT User_inf
+2016-4-8 15:45:58 [INFO]:OUT User_inf
+2016-4-8 15:45:59 [INFO]:IN Obtain_bills
+2016-4-8 15:45:59 [INFO]:OUT Obtain_bills
+2016-4-8 15:45:59 [INFO]:IN Send_DeviceToken
+2016-4-8 15:45:59 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-8 15:45:59 [INFO]:OUT Send_DeviceToken
+2016-4-8 15:45:59 [INFO]:IN Receive_Img
+2016-4-8 15:45:59 [INFO]:OUT Receive_Img
+2016-4-8 15:45:59 [INFO]:IN Receive_Img
+2016-4-8 15:45:59 [INFO]:OUT Receive_Img
+2016-4-8 15:46:58 [INFO]:IN Obtain_bills
+2016-4-8 15:46:59 [INFO]:OUT Obtain_bills
+2016-4-8 15:47:01 [INFO]:IN Reset_Status
+2016-4-8 15:47:01 [INFO]:OUT Reset_Status
+2016-4-8 15:47:05 [INFO]:IN Obtain_bills
+2016-4-8 15:47:05 [INFO]:OUT Obtain_bills
+2016-4-8 15:47:07 [INFO]:IN Reset_Status
+2016-4-8 15:47:07 [INFO]:OUT Reset_Status
+2016-4-8 15:47:13 [INFO]:IN Obtain_bills
+2016-4-8 15:47:13 [INFO]:OUT Obtain_bills
+2016-4-8 15:47:16 [INFO]:IN Reset_Status
+2016-4-8 15:47:16 [INFO]:OUT Reset_Status
+2016-4-8 15:49:15 [INFO]:SYN OUT
+2016-4-8 15:58:22 [INFO]:Start SYN
+2016-4-8 15:58:24 [INFO]:SYN OUT
+2016-4-8 15:58:26 [INFO]:Start SYN
+2016-4-8 15:58:26 [INFO]:IN User_inf
+2016-4-8 15:58:26 [INFO]:IN User_inf
+2016-4-8 15:58:26 [INFO]:OUT User_inf
+2016-4-8 15:58:26 [INFO]:OUT User_inf
+2016-4-8 15:58:27 [INFO]:IN Obtain_bills
+2016-4-8 15:58:27 [INFO]:OUT Obtain_bills
+2016-4-8 15:58:27 [INFO]:IN Send_DeviceToken
+2016-4-8 15:58:27 [INFO]:IN Receive_Img
+2016-4-8 15:58:27 [INFO]:OUT Receive_Img
+2016-4-8 15:58:27 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-8 15:58:27 [INFO]:OUT Send_DeviceToken
+2016-4-8 15:58:28 [INFO]:IN Receive_Img
+2016-4-8 15:58:28 [INFO]:OUT Receive_Img
+2016-4-8 15:58:33 [INFO]:SYN OUT
+2016-4-8 16:07:11 [INFO]:Start SYN
+mysql_real_connect fail
+sql pool used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+mysql_real_connect fail
+2016-4-8 16:11:21 [INFO]:Server Start
+2016-4-8 16:11:21 [INFO]:Server listening on : 0.0.0.0:50052
+2016-4-8 16:11:22 [INFO]:Start SYN
+2016-4-8 16:11:25 [INFO]:SYN OUT
+2016-4-8 16:11:26 [INFO]:IN User_inf
+2016-4-8 16:11:26 [INFO]:Start SYN
+2016-4-8 16:11:26 [INFO]:IN User_inf
+2016-4-8 16:11:26 [INFO]:OUT User_inf
+2016-4-8 16:11:26 [INFO]:OUT User_inf
+2016-4-8 16:11:27 [INFO]:IN Obtain_bills
+2016-4-8 16:11:27 [INFO]:OUT Obtain_bills
+2016-4-8 16:11:28 [INFO]:IN Send_DeviceToken
+2016-4-8 16:11:28 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-8 16:11:28 [INFO]:IN Receive_Img
+2016-4-8 16:11:28 [INFO]:OUT Send_DeviceToken
+2016-4-8 16:11:28 [INFO]:OUT Receive_Img
+2016-4-8 16:11:28 [INFO]:IN Receive_Img
+2016-4-8 16:11:28 [INFO]:OUT Receive_Img
+2016-4-8 16:11:33 [INFO]:SYN OUT
+2016-4-8 16:16:25 [INFO]:Start SYN
+2016-4-8 16:16:25 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 16:16:25 [ERROR]:MySQL server has gone away
+2016-4-8 16:17:28 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 16:17:28 [ERROR]:MySQL server has gone away
+2016-4-8 16:17:29 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 16:17:29 [ERROR]:MySQL server has gone away
+2016-4-8 16:17:30 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 16:17:30 [ERROR]:MySQL server has gone away
+2016-4-8 16:17:31 [ERROR]:SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =00000000001
+2016-4-8 16:17:31 [ERROR]:MySQL server has gone away
+2016-4-8 16:17:32 [INFO]:IN Obtain_bills
+2016-4-8 16:17:32 [INFO]:OUT Obtain_bills
+2016-4-8 16:17:34 [INFO]:IN Reset_Status
+2016-4-8 16:17:34 [INFO]:OUT Reset_Status
+2016-4-8 16:18:16 [INFO]:SYN OUT
+2016-4-8 16:34:54 [INFO]:Start SYN
+2016-4-8 16:36:24 [INFO]:SYN OUT
+2016-4-8 17:07:20 [INFO]:Start SYN
+2016-4-8 17:07:20 [INFO]:IN User_inf
+2016-4-8 17:07:20 [INFO]:IN User_inf
+2016-4-8 17:07:20 [INFO]:OUT User_inf
+2016-4-8 17:07:20 [INFO]:OUT User_inf
+2016-4-8 17:07:21 [INFO]:IN Obtain_bills
+2016-4-8 17:07:21 [INFO]:OUT Obtain_bills
+2016-4-8 17:07:21 [INFO]:IN Receive_Img
+2016-4-8 17:07:21 [INFO]:OUT Receive_Img
+2016-4-8 17:07:21 [INFO]:IN Receive_Img
+2016-4-8 17:07:21 [INFO]:OUT Receive_Img
+2016-4-8 17:08:01 [INFO]:IN Create_share
+2016-4-8 17:08:01 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (00000000020, 14 , 'Dinner' , 00000000001 , '2016-04-08 17:13' , 'comment...' , '' , 00000000017 , NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL, 'ifood.png')
+2016-4-8 17:08:01 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE user_id = 00000000017 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL
+2016-4-8 17:08:01 [INFO]:SELECT deviceToken FROM User WHERE (user_id = 00000000017 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL) AND N_newBill = 1
+2016-4-8 17:08:01 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+2016-4-8 17:08:01 [INFO]:OUT Create_share
+2016-4-8 17:08:01 [INFO]:IN Obtain_bills
+2016-4-8 17:08:01 [INFO]:OUT Obtain_bills
+2016-4-8 17:08:32 [INFO]:IN Create_share
+2016-4-8 17:08:32 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (00000000020, 42 , 'Dinner' , 00000000001 , '2016-04-08 17:14' , 'comment...' , '' , 00000000001 , 00000000020 , NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL, 'ifood.png')
+2016-4-8 17:08:32 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE user_id = 00000000001 OR user_id = 00000000020 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL
+2016-4-8 17:08:32 [INFO]:SELECT deviceToken FROM User WHERE (user_id = 00000000001 OR user_id = 00000000020 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL) AND N_newBill = 1
+2016-4-8 17:08:32 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-8 17:08:32 [INFO]:23b86180fb302dde599779d1c61f731ccb727c67e6c87e074b9131604aba2618
+2016-4-8 17:08:32 [INFO]:OUT Create_share
+2016-4-8 17:08:32 [INFO]:IN Obtain_bills
+2016-4-8 17:08:32 [INFO]:OUT Obtain_bills
+2016-4-8 17:09:08 [INFO]:SYN OUT
+2016-4-9 13:40:13 [INFO]:IN Obtain_bills
+2016-4-9 13:40:13 [INFO]:Start SYN
+2016-4-9 13:40:13 [INFO]:IN User_inf
+2016-4-9 13:40:13 [INFO]:IN User_inf
+2016-4-9 13:40:13 [INFO]:OUT User_inf
+2016-4-9 13:40:13 [INFO]:OUT User_inf
+2016-4-9 13:40:13 [INFO]:OUT Obtain_bills
+2016-4-9 13:40:13 [INFO]:IN Receive_Img
+2016-4-9 13:40:13 [INFO]:OUT Receive_Img
+2016-4-9 13:40:14 [INFO]:IN Receive_Img
+2016-4-9 13:40:14 [INFO]:OUT Receive_Img
+2016-4-9 13:41:22 [INFO]:IN Create_share
+2016-4-9 13:41:22 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (00000000020, 50.02 , 'Lunch' , 00000000020 , '2016-04-09 13:46' , 'comment...' , '' , 00000000020 , 00000000017 , 00000000001 , NULL , NULL , NULL , NULL , NULL , NULL , NULL, 'ifood.png')
+2016-4-9 13:41:22 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE user_id = 00000000020 OR user_id = 00000000017 OR user_id = 00000000001 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL
+2016-4-9 13:41:22 [INFO]:SELECT deviceToken FROM User WHERE (user_id = 00000000020 OR user_id = 00000000017 OR user_id = 00000000001 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL) AND N_newBill = 1
+2016-4-9 13:41:22 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-9 13:41:22 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+2016-4-9 13:41:22 [INFO]:23b86180fb302dde599779d1c61f731ccb727c67e6c87e074b9131604aba2618
+2016-4-9 13:41:22 [INFO]:OUT Create_share
+2016-4-9 13:41:23 [INFO]:IN Obtain_bills
+2016-4-9 13:41:23 [INFO]:OUT Obtain_bills
+2016-4-9 13:41:27 [INFO]:SYN OUT
+2016-4-9 13:41:33 [INFO]:IN User_inf
+2016-4-9 13:41:33 [INFO]:Start SYN
+2016-4-9 13:41:33 [INFO]:IN User_inf
+2016-4-9 13:41:33 [INFO]:OUT User_inf
+2016-4-9 13:41:33 [INFO]:OUT User_inf
+2016-4-9 13:41:34 [INFO]:IN Obtain_bills
+2016-4-9 13:41:34 [INFO]:OUT Obtain_bills
+2016-4-9 13:41:34 [INFO]:IN Send_DeviceToken
+2016-4-9 13:41:34 [INFO]:IN Receive_Img
+2016-4-9 13:41:34 [INFO]:OUT Receive_Img
+2016-4-9 13:41:34 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-9 13:41:34 [INFO]:OUT Send_DeviceToken
+2016-4-9 13:41:34 [INFO]:IN Receive_Img
+2016-4-9 13:41:34 [INFO]:OUT Receive_Img
+2016-4-9 13:41:36 [INFO]:IN Obtain_bills
+2016-4-9 13:41:36 [INFO]:OUT Obtain_bills
+2016-4-9 13:41:47 [INFO]:Start SYN
+2016-4-9 13:43:00 [INFO]:SYN OUT
+2016-4-9 13:43:08 [INFO]:SYN OUT
+2016-4-10 21:41:57 [INFO]:Start SYN
+2016-4-10 21:43:03 [INFO]:IN Sign_up
+2016-4-10 21:43:03 [INFO]:OUT Sign_up
+2016-4-10 21:43:04 [INFO]:IN User_inf
+2016-4-10 21:43:04 [INFO]:IN Obtain_bills
+2016-4-10 21:43:04 [INFO]:OUT Obtain_bills
+2016-4-10 21:43:04 [INFO]:OUT User_inf
+2016-4-10 21:43:04 [INFO]:IN Receive_Img
+2016-4-10 21:43:04 [INFO]:OUT Receive_Img
+2016-4-10 21:43:32 [INFO]:IN Search
+2016-4-10 21:43:32 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%G%'
+2016-4-10 21:43:32 [INFO]:OUT Search
+2016-4-10 21:43:46 [INFO]:IN Send_request
+2016-4-10 21:43:46 [INFO]:SELECT deviceToken FROM User WHERE user_id = 00000000001 AND N_friendInvite = 1
+2016-4-10 21:43:46 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-10 21:43:46 [INFO]:OUT Send_request
+2016-4-10 21:43:58 [INFO]:Start SYN
+2016-4-10 21:43:58 [INFO]:IN User_inf
+2016-4-10 21:43:58 [INFO]:IN User_inf
+2016-4-10 21:43:58 [INFO]:OUT User_inf
+2016-4-10 21:43:58 [INFO]:OUT User_inf
+2016-4-10 21:43:59 [INFO]:IN Obtain_bills
+2016-4-10 21:43:59 [INFO]:OUT Obtain_bills
+2016-4-10 21:43:59 [INFO]:IN Send_DeviceToken
+2016-4-10 21:43:59 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-10 21:43:59 [INFO]:OUT Send_DeviceToken
+2016-4-10 21:43:59 [INFO]:IN Receive_Img
+2016-4-10 21:43:59 [INFO]:OUT Receive_Img
+2016-4-10 21:43:59 [INFO]:IN Receive_Img
+2016-4-10 21:43:59 [INFO]:OUT Receive_Img
+2016-4-10 21:44:01 [INFO]:IN Obtain_request
+2016-4-10 21:44:01 [INFO]:one request
+2016-4-10 21:44:01 [INFO]:OUT Obtain_request
+2016-4-10 21:44:04 [INFO]:IN Obtain_request
+2016-4-10 21:44:04 [INFO]:one request
+2016-4-10 21:44:04 [INFO]:IN Obtain_requestLogHistory
+2016-4-10 21:44:04 [INFO]:OUT Obtain_requestLogHistory
+2016-4-10 21:44:05 [INFO]:OUT Obtain_request
+2016-4-10 21:44:05 [INFO]:IN Receive_Img
+2016-4-10 21:44:05 [INFO]:OUT Receive_Img
+2016-4-10 21:44:05 [INFO]:IN Receive_Img
+2016-4-10 21:44:05 [INFO]:OUT Receive_Img
+2016-4-10 21:44:06 [INFO]:IN Add_friend
+2016-4-10 21:44:06 [INFO]:OUT Add_friend
+2016-4-10 21:44:07 [INFO]:IN Request_response
+2016-4-10 21:44:07 [INFO]:UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE user_id = 00000000042 OR user_id = 00000000001
+2016-4-10 21:44:07 [INFO]:OUT Request_response
+2016-4-10 21:44:09 [INFO]:IN User_inf
+2016-4-10 21:44:09 [INFO]:OUT User_inf
+2016-4-10 21:44:09 [INFO]:IN Obtain_requestLog
+2016-4-10 21:44:09 [INFO]:IN Obtain_bills
+2016-4-10 21:44:09 [INFO]:OUT Obtain_requestLog
+2016-4-10 21:44:09 [INFO]:IN Receive_Img
+2016-4-10 21:44:09 [INFO]:OUT Receive_Img
+2016-4-10 21:44:09 [INFO]:OUT Obtain_bills
+2016-4-10 21:44:09 [INFO]:IN User_inf
+2016-4-10 21:44:09 [INFO]:OUT User_inf
+2016-4-10 21:44:09 [INFO]:IN Obtain_bills
+2016-4-10 21:44:09 [INFO]:IN Obtain_requestLog
+2016-4-10 21:44:09 [INFO]:OUT Obtain_bills
+2016-4-10 21:44:09 [INFO]:OUT Obtain_requestLog
+2016-4-10 21:44:09 [INFO]:IN Receive_Img
+2016-4-10 21:44:09 [INFO]:IN Reset_Status
+2016-4-10 21:44:09 [INFO]:OUT Reset_Status
+2016-4-10 21:44:10 [INFO]:OUT Receive_Img
+2016-4-10 21:44:10 [INFO]:IN User_inf
+2016-4-10 21:44:10 [INFO]:OUT User_inf
+2016-4-10 21:44:10 [INFO]:IN Receive_Img
+2016-4-10 21:44:10 [INFO]:OUT Receive_Img
+2016-4-10 21:44:11 [INFO]:IN User_inf
+2016-4-10 21:44:11 [INFO]:OUT User_inf
+2016-4-10 21:44:11 [INFO]:IN Receive_Img
+2016-4-10 21:44:11 [INFO]:OUT Receive_Img
+2016-4-10 21:44:12 [INFO]:IN Reset_Status
+2016-4-10 21:44:12 [INFO]:OUT Reset_Status
+2016-4-10 21:44:12 [INFO]:IN User_inf
+2016-4-10 21:44:12 [INFO]:OUT User_inf
+2016-4-10 21:44:12 [INFO]:IN User_inf
+2016-4-10 21:44:12 [INFO]:OUT User_inf
+2016-4-10 21:44:12 [INFO]:IN Receive_Img
+2016-4-10 21:44:12 [INFO]:OUT Receive_Img
+2016-4-10 21:44:12 [INFO]:IN Receive_Img
+2016-4-10 21:44:12 [INFO]:OUT Receive_Img
+2016-4-10 21:44:14 [INFO]:SYN OUT
+2016-4-10 21:44:37 [INFO]:SYN OUT
+2016-4-10 23:11:50 [INFO]:Start SYN
+2016-4-10 23:12:43 [INFO]:SYN OUT
+2016-4-11 04:52:51 [INFO]:Start SYN
+2016-4-11 04:53:15 [INFO]:IN Obtain_userInfo
+2016-4-11 04:53:15 [INFO]:SELECT password, email, currency, username FROM User WHERE user_id = 00000000001
+2016-4-11 04:53:15 [INFO]:OUT Obatin_userInfo
+2016-4-11 04:53:17 [INFO]:IN Obtain_setting
+2016-4-11 04:53:17 [INFO]:SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE user_id = 00000000001
+2016-4-11 04:53:17 [INFO]:OUT Obtain_setting
+2016-4-11 04:53:33 [INFO]:SYN OUT
+2016-4-11 05:12:58 [INFO]:Start SYN
+2016-4-11 05:13:09 [INFO]:SYN OUT
+2016-4-11 21:23:30 [INFO]:Start SYN
+2016-4-11 21:23:30 [INFO]:IN User_inf
+2016-4-11 21:23:30 [INFO]:IN User_inf
+2016-4-11 21:23:30 [INFO]:OUT User_inf
+2016-4-11 21:23:30 [INFO]:OUT User_inf
+2016-4-11 21:23:31 [INFO]:IN Obtain_bills
+2016-4-11 21:23:31 [INFO]:OUT Obtain_bills
+2016-4-11 21:23:31 [INFO]:IN Receive_Img
+2016-4-11 21:23:31 [INFO]:OUT Receive_Img
+2016-4-11 21:23:31 [INFO]:IN Receive_Img
+2016-4-11 21:23:31 [INFO]:OUT Receive_Img
+2016-4-11 21:23:31 [INFO]:IN Send_DeviceToken
+2016-4-11 21:23:31 [INFO]:9fb994c7a960a01ad6302db0089a3ecbfb6ee94cffec6dbb4f178d5115ec0f6a
+2016-4-11 21:23:31 [INFO]:OUT Send_DeviceToken
+2016-4-11 21:23:33 [INFO]:IN Obtain_bills
+2016-4-11 21:23:33 [INFO]:OUT Obtain_bills
+2016-4-11 21:23:34 [INFO]:SYN OUT
+2016-4-11 22:39:07 [INFO]:Start SYN
+2016-4-11 22:39:07 [INFO]:IN User_inf
+2016-4-11 22:39:07 [INFO]:IN User_inf
+2016-4-11 22:39:07 [INFO]:OUT User_inf
+2016-4-11 22:39:07 [INFO]:OUT User_inf
+2016-4-11 22:39:08 [INFO]:IN Obtain_bills
+2016-4-11 22:39:08 [INFO]:OUT Obtain_bills
+2016-4-11 22:39:09 [INFO]:IN Receive_Img
+2016-4-11 22:39:09 [INFO]:OUT Receive_Img
+2016-4-11 22:39:09 [INFO]:IN Receive_Img
+2016-4-11 22:39:09 [INFO]:OUT Receive_Img
+2016-4-11 22:39:24 [INFO]:SYN OUT
+2016-4-12 12:36:02 [INFO]:Start SYN
+2016-4-12 12:36:02 [INFO]:IN User_inf
+2016-4-12 12:36:02 [INFO]:IN User_inf
+2016-4-12 12:36:02 [INFO]:OUT User_inf
+2016-4-12 12:36:02 [INFO]:OUT User_inf
+2016-4-12 12:36:03 [INFO]:IN Obtain_bills
+2016-4-12 12:36:03 [INFO]:OUT Obtain_bills
+2016-4-12 12:36:03 [INFO]:IN Send_DeviceToken
+2016-4-12 12:36:03 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-12 12:36:03 [INFO]:IN Receive_Img
+2016-4-12 12:36:03 [INFO]:OUT Receive_Img
+2016-4-12 12:36:03 [INFO]:OUT Send_DeviceToken
+2016-4-12 12:36:03 [INFO]:IN Receive_Img
+2016-4-12 12:36:03 [INFO]:OUT Receive_Img
+2016-4-12 12:36:11 [INFO]:SYN OUT
+2016-4-12 12:36:33 [INFO]:Start SYN
+2016-4-12 12:36:33 [INFO]:IN User_inf
+2016-4-12 12:36:33 [INFO]:IN User_inf
+2016-4-12 12:36:33 [INFO]:OUT User_inf
+2016-4-12 12:36:33 [INFO]:OUT User_inf
+2016-4-12 12:36:34 [INFO]:IN Obtain_bills
+2016-4-12 12:36:34 [INFO]:OUT Obtain_bills
+2016-4-12 12:36:34 [INFO]:IN Receive_Img
+2016-4-12 12:36:34 [INFO]:OUT Receive_Img
+2016-4-12 12:36:34 [INFO]:IN Receive_Img
+2016-4-12 12:36:34 [INFO]:OUT Receive_Img
+2016-4-12 12:36:38 [INFO]:Start SYN
+2016-4-12 12:37:02 [INFO]:SYN OUT
+2016-4-12 12:37:56 [INFO]:SYN OUT
+2016-4-12 12:38:47 [INFO]:Start SYN
+2016-4-12 12:38:55 [INFO]:IN Create_share
+2016-4-12 12:38:55 [INFO]:INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (00000000001, 23 , 'Lunch' , 00000000001 , '2016-04-12 12:38' , 'comment...' , '' , 00000000001 , 00000000020 , NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL, 'ifood.png')
+2016-4-12 12:38:55 [INFO]:UPDATE User SET synchronism_bill = 1 WHERE user_id = 00000000001 OR user_id = 00000000020 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL
+2016-4-12 12:38:55 [INFO]:SELECT deviceToken FROM User WHERE (user_id = 00000000001 OR user_id = 00000000020 OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL OR user_id = NULL) AND N_newBill = 1
+2016-4-12 12:38:55 [INFO]:365449b4330c362a7ef84bc8717e0324e8a9440479cc3ae4ef6c95155c8e728f
+2016-4-12 12:38:55 [INFO]:23b86180fb302dde599779d1c61f731ccb727c67e6c87e074b9131604aba2618
+2016-4-12 12:38:55 [INFO]:OUT Create_share
+2016-4-12 12:38:56 [INFO]:IN Obtain_bills
+2016-4-12 12:38:56 [INFO]:OUT Obtain_bills
+2016-4-12 12:38:58 [INFO]:SYN OUT
+2016-4-12 12:39:07 [INFO]:Start SYN
+2016-4-12 12:39:07 [INFO]:IN Obtain_bills
+2016-4-12 12:39:07 [INFO]:IN User_inf
+2016-4-12 12:39:07 [INFO]:IN User_inf
+2016-4-12 12:39:07 [INFO]:OUT Obtain_bills
+2016-4-12 12:39:07 [INFO]:OUT User_inf
+2016-4-12 12:39:07 [INFO]:OUT User_inf
+2016-4-12 12:39:07 [INFO]:IN Receive_Img
+2016-4-12 12:39:07 [INFO]:OUT Receive_Img
+2016-4-12 12:39:07 [INFO]:IN Receive_Img
+2016-4-12 12:39:07 [INFO]:OUT Receive_Img
+2016-4-12 12:39:09 [INFO]:IN Obtain_bills
+2016-4-12 12:39:09 [INFO]:OUT Obtain_bills
+2016-4-12 12:39:45 [INFO]:IN Send_DeviceToken
+2016-4-12 12:39:45 [INFO]:23b86180fb302dde599779d1c61f731ccb727c67e6c87e074b9131604aba2618
+2016-4-12 12:39:45 [INFO]:OUT Send_DeviceToken
+2016-4-12 12:39:57 [INFO]:IN Obtain_setting
+2016-4-12 12:39:57 [INFO]:SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE user_id = 00000000020
+2016-4-12 12:39:57 [INFO]:OUT Obtain_setting
+2016-4-12 12:40:10 [INFO]:SYN OUT
+2016-4-12 12:40:11 [INFO]:Start SYN
+2016-4-12 12:40:33 [INFO]:SYN OUT
+2016-4-12 13:20:50 [INFO]:Start SYN
+2016-4-12 13:20:50 [INFO]:IN User_inf
+2016-4-12 13:20:50 [INFO]:IN User_inf
+2016-4-12 13:20:50 [INFO]:OUT User_inf
+2016-4-12 13:20:50 [INFO]:OUT User_inf
+2016-4-12 13:20:50 [INFO]:IN Obtain_bills
+2016-4-12 13:20:50 [INFO]:OUT Obtain_bills
+2016-4-12 13:20:51 [INFO]:IN Send_DeviceToken
+2016-4-12 13:20:51 [INFO]:23b86180fb302dde599779d1c61f731ccb727c67e6c87e074b9131604aba2618
+2016-4-12 13:20:51 [INFO]:OUT Send_DeviceToken
+2016-4-12 13:20:51 [INFO]:IN Receive_Img
+2016-4-12 13:20:51 [INFO]:OUT Receive_Img
+2016-4-12 13:20:51 [INFO]:IN Receive_Img
+2016-4-12 13:20:51 [INFO]:OUT Receive_Img
+2016-4-12 13:20:56 [INFO]:SYN OUT
+2016-4-12 13:43:15 [INFO]:Start SYN
+2016-4-12 13:43:40 [INFO]:IN Login
+2016-4-12 13:43:40 [INFO]:OUT Login
+2016-4-12 13:44:32 [INFO]:IN Sign_up
+2016-4-12 13:44:32 [INFO]:OUT Sign_up
+2016-4-12 13:44:32 [INFO]:IN User_inf
+2016-4-12 13:44:32 [INFO]:IN Obtain_bills
+2016-4-12 13:44:32 [INFO]:IN Send_DeviceToken
+2016-4-12 13:44:32 [INFO]:d56939c7320481e010b77182a32ca0a38a15f419ed8270e2fb017873069b7f40
+2016-4-12 13:44:32 [INFO]:OUT Send_DeviceToken
+2016-4-12 13:44:32 [INFO]:OUT Obtain_bills
+2016-4-12 13:44:32 [INFO]:OUT User_inf
+2016-4-12 13:44:32 [INFO]:IN Receive_Img
+2016-4-12 13:44:32 [INFO]:OUT Receive_Img
+2016-4-12 13:44:40 [INFO]:IN Search
+2016-4-12 13:44:40 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Y%'
+2016-4-12 13:44:40 [INFO]:OUT Search
+2016-4-12 13:44:40 [INFO]:IN Search
+2016-4-12 13:44:40 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yo%'
+2016-4-12 13:44:40 [INFO]:OUT Search
+2016-4-12 13:44:40 [INFO]:IN Search
+2016-4-12 13:44:40 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yon%'
+2016-4-12 13:44:40 [INFO]:OUT Search
+2016-4-12 13:44:40 [INFO]:IN Search
+2016-4-12 13:44:40 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong%'
+2016-4-12 13:44:40 [INFO]:OUT Search
+2016-4-12 13:44:41 [INFO]:IN Search
+2016-4-12 13:44:41 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong %'
+2016-4-12 13:44:41 [INFO]:OUT Search
+2016-4-12 13:44:42 [INFO]:IN Search
+2016-4-12 13:44:42 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong c%'
+2016-4-12 13:44:42 [INFO]:OUT Search
+2016-4-12 13:44:42 [INFO]:IN Search
+2016-4-12 13:44:42 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong ca%'
+2016-4-12 13:44:42 [INFO]:OUT Search
+2016-4-12 13:44:42 [INFO]:IN Search
+2016-4-12 13:44:42 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong cao%'
+2016-4-12 13:44:42 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong ca%'
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong c%'
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong %'
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yong%'
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:IN Search
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yo%'
+2016-4-12 13:44:44 [INFO]:SELECT username FROM User WHERE UPPER(username) like '%Yon%'
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:44 [INFO]:OUT Search
+2016-4-12 13:44:45

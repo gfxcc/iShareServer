@@ -28,7 +28,6 @@
  * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
  */
 
 #include <iostream>
@@ -36,7 +35,7 @@
 #include <string>
 #include <list>
 
-#include <mysql.h>
+#include <mysql/mysql.h>
 #include <grpc/grpc.h>
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
@@ -85,6 +84,7 @@ using helloworld::IgnoreMessage;
 using helloworld::BillPayment;
 using helloworld::Setting;
 using helloworld::UserInfo;
+using helloworld::Reply_inf;
 using namespace std;
 
 bool pushNotificationToDevice (string deviceToken, string message);
@@ -105,9 +105,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
         //send sql request
-        string sql_command = "SELECT * FROM Friends WHERE username_1 = '" + request->information() + "' OR username_2 = '" + request->information() + "'";
+        string sql_command = "SELECT * FROM Friends WHERE user1_id = '" + request->information() + "' OR user2_id = '" + request->information() + "'";
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "Obtain user_inf fail");
             log(ERROR, mysql_error(conn));
             log(ERROR, sql_command.data());
             check_sql_sock_normal(sock_node);
@@ -122,23 +121,58 @@ class GreeterServiceImpl final : public Greeter::Service {
 
             string name = row[0];
             if (name == request->information()) {
-                reply->add_friends(row[1]);
+                reply->add_friends_id(row[1]);
             } else {
-                reply->add_friends(row[0]);
+                reply->add_friends_id(row[0]);
             }
         }
         mysql_free_result(res);
         //cout << "obtain" << endl;
 
-        //set syn flag = 0
-        sql_command = "UPDATE User SET synchronism_friend = 0 WHERE username = '" + request->information() + "'";
+        // get friends_id
+        for (int i = 0; i != reply->friends_id_size(); i++) {
+            sql_command = "SELECT username FROM User WHERE user_id = " + reply->friends_id(i);
+            if (mysql_query(conn, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                log(INFO, "OUT User_inf");
+                return Status::CANCELLED;
+            }
+            res = mysql_use_result(conn);
+            if ((row = mysql_fetch_row(res)) != NULL) {
+                reply->add_friends_name(row[0]);
+            }
+            mysql_free_result(res);
+        }
+
+        // get personal information
+        sql_command = "SELECT username, email FROM User WHERE user_id = " + request->information();
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "Change syn flag = 0 fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT User_inf");
             return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            reply->set_username(row[0]);
+            reply->set_email(row[1]);
+        }
+        mysql_free_result(res);
 
+        //set syn flag = 0
+        sql_command = "UPDATE User SET synchronism_friend = 0 WHERE user_id = " + request->information();
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT User_inf");
+            return Status::CANCELLED;
         }
 
         log(INFO, "OUT User_inf");
@@ -146,7 +180,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         return Status::OK;
     }
 
-    Status Login (ServerContext* context, const Login_m* request, Inf* reply) override {
+    Status Login (ServerContext* context, const Login_m* request, Reply_inf* reply) override {
         log(INFO, "IN Login");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
@@ -157,37 +191,66 @@ class GreeterServiceImpl final : public Greeter::Service {
         string sql_command = "SELECT password FROM User WHERE binary username = '" + request->username() + "'";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "Login fail");
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, please try again");
+            log(INFO, "OUT Login");
+            return Status::OK;
         }
         res = mysql_use_result(conn);
         row = mysql_fetch_row(res);
 
         if (res->row_count == 0) {
-            reply->set_information("username incorrect");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, this username does not exist.");
+            log(INFO, "OUT Login");
             return Status::OK;
         }
 
         // check password
         if (row[0] != request->password()) {
+            reply->set_status("CANCELLED");
             reply->set_information("password incorrect");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Login");
             return Status::OK;
         }
         mysql_free_result(res);
-        reply->set_information("OK");
 
+        // get user_id
+        sql_command = "SELECT user_id FROM User WHERE username = '" + request->username() + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, please try again");
+            log(INFO, "OUT Login");
+            return Status::OK;
+        }
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            reply->set_information(row[0]);
+        }
+        mysql_free_result(res);
+
+        reply->set_status("OK");
         release_sock_to_sql_pool(sock_node);
         log(INFO, "OUT Login");
         return Status::OK;
     }
 
-    Status Sign_up (ServerContext* context, const Sign_m* request, Inf* reply) override {
+    Status Sign_up (ServerContext* context, const Sign_m* request, Reply_inf* reply) override {
         log(INFO, "IN Sign_up");
 
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
@@ -198,39 +261,68 @@ class GreeterServiceImpl final : public Greeter::Service {
         string sql_command = "SELECT user_id FROM User WHERE username = '" + request->username() + "'";
 
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, "check username fail");
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, please try again.");
+            log(INFO, "OUT Sign_up");
+            return Status::OK;
         }
         res = mysql_use_result(conn);
         while ((row = mysql_fetch_row(res)) != NULL) {
         }
 
-        // usename used
+        // usename has been used
         if (res->row_count != 0) {
-            reply->set_information("invalid_username");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            log(WARNING, "invalid username");
+
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, your username has beed used. Please change username.");
             log(INFO,"OUT Sign_up");
-            return Status::CANCELLED;
+            return Status::OK;
         }
+        mysql_free_result(res);
 
         // insert record into User table
-        mysql_free_result(res);
-        sql_command = "INSERT INTO User (username, password) VALUES ('" + request->username() + "', '" + request->password() + "')";
+        sql_command = "INSERT INTO User (username, password, email) VALUES ('" +
+            request->username() + "', '" + request->password() + "', '" +
+            request->email() + "')";
 
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, "insert userInf fail");
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, please create this account again.");
+
             log(INFO,"OUT Sign_up");
-            return Status::CANCELLED;
+            return Status::OK;
         }
+        // get user_id
+        sql_command = "SELECT user_id FROM User WHERE username = '" + request->username() + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, "get user_id fail");
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            reply->set_status("CANCELLED");
+            reply->set_information("Sorry, please reopen this app.");
 
-        reply->set_information("OK");
-
+            log(INFO,"OUT Sign_up");
+            return Status::OK;
+        }
+        string user_id;
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            user_id = row[0];
+        }
+        reply->set_status("OK");
+        reply->set_information(user_id);
         log(INFO,"OUT Sign_up");
         release_sock_to_sql_pool(sock_node);
         return Status::OK;
@@ -244,7 +336,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_ROW row;
 
 
-        string sql_command = "SELECT username FROM User WHERE username like '%" + request->information() + "%'";
+        string sql_command = "SELECT username FROM User WHERE UPPER(username) like '%" + request->information() + "%'";
 
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
@@ -273,38 +365,73 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
 
-        string sql_command = "SELECT * FROM iShare_data.Friends where (username_1 = '" + request->content(0) + "' and username_2 = '" + request->content(1) + "') or (username_1 = '" + request->content(1) + "' and username_2 = '" +request->content(0) + "')";
+        // get user_id
+        string user1_id, user2_id;
+        string sql_command = "SELECT user_id FROM User WHERE username = '" + request->content(0) + "' OR username = '" + request->content(1) + "'";
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
 
+            log(INFO, "OUT Add_friend");
+            return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            user1_id = row[0];
+        }
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            user2_id = row[0];
+        }
+        mysql_free_result(res);
+
+        // check for relation exist or not
+        sql_command = "SELECT * FROM Friends where (user1_id = " + user1_id + " and user2_id = " + user2_id + ") OR (user1_id = " + user2_id + " and user2_id = " + user1_id + ")";
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Add_friend");
+            return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
         while ((row = mysql_fetch_row(res)) != NULL) {
         }
         if (res->row_count != 0) {
             reply->set_information("Already be friends");
-
             release_sock_to_sql_pool(sock_node);
+
+            log(INFO, "OUT Add_friend");
             return Status::OK;
         }
         mysql_free_result(res);
 
-        //
-        sql_command = "INSERT INTO Friends (username_1, username_2) VALUES ('" + request->content(0) + "', '" + request->content(1) + "')";
+        // start to add friend
+        sql_command = "INSERT INTO Friends (user1_id, user2_id) VALUES (" + user1_id + ", " + user2_id + ")";
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
-            reply->set_information("INSERT WRONG");
             check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+
+            log(INFO, "OUT Add_friend");
+            return Status::CANCELLED;
         }
 
         //
-        sql_command = "UPDATE User SET synchronism_friend = 1 WHERE username = '" + request->content(0) + "' OR username = '" + request->content(1) + "'";
+        sql_command = "UPDATE User SET synchronism_friend = 1 WHERE user_id = " + user1_id + " OR user_id = " + user2_id;
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, mysql_error(conn));
             log(ERROR, sql_command.data());
-            reply->set_information("UPDATE User WRONG");
+            log(ERROR, mysql_error(conn));
+
+            reply->set_information("Sorry, please again later.");
             check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+
+            log(INFO, "OUT Add_friend");
+            return Status::OK;
         }
 
 
@@ -319,7 +446,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
 
-        string sql_command = "DELETE FROM Friends WHERE (username_1 = '" + request->content(0) + "' and username_2 = '" + request->content(1) + "') OR (username_1 = '" + request->content(1) + "' and username_2 = '" + request->content(0) + "')";
+        string sql_command = "DELETE FROM Friends WHERE (user1_id = " + request->content(0) + " and user2_id = " +
+            request->content(1) + ") OR (user1_id = " + request->content(1) + " and user2_id = " + request->content(0) + ")";
 
         if (mysql_query(conn, sql_command.data())) {
             log(ERROR, sql_command.data());
@@ -327,6 +455,7 @@ class GreeterServiceImpl final : public Greeter::Service {
 
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Delete_friend");
             return Status::CANCELLED;
         }
         // delete result check
@@ -334,13 +463,16 @@ class GreeterServiceImpl final : public Greeter::Service {
             log(ERROR, "error happend during delete process");
         }
 
-        sql_command = "UPDATE User SET synchronism_friend = 1 WHERE username = '" + request->content(0) + "' OR username = '" + request->content(1) + "'";
+        sql_command = "UPDATE User SET synchronism_friend = 1, synchronism_delete = 1 WHERE user_id = " + request->content(0) + " OR user_id = " + request->content(1);
         if (mysql_query(conn, sql_command.data())) {
 
             log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
             reply->set_information("UPDATE User WRONG");
             check_sql_sock_normal(sock_node);
+
+            log(INFO, "OUT Delete_friend");
+            return Status::OK;
         }
 
         reply->set_information("OK");
@@ -367,7 +499,10 @@ class GreeterServiceImpl final : public Greeter::Service {
             //            ostr << i;
             //            string astr = ostr.str();
 
-            sql_command = "SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='" + request.information() + "'";
+            if (request.information() == "")
+                continue;
+
+            sql_command = "SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE user_id =" + request.information();
             if (!mysql_query(conn, sql_command.data())) {
 
                 //cout << sql_command << endl;
@@ -380,7 +515,7 @@ class GreeterServiceImpl final : public Greeter::Service {
                         reply.set_delete_(row[2]);
                         reply.set_request(row[3]);
                     } else {
-                        log(WARNING, "error row == NULL");
+                        log(WARNING, "row == NULL");
                         log(INFO, sql_command.data());
 
                         // get new conn
@@ -469,56 +604,86 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
 
-        string sql_command = "INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES ('" + request->creater() + "', '" + request->amount() + "' , '" + request->type() + "' , '" + request->paidby() + "' , '" + request->data() + "' , '" + request->note() + "' , '" + request->image() + "' , '" + request->members(0) + "' , '" + request->members(1) + "' , '" + request->members(2) + "' , '" + request->members(3) + "' , '" + request->members(4) + "' , '" + request->members(5) + "' , '" + request->members(6) + "' , '" + request->members(7) + "' , '" + request->members(8) + "' , '" + request->members(9) + "', '" + request->typeicon() + "')";
+        string sql_command = "INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (" +
+            request->creater() + ", " + request->amount() + " , '" + request->type() + "' , " +
+            request->paidby() + " , '" + request->data() + "' , '" + request->note() + "' , '" +
+            request->image() + "' , " + request->members(0) + " , " + request->members(1) + " , " +
+            request->members(2) + " , " + request->members(3) + " , " + request->members(4) +
+            " , " + request->members(5) + " , " + request->members(6) + " , " +
+            request->members(7) + " , " + request->members(8) + " , " + request->members(9) + ", '" +
+            request->typeicon() + "')";
 
         log(INFO, sql_command.data());
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "error in Create_share Process 1");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
 
-            reply->set_information("insert fail");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Create_share");
             return Status::CANCELLED;
         }
 
         // update synchronism_bill
-        sql_command = "UPDATE User SET synchronism_bill = 1 WHERE username = '" + request->members(0) + "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) + "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) + "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) + "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) + "' OR username = '" + request->members(9) + "'";
+        sql_command = "UPDATE User SET synchronism_bill = 1 WHERE user_id = " + request->members(0) +
+            " OR user_id = " + request->members(1) + " OR user_id = " + request->members(2) +
+            " OR user_id = " + request->members(3) + " OR user_id = " + request->members(4) +
+            " OR user_id = " + request->members(5) + " OR user_id = " + request->members(6) +
+            " OR user_id = " + request->members(7) + " OR user_id = " + request->members(8) +
+            " OR user_id = " + request->members(9);
 
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "error in Create_share process 2");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
 
-            reply->set_information("update fail");
-            //printf("%s\n", );
+            reply->set_information("OK");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+            log(INFO, "OUT Create_share");
+            return Status::OK;
         }
 
-
-        // push notification
-        sql_command = "SELECT deviceToken FROM User WHERE (username = '" + request->members(0) +
-            "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) +
-            "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) +
-            "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) +
-            "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) +
-            "' OR username = '" + request->members(9) + "') AND N_newBill = 1";
-        log(INFO, sql_command.data());
+        // get creater username
+        string creater_username;
+        sql_command = "SELECT username FROM User WHERE user_id =" + request->creater();
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "error in Create_share process 3");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
 
-            reply->set_information("push notification fail");
-            //printf("%s\n", );
+            reply->set_information("OK");
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+            log(INFO, "OUT Create_share");
+            return Status::OK;
         }
         res = mysql_use_result(conn);
-        string message = request->creater() + " share a " + request->amount() + "$ bill with you.";
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            creater_username = row[0];
+        }
+        mysql_free_result(res);
+
+        // push notification
+        sql_command = "SELECT deviceToken FROM User WHERE (user_id = " + request->members(0) +
+            " OR user_id = " + request->members(1) + " OR user_id = " + request->members(2) +
+            " OR user_id = " + request->members(3) + " OR user_id = " + request->members(4) +
+            " OR user_id = " + request->members(5) + " OR user_id = " + request->members(6) +
+            " OR user_id = " + request->members(7) + " OR user_id = " + request->members(8) +
+            " OR user_id = " + request->members(9) + ") AND N_newBill = 1";
+        log(INFO, sql_command.data());
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+
+            reply->set_information("OK");
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Create_share");
+            return Status::OK;
+        }
+        res = mysql_use_result(conn);
+        string message = creater_username + " share a " + request->amount() + "$ bill with you.";
         while ((row = mysql_fetch_row(res)) != NULL) {
             if (!row[0]) {
                 continue;
@@ -529,8 +694,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         mysql_free_result(res);
 
         reply->set_information("OK");
-        log(INFO, "OUT Create_share");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Create_share");
         return Status::OK;
     }
 
@@ -543,18 +708,21 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         string sql_command = "DELETE FROM Bills WHERE bill_id = " + request->bill_id();
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, mysql_error(conn));
             log(ERROR, sql_command.data());
-
-            reply->set_information("delete fail");
+            log(ERROR, mysql_error(conn));
             //printf("%s\n", );
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Delete_bill");
             return Status::CANCELLED;
         }
 
 
-        sql_command = "UPDATE User SET synchronism_delete = 1 WHERE username = '" + request->members(0) + "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) + "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) + "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) + "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) + "' OR username = '" + request->members(9) + "'";
+        sql_command = "UPDATE User SET synchronism_delete = 1 WHERE user_id = " + request->members(0) + " OR user_id = " +
+            request->members(1) + " OR user_id = " + request->members(2) + " OR user_id = " + request->members(3) +
+            " OR user_id = " + request->members(4) + " OR user_id = " + request->members(5) + " OR user_id = " +
+            request->members(6) + " OR user_id = " + request->members(7) + " OR user_id = " + request->members(8) +
+            " OR user_id = " + request->members(9);
         if (mysql_query(conn, sql_command.data())) {
             log(ERROR, mysql_error(conn));
             log(ERROR, sql_command.data());
@@ -563,40 +731,41 @@ class GreeterServiceImpl final : public Greeter::Service {
             //printf("%s\n", );
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+            log(INFO, "OUT Delete_bill");
+            return Status::OK;
         }
 
         // push notification
         // push notification
         /*
-        sql_command = "SELECT deviceToken FROM User WHERE (username = '" + request->members(0) +
-            "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) +
-            "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) +
-            "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) +
-            "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) +
-            "' OR username = '" + request->members(9) + "') AND N_newBill = 1";
-        log(INFO, sql_command.data());
-        if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "error in Create_share process 3");
-            log(ERROR, sql_command.data());
+           sql_command = "SELECT deviceToken FROM User WHERE (username = '" + request->members(0) +
+           "' OR username = '" + request->members(1) + "' OR username = '" + request->members(2) +
+           "' OR username = '" + request->members(3) + "' OR username = '" + request->members(4) +
+           "' OR username = '" + request->members(5) + "' OR username = '" + request->members(6) +
+           "' OR username = '" + request->members(7) + "' OR username = '" + request->members(8) +
+           "' OR username = '" + request->members(9) + "') AND N_newBill = 1";
+           log(INFO, sql_command.data());
+           if (mysql_query(conn, sql_command.data())) {
+           log(ERROR, "error in Create_share process 3");
+           log(ERROR, sql_command.data());
 
-            reply->set_information("push notification fail");
+           reply->set_information("push notification fail");
             //printf("%s\n", );
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
             return Status::CANCELLED;
-        }
-        res = mysql_use_result(conn);
-        string message = request->creater() + " share a " + request->amount() + "$ bill with you.";
-        while ((row = mysql_fetch_row(res)) != NULL) {
+            }
+            res = mysql_use_result(conn);
+            string message = request->creater() + " share a " + request->amount() + "$ bill with you.";
+            while ((row = mysql_fetch_row(res)) != NULL) {
             if (!row[0]) {
-                continue;
+            continue;
             }
             log(INFO, row[0]);
             pushNotificationToDevice(row[0], message);
-        }
-        mysql_free_result(res);
-        */
+            }
+            mysql_free_result(res);
+            */
 
         release_sock_to_sql_pool(sock_node);
         log(INFO, "OUT Delete_bill");
@@ -616,8 +785,8 @@ class GreeterServiceImpl final : public Greeter::Service {
             if (fp == NULL)
             {
                 //fprintf(stderr, "cannot open image \n");
-                log(WARNING, "cannot open image");
-                log(WARNING, path.data());
+                //log(WARNING, "cannot open image");
+                //log(WARNING, path.data());
                 image.set_data("");
 
 
@@ -718,20 +887,32 @@ class GreeterServiceImpl final : public Greeter::Service {
         string sql_command;
         if (request->amount() == "all")
         {
-            sql_command = "SELECT * FROM Bills WHERE member_0 = '" + request->username() + "' OR member_1 = '" + request->username() + "' OR member_2 = '" + request->username() + "' OR member_3 = '" + request->username() + "' OR member_4 = '" + request->username() + "' OR member_5 = '" + request->username() + "' OR member_6 = '" + request->username() + "' OR member_7 = '" + request->username() + "' OR member_8 = '" + request->username() + "' OR member_9 = '" + request->username() + "' OR paidBy = '" + request->username() + "' order by bill_id desc";
+            sql_command = "SELECT * FROM Bills WHERE member_0 = " + request->username() + " OR member_1 = " +
+                request->username() + " OR member_2 = " + request->username() + " OR member_3 = " + request->username() +
+                " OR member_4 = " + request->username() + " OR member_5 = " + request->username() + " OR member_6 = " +
+                request->username() + " OR member_7 = " + request->username() + " OR member_8 = " + request->username() +
+                " OR member_9 = " + request->username() + " OR paidBy = " + request->username() + " order by bill_id desc";
         } else  {
-            sql_command = "SELECT * FROM Bills WHERE member_0 = '" + request->username() + "' OR member_1 = '" + request->username() + "' OR member_2 = '" + request->username() + "' OR member_3 = '" + request->username() + "' OR member_4 = '" + request->username() + "' OR member_5 = '" + request->username() + "' OR member_6 = '" + request->username() + "' OR member_7 = '" + request->username() + "' OR member_8 = '" + request->username() + "' OR member_9 = '" + request->username() + "' OR paidBy = '" + request->username() + "' order by bill_id desc LIMIT " + request->amount();
+            sql_command = "SELECT * FROM Bills WHERE member_0 = " + request->username() +
+                " OR member_1 = " + request->username() + " OR member_2 = " +
+                request->username() + " OR member_3 = " + request->username() +
+                " OR member_4 = " + request->username() + " OR member_5 = " +
+                request->username() + " OR member_6 = " + request->username() +
+                " OR member_7 = " + request->username() + " OR member_8 = " +
+                request->username() + " OR member_9 = " + request->username() +
+                " OR paidBy = " + request->username() + " order by bill_id desc LIMIT " +
+                request->amount();
         }
 
-        log(INFO, sql_command.data());
-
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
             return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
+
         while ((row = mysql_fetch_row(res)) != NULL) {
             Share_inf bill;
             bill.set_bill_id(row[0]);
@@ -740,18 +921,51 @@ class GreeterServiceImpl final : public Greeter::Service {
             bill.set_type(row[3]);
             bill.set_data(row[5]);
             bill.set_note(row[6]);
-            bill.set_image(row[7]);
+            if (row[7])
+                bill.set_image(row[7]);
+            else
+                bill.set_image("");
             bill.set_paidby(row[8]);
-            bill.add_members(row[9]);
-            bill.add_members(row[10]);
-            bill.add_members(row[11]);
-            bill.add_members(row[12]);
-            bill.add_members(row[13]);
-            bill.add_members(row[14]);
-            bill.add_members(row[15]);
-            bill.add_members(row[16]);
-            bill.add_members(row[17]);
-            bill.add_members(row[18]);
+            if (row[9])
+                bill.add_members(row[9]);
+            else
+                bill.add_members("");
+            if (row[10])
+                bill.add_members(row[10]);
+            else
+                bill.add_members("");
+            if (row[11])
+                bill.add_members(row[11]);
+            else
+                bill.add_members("");
+            if (row[12])
+                bill.add_members(row[12]);
+            else
+                bill.add_members("");
+            if (row[13])
+                bill.add_members(row[13]);
+            else
+                bill.add_members("");
+            if (row[14])
+                bill.add_members(row[14]);
+            else
+                bill.add_members("");
+            if (row[15])
+                bill.add_members(row[15]);
+            else
+                bill.add_members("");
+            if (row[16])
+                bill.add_members(row[16]);
+            else
+                bill.add_members("");
+            if (row[17])
+                bill.add_members(row[17]);
+            else
+                bill.add_members("");
+            if (row[18])
+                bill.add_members(row[18]);
+            else
+                bill.add_members("");
             bill.set_paidstatus(row[19]);
             if (row[20]) {
                 bill.set_typeicon(row[20]);
@@ -763,18 +977,17 @@ class GreeterServiceImpl final : public Greeter::Service {
             reply->Write(bill);
         }
         mysql_free_result(res);
-
-        sql_command = "UPDATE User SET synchronism_bill = 0 WHERE username = '" + request->username() + "'";
+        sql_command = "UPDATE User SET synchronism_bill = 0 WHERE user_id = " + request->username();
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Change syn flag = 0 failed");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
-
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obtain_bills");
+            return Status::OK;
         }
-
-
-        log(INFO, "OUT Obtain_bills");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Obtain_bills");
         return Status::OK;
     }
 
@@ -785,15 +998,15 @@ class GreeterServiceImpl final : public Greeter::Service {
         //MYSQL_RES *res;
         //MYSQL_ROW row;
 
-        string sql_command = "UPDATE User SET synchronism_delete = 0 WHERE username = '" + request->information() + "'";
+        string sql_command = "UPDATE User SET synchronism_delete = 0 WHERE user_id = '" + request->information() + "'";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Change synchronism_delete = 0 fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
         }
-        log(INFO, "OUT Reset_Status");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Reset_Status");
         return Status::OK;
     }
 
@@ -806,31 +1019,52 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
 
-        string sql_command = "INSERT INTO Request (sender, receiver, type, content, request_date) VALUES ('" +
-            request->sender() + "', '" + request->receiver() + "', '" + request->type() + "', '" +
+        // get receiver uiser_id
+        string receiver_id;
+        string sql_command = "SELECT user_id FROM User WHERE username = '" + request->receiver() + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Send_request");
+            return Status::CANCELLED;
+        }
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            receiver_id = row[0];
+        }
+        mysql_free_result(res);
+
+        sql_command = "INSERT INTO Request (sender, receiver, type, content, request_date) VALUES (" +
+            request->sender() + ", " + receiver_id + ", '" + request->type() + "', '" +
             request->content() + "', '" + request->request_date() + "')";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Send_request insert process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Send_request");
             return Status::CANCELLED;
         }
 
-        sql_command = "UPDATE User SET synchronism_request = 1 WHERE username = '" + request->receiver() + "'";
+        sql_command = "UPDATE User SET synchronism_request = 1 WHERE user_id = " + receiver_id;
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Send_request update process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Send_request");
+            return Status::CANCELLED;
         }
 
         // push notification
         if (request->type() == "friendInvite") {
-            sql_command = "SELECT deviceToken FROM User WHERE username = '" + request->receiver() + "' AND N_friendInvite = 1";
+            sql_command = "SELECT deviceToken FROM User WHERE user_id = " + receiver_id + " AND N_friendInvite = 1";
         } else if (request->type() == "payment") {
-            sql_command = "SELECT deviceToken FROM User WHERE username = '" + request->receiver() + "' AND N_paidNotice = 1";
+            sql_command = "SELECT deviceToken FROM User WHERE user_id = " + receiver_id + " AND N_paidNotice = 1";
         }
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
@@ -841,10 +1075,11 @@ class GreeterServiceImpl final : public Greeter::Service {
             //printf("%s\n", );
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Send_request");
             return Status::OK;
         }
         res = mysql_use_result(conn);
-        string message = "New request from " + request->sender();
+        string message = "New rquest.";
         while ((row = mysql_fetch_row(res)) != NULL) {
             if (!row[0]) {
                 continue;
@@ -855,8 +1090,8 @@ class GreeterServiceImpl final : public Greeter::Service {
         mysql_free_result(res);
 
 
-        log(INFO, "OUT Send_request");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Send_request");
         return Status::OK;
     }
 
@@ -864,24 +1099,74 @@ class GreeterServiceImpl final : public Greeter::Service {
         log(INFO, "IN Obtain_request");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
+        SQL_SOCK_NODE* sock_node_ = get_sock_from_pool();
+        MYSQL* conn_ = sock_node_->sql_sock->sock;
+
         MYSQL_RES *res;
         MYSQL_ROW row;
+        MYSQL_RES *res_;
+        MYSQL_ROW row_;
 
-        string sql_command = "SELECT * FROM Request WHERE receiver = '" + request->information() + "' order by request_id desc";
+        string sql_command = "SELECT * FROM Request WHERE receiver = " + request->information() + " order by request_id desc";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_request fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            check_sql_sock_normal(sock_node_);
+            release_sock_to_sql_pool(sock_node_);
+            log(INFO, "OUT Obtain_request");
             return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
         while ((row = mysql_fetch_row(res)) != NULL) {
             Request req;
+            // conver user_id to username
+            sql_command = "SELECT username FROM User WHERE user_id = " + request->information();
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                mysql_free_result(res);
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_request");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_receiver(row_[0]);
+            }
+            mysql_free_result(res_);
+
+            string sender_id(row[1]);
+            sql_command = "SELECT username FROM User WHERE user_id = " + sender_id;
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                mysql_free_result(res);
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_request");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_sender(row_[0]);
+            }
+            mysql_free_result(res_);
+
             req.set_request_id(row[0]);
-            req.set_sender(row[1]);
-            req.set_receiver(row[2]);
+            //req.set_sender(row[1]);
+            //req.set_receiver(row[2]);
             req.set_type(row[3]);
             req.set_content(row[4]);
 
@@ -889,19 +1174,23 @@ class GreeterServiceImpl final : public Greeter::Service {
             log(INFO, "one request");
             reply->Write(req);
         }
+        release_sock_to_sql_pool(sock_node_);
         mysql_free_result(res);
 
-        sql_command = "UPDATE User SET synchronism_request = 0 WHERE username = '" + request->information() + "'";
+
+        sql_command = "UPDATE User SET synchronism_request = 0 WHERE user_id = " + request->information();
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_request update process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
-            return Status::CANCELLED;
+            log(INFO, "OUT Obtain_request");
+            return Status::OK;
         }
 
-        log(INFO, "OUT Obtain_request");
+
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Obtain_request");
         return Status::OK;
     }
 
@@ -909,25 +1198,70 @@ class GreeterServiceImpl final : public Greeter::Service {
         log(INFO, "IN Obtain_requestLog");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
+        SQL_SOCK_NODE* sock_node_ = get_sock_from_pool();
+        MYSQL* conn_ = sock_node_->sql_sock->sock;
         MYSQL_RES *res;
         MYSQL_ROW row;
-        string sql_command = "SELECT * FROM RequestLog WHERE (sender = '" + request->information() + "' AND ignore_sender = 'FALSE') OR (receiver = '" + request->information() + "' AND ignore_receiver = 'FALSE') order by requestLog_id desc";
+        MYSQL_RES *res_;
+        MYSQL_ROW row_;
+        string sql_command = "SELECT * FROM RequestLog WHERE (sender = " + request->information() +
+            " AND ignore_sender = 'FALSE') OR (receiver = " + request->information() +
+            " AND ignore_receiver = 'FALSE') order by requestLog_id desc";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_requestLog fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obtain_requestLog");
             return Status::CANCELLED;
         }
-        log(INFO, sql_command.data());
         res = mysql_use_result(conn);
         while ((row = mysql_fetch_row(res)) != NULL) {
 
             Request req;
+            // convert user_id to username
+            string receiver_id(row[2]);
+            sql_command = "SELECT username FROM User WHERE user_id = " + receiver_id;
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_requestLog");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_receiver(row_[0]);
+            }
+            mysql_free_result(res_);
+
+            string sender_id(row[1]);
+            sql_command = "SELECT username FROM User WHERE user_id = " + sender_id;
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_requestLog");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_sender(row_[0]);
+            }
+            mysql_free_result(res_);
+
             req.set_request_id(row[0]);
-            req.set_sender(row[1]);
-            req.set_receiver(row[2]);
+            //req.set_sender(row[1]);
+            //req.set_receiver(row[2]);
             req.set_type(row[3]);
             req.set_content(row[4]);
             req.set_response(row[5]);
@@ -936,35 +1270,41 @@ class GreeterServiceImpl final : public Greeter::Service {
 
             reply->Write(req);
         }
+        release_sock_to_sql_pool(sock_node_);
+
         mysql_free_result(res);
-        sql_command = "UPDATE User SET synchronism_request = 0 WHERE username = '" + request->information() + "'";
+        sql_command = "UPDATE User SET synchronism_request = 0 WHERE user_id = " + request->information();
         if (mysql_query(conn, sql_command.data())) {
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obtain_requestLog");
             return Status::CANCELLED;
         }
 
-        sql_command = "UPDATE RequestLog SET ignore_receiver = 'TRUE' WHERE receiver = '" + request->information() + "' AND ignore_receiver = 'FALSE'";
+        sql_command = "UPDATE RequestLog SET ignore_receiver = 'TRUE' WHERE receiver = " + request->information() + " AND ignore_receiver = 'FALSE'";
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_requestLog update process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obtain_requestLog");
             return Status::CANCELLED;
         }
 
-        sql_command = "UPDATE RequestLog SET ignore_sender = 'TRUE' WHERE sender = '" + request->information() + "' AND ignore_sender = 'FALSE'";
+        sql_command = "UPDATE RequestLog SET ignore_sender = 'TRUE' WHERE sender = " + request->information() + " AND ignore_sender = 'FALSE'";
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_requestLog update process fail");
             log(ERROR,  sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obtain_requestLog");
             return Status::CANCELLED;
         }
 
-        log(INFO, "OUT Obtain_requestLog");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Obtain_requestLog");
         return Status::OK;
     }
 
@@ -973,26 +1313,75 @@ class GreeterServiceImpl final : public Greeter::Service {
         log(INFO, "IN Obtain_requestLogHistory");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
+        SQL_SOCK_NODE* sock_node_ = get_sock_from_pool();
+        MYSQL* conn_ = sock_node_->sql_sock->sock;
         MYSQL_RES *res;
         MYSQL_ROW row;
+        MYSQL_RES *res_;
+        MYSQL_ROW row_;
+
         //string sql_command = "SELECT * FROM RequestLog WHERE sender = '" + request->information() + "' OR receiver = '" + request->information() + "' order by requestLog_id desc";
-        string sql_command = "SELECT * FROM RequestLog WHERE receiver = '" + request->information() + "' order by requestLog_id desc";
+        string sql_command = "SELECT * FROM RequestLog WHERE receiver = " + request->information() + " order by requestLog_id desc";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Obtain_requestLogHistory fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            check_sql_sock_normal(sock_node_);
+            release_sock_to_sql_pool(sock_node_);
+            log(INFO, "OUT Obtain_requestLogHistory");
             return Status::CANCELLED;
         }
-        log(INFO, sql_command.data());
         res = mysql_use_result(conn);
         while ((row = mysql_fetch_row(res)) != NULL) {
 
             Request req;
+            // convert user_id to username
+            string receiver_id(row[2]);
+            sql_command = "SELECT username FROM User WHERE user_id = " + receiver_id;
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                mysql_free_result(res);
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_requestLogHistory");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_receiver(row_[0]);
+            }
+            mysql_free_result(res_);
+
+            string sender_id(row[1]);
+            sql_command = "SELECT username FROM User WHERE user_id = " + sender_id;
+            if (mysql_query(conn_, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn_));
+
+                mysql_free_result(res);
+
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                check_sql_sock_normal(sock_node_);
+                release_sock_to_sql_pool(sock_node_);
+                log(INFO, "OUT Obtain_requestLogHistory");
+                return Status::CANCELLED;
+            }
+            res_ = mysql_use_result(conn_);
+            if ((row_ = mysql_fetch_row(res_)) != NULL) {
+                req.set_sender(row_[0]);
+            }
+            mysql_free_result(res_);
             req.set_request_id(row[0]);
-            req.set_sender(row[1]);
-            req.set_receiver(row[2]);
+            //req.set_sender(row[1]);
+            //req.set_receiver(row[2]);
             req.set_type(row[3]);
             req.set_content(row[4]);
             req.set_response(row[5]);
@@ -1001,10 +1390,12 @@ class GreeterServiceImpl final : public Greeter::Service {
 
             reply->Write(req);
         }
+        release_sock_to_sql_pool(sock_node_);
+
         mysql_free_result(res);
 
-        log(INFO, "OUT Obtain_requestLogHistory");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Obtain_requestLogHistory");
         return Status::OK;
     }
 
@@ -1041,31 +1432,36 @@ class GreeterServiceImpl final : public Greeter::Service {
         mysql_free_result(res);
         if (type == "payment" || type == "friendInvite")
         {
-            sql_command = "INSERT INTO RequestLog (sender, receiver, type, content, response, request_date, response_date) VALUES ('" + req.sender() + "', '" + req.receiver() + "', '" + req.type() + "', '" + req.content() + "', '" + req.response() + "', '" + req.request_date() + "', '" + req.response_date() + "')";
+            sql_command = "INSERT INTO RequestLog (sender, receiver, type, content, response, request_date, response_date) VALUES (" +
+                req.sender() + ", " + req.receiver() + ", '" + req.type() + "', '" + req.content() + "', '" + req.response() + "', '" +
+                req.request_date() + "', '" + req.response_date() + "')";
             if (mysql_query(conn, sql_command.data())) {
-                log(ERROR, "ERROR Request_response INSERT process fail");
                 log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
                 check_sql_sock_normal(sock_node);
                 release_sock_to_sql_pool(sock_node);
+                log(INFO, "OUT Request_response");
                 return Status::CANCELLED;
             }
 
             sql_command = "DELETE FROM Request WHERE request_id = '" + request->request_id() + "'";
             if (mysql_query(conn, sql_command.data())) {
-                log(ERROR, "ERROR Request_response DELETE process fail");
                 log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
                 check_sql_sock_normal(sock_node);
                 release_sock_to_sql_pool(sock_node);
+                log(INFO, "OUT Request_response");
                 return Status::CANCELLED;
             }
 
-            sql_command = "UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE username = '" + request->sender() + "' OR username = '" + request->receiver() + "'";
+            sql_command = "UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE user_id = " + req.sender() + " OR user_id = " + req.receiver();
             log(INFO, sql_command.data());
             if (mysql_query(conn, sql_command.data())) {
-                log(ERROR, "ERROR Request_response update process fail");
                 log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
                 check_sql_sock_normal(sock_node);
                 release_sock_to_sql_pool(sock_node);
+                log(INFO, "OUT Request_response");
                 return Status::CANCELLED;
             }
 
@@ -1074,11 +1470,8 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         }
 
-
-
-
-        log(INFO, "OUT Request_response");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Request_response");
         return Status::OK;
     }
 
@@ -1093,17 +1486,18 @@ class GreeterServiceImpl final : public Greeter::Service {
 
             string sql_command = "UPDATE Bills SET paidStatus = '" + request.paidstatus() + "' WHERE bill_id = '" + request.bill_id() + "'";
             if (mysql_query(conn, sql_command.data())) {
-                log(ERROR, "ERROR MakePayment fail");
                 log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
                 check_sql_sock_normal(sock_node);
                 release_sock_to_sql_pool(sock_node);
+                log(INFO, "OUT MakePayment");
                 return Status::CANCELLED;
             }
             //printf("in");
         }
 
-        log(INFO, "OUT MakePayment");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT MakePayment");
         return Status::OK;
     }
 
@@ -1114,28 +1508,34 @@ class GreeterServiceImpl final : public Greeter::Service {
         //MYSQL_RES *res;
         //MYSQL_ROW row;
 
-        string sql_command = "INSERT INTO RequestLog (sender, receiver, type, content, response, request_date, response_date) VALUES ('" + request->sender() + "', '" + request->receiver() + "', '" + request->type() + "', '" + request->content() + "', '" + request->response() + "', '" + request->request_date() + "', '" + request->request_date() + "')";
+        string sql_command = "INSERT INTO RequestLog (sender, receiver, type, content, response, request_date, response_date) VALUES (" +
+            request->sender() + ", " + request->receiver() + ", '" + request->type() + "', '" + request->content() + "', '" +
+            request->response() + "', '" + request->request_date() + "', '" + request->request_date() + "')";
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Send_request insert process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Create_requestLog");
             return Status::CANCELLED;
         }
 
-        sql_command = "UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE username = '" + request->sender() + "' OR username = '" + request->receiver() + "'";
+        sql_command = "UPDATE User SET synchronism_request = 2, synchronism_delete = 1 WHERE user_id = " + request->sender() +
+            " OR user_id = " + request->receiver();
 
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Send_request update process fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Create_requestLog");
             return Status::CANCELLED;
         }
 
-        log(INFO, "OUT Create_requestLog");
+
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Create_requestLog");
         return Status::OK;
     }
 
@@ -1148,15 +1548,16 @@ class GreeterServiceImpl final : public Greeter::Service {
 
         string sql_command = "UPDATE RequestLog SET ignore_" + request->user() + " = 'TRUE' WHERE requestLog_id = '" + request->requestlog_id() + "'";
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR IgnoreRequestLog fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT IgnoreRequestLog");
             return Status::CANCELLED;
         }
 
-        log(INFO, "OUT IgnoreRequestLog");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT IgnoreRequestLog");
         return Status::OK;
     }
 
@@ -1165,18 +1566,19 @@ class GreeterServiceImpl final : public Greeter::Service {
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
 
-        string sql_command = "UPDATE User SET deviceToken = '" + request->content(1) + "' WHERE username = '" + request->content(0) + "'";
+        string sql_command = "UPDATE User SET deviceToken = '" + request->content(1) + "' WHERE user_id = " + request->content(0);
         log(INFO, request->content(1).data());
         if (mysql_query(conn, sql_command.data())) {
-            log(ERROR, "ERROR Send_DeviceToken fail");
             log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Send_DeviceToken");
             return Status::CANCELLED;
         }
 
-        log(INFO, "OUT Send_DeviceToken");
         release_sock_to_sql_pool(sock_node);
+        log(INFO, "OUT Send_DeviceToken");
         return Status::OK;
     }
 
@@ -1188,7 +1590,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL* conn = sock_node->sql_sock->sock;
         MYSQL_RES *res;
         MYSQL_ROW row;
-        string sql_command = "SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE username = '" + request->information() + "'";
+        string sql_command = "SELECT N_friendInvite, N_newBill, N_editedDeleteBill, N_commentBill, N_paidNotice FROM User WHERE user_id = " + request->information();
 
         log(INFO, sql_command.data());
 
@@ -1223,13 +1625,16 @@ class GreeterServiceImpl final : public Greeter::Service {
         string v3 = to_string(request->editeddeletebill());
         string v4 = to_string(request->commentbill());
         string v5 = to_string(request->paidnotice());
-        string sql_command = "UPDATE User SET N_friendInvite = " + v1 + ", N_newBill = " + v2 + ", N_editedDeleteBill = " + v3 + ", N_commentBill = " + v4 + ", N_paidNotice = " + v5 + " WHERE username = '" + request->username() + "'";
+        string sql_command = "UPDATE User SET N_friendInvite = " + v1 + ", N_newBill = " + v2 +
+            ", N_editedDeleteBill = " + v3 + ", N_commentBill = " + v4 + ", N_paidNotice = " +
+            v5 + " WHERE user_id = " + request->user_id();
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
             //printf("error %s\n", mysql_error(conn));
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Reset_setting");
             return Status::CANCELLED;
         }
 
@@ -1239,23 +1644,133 @@ class GreeterServiceImpl final : public Greeter::Service {
         return Status::OK;
     }
 
+
     Status Reset_userInfo (ServerContext* content, const UserInfo* request, Inf* reply) override {
         log(INFO, "Reset_userInfo IN");
         SQL_SOCK_NODE* sock_node = get_sock_from_pool();
         MYSQL* conn = sock_node->sql_sock->sock;
+        MYSQL_RES *res;
+        MYSQL_ROW row;
 
-        string sql_command = "UPDATE User SET password = '" + request->password() + "', email = '" +
-            request->email() + "', currency = " + to_string(request->currency()) +
-            " WHERE username = '" +
-            request->username() + "'";
-
-        log(INFO, sql_command.data());
+        bool username_changed = true;
+        string original_username;
+        // check username is avaliable or not
+        string sql_command = "SELECT user_id FROM User WHERE username = '" + request->username() + "'";
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "Reset_userInfo OUT");
             return Status::CANCELLED;
         }
+        res = mysql_use_result(conn);
+        if ((row = mysql_fetch_row(res)) != NULL) {
+            if (string(row[0]) != request->user_id()) {
+                mysql_free_result(res);
+                reply->set_information("Sorry, this username has been used. Please try another new one.");
+                release_sock_to_sql_pool(sock_node);
+                mysql_free_result(res);
+                log(INFO, "Reset_userInfo OUT");
+                return Status::OK;
+            } else {
+                username_changed = false;
+            }
+        }
+        mysql_free_result(res);
+
+        // get original username if need
+        if (username_changed) {
+            sql_command = "SELECT username FROM User WHERE user_id =" + request->user_id();
+            if (mysql_query(conn, sql_command.data())) {
+                log(ERROR, sql_command.data());
+                log(ERROR, mysql_error(conn));
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                mysql_free_result(res);
+                log(INFO, "Reset_userInfo OUT");
+                return Status::CANCELLED;
+            }
+            res = mysql_use_result(conn);
+            if ((row = mysql_fetch_row(res)) != NULL) {
+                original_username = row[0];
+            }
+            mysql_free_result(res);
+        }
+
+        sql_command = "UPDATE User SET password = '" + request->password() + "', email = '" +
+            request->email() + "', currency = " + to_string(request->currency()) + ", username = '" +
+            request->username() + "' WHERE user_id = " + request->user_id();
+
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
+            log(ERROR, mysql_error(conn));
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            log(INFO, "Reset_userInfo OUT");
+            return Status::CANCELLED;
+        }
+
+        reply->set_information("OK");
+
+        // if username changed, notice every friends
+        if (username_changed) {
+            vector<string> friends_id;
+            string message = "Your friend " + original_username + " changed username to " + request->username();
+
+            sql_command = "SELECT * FROM Friends WHERE user1_id = '" + request->user_id() + "' OR user2_id = '" + request->user_id() + "'";
+            if (mysql_query(conn, sql_command.data())) {
+                log(ERROR, mysql_error(conn));
+                log(ERROR, sql_command.data());
+                check_sql_sock_normal(sock_node);
+                release_sock_to_sql_pool(sock_node);
+                return Status::OK;
+            }
+            res = mysql_use_result(conn);
+            while ((row = mysql_fetch_row(res)) != NULL) {
+                //            cout << row[0] << ends << row[1] << endl;
+                //            reply->set_username(request->information());
+                //            reply->add_friends(row[1]);
+
+                string user_id = row[0];
+                if (user_id == request->user_id()) {
+                    friends_id.push_back(row[1]);
+                } else {
+                    friends_id.push_back(row[0]);
+                }
+            }
+            mysql_free_result(res);
+
+            for (unsigned int i = 0; i != friends_id.size(); i++) {
+                sql_command = "UPDATE User SET synchronism_friend = 1 WHERE user_id = " + friends_id[i];
+                if (mysql_query(conn, sql_command.data())) {
+                    log(ERROR, mysql_error(conn));
+                    log(ERROR, sql_command.data());
+                    check_sql_sock_normal(sock_node);
+                    release_sock_to_sql_pool(sock_node);
+                    return Status::OK;
+                }
+            }
+
+            for (unsigned int i = 0; i != friends_id.size(); i++) {
+                sql_command = "SELECT deviceToken FROM User WHERE user_id = " + friends_id[i];
+                if (mysql_query(conn, sql_command.data())) {
+                    log(ERROR, mysql_error(conn));
+                    log(ERROR, sql_command.data());
+                    check_sql_sock_normal(sock_node);
+                    release_sock_to_sql_pool(sock_node);
+                    return Status::OK;
+                }
+                res = mysql_use_result(conn);
+                if ((row = mysql_fetch_row(res)) != NULL) {
+                    pushNotificationToDevice(row[0], message);
+                }
+                mysql_free_result(res);
+            }
+        }
+
+
+
 
         release_sock_to_sql_pool(sock_node);
         log(INFO, "Reset_userInfo OUT");
@@ -1270,13 +1785,15 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_RES *res;
         MYSQL_ROW row;
 
-        string sql_command = "SELECT password, email, currency FROM User WHERE username = '" +
-            request->information() + "'";
+        string sql_command = "SELECT password, email, currency, username FROM User WHERE user_id = " +
+            request->information();
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, sql_command.data());
             log(ERROR, mysql_error(conn));
             check_sql_sock_normal(sock_node);
             release_sock_to_sql_pool(sock_node);
+            log(INFO, "OUT Obatin_userInfo");
             return Status::CANCELLED;
         }
         res = mysql_use_result(conn);
@@ -1284,6 +1801,8 @@ class GreeterServiceImpl final : public Greeter::Service {
             reply->set_password(row[0]);
             reply->set_email(row[1]);
             reply->set_currency(atoi(row[2]));
+            reply->set_username(row[3]);
+
         }
 
         mysql_free_result(res);
@@ -1294,15 +1813,18 @@ class GreeterServiceImpl final : public Greeter::Service {
 };
 
 void RunServer() {
-    std::string server_address("0.0.0.0:50051");
+    std::string server_address("0.0.0.0:50052");
     GreeterServiceImpl service;
 
     ServerBuilder builder;
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
     builder.RegisterService(&service);
     std::unique_ptr<Server> server(builder.BuildAndStart());
-    printf("Server Start\n");
-    std::cout << "Server listening on : " << server_address << std::endl;
+    log(INFO, "Server Start");
+    //printf("Server Start\n");
+    //std::cout << "Server listening on : " << server_address << std::endl;
+    string outInf = "Server listening on : " + server_address;
+    log(INFO, outInf.data());
     server->Wait();
 }
 
@@ -1454,8 +1976,9 @@ void Close_sock(SQL_SOCK* sql_sock) {
         const char* hostname = "localhost";
         const char* username = "root";
         const char* passwd = "19920406Cy";
-        const char* db = "iShare_data";
-        cout << sql_pool_create(CONN_NUM, hostname, username, passwd, db, 3306, NULL, Create_sock, Close_sock);
+        const char* db = "iShare_server";
+        sql_pool_create(CONN_NUM, hostname, username,
+                passwd, db, 3306, NULL, Create_sock, Close_sock);
         /*
            pthread_t id;
            int err = pthread_create(&id, NULL, mySqlHeartBeat, NULL);

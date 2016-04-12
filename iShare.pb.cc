@@ -71,6 +71,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* UserInfo_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   UserInfo_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Reply_inf_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Reply_inf_reflection_ = NULL;
 
 }  // namespace
 
@@ -145,10 +148,12 @@ void protobuf_AssignDesc_iShare_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _is_default_instance_));
   User_detail_descriptor_ = file->message_type(4);
-  static const int User_detail_offsets_[3] = {
+  static const int User_detail_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, username_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, user_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, email_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_id_),
   };
   User_detail_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -350,7 +355,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, editeddeletebill_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, commentbill_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, paidnotice_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, username_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, user_id_),
   };
   Setting_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -364,7 +369,8 @@ void protobuf_AssignDesc_iShare_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, _is_default_instance_));
   UserInfo_descriptor_ = file->message_type(16);
-  static const int UserInfo_offsets_[4] = {
+  static const int UserInfo_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, user_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, username_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, password_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, email_),
@@ -381,6 +387,22 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(UserInfo),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _is_default_instance_));
+  Reply_inf_descriptor_ = file->message_type(17);
+  static const int Reply_inf_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, status_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, information_),
+  };
+  Reply_inf_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      Reply_inf_descriptor_,
+      Reply_inf::default_instance_,
+      Reply_inf_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(Reply_inf),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, _is_default_instance_));
 }
 
 namespace {
@@ -427,6 +449,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
       Setting_descriptor_, &Setting::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       UserInfo_descriptor_, &UserInfo::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      Reply_inf_descriptor_, &Reply_inf::default_instance());
 }
 
 }  // namespace
@@ -466,6 +490,8 @@ void protobuf_ShutdownFile_iShare_2eproto() {
   delete Setting_reflection_;
   delete UserInfo::default_instance_;
   delete UserInfo_reflection_;
+  delete Reply_inf::default_instance_;
+  delete Reply_inf_reflection_;
 }
 
 void protobuf_AddDesc_iShare_2eproto() {
@@ -479,40 +505,43 @@ void protobuf_AddDesc_iShare_2eproto() {
     "\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\";\n\006Sig"
     "n_m\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022"
     "\r\n\005email\030\003 \001(\t\"\032\n\003Inf\022\023\n\013information\030\001 \001"
-    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"\?"
-    "\n\013User_detail\022\020\n\010username\030\001 \001(\t\022\r\n\005email"
-    "\030\002 \001(\t\022\017\n\007friends\030\003 \003(\t\"\324\001\n\tShare_inf\022\017\n"
-    "\007creater\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004type\030\003"
-    " \001(\t\022\016\n\006paidBy\030\004 \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004no"
-    "te\030\006 \001(\t\022\r\n\005image\030\007 \001(\t\022\017\n\007members\030\010 \003(\t"
-    "\022\025\n\rmembers_count\030\t \001(\005\022\017\n\007bill_id\030\n \001(\t"
-    "\022\022\n\npaidStatus\030\013 \001(\t\022\020\n\010typeIcon\030\014 \001(\t\"\?"
-    "\n\014Bill_request\022\020\n\010username\030\001 \001(\t\022\r\n\005star"
-    "t\030\002 \001(\t\022\016\n\006amount\030\003 \001(\t\"I\n\010Syn_data\022\016\n\006f"
-    "riend\030\001 \001(\t\022\014\n\004bill\030\002 \001(\t\022\016\n\006delete\030\003 \001("
-    "\t\022\017\n\007request\030\004 \001(\t\"\034\n\014HelloRequest\022\014\n\004na"
-    "me\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t\""
-    "#\n\005Image\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305\001\n"
-    "\007Request\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002"
-    " \001(\t\022\020\n\010receiver\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017\n\007"
-    "content\030\005 \001(\t\022\020\n\010response\030\006 \001(\t\022\024\n\014reque"
-    "st_date\030\007 \001(\t\022\025\n\rresponse_date\030\010 \001(\t\022\023\n\013"
-    "ignore_from\030\t \001(\t\022\021\n\tignore_to\030\n \001(\t\"i\n\010"
-    "Response\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002"
-    " \001(\t\022\020\n\010receiver\030\003 \001(\t\022\020\n\010response\030\004 \001(\t"
-    "\022\025\n\rresponse_date\030\005 \001(\t\"4\n\rIgnoreMessage"
-    "\022\025\n\rrequestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n"
-    "\013BillPayment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidSta"
-    "tus\030\002 \001(\t\"\205\001\n\007Setting\022\024\n\014friendInvite\030\001 "
-    "\001(\005\022\017\n\007newBill\030\002 \001(\005\022\030\n\020editedDeleteBill"
-    "\030\003 \001(\005\022\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNotic"
-    "e\030\005 \001(\005\022\020\n\010username\030\006 \001(\t\"O\n\010UserInfo\022\020\n"
-    "\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r\n\005ema"
-    "il\030\003 \001(\t\022\020\n\010currency\030\004 \001(\0052\335\014\n\007Greeter\022>"
-    "\n\010SayHello\022\030.helloworld.HelloRequest\032\026.h"
-    "elloworld.HelloReply\"\000\022/\n\005Login\022\023.hellow"
-    "orld.Login_m\032\017.helloworld.Inf\"\000\0220\n\007Sign_"
-    "up\022\022.helloworld.Sign_m\032\017.helloworld.Inf\""
+    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"i"
+    "\n\013User_detail\022\020\n\010username\030\001 \001(\t\022\017\n\007user_"
+    "id\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\024\n\014friends_name\030"
+    "\004 \003(\t\022\022\n\nfriends_id\030\005 \003(\t\"\324\001\n\tShare_inf\022"
+    "\017\n\007creater\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004type"
+    "\030\003 \001(\t\022\016\n\006paidBy\030\004 \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004"
+    "note\030\006 \001(\t\022\r\n\005image\030\007 \001(\t\022\017\n\007members\030\010 \003"
+    "(\t\022\025\n\rmembers_count\030\t \001(\005\022\017\n\007bill_id\030\n \001"
+    "(\t\022\022\n\npaidStatus\030\013 \001(\t\022\020\n\010typeIcon\030\014 \001(\t"
+    "\"\?\n\014Bill_request\022\020\n\010username\030\001 \001(\t\022\r\n\005st"
+    "art\030\002 \001(\t\022\016\n\006amount\030\003 \001(\t\"I\n\010Syn_data\022\016\n"
+    "\006friend\030\001 \001(\t\022\014\n\004bill\030\002 \001(\t\022\016\n\006delete\030\003 "
+    "\001(\t\022\017\n\007request\030\004 \001(\t\"\034\n\014HelloRequest\022\014\n\004"
+    "name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001("
+    "\t\"#\n\005Image\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305"
+    "\001\n\007Request\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender"
+    "\030\002 \001(\t\022\020\n\010receiver\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017"
+    "\n\007content\030\005 \001(\t\022\020\n\010response\030\006 \001(\t\022\024\n\014req"
+    "uest_date\030\007 \001(\t\022\025\n\rresponse_date\030\010 \001(\t\022\023"
+    "\n\013ignore_from\030\t \001(\t\022\021\n\tignore_to\030\n \001(\t\"i"
+    "\n\010Response\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender"
+    "\030\002 \001(\t\022\020\n\010receiver\030\003 \001(\t\022\020\n\010response\030\004 \001"
+    "(\t\022\025\n\rresponse_date\030\005 \001(\t\"4\n\rIgnoreMessa"
+    "ge\022\025\n\rrequestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\""
+    "2\n\013BillPayment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidS"
+    "tatus\030\002 \001(\t\"\204\001\n\007Setting\022\024\n\014friendInvite\030"
+    "\001 \001(\005\022\017\n\007newBill\030\002 \001(\005\022\030\n\020editedDeleteBi"
+    "ll\030\003 \001(\005\022\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNot"
+    "ice\030\005 \001(\005\022\017\n\007user_id\030\006 \001(\t\"`\n\010UserInfo\022\017"
+    "\n\007user_id\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010pas"
+    "sword\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\020\n\010currency\030\005"
+    " \001(\005\"0\n\tReply_inf\022\016\n\006status\030\001 \001(\t\022\023\n\013inf"
+    "ormation\030\002 \001(\t2\351\014\n\007Greeter\022>\n\010SayHello\022\030"
+    ".helloworld.HelloRequest\032\026.helloworld.He"
+    "lloReply\"\000\0225\n\005Login\022\023.helloworld.Login_m"
+    "\032\025.helloworld.Reply_inf\"\000\0226\n\007Sign_up\022\022.h"
+    "elloworld.Sign_m\032\025.helloworld.Reply_inf\""
     "\000\0226\n\010User_inf\022\017.helloworld.Inf\032\027.hellowo"
     "rld.User_detail\"\000\022A\n\017Search_username\022\017.h"
     "elloworld.Inf\032\033.helloworld.Repeated_stri"
@@ -550,7 +579,7 @@ void protobuf_AddDesc_iShare_2eproto() {
     "helloworld.UserInfo\032\017.helloworld.Inf\"\000\022:"
     "\n\017Obtain_userInfo\022\017.helloworld.Inf\032\024.hel"
     "loworld.UserInfo\"\000B\022\n\020io.grpc.examplesb\006"
-    "proto3", 3006);
+    "proto3", 3126);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "iShare.proto", &protobuf_RegisterTypes);
   Login_m::default_instance_ = new Login_m();
@@ -570,6 +599,7 @@ void protobuf_AddDesc_iShare_2eproto() {
   BillPayment::default_instance_ = new BillPayment();
   Setting::default_instance_ = new Setting();
   UserInfo::default_instance_ = new UserInfo();
+  Reply_inf::default_instance_ = new Reply_inf();
   Login_m::default_instance_->InitAsDefaultInstance();
   Sign_m::default_instance_->InitAsDefaultInstance();
   Inf::default_instance_->InitAsDefaultInstance();
@@ -587,6 +617,7 @@ void protobuf_AddDesc_iShare_2eproto() {
   BillPayment::default_instance_->InitAsDefaultInstance();
   Setting::default_instance_->InitAsDefaultInstance();
   UserInfo::default_instance_->InitAsDefaultInstance();
+  Reply_inf::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_iShare_2eproto);
 }
 
@@ -1994,8 +2025,10 @@ Repeated_string::mutable_content() {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int User_detail::kUsernameFieldNumber;
+const int User_detail::kUserIdFieldNumber;
 const int User_detail::kEmailFieldNumber;
-const int User_detail::kFriendsFieldNumber;
+const int User_detail::kFriendsNameFieldNumber;
+const int User_detail::kFriendsIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 User_detail::User_detail()
@@ -2021,6 +2054,7 @@ void User_detail::SharedCtor() {
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -2031,6 +2065,7 @@ User_detail::~User_detail() {
 
 void User_detail::SharedDtor() {
   username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
@@ -2063,8 +2098,10 @@ User_detail* User_detail::New(::google::protobuf::Arena* arena) const {
 
 void User_detail::Clear() {
   username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  friends_.Clear();
+  friends_name_.Clear();
+  friends_id_.Clear();
 }
 
 bool User_detail::MergePartialFromCodedStream(
@@ -2089,13 +2126,30 @@ bool User_detail::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_email;
+        if (input->ExpectTag(18)) goto parse_user_id;
         break;
       }
 
-      // optional string email = 2;
+      // optional string user_id = 2;
       case 2: {
         if (tag == 18) {
+         parse_user_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id().data(), this->user_id().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_email;
+        break;
+      }
+
+      // optional string email = 3;
+      case 3: {
+        if (tag == 26) {
          parse_email:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_email()));
@@ -2106,25 +2160,44 @@ bool User_detail::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_friends;
+        if (input->ExpectTag(34)) goto parse_friends_name;
         break;
       }
 
-      // repeated string friends = 3;
-      case 3: {
-        if (tag == 26) {
-         parse_friends:
+      // repeated string friends_name = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_friends_name:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->add_friends()));
+                input, this->add_friends_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->friends(this->friends_size() - 1).data(),
-            this->friends(this->friends_size() - 1).length(),
+            this->friends_name(this->friends_name_size() - 1).data(),
+            this->friends_name(this->friends_name_size() - 1).length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "helloworld.User_detail.friends"));
+            "helloworld.User_detail.friends_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_friends;
+        if (input->ExpectTag(34)) goto parse_friends_name;
+        if (input->ExpectTag(42)) goto parse_friends_id;
+        break;
+      }
+
+      // repeated string friends_id = 5;
+      case 5: {
+        if (tag == 42) {
+         parse_friends_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_friends_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->friends_id(this->friends_id_size() - 1).data(),
+            this->friends_id(this->friends_id_size() - 1).length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.friends_id"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(42)) goto parse_friends_id;
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -2163,24 +2236,44 @@ void User_detail::SerializeWithCachedSizes(
       1, this->username(), output);
   }
 
-  // optional string email = 2;
+  // optional string user_id = 2;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), this->user_id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->user_id(), output);
+  }
+
+  // optional string email = 3;
   if (this->email().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.User_detail.email");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->email(), output);
+      3, this->email(), output);
   }
 
-  // repeated string friends = 3;
-  for (int i = 0; i < this->friends_size(); i++) {
+  // repeated string friends_name = 4;
+  for (int i = 0; i < this->friends_name_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->friends(i).data(), this->friends(i).length(),
+      this->friends_name(i).data(), this->friends_name(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "helloworld.User_detail.friends");
+      "helloworld.User_detail.friends_name");
     ::google::protobuf::internal::WireFormatLite::WriteString(
-      3, this->friends(i), output);
+      4, this->friends_name(i), output);
+  }
+
+  // repeated string friends_id = 5;
+  for (int i = 0; i < this->friends_id_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->friends_id(i).data(), this->friends_id(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.friends_id");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->friends_id(i), output);
   }
 
   // @@protoc_insertion_point(serialize_end:helloworld.User_detail)
@@ -2200,7 +2293,18 @@ void User_detail::SerializeWithCachedSizes(
         1, this->username(), target);
   }
 
-  // optional string email = 2;
+  // optional string user_id = 2;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), this->user_id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.user_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->user_id(), target);
+  }
+
+  // optional string email = 3;
   if (this->email().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
@@ -2208,17 +2312,27 @@ void User_detail::SerializeWithCachedSizes(
       "helloworld.User_detail.email");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->email(), target);
+        3, this->email(), target);
   }
 
-  // repeated string friends = 3;
-  for (int i = 0; i < this->friends_size(); i++) {
+  // repeated string friends_name = 4;
+  for (int i = 0; i < this->friends_name_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->friends(i).data(), this->friends(i).length(),
+      this->friends_name(i).data(), this->friends_name(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "helloworld.User_detail.friends");
+      "helloworld.User_detail.friends_name");
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteStringToArray(3, this->friends(i), target);
+      WriteStringToArray(4, this->friends_name(i), target);
+  }
+
+  // repeated string friends_id = 5;
+  for (int i = 0; i < this->friends_id_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->friends_id(i).data(), this->friends_id(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.friends_id");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(5, this->friends_id(i), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:helloworld.User_detail)
@@ -2235,18 +2349,32 @@ int User_detail::ByteSize() const {
         this->username());
   }
 
-  // optional string email = 2;
+  // optional string user_id = 2;
+  if (this->user_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user_id());
+  }
+
+  // optional string email = 3;
   if (this->email().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->email());
   }
 
-  // repeated string friends = 3;
-  total_size += 1 * this->friends_size();
-  for (int i = 0; i < this->friends_size(); i++) {
+  // repeated string friends_name = 4;
+  total_size += 1 * this->friends_name_size();
+  for (int i = 0; i < this->friends_name_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-      this->friends(i));
+      this->friends_name(i));
+  }
+
+  // repeated string friends_id = 5;
+  total_size += 1 * this->friends_id_size();
+  for (int i = 0; i < this->friends_id_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->friends_id(i));
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -2269,10 +2397,15 @@ void User_detail::MergeFrom(const ::google::protobuf::Message& from) {
 
 void User_detail::MergeFrom(const User_detail& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  friends_.MergeFrom(from.friends_);
+  friends_name_.MergeFrom(from.friends_name_);
+  friends_id_.MergeFrom(from.friends_id_);
   if (from.username().size() > 0) {
 
     username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+  }
+  if (from.user_id().size() > 0) {
+
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
   }
   if (from.email().size() > 0) {
 
@@ -2303,8 +2436,10 @@ void User_detail::Swap(User_detail* other) {
 }
 void User_detail::InternalSwap(User_detail* other) {
   username_.Swap(&other->username_);
+  user_id_.Swap(&other->user_id_);
   email_.Swap(&other->email_);
-  friends_.UnsafeArenaSwap(&other->friends_);
+  friends_name_.UnsafeArenaSwap(&other->friends_name_);
+  friends_id_.UnsafeArenaSwap(&other->friends_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -2363,7 +2498,50 @@ void User_detail::clear_username() {
   // @@protoc_insertion_point(field_set_allocated:helloworld.User_detail.username)
 }
 
-// optional string email = 2;
+// optional string user_id = 2;
+void User_detail::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& User_detail::user_id() const {
+  // @@protoc_insertion_point(field_get:helloworld.User_detail.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void User_detail::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.User_detail.user_id)
+}
+ void User_detail::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.user_id)
+}
+ void User_detail::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.user_id)
+}
+ ::std::string* User_detail::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* User_detail::release_user_id() {
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void User_detail::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.User_detail.user_id)
+}
+
+// optional string email = 3;
 void User_detail::clear_email() {
   email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2406,58 +2584,112 @@ void User_detail::clear_email() {
   // @@protoc_insertion_point(field_set_allocated:helloworld.User_detail.email)
 }
 
-// repeated string friends = 3;
-int User_detail::friends_size() const {
-  return friends_.size();
+// repeated string friends_name = 4;
+int User_detail::friends_name_size() const {
+  return friends_name_.size();
 }
-void User_detail::clear_friends() {
-  friends_.Clear();
+void User_detail::clear_friends_name() {
+  friends_name_.Clear();
 }
- const ::std::string& User_detail::friends(int index) const {
-  // @@protoc_insertion_point(field_get:helloworld.User_detail.friends)
-  return friends_.Get(index);
+ const ::std::string& User_detail::friends_name(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.User_detail.friends_name)
+  return friends_name_.Get(index);
 }
- ::std::string* User_detail::mutable_friends(int index) {
-  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.friends)
-  return friends_.Mutable(index);
+ ::std::string* User_detail::mutable_friends_name(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.friends_name)
+  return friends_name_.Mutable(index);
 }
- void User_detail::set_friends(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:helloworld.User_detail.friends)
-  friends_.Mutable(index)->assign(value);
+ void User_detail::set_friends_name(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.User_detail.friends_name)
+  friends_name_.Mutable(index)->assign(value);
 }
- void User_detail::set_friends(int index, const char* value) {
-  friends_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.friends)
+ void User_detail::set_friends_name(int index, const char* value) {
+  friends_name_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.friends_name)
 }
- void User_detail::set_friends(int index, const char* value, size_t size) {
-  friends_.Mutable(index)->assign(
+ void User_detail::set_friends_name(int index, const char* value, size_t size) {
+  friends_name_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends)
+  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_name)
 }
- ::std::string* User_detail::add_friends() {
-  return friends_.Add();
+ ::std::string* User_detail::add_friends_name() {
+  return friends_name_.Add();
 }
- void User_detail::add_friends(const ::std::string& value) {
-  friends_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:helloworld.User_detail.friends)
+ void User_detail::add_friends_name(const ::std::string& value) {
+  friends_name_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.User_detail.friends_name)
 }
- void User_detail::add_friends(const char* value) {
-  friends_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:helloworld.User_detail.friends)
+ void User_detail::add_friends_name(const char* value) {
+  friends_name_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.User_detail.friends_name)
 }
- void User_detail::add_friends(const char* value, size_t size) {
-  friends_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:helloworld.User_detail.friends)
+ void User_detail::add_friends_name(const char* value, size_t size) {
+  friends_name_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.User_detail.friends_name)
 }
  const ::google::protobuf::RepeatedPtrField< ::std::string>&
-User_detail::friends() const {
-  // @@protoc_insertion_point(field_list:helloworld.User_detail.friends)
-  return friends_;
+User_detail::friends_name() const {
+  // @@protoc_insertion_point(field_list:helloworld.User_detail.friends_name)
+  return friends_name_;
 }
  ::google::protobuf::RepeatedPtrField< ::std::string>*
-User_detail::mutable_friends() {
-  // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends)
-  return &friends_;
+User_detail::mutable_friends_name() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_name)
+  return &friends_name_;
+}
+
+// repeated string friends_id = 5;
+int User_detail::friends_id_size() const {
+  return friends_id_.size();
+}
+void User_detail::clear_friends_id() {
+  friends_id_.Clear();
+}
+ const ::std::string& User_detail::friends_id(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.User_detail.friends_id)
+  return friends_id_.Get(index);
+}
+ ::std::string* User_detail::mutable_friends_id(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.friends_id)
+  return friends_id_.Mutable(index);
+}
+ void User_detail::set_friends_id(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.User_detail.friends_id)
+  friends_id_.Mutable(index)->assign(value);
+}
+ void User_detail::set_friends_id(int index, const char* value) {
+  friends_id_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.friends_id)
+}
+ void User_detail::set_friends_id(int index, const char* value, size_t size) {
+  friends_id_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_id)
+}
+ ::std::string* User_detail::add_friends_id() {
+  return friends_id_.Add();
+}
+ void User_detail::add_friends_id(const ::std::string& value) {
+  friends_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.User_detail.friends_id)
+}
+ void User_detail::add_friends_id(const char* value) {
+  friends_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.User_detail.friends_id)
+}
+ void User_detail::add_friends_id(const char* value, size_t size) {
+  friends_id_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.User_detail.friends_id)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+User_detail::friends_id() const {
+  // @@protoc_insertion_point(field_list:helloworld.User_detail.friends_id)
+  return friends_id_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+User_detail::mutable_friends_id() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_id)
+  return &friends_id_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -8235,7 +8467,7 @@ const int Setting::kNewBillFieldNumber;
 const int Setting::kEditedDeleteBillFieldNumber;
 const int Setting::kCommentBillFieldNumber;
 const int Setting::kPaidNoticeFieldNumber;
-const int Setting::kUsernameFieldNumber;
+const int Setting::kUserIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Setting::Setting()
@@ -8265,7 +8497,7 @@ void Setting::SharedCtor() {
   editeddeletebill_ = 0;
   commentbill_ = 0;
   paidnotice_ = 0;
-  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Setting::~Setting() {
@@ -8274,7 +8506,7 @@ Setting::~Setting() {
 }
 
 void Setting::SharedDtor() {
-  username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -8315,7 +8547,7 @@ void Setting::Clear() {
 
   ZR_(friendinvite_, commentbill_);
   paidnotice_ = 0;
-  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 
 #undef ZR_HELPER_
 #undef ZR_
@@ -8402,20 +8634,20 @@ bool Setting::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(50)) goto parse_username;
+        if (input->ExpectTag(50)) goto parse_user_id;
         break;
       }
 
-      // optional string username = 6;
+      // optional string user_id = 6;
       case 6: {
         if (tag == 50) {
-         parse_username:
+         parse_user_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_username()));
+                input, this->mutable_user_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->username().data(), this->username().length(),
+            this->user_id().data(), this->user_id().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "helloworld.Setting.username"));
+            "helloworld.Setting.user_id"));
         } else {
           goto handle_unusual;
         }
@@ -8472,14 +8704,14 @@ void Setting::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->paidnotice(), output);
   }
 
-  // optional string username = 6;
-  if (this->username().size() > 0) {
+  // optional string user_id = 6;
+  if (this->user_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->username().data(), this->username().length(),
+      this->user_id().data(), this->user_id().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "helloworld.Setting.username");
+      "helloworld.Setting.user_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->username(), output);
+      6, this->user_id(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:helloworld.Setting)
@@ -8513,15 +8745,15 @@ void Setting::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->paidnotice(), target);
   }
 
-  // optional string username = 6;
-  if (this->username().size() > 0) {
+  // optional string user_id = 6;
+  if (this->user_id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->username().data(), this->username().length(),
+      this->user_id().data(), this->user_id().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "helloworld.Setting.username");
+      "helloworld.Setting.user_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->username(), target);
+        6, this->user_id(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:helloworld.Setting)
@@ -8566,11 +8798,11 @@ int Setting::ByteSize() const {
         this->paidnotice());
   }
 
-  // optional string username = 6;
-  if (this->username().size() > 0) {
+  // optional string user_id = 6;
+  if (this->user_id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->username());
+        this->user_id());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -8608,9 +8840,9 @@ void Setting::MergeFrom(const Setting& from) {
   if (from.paidnotice() != 0) {
     set_paidnotice(from.paidnotice());
   }
-  if (from.username().size() > 0) {
+  if (from.user_id().size() > 0) {
 
-    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
   }
 }
 
@@ -8641,7 +8873,7 @@ void Setting::InternalSwap(Setting* other) {
   std::swap(editeddeletebill_, other->editeddeletebill_);
   std::swap(commentbill_, other->commentbill_);
   std::swap(paidnotice_, other->paidnotice_);
-  username_.Swap(&other->username_);
+  user_id_.Swap(&other->user_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -8727,47 +8959,47 @@ void Setting::clear_paidnotice() {
   // @@protoc_insertion_point(field_set:helloworld.Setting.paidNotice)
 }
 
-// optional string username = 6;
-void Setting::clear_username() {
-  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string user_id = 6;
+void Setting::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& Setting::username() const {
-  // @@protoc_insertion_point(field_get:helloworld.Setting.username)
-  return username_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& Setting::user_id() const {
+  // @@protoc_insertion_point(field_get:helloworld.Setting.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Setting::set_username(const ::std::string& value) {
+ void Setting::set_user_id(const ::std::string& value) {
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:helloworld.Setting.username)
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.Setting.user_id)
 }
- void Setting::set_username(const char* value) {
+ void Setting::set_user_id(const char* value) {
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:helloworld.Setting.username)
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.Setting.user_id)
 }
- void Setting::set_username(const char* value, size_t size) {
+ void Setting::set_user_id(const char* value, size_t size) {
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:helloworld.Setting.username)
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Setting.user_id)
 }
- ::std::string* Setting::mutable_username() {
+ ::std::string* Setting::mutable_user_id() {
   
-  // @@protoc_insertion_point(field_mutable:helloworld.Setting.username)
-  return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:helloworld.Setting.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* Setting::release_username() {
+ ::std::string* Setting::release_user_id() {
   
-  return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Setting::set_allocated_username(::std::string* username) {
-  if (username != NULL) {
+ void Setting::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
     
   } else {
     
   }
-  username_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), username);
-  // @@protoc_insertion_point(field_set_allocated:helloworld.Setting.username)
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.Setting.user_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -8775,6 +9007,7 @@ void Setting::clear_username() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int UserInfo::kUserIdFieldNumber;
 const int UserInfo::kUsernameFieldNumber;
 const int UserInfo::kPasswordFieldNumber;
 const int UserInfo::kEmailFieldNumber;
@@ -8803,6 +9036,7 @@ void UserInfo::SharedCtor() {
     _is_default_instance_ = false;
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
+  user_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -8815,6 +9049,7 @@ UserInfo::~UserInfo() {
 }
 
 void UserInfo::SharedDtor() {
+  user_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -8848,6 +9083,7 @@ UserInfo* UserInfo::New(::google::protobuf::Arena* arena) const {
 }
 
 void UserInfo::Clear() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -8864,9 +9100,26 @@ bool UserInfo::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string username = 1;
+      // optional string user_id = 1;
       case 1: {
         if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id().data(), this->user_id().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.UserInfo.user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_username;
+        break;
+      }
+
+      // optional string username = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_username:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_username()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -8876,13 +9129,13 @@ bool UserInfo::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_password;
+        if (input->ExpectTag(26)) goto parse_password;
         break;
       }
 
-      // optional string password = 2;
-      case 2: {
-        if (tag == 18) {
+      // optional string password = 3;
+      case 3: {
+        if (tag == 26) {
          parse_password:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_password()));
@@ -8893,13 +9146,13 @@ bool UserInfo::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_email;
+        if (input->ExpectTag(34)) goto parse_email;
         break;
       }
 
-      // optional string email = 3;
-      case 3: {
-        if (tag == 26) {
+      // optional string email = 4;
+      case 4: {
+        if (tag == 34) {
          parse_email:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_email()));
@@ -8910,13 +9163,13 @@ bool UserInfo::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(32)) goto parse_currency;
+        if (input->ExpectTag(40)) goto parse_currency;
         break;
       }
 
-      // optional int32 currency = 4;
-      case 4: {
-        if (tag == 32) {
+      // optional int32 currency = 5;
+      case 5: {
+        if (tag == 40) {
          parse_currency:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -8953,39 +9206,49 @@ failure:
 void UserInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:helloworld.UserInfo)
-  // optional string username = 1;
+  // optional string user_id = 1;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), this->user_id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.UserInfo.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->user_id(), output);
+  }
+
+  // optional string username = 2;
   if (this->username().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.UserInfo.username");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->username(), output);
+      2, this->username(), output);
   }
 
-  // optional string password = 2;
+  // optional string password = 3;
   if (this->password().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.UserInfo.password");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->password(), output);
+      3, this->password(), output);
   }
 
-  // optional string email = 3;
+  // optional string email = 4;
   if (this->email().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "helloworld.UserInfo.email");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->email(), output);
+      4, this->email(), output);
   }
 
-  // optional int32 currency = 4;
+  // optional int32 currency = 5;
   if (this->currency() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->currency(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->currency(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:helloworld.UserInfo)
@@ -8994,7 +9257,18 @@ void UserInfo::SerializeWithCachedSizes(
 ::google::protobuf::uint8* UserInfo::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:helloworld.UserInfo)
-  // optional string username = 1;
+  // optional string user_id = 1;
+  if (this->user_id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id().data(), this->user_id().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.UserInfo.user_id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->user_id(), target);
+  }
+
+  // optional string username = 2;
   if (this->username().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->username().data(), this->username().length(),
@@ -9002,10 +9276,10 @@ void UserInfo::SerializeWithCachedSizes(
       "helloworld.UserInfo.username");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->username(), target);
+        2, this->username(), target);
   }
 
-  // optional string password = 2;
+  // optional string password = 3;
   if (this->password().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->password().data(), this->password().length(),
@@ -9013,10 +9287,10 @@ void UserInfo::SerializeWithCachedSizes(
       "helloworld.UserInfo.password");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->password(), target);
+        3, this->password(), target);
   }
 
-  // optional string email = 3;
+  // optional string email = 4;
   if (this->email().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->email().data(), this->email().length(),
@@ -9024,12 +9298,12 @@ void UserInfo::SerializeWithCachedSizes(
       "helloworld.UserInfo.email");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->email(), target);
+        4, this->email(), target);
   }
 
-  // optional int32 currency = 4;
+  // optional int32 currency = 5;
   if (this->currency() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->currency(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->currency(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:helloworld.UserInfo)
@@ -9039,28 +9313,35 @@ void UserInfo::SerializeWithCachedSizes(
 int UserInfo::ByteSize() const {
   int total_size = 0;
 
-  // optional string username = 1;
+  // optional string user_id = 1;
+  if (this->user_id().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->user_id());
+  }
+
+  // optional string username = 2;
   if (this->username().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->username());
   }
 
-  // optional string password = 2;
+  // optional string password = 3;
   if (this->password().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->password());
   }
 
-  // optional string email = 3;
+  // optional string email = 4;
   if (this->email().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->email());
   }
 
-  // optional int32 currency = 4;
+  // optional int32 currency = 5;
   if (this->currency() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
@@ -9087,6 +9368,10 @@ void UserInfo::MergeFrom(const ::google::protobuf::Message& from) {
 
 void UserInfo::MergeFrom(const UserInfo& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  if (from.user_id().size() > 0) {
+
+    user_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_id_);
+  }
   if (from.username().size() > 0) {
 
     username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
@@ -9126,6 +9411,7 @@ void UserInfo::Swap(UserInfo* other) {
   InternalSwap(other);
 }
 void UserInfo::InternalSwap(UserInfo* other) {
+  user_id_.Swap(&other->user_id_);
   username_.Swap(&other->username_);
   password_.Swap(&other->password_);
   email_.Swap(&other->email_);
@@ -9145,7 +9431,50 @@ void UserInfo::InternalSwap(UserInfo* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // UserInfo
 
-// optional string username = 1;
+// optional string user_id = 1;
+void UserInfo::clear_user_id() {
+  user_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& UserInfo::user_id() const {
+  // @@protoc_insertion_point(field_get:helloworld.UserInfo.user_id)
+  return user_id_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UserInfo::set_user_id(const ::std::string& value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.UserInfo.user_id)
+}
+ void UserInfo::set_user_id(const char* value) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.UserInfo.user_id)
+}
+ void UserInfo::set_user_id(const char* value, size_t size) {
+  
+  user_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:helloworld.UserInfo.user_id)
+}
+ ::std::string* UserInfo::mutable_user_id() {
+  
+  // @@protoc_insertion_point(field_mutable:helloworld.UserInfo.user_id)
+  return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* UserInfo::release_user_id() {
+  
+  return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void UserInfo::set_allocated_user_id(::std::string* user_id) {
+  if (user_id != NULL) {
+    
+  } else {
+    
+  }
+  user_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_id);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.UserInfo.user_id)
+}
+
+// optional string username = 2;
 void UserInfo::clear_username() {
   username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -9188,7 +9517,7 @@ void UserInfo::clear_username() {
   // @@protoc_insertion_point(field_set_allocated:helloworld.UserInfo.username)
 }
 
-// optional string password = 2;
+// optional string password = 3;
 void UserInfo::clear_password() {
   password_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -9231,7 +9560,7 @@ void UserInfo::clear_password() {
   // @@protoc_insertion_point(field_set_allocated:helloworld.UserInfo.password)
 }
 
-// optional string email = 3;
+// optional string email = 4;
 void UserInfo::clear_email() {
   email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -9274,7 +9603,7 @@ void UserInfo::clear_email() {
   // @@protoc_insertion_point(field_set_allocated:helloworld.UserInfo.email)
 }
 
-// optional int32 currency = 4;
+// optional int32 currency = 5;
 void UserInfo::clear_currency() {
   currency_ = 0;
 }
@@ -9286,6 +9615,374 @@ void UserInfo::clear_currency() {
   
   currency_ = value;
   // @@protoc_insertion_point(field_set:helloworld.UserInfo.currency)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Reply_inf::kStatusFieldNumber;
+const int Reply_inf::kInformationFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Reply_inf::Reply_inf()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:helloworld.Reply_inf)
+}
+
+void Reply_inf::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+Reply_inf::Reply_inf(const Reply_inf& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:helloworld.Reply_inf)
+}
+
+void Reply_inf::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  status_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  information_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+Reply_inf::~Reply_inf() {
+  // @@protoc_insertion_point(destructor:helloworld.Reply_inf)
+  SharedDtor();
+}
+
+void Reply_inf::SharedDtor() {
+  status_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  information_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != default_instance_) {
+  }
+}
+
+void Reply_inf::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Reply_inf::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Reply_inf_descriptor_;
+}
+
+const Reply_inf& Reply_inf::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_iShare_2eproto();
+  return *default_instance_;
+}
+
+Reply_inf* Reply_inf::default_instance_ = NULL;
+
+Reply_inf* Reply_inf::New(::google::protobuf::Arena* arena) const {
+  Reply_inf* n = new Reply_inf;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Reply_inf::Clear() {
+  status_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  information_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+bool Reply_inf::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:helloworld.Reply_inf)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string status = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_status()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->status().data(), this->status().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Reply_inf.status"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_information;
+        break;
+      }
+
+      // optional string information = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_information:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_information()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->information().data(), this->information().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Reply_inf.information"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:helloworld.Reply_inf)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:helloworld.Reply_inf)
+  return false;
+#undef DO_
+}
+
+void Reply_inf::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:helloworld.Reply_inf)
+  // optional string status = 1;
+  if (this->status().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->status().data(), this->status().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Reply_inf.status");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->status(), output);
+  }
+
+  // optional string information = 2;
+  if (this->information().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->information().data(), this->information().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Reply_inf.information");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->information(), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:helloworld.Reply_inf)
+}
+
+::google::protobuf::uint8* Reply_inf::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:helloworld.Reply_inf)
+  // optional string status = 1;
+  if (this->status().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->status().data(), this->status().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Reply_inf.status");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->status(), target);
+  }
+
+  // optional string information = 2;
+  if (this->information().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->information().data(), this->information().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Reply_inf.information");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->information(), target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:helloworld.Reply_inf)
+  return target;
+}
+
+int Reply_inf::ByteSize() const {
+  int total_size = 0;
+
+  // optional string status = 1;
+  if (this->status().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->status());
+  }
+
+  // optional string information = 2;
+  if (this->information().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->information());
+  }
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Reply_inf::MergeFrom(const ::google::protobuf::Message& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  const Reply_inf* source = 
+      ::google::protobuf::internal::DynamicCastToGenerated<const Reply_inf>(
+          &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void Reply_inf::MergeFrom(const Reply_inf& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  if (from.status().size() > 0) {
+
+    status_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.status_);
+  }
+  if (from.information().size() > 0) {
+
+    information_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.information_);
+  }
+}
+
+void Reply_inf::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Reply_inf::CopyFrom(const Reply_inf& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_inf::IsInitialized() const {
+
+  return true;
+}
+
+void Reply_inf::Swap(Reply_inf* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Reply_inf::InternalSwap(Reply_inf* other) {
+  status_.Swap(&other->status_);
+  information_.Swap(&other->information_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Reply_inf::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Reply_inf_descriptor_;
+  metadata.reflection = Reply_inf_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Reply_inf
+
+// optional string status = 1;
+void Reply_inf::clear_status() {
+  status_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Reply_inf::status() const {
+  // @@protoc_insertion_point(field_get:helloworld.Reply_inf.status)
+  return status_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Reply_inf::set_status(const ::std::string& value) {
+  
+  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.Reply_inf.status)
+}
+ void Reply_inf::set_status(const char* value) {
+  
+  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.Reply_inf.status)
+}
+ void Reply_inf::set_status(const char* value, size_t size) {
+  
+  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Reply_inf.status)
+}
+ ::std::string* Reply_inf::mutable_status() {
+  
+  // @@protoc_insertion_point(field_mutable:helloworld.Reply_inf.status)
+  return status_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Reply_inf::release_status() {
+  
+  return status_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Reply_inf::set_allocated_status(::std::string* status) {
+  if (status != NULL) {
+    
+  } else {
+    
+  }
+  status_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), status);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.Reply_inf.status)
+}
+
+// optional string information = 2;
+void Reply_inf::clear_information() {
+  information_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Reply_inf::information() const {
+  // @@protoc_insertion_point(field_get:helloworld.Reply_inf.information)
+  return information_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Reply_inf::set_information(const ::std::string& value) {
+  
+  information_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:helloworld.Reply_inf.information)
+}
+ void Reply_inf::set_information(const char* value) {
+  
+  information_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:helloworld.Reply_inf.information)
+}
+ void Reply_inf::set_information(const char* value, size_t size) {
+  
+  information_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Reply_inf.information)
+}
+ ::std::string* Reply_inf::mutable_information() {
+  
+  // @@protoc_insertion_point(field_mutable:helloworld.Reply_inf.information)
+  return information_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Reply_inf::release_information() {
+  
+  return information_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Reply_inf::set_allocated_information(::std::string* information) {
+  if (information != NULL) {
+    
+  } else {
+    
+  }
+  information_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), information);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.Reply_inf.information)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
