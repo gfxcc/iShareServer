@@ -13,12 +13,14 @@ service Greeter {
 rpc SayHello (HelloRequest) returns (HelloReply) {}
 
 // A simple RPC
-//
+// login_m(usename, password)
+// Inf contain user_id
 // login rpc
 rpc Login (Login_m) returns (Inf) {}
 
 // A simple RPC
-//
+// sign_m(username, password, email)
+// Inf contain user_id
 // sign in rpc
 rpc Sign_up (Sign_m) returns (Inf) {}
 

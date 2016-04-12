@@ -59,13 +59,6 @@ CMakeFiles/iShare.dir/iShare_server.cc.o
  /home/ubuntu/iShare/iShare_server.cc
  /home/ubuntu/iShare/iShare_server.h
  /home/ubuntu/iShare/mysql_pool.h
- /usr/include/mysql/my_alloc.h
- /usr/include/mysql/my_list.h
- /usr/include/mysql/mysql.h
- /usr/include/mysql/mysql_com.h
- /usr/include/mysql/mysql_time.h
- /usr/include/mysql/mysql_version.h
- /usr/include/mysql/typelib.h
 CMakeFiles/iShare.dir/tools.cc.o
  /home/ubuntu/iShare/iShare_server.h
  /home/ubuntu/iShare/tools.cc

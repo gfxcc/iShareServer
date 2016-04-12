@@ -36,7 +36,7 @@
 #include <string>
 #include <list>
 
-#include <mysql.h>
+#include <mysql/mysql.h>
 #include <grpc/grpc.h>
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
@@ -244,7 +244,7 @@ class GreeterServiceImpl final : public Greeter::Service {
         MYSQL_ROW row;
 
 
-        string sql_command = "SELECT username FROM User WHERE username like '%" + request->information() + "%'";
+        string sql_command = "SELECT username FROM User WHERE UPPER(username) like '%" + request->information() + "%'";
 
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
@@ -366,7 +366,8 @@ class GreeterServiceImpl final : public Greeter::Service {
             //            ostringstream ostr;
             //            ostr << i;
             //            string astr = ostr.str();
-
+            if (request.information() == "")
+                continue;
             sql_command = "SELECT synchronism_friend, synchronism_bill, synchronism_delete, synchronism_request FROM User WHERE username ='" + request.information() + "'";
             if (!mysql_query(conn, sql_command.data())) {
 
