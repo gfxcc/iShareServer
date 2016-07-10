@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/iShare_new
+CMAKE_SOURCE_DIR = /home/ubuntu/iShare_alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/iShare_new
+CMAKE_BINARY_DIR = /home/ubuntu/iShare_alpha
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/iShare_new/CMakeFiles /home/ubuntu/iShare_new/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/iShare_alpha/CMakeFiles /home/ubuntu/iShare_alpha/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/iShare_new/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/iShare_alpha/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -306,101 +306,221 @@ MMGAPN/MMGTools.cpp.s:
 	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.s
 .PHONY : MMGAPN/MMGTools.cpp.s
 
-iShare.grpc.pb.o: iShare.grpc.pb.cc.o
-.PHONY : iShare.grpc.pb.o
+iShare_source/iShare.grpc.pb.o: iShare_source/iShare.grpc.pb.cc.o
+.PHONY : iShare_source/iShare.grpc.pb.o
 
 # target to build an object file
-iShare.grpc.pb.cc.o:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o
-.PHONY : iShare.grpc.pb.cc.o
+iShare_source/iShare.grpc.pb.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o
+.PHONY : iShare_source/iShare.grpc.pb.cc.o
 
-iShare.grpc.pb.i: iShare.grpc.pb.cc.i
-.PHONY : iShare.grpc.pb.i
+iShare_source/iShare.grpc.pb.i: iShare_source/iShare.grpc.pb.cc.i
+.PHONY : iShare_source/iShare.grpc.pb.i
 
 # target to preprocess a source file
-iShare.grpc.pb.cc.i:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.grpc.pb.cc.i
-.PHONY : iShare.grpc.pb.cc.i
+iShare_source/iShare.grpc.pb.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.i
+.PHONY : iShare_source/iShare.grpc.pb.cc.i
 
-iShare.grpc.pb.s: iShare.grpc.pb.cc.s
-.PHONY : iShare.grpc.pb.s
+iShare_source/iShare.grpc.pb.s: iShare_source/iShare.grpc.pb.cc.s
+.PHONY : iShare_source/iShare.grpc.pb.s
 
 # target to generate assembly for a file
-iShare.grpc.pb.cc.s:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.grpc.pb.cc.s
-.PHONY : iShare.grpc.pb.cc.s
+iShare_source/iShare.grpc.pb.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.s
+.PHONY : iShare_source/iShare.grpc.pb.cc.s
 
-iShare.pb.o: iShare.pb.cc.o
-.PHONY : iShare.pb.o
+iShare_source/iShare.pb.o: iShare_source/iShare.pb.cc.o
+.PHONY : iShare_source/iShare.pb.o
 
 # target to build an object file
-iShare.pb.cc.o:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.pb.cc.o
-.PHONY : iShare.pb.cc.o
+iShare_source/iShare.pb.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.o
+.PHONY : iShare_source/iShare.pb.cc.o
 
-iShare.pb.i: iShare.pb.cc.i
-.PHONY : iShare.pb.i
+iShare_source/iShare.pb.i: iShare_source/iShare.pb.cc.i
+.PHONY : iShare_source/iShare.pb.i
 
 # target to preprocess a source file
-iShare.pb.cc.i:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.pb.cc.i
-.PHONY : iShare.pb.cc.i
+iShare_source/iShare.pb.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.i
+.PHONY : iShare_source/iShare.pb.cc.i
 
-iShare.pb.s: iShare.pb.cc.s
-.PHONY : iShare.pb.s
+iShare_source/iShare.pb.s: iShare_source/iShare.pb.cc.s
+.PHONY : iShare_source/iShare.pb.s
 
 # target to generate assembly for a file
-iShare.pb.cc.s:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare.pb.cc.s
-.PHONY : iShare.pb.cc.s
+iShare_source/iShare.pb.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.s
+.PHONY : iShare_source/iShare.pb.cc.s
 
-iShare_server.o: iShare_server.cc.o
-.PHONY : iShare_server.o
+iShare_source/iShare_bill.o: iShare_source/iShare_bill.cc.o
+.PHONY : iShare_source/iShare_bill.o
 
 # target to build an object file
-iShare_server.cc.o:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_server.cc.o
-.PHONY : iShare_server.cc.o
+iShare_source/iShare_bill.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o
+.PHONY : iShare_source/iShare_bill.cc.o
 
-iShare_server.i: iShare_server.cc.i
-.PHONY : iShare_server.i
+iShare_source/iShare_bill.i: iShare_source/iShare_bill.cc.i
+.PHONY : iShare_source/iShare_bill.i
 
 # target to preprocess a source file
-iShare_server.cc.i:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_server.cc.i
-.PHONY : iShare_server.cc.i
+iShare_source/iShare_bill.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.i
+.PHONY : iShare_source/iShare_bill.cc.i
 
-iShare_server.s: iShare_server.cc.s
-.PHONY : iShare_server.s
+iShare_source/iShare_bill.s: iShare_source/iShare_bill.cc.s
+.PHONY : iShare_source/iShare_bill.s
 
 # target to generate assembly for a file
-iShare_server.cc.s:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_server.cc.s
-.PHONY : iShare_server.cc.s
+iShare_source/iShare_bill.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.s
+.PHONY : iShare_source/iShare_bill.cc.s
 
-tools.o: tools.cc.o
-.PHONY : tools.o
+iShare_source/iShare_request.o: iShare_source/iShare_request.cc.o
+.PHONY : iShare_source/iShare_request.o
 
 # target to build an object file
-tools.cc.o:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.o
-.PHONY : tools.cc.o
+iShare_source/iShare_request.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o
+.PHONY : iShare_source/iShare_request.cc.o
 
-tools.i: tools.cc.i
-.PHONY : tools.i
+iShare_source/iShare_request.i: iShare_source/iShare_request.cc.i
+.PHONY : iShare_source/iShare_request.i
 
 # target to preprocess a source file
-tools.cc.i:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.i
-.PHONY : tools.cc.i
+iShare_source/iShare_request.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.i
+.PHONY : iShare_source/iShare_request.cc.i
 
-tools.s: tools.cc.s
-.PHONY : tools.s
+iShare_source/iShare_request.s: iShare_source/iShare_request.cc.s
+.PHONY : iShare_source/iShare_request.s
 
 # target to generate assembly for a file
-tools.cc.s:
-	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/tools.cc.s
-.PHONY : tools.cc.s
+iShare_source/iShare_request.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.s
+.PHONY : iShare_source/iShare_request.cc.s
+
+iShare_source/iShare_server.o: iShare_source/iShare_server.cc.o
+.PHONY : iShare_source/iShare_server.o
+
+# target to build an object file
+iShare_source/iShare_server.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o
+.PHONY : iShare_source/iShare_server.cc.o
+
+iShare_source/iShare_server.i: iShare_source/iShare_server.cc.i
+.PHONY : iShare_source/iShare_server.i
+
+# target to preprocess a source file
+iShare_source/iShare_server.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.i
+.PHONY : iShare_source/iShare_server.cc.i
+
+iShare_source/iShare_server.s: iShare_source/iShare_server.cc.s
+.PHONY : iShare_source/iShare_server.s
+
+# target to generate assembly for a file
+iShare_source/iShare_server.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.s
+.PHONY : iShare_source/iShare_server.cc.s
+
+iShare_source/iShare_setting.o: iShare_source/iShare_setting.cc.o
+.PHONY : iShare_source/iShare_setting.o
+
+# target to build an object file
+iShare_source/iShare_setting.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o
+.PHONY : iShare_source/iShare_setting.cc.o
+
+iShare_source/iShare_setting.i: iShare_source/iShare_setting.cc.i
+.PHONY : iShare_source/iShare_setting.i
+
+# target to preprocess a source file
+iShare_source/iShare_setting.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.i
+.PHONY : iShare_source/iShare_setting.cc.i
+
+iShare_source/iShare_setting.s: iShare_source/iShare_setting.cc.s
+.PHONY : iShare_source/iShare_setting.s
+
+# target to generate assembly for a file
+iShare_source/iShare_setting.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.s
+.PHONY : iShare_source/iShare_setting.cc.s
+
+iShare_source/iShare_tools.o: iShare_source/iShare_tools.cc.o
+.PHONY : iShare_source/iShare_tools.o
+
+# target to build an object file
+iShare_source/iShare_tools.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o
+.PHONY : iShare_source/iShare_tools.cc.o
+
+iShare_source/iShare_tools.i: iShare_source/iShare_tools.cc.i
+.PHONY : iShare_source/iShare_tools.i
+
+# target to preprocess a source file
+iShare_source/iShare_tools.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.i
+.PHONY : iShare_source/iShare_tools.cc.i
+
+iShare_source/iShare_tools.s: iShare_source/iShare_tools.cc.s
+.PHONY : iShare_source/iShare_tools.s
+
+# target to generate assembly for a file
+iShare_source/iShare_tools.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.s
+.PHONY : iShare_source/iShare_tools.cc.s
+
+iShare_source/iShare_user.o: iShare_source/iShare_user.cc.o
+.PHONY : iShare_source/iShare_user.o
+
+# target to build an object file
+iShare_source/iShare_user.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o
+.PHONY : iShare_source/iShare_user.cc.o
+
+iShare_source/iShare_user.i: iShare_source/iShare_user.cc.i
+.PHONY : iShare_source/iShare_user.i
+
+# target to preprocess a source file
+iShare_source/iShare_user.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.i
+.PHONY : iShare_source/iShare_user.cc.i
+
+iShare_source/iShare_user.s: iShare_source/iShare_user.cc.s
+.PHONY : iShare_source/iShare_user.s
+
+# target to generate assembly for a file
+iShare_source/iShare_user.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.s
+.PHONY : iShare_source/iShare_user.cc.s
+
+iShare_source/mysql_pool.o: iShare_source/mysql_pool.cc.o
+.PHONY : iShare_source/mysql_pool.o
+
+# target to build an object file
+iShare_source/mysql_pool.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.o
+.PHONY : iShare_source/mysql_pool.cc.o
+
+iShare_source/mysql_pool.i: iShare_source/mysql_pool.cc.i
+.PHONY : iShare_source/mysql_pool.i
+
+# target to preprocess a source file
+iShare_source/mysql_pool.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.i
+.PHONY : iShare_source/mysql_pool.cc.i
+
+iShare_source/mysql_pool.s: iShare_source/mysql_pool.cc.s
+.PHONY : iShare_source/mysql_pool.s
+
+# target to generate assembly for a file
+iShare_source/mysql_pool.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.s
+.PHONY : iShare_source/mysql_pool.cc.s
 
 # Help Target
 help:
@@ -435,18 +555,33 @@ help:
 	@echo "... MMGAPN/MMGTools.o"
 	@echo "... MMGAPN/MMGTools.i"
 	@echo "... MMGAPN/MMGTools.s"
-	@echo "... iShare.grpc.pb.o"
-	@echo "... iShare.grpc.pb.i"
-	@echo "... iShare.grpc.pb.s"
-	@echo "... iShare.pb.o"
-	@echo "... iShare.pb.i"
-	@echo "... iShare.pb.s"
-	@echo "... iShare_server.o"
-	@echo "... iShare_server.i"
-	@echo "... iShare_server.s"
-	@echo "... tools.o"
-	@echo "... tools.i"
-	@echo "... tools.s"
+	@echo "... iShare_source/iShare.grpc.pb.o"
+	@echo "... iShare_source/iShare.grpc.pb.i"
+	@echo "... iShare_source/iShare.grpc.pb.s"
+	@echo "... iShare_source/iShare.pb.o"
+	@echo "... iShare_source/iShare.pb.i"
+	@echo "... iShare_source/iShare.pb.s"
+	@echo "... iShare_source/iShare_bill.o"
+	@echo "... iShare_source/iShare_bill.i"
+	@echo "... iShare_source/iShare_bill.s"
+	@echo "... iShare_source/iShare_request.o"
+	@echo "... iShare_source/iShare_request.i"
+	@echo "... iShare_source/iShare_request.s"
+	@echo "... iShare_source/iShare_server.o"
+	@echo "... iShare_source/iShare_server.i"
+	@echo "... iShare_source/iShare_server.s"
+	@echo "... iShare_source/iShare_setting.o"
+	@echo "... iShare_source/iShare_setting.i"
+	@echo "... iShare_source/iShare_setting.s"
+	@echo "... iShare_source/iShare_tools.o"
+	@echo "... iShare_source/iShare_tools.i"
+	@echo "... iShare_source/iShare_tools.s"
+	@echo "... iShare_source/iShare_user.o"
+	@echo "... iShare_source/iShare_user.i"
+	@echo "... iShare_source/iShare_user.s"
+	@echo "... iShare_source/mysql_pool.o"
+	@echo "... iShare_source/mysql_pool.i"
+	@echo "... iShare_source/mysql_pool.s"
 .PHONY : help
 
 

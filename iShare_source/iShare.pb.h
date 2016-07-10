@@ -551,6 +551,22 @@ class User_detail : public ::google::protobuf::Message {
   const ::google::protobuf::RepeatedPtrField< ::std::string>& friends_id() const;
   ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_friends_id();
 
+  // repeated string friends_lastModified = 6;
+  int friends_lastmodified_size() const;
+  void clear_friends_lastmodified();
+  static const int kFriendsLastModifiedFieldNumber = 6;
+  const ::std::string& friends_lastmodified(int index) const;
+  ::std::string* mutable_friends_lastmodified(int index);
+  void set_friends_lastmodified(int index, const ::std::string& value);
+  void set_friends_lastmodified(int index, const char* value);
+  void set_friends_lastmodified(int index, const char* value, size_t size);
+  ::std::string* add_friends_lastmodified();
+  void add_friends_lastmodified(const ::std::string& value);
+  void add_friends_lastmodified(const char* value);
+  void add_friends_lastmodified(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& friends_lastmodified() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_friends_lastmodified();
+
   // @@protoc_insertion_point(class_scope:helloworld.User_detail)
  private:
 
@@ -561,6 +577,7 @@ class User_detail : public ::google::protobuf::Message {
   ::google::protobuf::internal::ArenaStringPtr email_;
   ::google::protobuf::RepeatedPtrField< ::std::string> friends_name_;
   ::google::protobuf::RepeatedPtrField< ::std::string> friends_id_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> friends_lastmodified_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_iShare_2eproto();
   friend void protobuf_AssignDesc_iShare_2eproto();
@@ -2693,6 +2710,60 @@ inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 User_detail::mutable_friends_id() {
   // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_id)
   return &friends_id_;
+}
+
+// repeated string friends_lastModified = 6;
+inline int User_detail::friends_lastmodified_size() const {
+  return friends_lastmodified_.size();
+}
+inline void User_detail::clear_friends_lastmodified() {
+  friends_lastmodified_.Clear();
+}
+inline const ::std::string& User_detail::friends_lastmodified(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_.Get(index);
+}
+inline ::std::string* User_detail::mutable_friends_lastmodified(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_.Mutable(index);
+}
+inline void User_detail::set_friends_lastmodified(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.User_detail.friends_lastModified)
+  friends_lastmodified_.Mutable(index)->assign(value);
+}
+inline void User_detail::set_friends_lastmodified(int index, const char* value) {
+  friends_lastmodified_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.friends_lastModified)
+}
+inline void User_detail::set_friends_lastmodified(int index, const char* value, size_t size) {
+  friends_lastmodified_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_lastModified)
+}
+inline ::std::string* User_detail::add_friends_lastmodified() {
+  return friends_lastmodified_.Add();
+}
+inline void User_detail::add_friends_lastmodified(const ::std::string& value) {
+  friends_lastmodified_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.User_detail.friends_lastModified)
+}
+inline void User_detail::add_friends_lastmodified(const char* value) {
+  friends_lastmodified_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.User_detail.friends_lastModified)
+}
+inline void User_detail::add_friends_lastmodified(const char* value, size_t size) {
+  friends_lastmodified_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.User_detail.friends_lastModified)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+User_detail::friends_lastmodified() const {
+  // @@protoc_insertion_point(field_list:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+User_detail::mutable_friends_lastmodified() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_lastModified)
+  return &friends_lastmodified_;
 }
 
 // -------------------------------------------------------------------

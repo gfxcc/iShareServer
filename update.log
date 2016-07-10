@@ -13,6 +13,11 @@
 1. In SYN remove [WARNING] when request->information() == ""
 2. In Search_username match 'm' to 'M' and 'm'
 
+09/JUL/2016
+1. edit MMGTools.cpp 49line "*s++"   ->      "s++"
 
+10/JUL/2016
+1. update usericon 
+2. add last_modified field into User table
 
 Bill data transfer at 423

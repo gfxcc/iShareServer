@@ -9,12 +9,14 @@ MESSAGE(STATUS "Project: ${PROJECT_NAME}")
 MESSAGE(STATUS "Project Directory: ${PORJECT_SOURCE_DIR}")
 message(status ${source})
 
-file(GLOB_RECURSE header ${iShare_SOURCE_DIR}/*.h ${iShare_SOURCE_DIR}/MMGAPN/*.hpp)
-file(GLOB_RECURSE source ${iShare_SOURCE_DIR}/*.cc ${iShare_SOURCE_DIR}/MMGAPN/*.cpp)
+file(GLOB_RECURSE header ${iShare_SOURCE_DIR}/*.h ${iShare_SOURCE_DIR}/iShare_source/*.h
+    ${iShare_SOURCE_DIR}/MMGAPN/*.hpp)
+file(GLOB_RECURSE source ${iShare_SOURCE_DIR}/*.cc ${iShare_SOURCE_DIR}/iShare_source/*.cc
+    ${iShare_SOURCE_DIR}/MMGAPN/*.cpp)
 list(REMOVE_ITEM source ${iShare_SOURCE_DIR}/MMGAPN/feedback.cpp ${iShare_SOURCE_DIR}/MMGAPN/main.cpp)
 
 SET(CMAKE_BUILD_TYPE "Debug")
-set(CMAKE_CXX_FLAGS "-std=c++11")
+SET(CMAKE_CXX_FLAGS "-std=c++11")
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 

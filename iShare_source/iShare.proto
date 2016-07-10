@@ -175,12 +175,17 @@ rpc Reset_setting (Setting) returns (Inf) {}
 //
 //
 //
-rpc Reset_userInfo (UserInfo) returns(Inf) {}
+rpc Reset_userInfo (UserInfo) returns (Inf) {}
 
 //
 //
 //
-rpc Obtain_userInfo (Inf) returns(UserInfo) {}
+rpc Obtain_userInfo (Inf) returns (UserInfo) {}
+
+//
+//
+//
+rpc Update_user_lastModified (Inf) returns (Inf) {}
 }
 
 // The request message contain username and password
@@ -209,7 +214,7 @@ string user_id = 2;
 string email = 3;
 repeated string friends_name = 4;
 repeated string friends_id = 5;
-
+repeated string friends_lastModified = 6;
 }
 
 message Share_inf {

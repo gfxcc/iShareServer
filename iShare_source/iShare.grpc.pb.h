@@ -154,6 +154,10 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::UserInfo>> AsyncObtain_userInfo(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::UserInfo>>(AsyncObtain_userInfoRaw(context, request, cq));
     }
+    virtual ::grpc::Status Update_user_lastModified(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Inf* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncUpdate_user_lastModified(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncUpdate_user_lastModifiedRaw(context, request, cq));
+    }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::HelloReply>* AsyncSayHelloRaw(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Reply_inf>* AsyncLoginRaw(::grpc::ClientContext* context, const ::helloworld::Login_m& request, ::grpc::CompletionQueue* cq) = 0;
@@ -190,6 +194,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncReset_settingRaw(::grpc::ClientContext* context, const ::helloworld::Setting& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncReset_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::UserInfo& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::UserInfo>* AsyncObtain_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncUpdate_user_lastModifiedRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub GRPC_FINAL : public StubInterface {
    public:
@@ -318,6 +323,10 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::UserInfo>> AsyncObtain_userInfo(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::UserInfo>>(AsyncObtain_userInfoRaw(context, request, cq));
     }
+    ::grpc::Status Update_user_lastModified(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncUpdate_user_lastModified(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncUpdate_user_lastModifiedRaw(context, request, cq));
+    }
 
    private:
     std::shared_ptr< ::grpc::Channel> channel_;
@@ -356,6 +365,7 @@ class Greeter GRPC_FINAL {
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncReset_settingRaw(::grpc::ClientContext* context, const ::helloworld::Setting& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncReset_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::UserInfo& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::UserInfo>* AsyncObtain_userInfoRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncUpdate_user_lastModifiedRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     const ::grpc::RpcMethod rpcmethod_SayHello_;
     const ::grpc::RpcMethod rpcmethod_Login_;
     const ::grpc::RpcMethod rpcmethod_Sign_up_;
@@ -383,6 +393,7 @@ class Greeter GRPC_FINAL {
     const ::grpc::RpcMethod rpcmethod_Reset_setting_;
     const ::grpc::RpcMethod rpcmethod_Reset_userInfo_;
     const ::grpc::RpcMethod rpcmethod_Obtain_userInfo_;
+    const ::grpc::RpcMethod rpcmethod_Update_user_lastModified_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::Channel>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -417,6 +428,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Reset_setting(::grpc::ServerContext* context, const ::helloworld::Setting* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Reset_userInfo(::grpc::ServerContext* context, const ::helloworld::UserInfo* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Obtain_userInfo(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::UserInfo* response);
+    virtual ::grpc::Status Update_user_lastModified(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Inf* response);
     ::grpc::RpcService* service() GRPC_OVERRIDE GRPC_FINAL;
    private:
     std::unique_ptr< ::grpc::RpcService> service_;
@@ -452,6 +464,7 @@ class Greeter GRPC_FINAL {
     void RequestReset_setting(::grpc::ServerContext* context, ::helloworld::Setting* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestReset_userInfo(::grpc::ServerContext* context, ::helloworld::UserInfo* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestObtain_userInfo(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::UserInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
+    void RequestUpdate_user_lastModified(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
   };
 };
 

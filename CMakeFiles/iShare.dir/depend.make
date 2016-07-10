@@ -39,26 +39,83 @@ CMakeFiles/iShare.dir/MMGAPN/MMGSafariPayload.cpp.o: MMGAPN/global.hpp
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o: MMGAPN/MMGTools.cpp
 CMakeFiles/iShare.dir/MMGAPN/MMGTools.cpp.o: MMGAPN/MMGTools.hpp
 
-CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o: iShare.grpc.pb.cc
-CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o: iShare.grpc.pb.h
-CMakeFiles/iShare.dir/iShare.grpc.pb.cc.o: iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o: iShare_source/iShare.grpc.pb.cc
+CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o: iShare_source/iShare.pb.h
 
-CMakeFiles/iShare.dir/iShare.pb.cc.o: iShare.pb.cc
-CMakeFiles/iShare.dir/iShare.pb.cc.o: iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.o: iShare_source/iShare.pb.cc
+CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.o: iShare_source/iShare.pb.h
 
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGAPNSConnection.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGDevice.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGIOSPayload.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGPayload.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGSSLConnection.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/MMGTools.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: MMGAPN/global.hpp
-CMakeFiles/iShare.dir/iShare_server.cc.o: iShare.grpc.pb.h
-CMakeFiles/iShare.dir/iShare_server.cc.o: iShare.pb.h
-CMakeFiles/iShare.dir/iShare_server.cc.o: iShare_server.cc
-CMakeFiles/iShare.dir/iShare_server.cc.o: iShare_server.h
-CMakeFiles/iShare.dir/iShare_server.cc.o: mysql_pool.h
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGAPNSConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGDevice.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGIOSPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGSSLConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/MMGTools.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: MMGAPN/global.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare_bill.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/mysql_pool.h
 
-CMakeFiles/iShare.dir/tools.cc.o: iShare_server.h
-CMakeFiles/iShare.dir/tools.cc.o: tools.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGAPNSConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGDevice.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGIOSPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGSSLConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGTools.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/global.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: iShare_source/iShare_request.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: iShare_source/mysql_pool.h
+
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGAPNSConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGDevice.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGIOSPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGSSLConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGTools.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/global.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare_server.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/mysql_pool.h
+
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGAPNSConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGDevice.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGIOSPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGSSLConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/MMGTools.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: MMGAPN/global.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/iShare_setting.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/mysql_pool.h
+
+CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare_tools.cc
+
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGAPNSConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGDevice.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGIOSPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGPayload.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGSSLConnection.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/MMGTools.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: MMGAPN/global.hpp
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: iShare_source/iShare.grpc.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: iShare_source/iShare_server.h
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: iShare_source/iShare_user.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o: iShare_source/mysql_pool.h
+
+CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.o: iShare_source/mysql_pool.cc
+CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.o: iShare_source/mysql_pool.h
 

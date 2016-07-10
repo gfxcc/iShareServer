@@ -46,7 +46,7 @@ int MMGTools::StringToInteger(const std::string& str)
 	if (*s == '-')
 	{
 		n = -1;
-		*s++;
+		s++;
 	}
 	while ((unsigned int)(c = (unsigned int)*s++ - 48) < 10u)
 		res = res * 10 + (int)c;

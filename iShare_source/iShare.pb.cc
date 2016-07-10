@@ -148,12 +148,13 @@ void protobuf_AssignDesc_iShare_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _is_default_instance_));
   User_detail_descriptor_ = file->message_type(4);
-  static const int User_detail_offsets_[5] = {
+  static const int User_detail_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, username_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, user_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, email_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, friends_lastmodified_),
   };
   User_detail_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -505,81 +506,83 @@ void protobuf_AddDesc_iShare_2eproto() {
     "\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\";\n\006Sig"
     "n_m\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022"
     "\r\n\005email\030\003 \001(\t\"\032\n\003Inf\022\023\n\013information\030\001 \001"
-    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"i"
-    "\n\013User_detail\022\020\n\010username\030\001 \001(\t\022\017\n\007user_"
-    "id\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\024\n\014friends_name\030"
-    "\004 \003(\t\022\022\n\nfriends_id\030\005 \003(\t\"\324\001\n\tShare_inf\022"
-    "\017\n\007creater\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004type"
-    "\030\003 \001(\t\022\016\n\006paidBy\030\004 \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004"
-    "note\030\006 \001(\t\022\r\n\005image\030\007 \001(\t\022\017\n\007members\030\010 \003"
-    "(\t\022\025\n\rmembers_count\030\t \001(\005\022\017\n\007bill_id\030\n \001"
-    "(\t\022\022\n\npaidStatus\030\013 \001(\t\022\020\n\010typeIcon\030\014 \001(\t"
-    "\"\?\n\014Bill_request\022\020\n\010username\030\001 \001(\t\022\r\n\005st"
-    "art\030\002 \001(\t\022\016\n\006amount\030\003 \001(\t\"I\n\010Syn_data\022\016\n"
-    "\006friend\030\001 \001(\t\022\014\n\004bill\030\002 \001(\t\022\016\n\006delete\030\003 "
-    "\001(\t\022\017\n\007request\030\004 \001(\t\"\034\n\014HelloRequest\022\014\n\004"
-    "name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001("
-    "\t\"#\n\005Image\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305"
-    "\001\n\007Request\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender"
-    "\030\002 \001(\t\022\020\n\010receiver\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017"
-    "\n\007content\030\005 \001(\t\022\020\n\010response\030\006 \001(\t\022\024\n\014req"
-    "uest_date\030\007 \001(\t\022\025\n\rresponse_date\030\010 \001(\t\022\023"
-    "\n\013ignore_from\030\t \001(\t\022\021\n\tignore_to\030\n \001(\t\"i"
-    "\n\010Response\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender"
-    "\030\002 \001(\t\022\020\n\010receiver\030\003 \001(\t\022\020\n\010response\030\004 \001"
-    "(\t\022\025\n\rresponse_date\030\005 \001(\t\"4\n\rIgnoreMessa"
-    "ge\022\025\n\rrequestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\""
-    "2\n\013BillPayment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidS"
-    "tatus\030\002 \001(\t\"\204\001\n\007Setting\022\024\n\014friendInvite\030"
-    "\001 \001(\005\022\017\n\007newBill\030\002 \001(\005\022\030\n\020editedDeleteBi"
-    "ll\030\003 \001(\005\022\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNot"
-    "ice\030\005 \001(\005\022\017\n\007user_id\030\006 \001(\t\"`\n\010UserInfo\022\017"
-    "\n\007user_id\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010pas"
-    "sword\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\020\n\010currency\030\005"
-    " \001(\005\"0\n\tReply_inf\022\016\n\006status\030\001 \001(\t\022\023\n\013inf"
-    "ormation\030\002 \001(\t2\351\014\n\007Greeter\022>\n\010SayHello\022\030"
-    ".helloworld.HelloRequest\032\026.helloworld.He"
-    "lloReply\"\000\0225\n\005Login\022\023.helloworld.Login_m"
-    "\032\025.helloworld.Reply_inf\"\000\0226\n\007Sign_up\022\022.h"
-    "elloworld.Sign_m\032\025.helloworld.Reply_inf\""
-    "\000\0226\n\010User_inf\022\017.helloworld.Inf\032\027.hellowo"
-    "rld.User_detail\"\000\022A\n\017Search_username\022\017.h"
-    "elloworld.Inf\032\033.helloworld.Repeated_stri"
-    "ng\"\000\022<\n\nAdd_friend\022\033.helloworld.Repeated"
-    "_string\032\017.helloworld.Inf\"\000\022\?\n\rDelete_fri"
-    "end\022\033.helloworld.Repeated_string\032\017.hello"
-    "world.Inf\"\000\0228\n\014Create_share\022\025.helloworld"
-    ".Share_inf\032\017.helloworld.Inf\"\000\0227\n\013Delete_"
-    "bill\022\025.helloworld.Share_inf\032\017.helloworld"
-    ".Inf\"\000\0222\n\003Syn\022\017.helloworld.Inf\032\024.hellowo"
-    "rld.Syn_data\"\000(\0010\001\022C\n\014Obtain_bills\022\030.hel"
-    "loworld.Bill_request\032\025.helloworld.Share_"
-    "inf\"\0000\001\0222\n\010Send_Img\022\021.helloworld.Image\032\017"
-    ".helloworld.Inf\"\000(\001\022A\n\013Receive_Img\022\033.hel"
-    "loworld.Repeated_string\032\021.helloworld.Ima"
-    "ge\"\0000\001\0222\n\014Reset_Status\022\017.helloworld.Inf\032"
-    "\017.helloworld.Inf\"\000\0226\n\014Send_request\022\023.hel"
-    "loworld.Request\032\017.helloworld.Inf\"\000\022:\n\016Ob"
-    "tain_request\022\017.helloworld.Inf\032\023.hellowor"
-    "ld.Request\"\0000\001\022=\n\021Obtain_requestLog\022\017.he"
-    "lloworld.Inf\032\023.helloworld.Request\"\0000\001\022D\n"
-    "\030Obtain_requestLogHistory\022\017.helloworld.I"
-    "nf\032\023.helloworld.Request\"\0000\001\022;\n\020Request_r"
-    "esponse\022\024.helloworld.Response\032\017.hellowor"
-    "ld.Inf\"\000\022;\n\013MakePayment\022\027.helloworld.Bil"
-    "lPayment\032\017.helloworld.Inf\"\000(\001\022@\n\020IgnoreR"
-    "equestLog\022\031.helloworld.IgnoreMessage\032\017.h"
-    "elloworld.Inf\"\000\022;\n\021Create_requestLog\022\023.h"
-    "elloworld.Request\032\017.helloworld.Inf\"\000\022B\n\020"
-    "Send_DeviceToken\022\033.helloworld.Repeated_s"
-    "tring\032\017.helloworld.Inf\"\000\0228\n\016Obtain_setti"
-    "ng\022\017.helloworld.Inf\032\023.helloworld.Setting"
-    "\"\000\0227\n\rReset_setting\022\023.helloworld.Setting"
-    "\032\017.helloworld.Inf\"\000\0229\n\016Reset_userInfo\022\024."
-    "helloworld.UserInfo\032\017.helloworld.Inf\"\000\022:"
-    "\n\017Obtain_userInfo\022\017.helloworld.Inf\032\024.hel"
-    "loworld.UserInfo\"\000B\022\n\020io.grpc.examplesb\006"
-    "proto3", 3126);
+    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"\207"
+    "\001\n\013User_detail\022\020\n\010username\030\001 \001(\t\022\017\n\007user"
+    "_id\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\024\n\014friends_name"
+    "\030\004 \003(\t\022\022\n\nfriends_id\030\005 \003(\t\022\034\n\024friends_la"
+    "stModified\030\006 \003(\t\"\324\001\n\tShare_inf\022\017\n\007create"
+    "r\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022\016\n"
+    "\006paidBy\030\004 \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004note\030\006 \001("
+    "\t\022\r\n\005image\030\007 \001(\t\022\017\n\007members\030\010 \003(\t\022\025\n\rmem"
+    "bers_count\030\t \001(\005\022\017\n\007bill_id\030\n \001(\t\022\022\n\npai"
+    "dStatus\030\013 \001(\t\022\020\n\010typeIcon\030\014 \001(\t\"\?\n\014Bill_"
+    "request\022\020\n\010username\030\001 \001(\t\022\r\n\005start\030\002 \001(\t"
+    "\022\016\n\006amount\030\003 \001(\t\"I\n\010Syn_data\022\016\n\006friend\030\001"
+    " \001(\t\022\014\n\004bill\030\002 \001(\t\022\016\n\006delete\030\003 \001(\t\022\017\n\007re"
+    "quest\030\004 \001(\t\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001("
+    "\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t\"#\n\005Imag"
+    "e\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305\001\n\007Reques"
+    "t\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n"
+    "\010receiver\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017\n\007content"
+    "\030\005 \001(\t\022\020\n\010response\030\006 \001(\t\022\024\n\014request_date"
+    "\030\007 \001(\t\022\025\n\rresponse_date\030\010 \001(\t\022\023\n\013ignore_"
+    "from\030\t \001(\t\022\021\n\tignore_to\030\n \001(\t\"i\n\010Respons"
+    "e\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n"
+    "\010receiver\030\003 \001(\t\022\020\n\010response\030\004 \001(\t\022\025\n\rres"
+    "ponse_date\030\005 \001(\t\"4\n\rIgnoreMessage\022\025\n\rreq"
+    "uestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n\013BillPa"
+    "yment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidStatus\030\002 \001"
+    "(\t\"\204\001\n\007Setting\022\024\n\014friendInvite\030\001 \001(\005\022\017\n\007"
+    "newBill\030\002 \001(\005\022\030\n\020editedDeleteBill\030\003 \001(\005\022"
+    "\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNotice\030\005 \001(\005"
+    "\022\017\n\007user_id\030\006 \001(\t\"`\n\010UserInfo\022\017\n\007user_id"
+    "\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010password\030\003 \001"
+    "(\t\022\r\n\005email\030\004 \001(\t\022\020\n\010currency\030\005 \001(\005\"0\n\tR"
+    "eply_inf\022\016\n\006status\030\001 \001(\t\022\023\n\013information\030"
+    "\002 \001(\t2\251\r\n\007Greeter\022>\n\010SayHello\022\030.hellowor"
+    "ld.HelloRequest\032\026.helloworld.HelloReply\""
+    "\000\0225\n\005Login\022\023.helloworld.Login_m\032\025.hellow"
+    "orld.Reply_inf\"\000\0226\n\007Sign_up\022\022.helloworld"
+    ".Sign_m\032\025.helloworld.Reply_inf\"\000\0226\n\010User"
+    "_inf\022\017.helloworld.Inf\032\027.helloworld.User_"
+    "detail\"\000\022A\n\017Search_username\022\017.helloworld"
+    ".Inf\032\033.helloworld.Repeated_string\"\000\022<\n\nA"
+    "dd_friend\022\033.helloworld.Repeated_string\032\017"
+    ".helloworld.Inf\"\000\022\?\n\rDelete_friend\022\033.hel"
+    "loworld.Repeated_string\032\017.helloworld.Inf"
+    "\"\000\0228\n\014Create_share\022\025.helloworld.Share_in"
+    "f\032\017.helloworld.Inf\"\000\0227\n\013Delete_bill\022\025.he"
+    "lloworld.Share_inf\032\017.helloworld.Inf\"\000\0222\n"
+    "\003Syn\022\017.helloworld.Inf\032\024.helloworld.Syn_d"
+    "ata\"\000(\0010\001\022C\n\014Obtain_bills\022\030.helloworld.B"
+    "ill_request\032\025.helloworld.Share_inf\"\0000\001\0222"
+    "\n\010Send_Img\022\021.helloworld.Image\032\017.hellowor"
+    "ld.Inf\"\000(\001\022A\n\013Receive_Img\022\033.helloworld.R"
+    "epeated_string\032\021.helloworld.Image\"\0000\001\0222\n"
+    "\014Reset_Status\022\017.helloworld.Inf\032\017.hellowo"
+    "rld.Inf\"\000\0226\n\014Send_request\022\023.helloworld.R"
+    "equest\032\017.helloworld.Inf\"\000\022:\n\016Obtain_requ"
+    "est\022\017.helloworld.Inf\032\023.helloworld.Reques"
+    "t\"\0000\001\022=\n\021Obtain_requestLog\022\017.helloworld."
+    "Inf\032\023.helloworld.Request\"\0000\001\022D\n\030Obtain_r"
+    "equestLogHistory\022\017.helloworld.Inf\032\023.hell"
+    "oworld.Request\"\0000\001\022;\n\020Request_response\022\024"
+    ".helloworld.Response\032\017.helloworld.Inf\"\000\022"
+    ";\n\013MakePayment\022\027.helloworld.BillPayment\032"
+    "\017.helloworld.Inf\"\000(\001\022@\n\020IgnoreRequestLog"
+    "\022\031.helloworld.IgnoreMessage\032\017.helloworld"
+    ".Inf\"\000\022;\n\021Create_requestLog\022\023.helloworld"
+    ".Request\032\017.helloworld.Inf\"\000\022B\n\020Send_Devi"
+    "ceToken\022\033.helloworld.Repeated_string\032\017.h"
+    "elloworld.Inf\"\000\0228\n\016Obtain_setting\022\017.hell"
+    "oworld.Inf\032\023.helloworld.Setting\"\000\0227\n\rRes"
+    "et_setting\022\023.helloworld.Setting\032\017.hellow"
+    "orld.Inf\"\000\0229\n\016Reset_userInfo\022\024.helloworl"
+    "d.UserInfo\032\017.helloworld.Inf\"\000\022:\n\017Obtain_"
+    "userInfo\022\017.helloworld.Inf\032\024.helloworld.U"
+    "serInfo\"\000\022>\n\030Update_user_lastModified\022\017."
+    "helloworld.Inf\032\017.helloworld.Inf\"\000B\022\n\020io."
+    "grpc.examplesb\006proto3", 3221);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "iShare.proto", &protobuf_RegisterTypes);
   Login_m::default_instance_ = new Login_m();
@@ -2029,6 +2032,7 @@ const int User_detail::kUserIdFieldNumber;
 const int User_detail::kEmailFieldNumber;
 const int User_detail::kFriendsNameFieldNumber;
 const int User_detail::kFriendsIdFieldNumber;
+const int User_detail::kFriendsLastModifiedFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 User_detail::User_detail()
@@ -2102,6 +2106,7 @@ void User_detail::Clear() {
   email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   friends_name_.Clear();
   friends_id_.Clear();
+  friends_lastmodified_.Clear();
 }
 
 bool User_detail::MergePartialFromCodedStream(
@@ -2198,6 +2203,25 @@ bool User_detail::MergePartialFromCodedStream(
           goto handle_unusual;
         }
         if (input->ExpectTag(42)) goto parse_friends_id;
+        if (input->ExpectTag(50)) goto parse_friends_lastModified;
+        break;
+      }
+
+      // repeated string friends_lastModified = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_friends_lastModified:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_friends_lastmodified()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->friends_lastmodified(this->friends_lastmodified_size() - 1).data(),
+            this->friends_lastmodified(this->friends_lastmodified_size() - 1).length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.User_detail.friends_lastModified"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_friends_lastModified;
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -2276,6 +2300,16 @@ void User_detail::SerializeWithCachedSizes(
       5, this->friends_id(i), output);
   }
 
+  // repeated string friends_lastModified = 6;
+  for (int i = 0; i < this->friends_lastmodified_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->friends_lastmodified(i).data(), this->friends_lastmodified(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.friends_lastModified");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      6, this->friends_lastmodified(i), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:helloworld.User_detail)
 }
 
@@ -2335,6 +2369,16 @@ void User_detail::SerializeWithCachedSizes(
       WriteStringToArray(5, this->friends_id(i), target);
   }
 
+  // repeated string friends_lastModified = 6;
+  for (int i = 0; i < this->friends_lastmodified_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->friends_lastmodified(i).data(), this->friends_lastmodified(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.User_detail.friends_lastModified");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(6, this->friends_lastmodified(i), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:helloworld.User_detail)
   return target;
 }
@@ -2377,6 +2421,13 @@ int User_detail::ByteSize() const {
       this->friends_id(i));
   }
 
+  // repeated string friends_lastModified = 6;
+  total_size += 1 * this->friends_lastmodified_size();
+  for (int i = 0; i < this->friends_lastmodified_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->friends_lastmodified(i));
+  }
+
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = total_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
@@ -2399,6 +2450,7 @@ void User_detail::MergeFrom(const User_detail& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   friends_name_.MergeFrom(from.friends_name_);
   friends_id_.MergeFrom(from.friends_id_);
+  friends_lastmodified_.MergeFrom(from.friends_lastmodified_);
   if (from.username().size() > 0) {
 
     username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
@@ -2440,6 +2492,7 @@ void User_detail::InternalSwap(User_detail* other) {
   email_.Swap(&other->email_);
   friends_name_.UnsafeArenaSwap(&other->friends_name_);
   friends_id_.UnsafeArenaSwap(&other->friends_id_);
+  friends_lastmodified_.UnsafeArenaSwap(&other->friends_lastmodified_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -2690,6 +2743,60 @@ User_detail::friends_id() const {
 User_detail::mutable_friends_id() {
   // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_id)
   return &friends_id_;
+}
+
+// repeated string friends_lastModified = 6;
+int User_detail::friends_lastmodified_size() const {
+  return friends_lastmodified_.size();
+}
+void User_detail::clear_friends_lastmodified() {
+  friends_lastmodified_.Clear();
+}
+ const ::std::string& User_detail::friends_lastmodified(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_.Get(index);
+}
+ ::std::string* User_detail::mutable_friends_lastmodified(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_.Mutable(index);
+}
+ void User_detail::set_friends_lastmodified(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.User_detail.friends_lastModified)
+  friends_lastmodified_.Mutable(index)->assign(value);
+}
+ void User_detail::set_friends_lastmodified(int index, const char* value) {
+  friends_lastmodified_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.User_detail.friends_lastModified)
+}
+ void User_detail::set_friends_lastmodified(int index, const char* value, size_t size) {
+  friends_lastmodified_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_lastModified)
+}
+ ::std::string* User_detail::add_friends_lastmodified() {
+  return friends_lastmodified_.Add();
+}
+ void User_detail::add_friends_lastmodified(const ::std::string& value) {
+  friends_lastmodified_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.User_detail.friends_lastModified)
+}
+ void User_detail::add_friends_lastmodified(const char* value) {
+  friends_lastmodified_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.User_detail.friends_lastModified)
+}
+ void User_detail::add_friends_lastmodified(const char* value, size_t size) {
+  friends_lastmodified_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.User_detail.friends_lastModified)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+User_detail::friends_lastmodified() const {
+  // @@protoc_insertion_point(field_list:helloworld.User_detail.friends_lastModified)
+  return friends_lastmodified_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+User_detail::mutable_friends_lastmodified() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.User_detail.friends_lastModified)
+  return &friends_lastmodified_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
