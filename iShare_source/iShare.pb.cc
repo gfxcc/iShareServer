@@ -32,6 +32,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* Repeated_string_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   Repeated_string_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Search_result_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Search_result_reflection_ = NULL;
 const ::google::protobuf::Descriptor* User_detail_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   User_detail_reflection_ = NULL;
@@ -147,7 +150,24 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Repeated_string),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Repeated_string, _is_default_instance_));
-  User_detail_descriptor_ = file->message_type(4);
+  Search_result_descriptor_ = file->message_type(4);
+  static const int Search_result_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Search_result, username_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Search_result, user_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Search_result, user_icon_),
+  };
+  Search_result_reflection_ =
+    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
+      Search_result_descriptor_,
+      Search_result::default_instance_,
+      Search_result_offsets_,
+      -1,
+      -1,
+      -1,
+      sizeof(Search_result),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Search_result, _internal_metadata_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Search_result, _is_default_instance_));
+  User_detail_descriptor_ = file->message_type(5);
   static const int User_detail_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, username_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, user_id_),
@@ -167,7 +187,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(User_detail),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(User_detail, _is_default_instance_));
-  Share_inf_descriptor_ = file->message_type(5);
+  Share_inf_descriptor_ = file->message_type(6);
   static const int Share_inf_offsets_[12] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Share_inf, creater_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Share_inf, amount_),
@@ -193,7 +213,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Share_inf),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Share_inf, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Share_inf, _is_default_instance_));
-  Bill_request_descriptor_ = file->message_type(6);
+  Bill_request_descriptor_ = file->message_type(7);
   static const int Bill_request_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Bill_request, username_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Bill_request, start_),
@@ -210,7 +230,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Bill_request),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Bill_request, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Bill_request, _is_default_instance_));
-  Syn_data_descriptor_ = file->message_type(7);
+  Syn_data_descriptor_ = file->message_type(8);
   static const int Syn_data_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Syn_data, friend__),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Syn_data, bill_),
@@ -228,7 +248,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Syn_data),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Syn_data, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Syn_data, _is_default_instance_));
-  HelloRequest_descriptor_ = file->message_type(8);
+  HelloRequest_descriptor_ = file->message_type(9);
   static const int HelloRequest_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloRequest, name_),
   };
@@ -243,7 +263,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(HelloRequest),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloRequest, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloRequest, _is_default_instance_));
-  HelloReply_descriptor_ = file->message_type(9);
+  HelloReply_descriptor_ = file->message_type(10);
   static const int HelloReply_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloReply, message_),
   };
@@ -258,7 +278,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(HelloReply),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloReply, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HelloReply, _is_default_instance_));
-  Image_descriptor_ = file->message_type(10);
+  Image_descriptor_ = file->message_type(11);
   static const int Image_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Image, name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Image, data_),
@@ -274,7 +294,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Image),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Image, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Image, _is_default_instance_));
-  Request_descriptor_ = file->message_type(11);
+  Request_descriptor_ = file->message_type(12);
   static const int Request_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, request_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, sender_),
@@ -298,7 +318,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Request),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request, _is_default_instance_));
-  Response_descriptor_ = file->message_type(12);
+  Response_descriptor_ = file->message_type(13);
   static const int Response_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, request_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, sender_),
@@ -317,7 +337,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Response),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, _is_default_instance_));
-  IgnoreMessage_descriptor_ = file->message_type(13);
+  IgnoreMessage_descriptor_ = file->message_type(14);
   static const int IgnoreMessage_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IgnoreMessage, requestlog_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IgnoreMessage, user_),
@@ -333,7 +353,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(IgnoreMessage),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IgnoreMessage, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IgnoreMessage, _is_default_instance_));
-  BillPayment_descriptor_ = file->message_type(14);
+  BillPayment_descriptor_ = file->message_type(15);
   static const int BillPayment_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, bill_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, paidstatus_),
@@ -349,7 +369,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(BillPayment),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BillPayment, _is_default_instance_));
-  Setting_descriptor_ = file->message_type(15);
+  Setting_descriptor_ = file->message_type(16);
   static const int Setting_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, friendinvite_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, newbill_),
@@ -369,7 +389,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(Setting),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Setting, _is_default_instance_));
-  UserInfo_descriptor_ = file->message_type(16);
+  UserInfo_descriptor_ = file->message_type(17);
   static const int UserInfo_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, user_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, username_),
@@ -388,7 +408,7 @@ void protobuf_AssignDesc_iShare_2eproto() {
       sizeof(UserInfo),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserInfo, _is_default_instance_));
-  Reply_inf_descriptor_ = file->message_type(17);
+  Reply_inf_descriptor_ = file->message_type(18);
   static const int Reply_inf_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, status_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Reply_inf, information_),
@@ -424,6 +444,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
       Inf_descriptor_, &Inf::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       Repeated_string_descriptor_, &Repeated_string::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+      Search_result_descriptor_, &Search_result::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
       User_detail_descriptor_, &User_detail::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -465,6 +487,8 @@ void protobuf_ShutdownFile_iShare_2eproto() {
   delete Inf_reflection_;
   delete Repeated_string::default_instance_;
   delete Repeated_string_reflection_;
+  delete Search_result::default_instance_;
+  delete Search_result_reflection_;
   delete User_detail::default_instance_;
   delete User_detail_reflection_;
   delete Share_inf::default_instance_;
@@ -506,89 +530,92 @@ void protobuf_AddDesc_iShare_2eproto() {
     "\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\";\n\006Sig"
     "n_m\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022"
     "\r\n\005email\030\003 \001(\t\"\032\n\003Inf\022\023\n\013information\030\001 \001"
-    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"\207"
-    "\001\n\013User_detail\022\020\n\010username\030\001 \001(\t\022\017\n\007user"
-    "_id\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\024\n\014friends_name"
-    "\030\004 \003(\t\022\022\n\nfriends_id\030\005 \003(\t\022\034\n\024friends_la"
-    "stModified\030\006 \003(\t\"\324\001\n\tShare_inf\022\017\n\007create"
-    "r\030\001 \001(\t\022\016\n\006amount\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022\016\n"
-    "\006paidBy\030\004 \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004note\030\006 \001("
-    "\t\022\r\n\005image\030\007 \001(\t\022\017\n\007members\030\010 \003(\t\022\025\n\rmem"
-    "bers_count\030\t \001(\005\022\017\n\007bill_id\030\n \001(\t\022\022\n\npai"
-    "dStatus\030\013 \001(\t\022\020\n\010typeIcon\030\014 \001(\t\"\?\n\014Bill_"
-    "request\022\020\n\010username\030\001 \001(\t\022\r\n\005start\030\002 \001(\t"
-    "\022\016\n\006amount\030\003 \001(\t\"I\n\010Syn_data\022\016\n\006friend\030\001"
-    " \001(\t\022\014\n\004bill\030\002 \001(\t\022\016\n\006delete\030\003 \001(\t\022\017\n\007re"
-    "quest\030\004 \001(\t\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001("
-    "\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t\"#\n\005Imag"
-    "e\022\014\n\004name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305\001\n\007Reques"
-    "t\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n"
-    "\010receiver\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017\n\007content"
-    "\030\005 \001(\t\022\020\n\010response\030\006 \001(\t\022\024\n\014request_date"
-    "\030\007 \001(\t\022\025\n\rresponse_date\030\010 \001(\t\022\023\n\013ignore_"
-    "from\030\t \001(\t\022\021\n\tignore_to\030\n \001(\t\"i\n\010Respons"
-    "e\022\022\n\nrequest_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n"
-    "\010receiver\030\003 \001(\t\022\020\n\010response\030\004 \001(\t\022\025\n\rres"
-    "ponse_date\030\005 \001(\t\"4\n\rIgnoreMessage\022\025\n\rreq"
-    "uestLog_id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n\013BillPa"
-    "yment\022\017\n\007bill_id\030\001 \001(\t\022\022\n\npaidStatus\030\002 \001"
-    "(\t\"\204\001\n\007Setting\022\024\n\014friendInvite\030\001 \001(\005\022\017\n\007"
-    "newBill\030\002 \001(\005\022\030\n\020editedDeleteBill\030\003 \001(\005\022"
-    "\023\n\013commentBill\030\004 \001(\005\022\022\n\npaidNotice\030\005 \001(\005"
-    "\022\017\n\007user_id\030\006 \001(\t\"`\n\010UserInfo\022\017\n\007user_id"
-    "\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010password\030\003 \001"
-    "(\t\022\r\n\005email\030\004 \001(\t\022\020\n\010currency\030\005 \001(\005\"0\n\tR"
-    "eply_inf\022\016\n\006status\030\001 \001(\t\022\023\n\013information\030"
-    "\002 \001(\t2\251\r\n\007Greeter\022>\n\010SayHello\022\030.hellowor"
-    "ld.HelloRequest\032\026.helloworld.HelloReply\""
-    "\000\0225\n\005Login\022\023.helloworld.Login_m\032\025.hellow"
-    "orld.Reply_inf\"\000\0226\n\007Sign_up\022\022.helloworld"
-    ".Sign_m\032\025.helloworld.Reply_inf\"\000\0226\n\010User"
-    "_inf\022\017.helloworld.Inf\032\027.helloworld.User_"
-    "detail\"\000\022A\n\017Search_username\022\017.helloworld"
-    ".Inf\032\033.helloworld.Repeated_string\"\000\022<\n\nA"
-    "dd_friend\022\033.helloworld.Repeated_string\032\017"
-    ".helloworld.Inf\"\000\022\?\n\rDelete_friend\022\033.hel"
-    "loworld.Repeated_string\032\017.helloworld.Inf"
-    "\"\000\0228\n\014Create_share\022\025.helloworld.Share_in"
-    "f\032\017.helloworld.Inf\"\000\0227\n\013Delete_bill\022\025.he"
-    "lloworld.Share_inf\032\017.helloworld.Inf\"\000\0222\n"
-    "\003Syn\022\017.helloworld.Inf\032\024.helloworld.Syn_d"
-    "ata\"\000(\0010\001\022C\n\014Obtain_bills\022\030.helloworld.B"
-    "ill_request\032\025.helloworld.Share_inf\"\0000\001\0222"
-    "\n\010Send_Img\022\021.helloworld.Image\032\017.hellowor"
-    "ld.Inf\"\000(\001\022A\n\013Receive_Img\022\033.helloworld.R"
-    "epeated_string\032\021.helloworld.Image\"\0000\001\0222\n"
-    "\014Reset_Status\022\017.helloworld.Inf\032\017.hellowo"
-    "rld.Inf\"\000\0226\n\014Send_request\022\023.helloworld.R"
-    "equest\032\017.helloworld.Inf\"\000\022:\n\016Obtain_requ"
-    "est\022\017.helloworld.Inf\032\023.helloworld.Reques"
-    "t\"\0000\001\022=\n\021Obtain_requestLog\022\017.helloworld."
-    "Inf\032\023.helloworld.Request\"\0000\001\022D\n\030Obtain_r"
-    "equestLogHistory\022\017.helloworld.Inf\032\023.hell"
-    "oworld.Request\"\0000\001\022;\n\020Request_response\022\024"
-    ".helloworld.Response\032\017.helloworld.Inf\"\000\022"
-    ";\n\013MakePayment\022\027.helloworld.BillPayment\032"
-    "\017.helloworld.Inf\"\000(\001\022@\n\020IgnoreRequestLog"
-    "\022\031.helloworld.IgnoreMessage\032\017.helloworld"
-    ".Inf\"\000\022;\n\021Create_requestLog\022\023.helloworld"
-    ".Request\032\017.helloworld.Inf\"\000\022B\n\020Send_Devi"
-    "ceToken\022\033.helloworld.Repeated_string\032\017.h"
-    "elloworld.Inf\"\000\0228\n\016Obtain_setting\022\017.hell"
-    "oworld.Inf\032\023.helloworld.Setting\"\000\0227\n\rRes"
-    "et_setting\022\023.helloworld.Setting\032\017.hellow"
-    "orld.Inf\"\000\0229\n\016Reset_userInfo\022\024.helloworl"
-    "d.UserInfo\032\017.helloworld.Inf\"\000\022:\n\017Obtain_"
-    "userInfo\022\017.helloworld.Inf\032\024.helloworld.U"
-    "serInfo\"\000\022>\n\030Update_user_lastModified\022\017."
-    "helloworld.Inf\032\017.helloworld.Inf\"\000B\022\n\020io."
-    "grpc.examplesb\006proto3", 3221);
+    "(\t\"\"\n\017Repeated_string\022\017\n\007content\030\001 \003(\t\"E"
+    "\n\rSearch_result\022\020\n\010username\030\001 \003(\t\022\017\n\007use"
+    "r_id\030\002 \003(\t\022\021\n\tuser_icon\030\003 \003(\014\"\207\001\n\013User_d"
+    "etail\022\020\n\010username\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t"
+    "\022\r\n\005email\030\003 \001(\t\022\024\n\014friends_name\030\004 \003(\t\022\022\n"
+    "\nfriends_id\030\005 \003(\t\022\034\n\024friends_lastModifie"
+    "d\030\006 \003(\t\"\324\001\n\tShare_inf\022\017\n\007creater\030\001 \001(\t\022\016"
+    "\n\006amount\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022\016\n\006paidBy\030\004"
+    " \001(\t\022\014\n\004data\030\005 \001(\t\022\014\n\004note\030\006 \001(\t\022\r\n\005imag"
+    "e\030\007 \001(\t\022\017\n\007members\030\010 \003(\t\022\025\n\rmembers_coun"
+    "t\030\t \001(\005\022\017\n\007bill_id\030\n \001(\t\022\022\n\npaidStatus\030\013"
+    " \001(\t\022\020\n\010typeIcon\030\014 \001(\t\"\?\n\014Bill_request\022\020"
+    "\n\010username\030\001 \001(\t\022\r\n\005start\030\002 \001(\t\022\016\n\006amoun"
+    "t\030\003 \001(\t\"I\n\010Syn_data\022\016\n\006friend\030\001 \001(\t\022\014\n\004b"
+    "ill\030\002 \001(\t\022\016\n\006delete\030\003 \001(\t\022\017\n\007request\030\004 \001"
+    "(\t\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001(\t\"\035\n\nHell"
+    "oReply\022\017\n\007message\030\001 \001(\t\"#\n\005Image\022\014\n\004name"
+    "\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\305\001\n\007Request\022\022\n\nrequ"
+    "est_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n\010receiver"
+    "\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\017\n\007content\030\005 \001(\t\022\020\n"
+    "\010response\030\006 \001(\t\022\024\n\014request_date\030\007 \001(\t\022\025\n"
+    "\rresponse_date\030\010 \001(\t\022\023\n\013ignore_from\030\t \001("
+    "\t\022\021\n\tignore_to\030\n \001(\t\"i\n\010Response\022\022\n\nrequ"
+    "est_id\030\001 \001(\t\022\016\n\006sender\030\002 \001(\t\022\020\n\010receiver"
+    "\030\003 \001(\t\022\020\n\010response\030\004 \001(\t\022\025\n\rresponse_dat"
+    "e\030\005 \001(\t\"4\n\rIgnoreMessage\022\025\n\rrequestLog_i"
+    "d\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\"2\n\013BillPayment\022\017\n\007"
+    "bill_id\030\001 \001(\t\022\022\n\npaidStatus\030\002 \001(\t\"\204\001\n\007Se"
+    "tting\022\024\n\014friendInvite\030\001 \001(\005\022\017\n\007newBill\030\002"
+    " \001(\005\022\030\n\020editedDeleteBill\030\003 \001(\005\022\023\n\013commen"
+    "tBill\030\004 \001(\005\022\022\n\npaidNotice\030\005 \001(\005\022\017\n\007user_"
+    "id\030\006 \001(\t\"`\n\010UserInfo\022\017\n\007user_id\030\001 \001(\t\022\020\n"
+    "\010username\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\r\n\005ema"
+    "il\030\004 \001(\t\022\020\n\010currency\030\005 \001(\005\"0\n\tReply_inf\022"
+    "\016\n\006status\030\001 \001(\t\022\023\n\013information\030\002 \001(\t2\247\r\n"
+    "\007Greeter\022>\n\010SayHello\022\030.helloworld.HelloR"
+    "equest\032\026.helloworld.HelloReply\"\000\0225\n\005Logi"
+    "n\022\023.helloworld.Login_m\032\025.helloworld.Repl"
+    "y_inf\"\000\0226\n\007Sign_up\022\022.helloworld.Sign_m\032\025"
+    ".helloworld.Reply_inf\"\000\0226\n\010User_inf\022\017.he"
+    "lloworld.Inf\032\027.helloworld.User_detail\"\000\022"
+    "\?\n\017Search_username\022\017.helloworld.Inf\032\031.he"
+    "lloworld.Search_result\"\000\022<\n\nAdd_friend\022\033"
+    ".helloworld.Repeated_string\032\017.helloworld"
+    ".Inf\"\000\022\?\n\rDelete_friend\022\033.helloworld.Rep"
+    "eated_string\032\017.helloworld.Inf\"\000\0228\n\014Creat"
+    "e_share\022\025.helloworld.Share_inf\032\017.hellowo"
+    "rld.Inf\"\000\0227\n\013Delete_bill\022\025.helloworld.Sh"
+    "are_inf\032\017.helloworld.Inf\"\000\0222\n\003Syn\022\017.hell"
+    "oworld.Inf\032\024.helloworld.Syn_data\"\000(\0010\001\022C"
+    "\n\014Obtain_bills\022\030.helloworld.Bill_request"
+    "\032\025.helloworld.Share_inf\"\0000\001\0222\n\010Send_Img\022"
+    "\021.helloworld.Image\032\017.helloworld.Inf\"\000(\001\022"
+    "A\n\013Receive_Img\022\033.helloworld.Repeated_str"
+    "ing\032\021.helloworld.Image\"\0000\001\0222\n\014Reset_Stat"
+    "us\022\017.helloworld.Inf\032\017.helloworld.Inf\"\000\0226"
+    "\n\014Send_request\022\023.helloworld.Request\032\017.he"
+    "lloworld.Inf\"\000\022:\n\016Obtain_request\022\017.hello"
+    "world.Inf\032\023.helloworld.Request\"\0000\001\022=\n\021Ob"
+    "tain_requestLog\022\017.helloworld.Inf\032\023.hello"
+    "world.Request\"\0000\001\022D\n\030Obtain_requestLogHi"
+    "story\022\017.helloworld.Inf\032\023.helloworld.Requ"
+    "est\"\0000\001\022;\n\020Request_response\022\024.helloworld"
+    ".Response\032\017.helloworld.Inf\"\000\022;\n\013MakePaym"
+    "ent\022\027.helloworld.BillPayment\032\017.helloworl"
+    "d.Inf\"\000(\001\022@\n\020IgnoreRequestLog\022\031.hellowor"
+    "ld.IgnoreMessage\032\017.helloworld.Inf\"\000\022;\n\021C"
+    "reate_requestLog\022\023.helloworld.Request\032\017."
+    "helloworld.Inf\"\000\022B\n\020Send_DeviceToken\022\033.h"
+    "elloworld.Repeated_string\032\017.helloworld.I"
+    "nf\"\000\0228\n\016Obtain_setting\022\017.helloworld.Inf\032"
+    "\023.helloworld.Setting\"\000\0227\n\rReset_setting\022"
+    "\023.helloworld.Setting\032\017.helloworld.Inf\"\000\022"
+    "9\n\016Reset_userInfo\022\024.helloworld.UserInfo\032"
+    "\017.helloworld.Inf\"\000\022:\n\017Obtain_userInfo\022\017."
+    "helloworld.Inf\032\024.helloworld.UserInfo\"\000\022>"
+    "\n\030Update_user_lastModified\022\017.helloworld."
+    "Inf\032\017.helloworld.Inf\"\000B\022\n\020io.grpc.exampl"
+    "esb\006proto3", 3290);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "iShare.proto", &protobuf_RegisterTypes);
   Login_m::default_instance_ = new Login_m();
   Sign_m::default_instance_ = new Sign_m();
   Inf::default_instance_ = new Inf();
   Repeated_string::default_instance_ = new Repeated_string();
+  Search_result::default_instance_ = new Search_result();
   User_detail::default_instance_ = new User_detail();
   Share_inf::default_instance_ = new Share_inf();
   Bill_request::default_instance_ = new Bill_request();
@@ -607,6 +634,7 @@ void protobuf_AddDesc_iShare_2eproto() {
   Sign_m::default_instance_->InitAsDefaultInstance();
   Inf::default_instance_->InitAsDefaultInstance();
   Repeated_string::default_instance_->InitAsDefaultInstance();
+  Search_result::default_instance_->InitAsDefaultInstance();
   User_detail::default_instance_->InitAsDefaultInstance();
   Share_inf::default_instance_->InitAsDefaultInstance();
   Bill_request::default_instance_->InitAsDefaultInstance();
@@ -2020,6 +2048,480 @@ Repeated_string::content() const {
 Repeated_string::mutable_content() {
   // @@protoc_insertion_point(field_mutable_list:helloworld.Repeated_string.content)
   return &content_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Search_result::kUsernameFieldNumber;
+const int Search_result::kUserIdFieldNumber;
+const int Search_result::kUserIconFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Search_result::Search_result()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:helloworld.Search_result)
+}
+
+void Search_result::InitAsDefaultInstance() {
+  _is_default_instance_ = true;
+}
+
+Search_result::Search_result(const Search_result& from)
+  : ::google::protobuf::Message(),
+    _internal_metadata_(NULL) {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:helloworld.Search_result)
+}
+
+void Search_result::SharedCtor() {
+    _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+}
+
+Search_result::~Search_result() {
+  // @@protoc_insertion_point(destructor:helloworld.Search_result)
+  SharedDtor();
+}
+
+void Search_result::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void Search_result::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Search_result::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Search_result_descriptor_;
+}
+
+const Search_result& Search_result::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_iShare_2eproto();
+  return *default_instance_;
+}
+
+Search_result* Search_result::default_instance_ = NULL;
+
+Search_result* Search_result::New(::google::protobuf::Arena* arena) const {
+  Search_result* n = new Search_result;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Search_result::Clear() {
+  username_.Clear();
+  user_id_.Clear();
+  user_icon_.Clear();
+}
+
+bool Search_result::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:helloworld.Search_result)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated string username = 1;
+      case 1: {
+        if (tag == 10) {
+         parse_username:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_username()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->username(this->username_size() - 1).data(),
+            this->username(this->username_size() - 1).length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Search_result.username"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(10)) goto parse_username;
+        if (input->ExpectTag(18)) goto parse_user_id;
+        break;
+      }
+
+      // repeated string user_id = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_user_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_user_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->user_id(this->user_id_size() - 1).data(),
+            this->user_id(this->user_id_size() - 1).length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "helloworld.Search_result.user_id"));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_user_id;
+        if (input->ExpectTag(26)) goto parse_user_icon;
+        break;
+      }
+
+      // repeated bytes user_icon = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_user_icon:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->add_user_icon()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_user_icon;
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:helloworld.Search_result)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:helloworld.Search_result)
+  return false;
+#undef DO_
+}
+
+void Search_result::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:helloworld.Search_result)
+  // repeated string username = 1;
+  for (int i = 0; i < this->username_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->username(i).data(), this->username(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Search_result.username");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->username(i), output);
+  }
+
+  // repeated string user_id = 2;
+  for (int i = 0; i < this->user_id_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id(i).data(), this->user_id(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Search_result.user_id");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->user_id(i), output);
+  }
+
+  // repeated bytes user_icon = 3;
+  for (int i = 0; i < this->user_icon_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+      3, this->user_icon(i), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:helloworld.Search_result)
+}
+
+::google::protobuf::uint8* Search_result::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:helloworld.Search_result)
+  // repeated string username = 1;
+  for (int i = 0; i < this->username_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->username(i).data(), this->username(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Search_result.username");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(1, this->username(i), target);
+  }
+
+  // repeated string user_id = 2;
+  for (int i = 0; i < this->user_id_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->user_id(i).data(), this->user_id(i).length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "helloworld.Search_result.user_id");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(2, this->user_id(i), target);
+  }
+
+  // repeated bytes user_icon = 3;
+  for (int i = 0; i < this->user_icon_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteBytesToArray(3, this->user_icon(i), target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:helloworld.Search_result)
+  return target;
+}
+
+int Search_result::ByteSize() const {
+  int total_size = 0;
+
+  // repeated string username = 1;
+  total_size += 1 * this->username_size();
+  for (int i = 0; i < this->username_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->username(i));
+  }
+
+  // repeated string user_id = 2;
+  total_size += 1 * this->user_id_size();
+  for (int i = 0; i < this->user_id_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->user_id(i));
+  }
+
+  // repeated bytes user_icon = 3;
+  total_size += 1 * this->user_icon_size();
+  for (int i = 0; i < this->user_icon_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
+      this->user_icon(i));
+  }
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Search_result::MergeFrom(const ::google::protobuf::Message& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  const Search_result* source = 
+      ::google::protobuf::internal::DynamicCastToGenerated<const Search_result>(
+          &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void Search_result::MergeFrom(const Search_result& from) {
+  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  username_.MergeFrom(from.username_);
+  user_id_.MergeFrom(from.user_id_);
+  user_icon_.MergeFrom(from.user_icon_);
+}
+
+void Search_result::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Search_result::CopyFrom(const Search_result& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Search_result::IsInitialized() const {
+
+  return true;
+}
+
+void Search_result::Swap(Search_result* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Search_result::InternalSwap(Search_result* other) {
+  username_.UnsafeArenaSwap(&other->username_);
+  user_id_.UnsafeArenaSwap(&other->user_id_);
+  user_icon_.UnsafeArenaSwap(&other->user_icon_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Search_result::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Search_result_descriptor_;
+  metadata.reflection = Search_result_reflection_;
+  return metadata;
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Search_result
+
+// repeated string username = 1;
+int Search_result::username_size() const {
+  return username_.size();
+}
+void Search_result::clear_username() {
+  username_.Clear();
+}
+ const ::std::string& Search_result::username(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.username)
+  return username_.Get(index);
+}
+ ::std::string* Search_result::mutable_username(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.username)
+  return username_.Mutable(index);
+}
+ void Search_result::set_username(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.username)
+  username_.Mutable(index)->assign(value);
+}
+ void Search_result::set_username(int index, const char* value) {
+  username_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.username)
+}
+ void Search_result::set_username(int index, const char* value, size_t size) {
+  username_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.username)
+}
+ ::std::string* Search_result::add_username() {
+  return username_.Add();
+}
+ void Search_result::add_username(const ::std::string& value) {
+  username_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.username)
+}
+ void Search_result::add_username(const char* value) {
+  username_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.username)
+}
+ void Search_result::add_username(const char* value, size_t size) {
+  username_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.username)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::username() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.username)
+  return username_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_username() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.username)
+  return &username_;
+}
+
+// repeated string user_id = 2;
+int Search_result::user_id_size() const {
+  return user_id_.size();
+}
+void Search_result::clear_user_id() {
+  user_id_.Clear();
+}
+ const ::std::string& Search_result::user_id(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.user_id)
+  return user_id_.Get(index);
+}
+ ::std::string* Search_result::mutable_user_id(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.user_id)
+  return user_id_.Mutable(index);
+}
+ void Search_result::set_user_id(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.user_id)
+  user_id_.Mutable(index)->assign(value);
+}
+ void Search_result::set_user_id(int index, const char* value) {
+  user_id_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.user_id)
+}
+ void Search_result::set_user_id(int index, const char* value, size_t size) {
+  user_id_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_id)
+}
+ ::std::string* Search_result::add_user_id() {
+  return user_id_.Add();
+}
+ void Search_result::add_user_id(const ::std::string& value) {
+  user_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.user_id)
+}
+ void Search_result::add_user_id(const char* value) {
+  user_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.user_id)
+}
+ void Search_result::add_user_id(const char* value, size_t size) {
+  user_id_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.user_id)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::user_id() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.user_id)
+  return user_id_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_user_id() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.user_id)
+  return &user_id_;
+}
+
+// repeated bytes user_icon = 3;
+int Search_result::user_icon_size() const {
+  return user_icon_.size();
+}
+void Search_result::clear_user_icon() {
+  user_icon_.Clear();
+}
+ const ::std::string& Search_result::user_icon(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.user_icon)
+  return user_icon_.Get(index);
+}
+ ::std::string* Search_result::mutable_user_icon(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.user_icon)
+  return user_icon_.Mutable(index);
+}
+ void Search_result::set_user_icon(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.user_icon)
+  user_icon_.Mutable(index)->assign(value);
+}
+ void Search_result::set_user_icon(int index, const char* value) {
+  user_icon_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.user_icon)
+}
+ void Search_result::set_user_icon(int index, const void* value, size_t size) {
+  user_icon_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_icon)
+}
+ ::std::string* Search_result::add_user_icon() {
+  return user_icon_.Add();
+}
+ void Search_result::add_user_icon(const ::std::string& value) {
+  user_icon_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.user_icon)
+}
+ void Search_result::add_user_icon(const char* value) {
+  user_icon_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.user_icon)
+}
+ void Search_result::add_user_icon(const void* value, size_t size) {
+  user_icon_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.user_icon)
+}
+ const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::user_icon() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.user_icon)
+  return user_icon_;
+}
+ ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_user_icon() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.user_icon)
+  return &user_icon_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

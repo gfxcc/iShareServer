@@ -47,7 +47,7 @@ namespace helloworld {
         ::grpc::Status User_inf(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::User_detail* reply) override;
         ::grpc::Status Login (::grpc::ServerContext* context, const ::helloworld::Login_m* request, ::helloworld::Reply_inf* reply) override;
         ::grpc::Status Sign_up (::grpc::ServerContext* context, const ::helloworld::Sign_m* request, ::helloworld::Reply_inf* reply) override;
-        ::grpc::Status Search_username (::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Repeated_string* reply) override;
+        ::grpc::Status Search_username (::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Search_result* reply) override;
         ::grpc::Status Add_friend (::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* reply) override;
         ::grpc::Status Delete_friend (::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* reply) override;
         ::grpc::Status Syn (::grpc::ServerContext* context, ::grpc::ServerReaderWriter<::helloworld::Syn_data, ::helloworld::Inf>* stream) override;

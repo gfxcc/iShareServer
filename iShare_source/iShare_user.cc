@@ -61,6 +61,7 @@ using helloworld::BillPayment;
 using helloworld::Setting;
 using helloworld::UserInfo;
 using helloworld::Reply_inf;
+using helloworld::Search_result;
 using namespace std;
 
 bool pushNotificationToDevice (string deviceToken, string message);
@@ -298,7 +299,7 @@ Status GreeterServiceImpl::Sign_up (ServerContext* context, const Sign_m* reques
     return Status::OK;
 }
 
-Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* request, Repeated_string* reply) {
+Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* request, Search_result* reply) {
     log(INFO, "IN Search");
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
     MYSQL* conn = sock_node->sql_sock->sock;
@@ -306,8 +307,7 @@ Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* r
     MYSQL_ROW row;
 
 
-    string sql_command = "SELECT username FROM User WHERE UPPER(username) like '%" + request->information() + "%'";
-
+    string sql_command = "SELECT username FROM User WHERE UPPER(username) like UPPER('%" + request->information() + "%')";
     log(INFO, sql_command.data());
     if (mysql_query(conn, sql_command.data())) {
         log(ERROR, sql_command.data());
@@ -318,7 +318,7 @@ Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* r
     }
     res = mysql_use_result(conn);
     while ((row = mysql_fetch_row(res)) != NULL) {
-        reply->add_content(row[0]);
+        reply->add_username(row[0]);
     }
 
     mysql_free_result(res);

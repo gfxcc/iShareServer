@@ -113,12 +113,12 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   return new ::grpc::ClientAsyncResponseReader< ::helloworld::User_detail>(channel_.get(), cq, rpcmethod_User_inf_, context, request);
 }
 
-::grpc::Status Greeter::Stub::Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Repeated_string* response) {
+::grpc::Status Greeter::Stub::Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Search_result* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Search_username_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::helloworld::Repeated_string>* Greeter::Stub::AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::helloworld::Repeated_string>(channel_.get(), cq, rpcmethod_Search_username_, context, request);
+::grpc::ClientAsyncResponseReader< ::helloworld::Search_result>* Greeter::Stub::AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::helloworld::Search_result>(channel_.get(), cq, rpcmethod_Search_username_, context, request);
 }
 
 ::grpc::Status Greeter::Stub::Add_friend(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) {
@@ -357,14 +357,14 @@ void Greeter::AsyncService::RequestUser_inf(::grpc::ServerContext* context, ::he
   AsynchronousService::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
 }
 
-::grpc::Status Greeter::Service::Search_username(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Repeated_string* response) {
+::grpc::Status Greeter::Service::Search_username(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Search_result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSearch_username(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Repeated_string>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+void Greeter::AsyncService::RequestSearch_username(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Search_result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
   AsynchronousService::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
 }
 
@@ -648,7 +648,7 @@ void Greeter::AsyncService::RequestUpdate_user_lastModified(::grpc::ServerContex
   service_->AddMethod(new ::grpc::RpcServiceMethod(
       Greeter_method_names[4],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Repeated_string>(
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Search_result>(
           std::mem_fn(&Greeter::Service::Search_username), this)));
   service_->AddMethod(new ::grpc::RpcServiceMethod(
       Greeter_method_names[5],

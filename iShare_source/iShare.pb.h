@@ -48,6 +48,7 @@ class Repeated_string;
 class Reply_inf;
 class Request;
 class Response;
+class Search_result;
 class Setting;
 class Share_inf;
 class Sign_m;
@@ -427,6 +428,128 @@ class Repeated_string : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static Repeated_string* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class Search_result : public ::google::protobuf::Message {
+ public:
+  Search_result();
+  virtual ~Search_result();
+
+  Search_result(const Search_result& from);
+
+  inline Search_result& operator=(const Search_result& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Search_result& default_instance();
+
+  void Swap(Search_result* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Search_result* New() const { return New(NULL); }
+
+  Search_result* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Search_result& from);
+  void MergeFrom(const Search_result& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Search_result* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated string username = 1;
+  int username_size() const;
+  void clear_username();
+  static const int kUsernameFieldNumber = 1;
+  const ::std::string& username(int index) const;
+  ::std::string* mutable_username(int index);
+  void set_username(int index, const ::std::string& value);
+  void set_username(int index, const char* value);
+  void set_username(int index, const char* value, size_t size);
+  ::std::string* add_username();
+  void add_username(const ::std::string& value);
+  void add_username(const char* value);
+  void add_username(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& username() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_username();
+
+  // repeated string user_id = 2;
+  int user_id_size() const;
+  void clear_user_id();
+  static const int kUserIdFieldNumber = 2;
+  const ::std::string& user_id(int index) const;
+  ::std::string* mutable_user_id(int index);
+  void set_user_id(int index, const ::std::string& value);
+  void set_user_id(int index, const char* value);
+  void set_user_id(int index, const char* value, size_t size);
+  ::std::string* add_user_id();
+  void add_user_id(const ::std::string& value);
+  void add_user_id(const char* value);
+  void add_user_id(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& user_id() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_user_id();
+
+  // repeated bytes user_icon = 3;
+  int user_icon_size() const;
+  void clear_user_icon();
+  static const int kUserIconFieldNumber = 3;
+  const ::std::string& user_icon(int index) const;
+  ::std::string* mutable_user_icon(int index);
+  void set_user_icon(int index, const ::std::string& value);
+  void set_user_icon(int index, const char* value);
+  void set_user_icon(int index, const void* value, size_t size);
+  ::std::string* add_user_icon();
+  void add_user_icon(const ::std::string& value);
+  void add_user_icon(const char* value);
+  void add_user_icon(const void* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& user_icon() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_user_icon();
+
+  // @@protoc_insertion_point(class_scope:helloworld.Search_result)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> username_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> user_id_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> user_icon_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_iShare_2eproto();
+  friend void protobuf_AssignDesc_iShare_2eproto();
+  friend void protobuf_ShutdownFile_iShare_2eproto();
+
+  void InitAsDefaultInstance();
+  static Search_result* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -2469,6 +2592,172 @@ inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 Repeated_string::mutable_content() {
   // @@protoc_insertion_point(field_mutable_list:helloworld.Repeated_string.content)
   return &content_;
+}
+
+// -------------------------------------------------------------------
+
+// Search_result
+
+// repeated string username = 1;
+inline int Search_result::username_size() const {
+  return username_.size();
+}
+inline void Search_result::clear_username() {
+  username_.Clear();
+}
+inline const ::std::string& Search_result::username(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.username)
+  return username_.Get(index);
+}
+inline ::std::string* Search_result::mutable_username(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.username)
+  return username_.Mutable(index);
+}
+inline void Search_result::set_username(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.username)
+  username_.Mutable(index)->assign(value);
+}
+inline void Search_result::set_username(int index, const char* value) {
+  username_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.username)
+}
+inline void Search_result::set_username(int index, const char* value, size_t size) {
+  username_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.username)
+}
+inline ::std::string* Search_result::add_username() {
+  return username_.Add();
+}
+inline void Search_result::add_username(const ::std::string& value) {
+  username_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.username)
+}
+inline void Search_result::add_username(const char* value) {
+  username_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.username)
+}
+inline void Search_result::add_username(const char* value, size_t size) {
+  username_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.username)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::username() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.username)
+  return username_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_username() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.username)
+  return &username_;
+}
+
+// repeated string user_id = 2;
+inline int Search_result::user_id_size() const {
+  return user_id_.size();
+}
+inline void Search_result::clear_user_id() {
+  user_id_.Clear();
+}
+inline const ::std::string& Search_result::user_id(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.user_id)
+  return user_id_.Get(index);
+}
+inline ::std::string* Search_result::mutable_user_id(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.user_id)
+  return user_id_.Mutable(index);
+}
+inline void Search_result::set_user_id(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.user_id)
+  user_id_.Mutable(index)->assign(value);
+}
+inline void Search_result::set_user_id(int index, const char* value) {
+  user_id_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.user_id)
+}
+inline void Search_result::set_user_id(int index, const char* value, size_t size) {
+  user_id_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_id)
+}
+inline ::std::string* Search_result::add_user_id() {
+  return user_id_.Add();
+}
+inline void Search_result::add_user_id(const ::std::string& value) {
+  user_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.user_id)
+}
+inline void Search_result::add_user_id(const char* value) {
+  user_id_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.user_id)
+}
+inline void Search_result::add_user_id(const char* value, size_t size) {
+  user_id_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.user_id)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::user_id() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.user_id)
+  return user_id_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_user_id() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.user_id)
+  return &user_id_;
+}
+
+// repeated bytes user_icon = 3;
+inline int Search_result::user_icon_size() const {
+  return user_icon_.size();
+}
+inline void Search_result::clear_user_icon() {
+  user_icon_.Clear();
+}
+inline const ::std::string& Search_result::user_icon(int index) const {
+  // @@protoc_insertion_point(field_get:helloworld.Search_result.user_icon)
+  return user_icon_.Get(index);
+}
+inline ::std::string* Search_result::mutable_user_icon(int index) {
+  // @@protoc_insertion_point(field_mutable:helloworld.Search_result.user_icon)
+  return user_icon_.Mutable(index);
+}
+inline void Search_result::set_user_icon(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:helloworld.Search_result.user_icon)
+  user_icon_.Mutable(index)->assign(value);
+}
+inline void Search_result::set_user_icon(int index, const char* value) {
+  user_icon_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:helloworld.Search_result.user_icon)
+}
+inline void Search_result::set_user_icon(int index, const void* value, size_t size) {
+  user_icon_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_icon)
+}
+inline ::std::string* Search_result::add_user_icon() {
+  return user_icon_.Add();
+}
+inline void Search_result::add_user_icon(const ::std::string& value) {
+  user_icon_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:helloworld.Search_result.user_icon)
+}
+inline void Search_result::add_user_icon(const char* value) {
+  user_icon_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:helloworld.Search_result.user_icon)
+}
+inline void Search_result::add_user_icon(const void* value, size_t size) {
+  user_icon_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:helloworld.Search_result.user_icon)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Search_result::user_icon() const {
+  // @@protoc_insertion_point(field_list:helloworld.Search_result.user_icon)
+  return user_icon_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Search_result::mutable_user_icon() {
+  // @@protoc_insertion_point(field_mutable_list:helloworld.Search_result.user_icon)
+  return &user_icon_;
 }
 
 // -------------------------------------------------------------------
@@ -4992,6 +5281,8 @@ inline void Reply_inf::set_allocated_information(::std::string* information) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

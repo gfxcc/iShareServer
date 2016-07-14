@@ -46,9 +46,9 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::User_detail>> AsyncUser_inf(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::User_detail>>(AsyncUser_infRaw(context, request, cq));
     }
-    virtual ::grpc::Status Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Repeated_string* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Repeated_string>> AsyncSearch_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Repeated_string>>(AsyncSearch_usernameRaw(context, request, cq));
+    virtual ::grpc::Status Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Search_result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Search_result>> AsyncSearch_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Search_result>>(AsyncSearch_usernameRaw(context, request, cq));
     }
     virtual ::grpc::Status Add_friend(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncAdd_friend(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
@@ -163,7 +163,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Reply_inf>* AsyncLoginRaw(::grpc::ClientContext* context, const ::helloworld::Login_m& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Reply_inf>* AsyncSign_upRaw(::grpc::ClientContext* context, const ::helloworld::Sign_m& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::User_detail>* AsyncUser_infRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Repeated_string>* AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Search_result>* AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncAdd_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) = 0;
@@ -215,9 +215,9 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::User_detail>> AsyncUser_inf(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::User_detail>>(AsyncUser_infRaw(context, request, cq));
     }
-    ::grpc::Status Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Repeated_string* response) GRPC_OVERRIDE;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Repeated_string>> AsyncSearch_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Repeated_string>>(AsyncSearch_usernameRaw(context, request, cq));
+    ::grpc::Status Search_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Search_result* response) GRPC_OVERRIDE;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Search_result>> AsyncSearch_username(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Search_result>>(AsyncSearch_usernameRaw(context, request, cq));
     }
     ::grpc::Status Add_friend(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncAdd_friend(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
@@ -334,7 +334,7 @@ class Greeter GRPC_FINAL {
     ::grpc::ClientAsyncResponseReader< ::helloworld::Reply_inf>* AsyncLoginRaw(::grpc::ClientContext* context, const ::helloworld::Login_m& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Reply_inf>* AsyncSign_upRaw(::grpc::ClientContext* context, const ::helloworld::Sign_m& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::User_detail>* AsyncUser_infRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
-    ::grpc::ClientAsyncResponseReader< ::helloworld::Repeated_string>* AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncResponseReader< ::helloworld::Search_result>* AsyncSearch_usernameRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncAdd_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
@@ -405,7 +405,7 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Login(::grpc::ServerContext* context, const ::helloworld::Login_m* request, ::helloworld::Reply_inf* response);
     virtual ::grpc::Status Sign_up(::grpc::ServerContext* context, const ::helloworld::Sign_m* request, ::helloworld::Reply_inf* response);
     virtual ::grpc::Status User_inf(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::User_detail* response);
-    virtual ::grpc::Status Search_username(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Repeated_string* response);
+    virtual ::grpc::Status Search_username(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Search_result* response);
     virtual ::grpc::Status Add_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Delete_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     virtual ::grpc::Status Create_share(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response);
@@ -441,7 +441,7 @@ class Greeter GRPC_FINAL {
     void RequestLogin(::grpc::ServerContext* context, ::helloworld::Login_m* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Reply_inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestSign_up(::grpc::ServerContext* context, ::helloworld::Sign_m* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Reply_inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestUser_inf(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::User_detail>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
-    void RequestSearch_username(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Repeated_string>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
+    void RequestSearch_username(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Search_result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestAdd_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestDelete_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);
     void RequestCreate_share(::grpc::ServerContext* context, ::helloworld::Share_inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag);

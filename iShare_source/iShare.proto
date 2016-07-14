@@ -41,7 +41,7 @@ rpc User_inf (Inf) returns (User_detail) {}
 // A simple RPC
 //
 // search user by username
-rpc Search_username (Inf) returns (Repeated_string) {}
+rpc Search_username (Inf) returns (Search_result) {}
 
 
 // updated
@@ -206,6 +206,12 @@ string information = 1;
 
 message Repeated_string {
 repeated string content = 1;
+}
+
+message Search_result {
+repeated string username = 1;
+repeated string user_id = 2;
+repeated bytes user_icon = 3;
 }
 
 message User_detail {
