@@ -92,7 +92,7 @@ Status GreeterServiceImpl::Send_Img (ServerContext *context, ServerReader<Image>
 
     // create image file
     FILE* fp;
-    path = "./" + path + "/" + imgName + ".png";
+    path = "/home/ubuntu/iShare_files/" + path + "/" + imgName + ".png";
     fp = fopen(path.data(),"w+");
     // get image
     reader->Read(&image);
@@ -117,7 +117,7 @@ Status GreeterServiceImpl::Receive_Img(ServerContext *context, const Repeated_st
 
     for (int i = 1; i != request->content_size(); i++) {
 
-        string path = "./" + request->content(0) + "/" + request->content(i) + ".png";
+        string path = "/home/ubuntu/iShare_files/" + request->content(0) + "/" + request->content(i) + ".png";
 
         FILE *fp = fopen(path.data(), "rb");
         //cout << i << endl;

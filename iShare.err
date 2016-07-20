@@ -1,3 +1,27 @@
 
 E0626 15:55:36.725659155    6793 chttp2_transport.c:532]     server stream 9 still included in list 9
 E0627 19:47:08.589871803   13528 chttp2_transport.c:833]     assertion failed: stream_global->send_message == NULL
+I0717 11:23:11.880695229    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:12.862172913    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:14.666415643    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:17.366775521    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:21.294356540    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:27.697990276    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:23:39.882289454    1804 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:24:46.252093904    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:24:47.251823363    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:24:48.677915368    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:24:51.737751513    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:24:55.620074053    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:25:01.983360908    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:25:12.728236177    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:25:32.855773527    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:26:03.884701303    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:26:48.301612784    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:38.344604742    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:39.347982948    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:41.086549681    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:43.616122246    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:47.491383844    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:27:54.228146739    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+I0717 11:28:05.630865559    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0

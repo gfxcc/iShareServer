@@ -307,7 +307,7 @@ Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* r
     MYSQL_ROW row;
 
 
-    string sql_command = "SELECT username FROM User WHERE UPPER(username) like UPPER('%" + request->information() + "%')";
+    string sql_command = "SELECT username, user_id FROM User WHERE UPPER(username) like UPPER('%" + request->information() + "%')";
     log(INFO, sql_command.data());
     if (mysql_query(conn, sql_command.data())) {
         log(ERROR, sql_command.data());
@@ -319,8 +319,8 @@ Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* r
     res = mysql_use_result(conn);
     while ((row = mysql_fetch_row(res)) != NULL) {
         reply->add_username(row[0]);
+        reply->add_user_id(row[1]);
     }
-
     mysql_free_result(res);
 
     release_sock_to_sql_pool(sock_node);
@@ -553,8 +553,8 @@ Status GreeterServiceImpl::Update_user_lastModified (ServerContext *context, con
     log(INFO, "IN Update_user_lastModified");
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
     MYSQL* conn = sock_node->sql_sock->sock;
-    //MYSQL_RES *res;
-    //MYSQL_ROW row;
+    MYSQL_RES *res;
+    MYSQL_ROW row;
 
     string sql_command = "UPDATE User SET last_modified = NOW() WHERE user_id = '" + request->information() + "'";
 
@@ -563,6 +563,44 @@ Status GreeterServiceImpl::Update_user_lastModified (ServerContext *context, con
         log(ERROR, mysql_error(conn));
         check_sql_sock_normal(sock_node);
     }
+
+    // update synchronism_friend
+    vector<string> friend_id_list;
+    sql_command = "SELECT * FROM Friends WHERE user1_id = '" + request->information() + "' OR user2_id = '" + request->information() + "'";
+    if (mysql_query(conn, sql_command.data())) {
+        log(ERROR, mysql_error(conn));
+        log(ERROR, sql_command.data());
+        check_sql_sock_normal(sock_node);
+        release_sock_to_sql_pool(sock_node);
+        return Status::CANCELLED;
+    }
+    res = mysql_use_result(conn);
+    while ((row = mysql_fetch_row(res)) != NULL) {
+        //            cout << row[0] << ends << row[1] << endl;
+        //            reply->set_username(request->information());
+        //            reply->add_friends(row[1]);
+
+        string user_id = row[0];
+        if (user_id == request->information()) {
+            friend_id_list.push_back(row[1]);
+        } else {
+            friend_id_list.push_back(row[0]);
+        }
+    }
+    mysql_free_result(res);
+
+    for (unsigned int i = 0; i != friend_id_list.size(); i++) {
+        sql_command = "UPDATE User SET synchronism_friend = 1 WHERE user_id = '" + friend_id_list[i] + "'";
+        if (mysql_query(conn, sql_command.data())) {
+            log(ERROR, mysql_error(conn));
+            log(ERROR, sql_command.data());
+            check_sql_sock_normal(sock_node);
+            release_sock_to_sql_pool(sock_node);
+            return Status::CANCELLED;
+        }
+    }
+
+
     release_sock_to_sql_pool(sock_node);
     log(INFO, "OUT Update_user_lastModified");
 
