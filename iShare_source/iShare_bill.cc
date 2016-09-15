@@ -259,9 +259,16 @@ bool pushNotificationToDevice (string deviceToken, string message);
         MYSQL_RES *res;
         MYSQL_ROW row;
 
+        string note_str = request->note();
+        for (unsigned int i = 0; i < note_str.length(); i++) {
+            if (note_str[i] == '\n') {
+                note_str[i] = ' ';
+            }
+        }
+
         string sql_command = "INSERT INTO Bills (creater, amount, type, paidBy, date, note, image, member_0, member_1, member_2, member_3, member_4, member_5, member_6, member_7, member_8, member_9, typeIcon) VALUES (" +
             request->creater() + ", " + request->amount() + " , '" + request->type() + "' , " +
-            request->paidby() + " , '" + request->data() + "' , '" + request->note() + "' , '" +
+            request->paidby() + " , '" + request->data() + "' , '" + note_str + "' , '" +
             request->image() + "' , " + request->members(0) + " , " + request->members(1) + " , " +
             request->members(2) + " , " + request->members(3) + " , " + request->members(4) +
             " , " + request->members(5) + " , " + request->members(6) + " , " +

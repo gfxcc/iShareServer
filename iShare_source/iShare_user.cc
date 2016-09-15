@@ -146,6 +146,7 @@ Status GreeterServiceImpl::User_inf (ServerContext* context, const Inf* request,
         return Status::CANCELLED;
     }
 
+    log(DEBUG, to_string(reply->friends_lastmodified_size()).c_str());
     log(INFO, "OUT User_inf");
     release_sock_to_sql_pool(sock_node);
     return Status::OK;

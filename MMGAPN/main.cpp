@@ -118,7 +118,8 @@ int main(void)
 	// Get a list of devices
 	std::vector<MMGDevice*> devices;
 	//get_devices_list(devices);
-    MMGDevice* device1 = new MMGDevice("17a612c5fe84f544ebd0c6aa880a0955ca00084a4488dd633d113ef379292f48", 1);
+
+    MMGDevice* device1 = new MMGDevice("0b11d46592440b4c6d6a78c510ddb3e90dd088a2bea5066e869f3a4f96ab6850", 1);
     devices.push_back(device1);
 
 	// Create a payload object
@@ -135,9 +136,16 @@ int main(void)
 	for (MMGDevice* device : devices)
 	{
 		// Update payload badge number to reflect device's one
-		payload.SetBadgeNumber(device->GetBadge());
-		// Send payload to the device
-		connection.SendPayloadToDevice(payload, *device, notifId++);
+        payload.SetBadgeNumber(device->GetBadge());
+        // Send payload to the device
+        connection.SendPayloadToDevice(payload, *device, notifId);
+
+        MMGAPNSStatusCode response = connection.GetResponse(&notifId);
+        if ((int)response != 0) {
+            log(ERROR, to_string((int)response).c_str());
+        }
+        notifId++;
+
 	}
 
 	// Free up memory

@@ -31,6 +31,7 @@ enum LOG_LEVEL {
 void log(LOG_LEVEL level, const char* msg);
 void tabPrint(std::string str);
 std::string convertToString(double d);
+bool pushNotificationToDevice (std::string deviceToken, std::string message);
 
 namespace grpc {
 class CompletionQueue;

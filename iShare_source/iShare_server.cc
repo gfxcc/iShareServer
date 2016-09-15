@@ -210,7 +210,6 @@ Status GreeterServiceImpl::Receive_Img(ServerContext *context, const Repeated_st
         image.set_data(image_data);
         image.set_name(request->content(i));
         reply->Write(image);
-        log(DEBUG, request->content(i).c_str());
         delete []data;
     }
 
@@ -262,7 +261,16 @@ bool pushNotificationToDevice (string deviceToken, string message) {
         // Update payload badge number to reflect device's one
         payload.SetBadgeNumber(device->GetBadge());
         // Send payload to the device
-        connection.SendPayloadToDevice(payload, *device, notifId++);
+        connection.SendPayloadToDevice(payload, *device, notifId);
+
+        MMGAPNSStatusCode response = connection.GetResponse(&notifId);
+        if ((int)response != 0) {
+            log(ERROR, to_string((int)response).c_str());
+        } else {
+            log (INFO, "push OK");
+        }
+        notifId++;
+
     }
 
     // Free up memory
@@ -393,7 +401,9 @@ void Close_sock(SQL_SOCK* sql_sock) {
            printf("HeatBeat create Fail!\n");
            printf("%s\n",strerror(err));
            }*/
+        //0535c68b4f947a854392241d7184a8f6448cc36844e323b0d5a908a0760635f4
         RunServer();
+
         return 0;
     }
 

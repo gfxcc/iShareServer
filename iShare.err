@@ -25,3 +25,162 @@ I0717 11:27:43.616122246    4164 parsing.c:282]              Connect string mism
 I0717 11:27:47.491383844    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
 I0717 11:27:54.228146739    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
 I0717 11:28:05.630865559    4164 parsing.c:282]              Connect string mismatch: expected 'P' (80) got '' (22) at byte 0
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140597354071640:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140597354071640:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140597354071640:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140597354071640:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140597354071640:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140597354071640:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140597354071640:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140597354071640:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140597354071640:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140597354071640:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140597354071640:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140597354071640:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658122856024:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658122856024:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658122856024:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658122856024:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658122856024:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658122856024:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658122856024:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658122856024:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658122856024:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658103879256:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658103879256:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658103879256:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658078701144:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658078701144:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658078701144:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658078701144:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658078701144:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658078701144:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+139658078701144:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+139658078701144:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+139658078701144:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423587391064:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423587391064:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423587391064:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423587391064:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423587391064:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423587391064:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423595783768:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423595783768:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423595783768:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423595783768:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423595783768:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423595783768:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423217542744:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423217542744:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423217542744:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423217542744:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423217542744:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423217542744:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423576172120:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423576172120:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423576172120:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423217542744:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423217542744:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423217542744:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423217542744:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423217542744:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423217542744:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423217542744:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423217542744:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423217542744:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+[!] Cannot use certificate file </home/ubuntu/iShare/iSharePushCert.pem>
+140423564936792:error:02001002:system library:fopen:No such file or directory:bss_file.c:391:fopen('/home/ubuntu/iShare/iSharePushCert.pem','r')
+140423564936792:error:20074002:BIO routines:FILE_CTRL:system lib:bss_file.c:393:
+140423564936792:error:140AD002:SSL routines:SSL_CTX_use_certificate_file:system lib:ssl_rsa.c:452:
+E0913 20:02:21.095983981   20580 tcp_server_posix.c:284]     bind addr=[::]:50052: Address already in use
+E0913 20:02:21.096215536   20580 server_chttp2.c:122]        No address added out of total 1 resolved
+[!] SSL_ERROR_ZERO_RETURN (Connection closed)
