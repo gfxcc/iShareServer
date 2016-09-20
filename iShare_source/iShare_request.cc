@@ -15,8 +15,7 @@
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
 #include <grpc++/server_context.h>
-#include <grpc++/server_credentials.h>
-#include <grpc++/support/status.h>
+#include <grpc++/security/server_credentials.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <stdio.h>

@@ -5,6 +5,7 @@
  * */
 #include <string>
 #include <sstream>
+/*
 #include <grpc++/support/async_stream.h>
 #include <grpc++/impl/rpc_method.h>
 #include <grpc++/impl/proto_utils.h>
@@ -13,6 +14,7 @@
 #include <grpc++/support/status.h>
 #include <grpc++/support/stub_options.h>
 #include <grpc++/support/sync_stream.h>
+*/
 
 #include "iShare.grpc.pb.h"
 

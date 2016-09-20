@@ -12,6 +12,11 @@ service Greeter {
 // Sends a greeting
 rpc SayHello (HelloRequest) returns (HelloReply) {}
 
+//
+//
+//
+//rpc TimeTest (Inf) returns (stream Inf) {}
+
 // updated
 // A simple RPC
 // login_m(usename, password)

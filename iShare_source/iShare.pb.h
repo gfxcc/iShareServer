@@ -58,7 +58,7 @@ class User_detail;
 
 // ===================================================================
 
-class Login_m : public ::google::protobuf::Message {
+class Login_m : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Login_m) */ {
  public:
   Login_m();
   virtual ~Login_m();
@@ -92,7 +92,11 @@ class Login_m : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -153,7 +157,7 @@ class Login_m : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Sign_m : public ::google::protobuf::Message {
+class Sign_m : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Sign_m) */ {
  public:
   Sign_m();
   virtual ~Sign_m();
@@ -187,7 +191,11 @@ class Sign_m : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -260,7 +268,7 @@ class Sign_m : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Inf : public ::google::protobuf::Message {
+class Inf : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Inf) */ {
  public:
   Inf();
   virtual ~Inf();
@@ -294,7 +302,11 @@ class Inf : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -343,7 +355,7 @@ class Inf : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Repeated_string : public ::google::protobuf::Message {
+class Repeated_string : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Repeated_string) */ {
  public:
   Repeated_string();
   virtual ~Repeated_string();
@@ -377,7 +389,11 @@ class Repeated_string : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -431,7 +447,7 @@ class Repeated_string : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Search_result : public ::google::protobuf::Message {
+class Search_result : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Search_result) */ {
  public:
   Search_result();
   virtual ~Search_result();
@@ -465,7 +481,11 @@ class Search_result : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -553,7 +573,7 @@ class Search_result : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class User_detail : public ::google::protobuf::Message {
+class User_detail : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.User_detail) */ {
  public:
   User_detail();
   virtual ~User_detail();
@@ -587,7 +607,11 @@ class User_detail : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -711,7 +735,7 @@ class User_detail : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Share_inf : public ::google::protobuf::Message {
+class Share_inf : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Share_inf) */ {
  public:
   Share_inf();
   virtual ~Share_inf();
@@ -745,7 +769,11 @@ class Share_inf : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -926,7 +954,7 @@ class Share_inf : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Bill_request : public ::google::protobuf::Message {
+class Bill_request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Bill_request) */ {
  public:
   Bill_request();
   virtual ~Bill_request();
@@ -960,7 +988,11 @@ class Bill_request : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1033,7 +1065,7 @@ class Bill_request : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Syn_data : public ::google::protobuf::Message {
+class Syn_data : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Syn_data) */ {
  public:
   Syn_data();
   virtual ~Syn_data();
@@ -1067,7 +1099,11 @@ class Syn_data : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1152,7 +1188,7 @@ class Syn_data : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class HelloRequest : public ::google::protobuf::Message {
+class HelloRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.HelloRequest) */ {
  public:
   HelloRequest();
   virtual ~HelloRequest();
@@ -1186,7 +1222,11 @@ class HelloRequest : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1235,7 +1275,7 @@ class HelloRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class HelloReply : public ::google::protobuf::Message {
+class HelloReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.HelloReply) */ {
  public:
   HelloReply();
   virtual ~HelloReply();
@@ -1269,7 +1309,11 @@ class HelloReply : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1318,7 +1362,7 @@ class HelloReply : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Image : public ::google::protobuf::Message {
+class Image : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Image) */ {
  public:
   Image();
   virtual ~Image();
@@ -1352,7 +1396,11 @@ class Image : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1413,7 +1461,7 @@ class Image : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Request : public ::google::protobuf::Message {
+class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Request) */ {
  public:
   Request();
   virtual ~Request();
@@ -1447,7 +1495,11 @@ class Request : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1604,7 +1656,7 @@ class Request : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Response : public ::google::protobuf::Message {
+class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Response) */ {
  public:
   Response();
   virtual ~Response();
@@ -1638,7 +1690,11 @@ class Response : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1735,7 +1791,7 @@ class Response : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class IgnoreMessage : public ::google::protobuf::Message {
+class IgnoreMessage : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.IgnoreMessage) */ {
  public:
   IgnoreMessage();
   virtual ~IgnoreMessage();
@@ -1769,7 +1825,11 @@ class IgnoreMessage : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1830,7 +1890,7 @@ class IgnoreMessage : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class BillPayment : public ::google::protobuf::Message {
+class BillPayment : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.BillPayment) */ {
  public:
   BillPayment();
   virtual ~BillPayment();
@@ -1864,7 +1924,11 @@ class BillPayment : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -1925,7 +1989,7 @@ class BillPayment : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Setting : public ::google::protobuf::Message {
+class Setting : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Setting) */ {
  public:
   Setting();
   virtual ~Setting();
@@ -1959,7 +2023,11 @@ class Setting : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2043,7 +2111,7 @@ class Setting : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class UserInfo : public ::google::protobuf::Message {
+class UserInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.UserInfo) */ {
  public:
   UserInfo();
   virtual ~UserInfo();
@@ -2077,7 +2145,11 @@ class UserInfo : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2169,7 +2241,7 @@ class UserInfo : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class Reply_inf : public ::google::protobuf::Message {
+class Reply_inf : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:helloworld.Reply_inf) */ {
  public:
   Reply_inf();
   virtual ~Reply_inf();
@@ -2203,7 +2275,11 @@ class Reply_inf : public ::google::protobuf::Message {
       ::google::protobuf::io::CodedInputStream* input);
   void SerializeWithCachedSizes(
       ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
   int GetCachedSize() const { return _cached_size_; }
   private:
   void SharedCtor();
@@ -2300,6 +2376,7 @@ inline ::std::string* Login_m::mutable_username() {
   return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Login_m::release_username() {
+  // @@protoc_insertion_point(field_release:helloworld.Login_m.username)
   
   return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2343,6 +2420,7 @@ inline ::std::string* Login_m::mutable_password() {
   return password_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Login_m::release_password() {
+  // @@protoc_insertion_point(field_release:helloworld.Login_m.password)
   
   return password_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2390,6 +2468,7 @@ inline ::std::string* Sign_m::mutable_username() {
   return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Sign_m::release_username() {
+  // @@protoc_insertion_point(field_release:helloworld.Sign_m.username)
   
   return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2433,6 +2512,7 @@ inline ::std::string* Sign_m::mutable_password() {
   return password_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Sign_m::release_password() {
+  // @@protoc_insertion_point(field_release:helloworld.Sign_m.password)
   
   return password_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2476,6 +2556,7 @@ inline ::std::string* Sign_m::mutable_email() {
   return email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Sign_m::release_email() {
+  // @@protoc_insertion_point(field_release:helloworld.Sign_m.email)
   
   return email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2523,6 +2604,7 @@ inline ::std::string* Inf::mutable_information() {
   return information_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Inf::release_information() {
+  // @@protoc_insertion_point(field_release:helloworld.Inf.information)
   
   return information_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2569,6 +2651,7 @@ inline void Repeated_string::set_content(int index, const char* value, size_t si
   // @@protoc_insertion_point(field_set_pointer:helloworld.Repeated_string.content)
 }
 inline ::std::string* Repeated_string::add_content() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.Repeated_string.content)
   return content_.Add();
 }
 inline void Repeated_string::add_content(const ::std::string& value) {
@@ -2627,6 +2710,7 @@ inline void Search_result::set_username(int index, const char* value, size_t siz
   // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.username)
 }
 inline ::std::string* Search_result::add_username() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.Search_result.username)
   return username_.Add();
 }
 inline void Search_result::add_username(const ::std::string& value) {
@@ -2681,6 +2765,7 @@ inline void Search_result::set_user_id(int index, const char* value, size_t size
   // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_id)
 }
 inline ::std::string* Search_result::add_user_id() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.Search_result.user_id)
   return user_id_.Add();
 }
 inline void Search_result::add_user_id(const ::std::string& value) {
@@ -2735,6 +2820,7 @@ inline void Search_result::set_user_icon(int index, const void* value, size_t si
   // @@protoc_insertion_point(field_set_pointer:helloworld.Search_result.user_icon)
 }
 inline ::std::string* Search_result::add_user_icon() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.Search_result.user_icon)
   return user_icon_.Add();
 }
 inline void Search_result::add_user_icon(const ::std::string& value) {
@@ -2794,6 +2880,7 @@ inline ::std::string* User_detail::mutable_username() {
   return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* User_detail::release_username() {
+  // @@protoc_insertion_point(field_release:helloworld.User_detail.username)
   
   return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2837,6 +2924,7 @@ inline ::std::string* User_detail::mutable_user_id() {
   return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* User_detail::release_user_id() {
+  // @@protoc_insertion_point(field_release:helloworld.User_detail.user_id)
   
   return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2880,6 +2968,7 @@ inline ::std::string* User_detail::mutable_email() {
   return email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* User_detail::release_email() {
+  // @@protoc_insertion_point(field_release:helloworld.User_detail.email)
   
   return email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2922,6 +3011,7 @@ inline void User_detail::set_friends_name(int index, const char* value, size_t s
   // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_name)
 }
 inline ::std::string* User_detail::add_friends_name() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.User_detail.friends_name)
   return friends_name_.Add();
 }
 inline void User_detail::add_friends_name(const ::std::string& value) {
@@ -2976,6 +3066,7 @@ inline void User_detail::set_friends_id(int index, const char* value, size_t siz
   // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_id)
 }
 inline ::std::string* User_detail::add_friends_id() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.User_detail.friends_id)
   return friends_id_.Add();
 }
 inline void User_detail::add_friends_id(const ::std::string& value) {
@@ -3030,6 +3121,7 @@ inline void User_detail::set_friends_lastmodified(int index, const char* value, 
   // @@protoc_insertion_point(field_set_pointer:helloworld.User_detail.friends_lastModified)
 }
 inline ::std::string* User_detail::add_friends_lastmodified() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.User_detail.friends_lastModified)
   return friends_lastmodified_.Add();
 }
 inline void User_detail::add_friends_lastmodified(const ::std::string& value) {
@@ -3089,6 +3181,7 @@ inline ::std::string* Share_inf::mutable_creater() {
   return creater_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_creater() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.creater)
   
   return creater_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3132,6 +3225,7 @@ inline ::std::string* Share_inf::mutable_amount() {
   return amount_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_amount() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.amount)
   
   return amount_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3175,6 +3269,7 @@ inline ::std::string* Share_inf::mutable_type() {
   return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_type() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.type)
   
   return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3218,6 +3313,7 @@ inline ::std::string* Share_inf::mutable_paidby() {
   return paidby_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_paidby() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.paidBy)
   
   return paidby_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3261,6 +3357,7 @@ inline ::std::string* Share_inf::mutable_data() {
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_data() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.data)
   
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3304,6 +3401,7 @@ inline ::std::string* Share_inf::mutable_note() {
   return note_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_note() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.note)
   
   return note_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3347,6 +3445,7 @@ inline ::std::string* Share_inf::mutable_image() {
   return image_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_image() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.image)
   
   return image_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3389,6 +3488,7 @@ inline void Share_inf::set_members(int index, const char* value, size_t size) {
   // @@protoc_insertion_point(field_set_pointer:helloworld.Share_inf.members)
 }
 inline ::std::string* Share_inf::add_members() {
+  // @@protoc_insertion_point(field_add_mutable:helloworld.Share_inf.members)
   return members_.Add();
 }
 inline void Share_inf::add_members(const ::std::string& value) {
@@ -3458,6 +3558,7 @@ inline ::std::string* Share_inf::mutable_bill_id() {
   return bill_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_bill_id() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.bill_id)
   
   return bill_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3501,6 +3602,7 @@ inline ::std::string* Share_inf::mutable_paidstatus() {
   return paidstatus_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_paidstatus() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.paidStatus)
   
   return paidstatus_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3544,6 +3646,7 @@ inline ::std::string* Share_inf::mutable_typeicon() {
   return typeicon_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Share_inf::release_typeicon() {
+  // @@protoc_insertion_point(field_release:helloworld.Share_inf.typeIcon)
   
   return typeicon_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3591,6 +3694,7 @@ inline ::std::string* Bill_request::mutable_username() {
   return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Bill_request::release_username() {
+  // @@protoc_insertion_point(field_release:helloworld.Bill_request.username)
   
   return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3634,6 +3738,7 @@ inline ::std::string* Bill_request::mutable_start() {
   return start_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Bill_request::release_start() {
+  // @@protoc_insertion_point(field_release:helloworld.Bill_request.start)
   
   return start_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3677,6 +3782,7 @@ inline ::std::string* Bill_request::mutable_amount() {
   return amount_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Bill_request::release_amount() {
+  // @@protoc_insertion_point(field_release:helloworld.Bill_request.amount)
   
   return amount_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3724,6 +3830,7 @@ inline ::std::string* Syn_data::mutable_friend_() {
   return friend__.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Syn_data::release_friend_() {
+  // @@protoc_insertion_point(field_release:helloworld.Syn_data.friend)
   
   return friend__.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3767,6 +3874,7 @@ inline ::std::string* Syn_data::mutable_bill() {
   return bill_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Syn_data::release_bill() {
+  // @@protoc_insertion_point(field_release:helloworld.Syn_data.bill)
   
   return bill_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3810,6 +3918,7 @@ inline ::std::string* Syn_data::mutable_delete_() {
   return delete__.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Syn_data::release_delete_() {
+  // @@protoc_insertion_point(field_release:helloworld.Syn_data.delete)
   
   return delete__.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3853,6 +3962,7 @@ inline ::std::string* Syn_data::mutable_request() {
   return request_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Syn_data::release_request() {
+  // @@protoc_insertion_point(field_release:helloworld.Syn_data.request)
   
   return request_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3900,6 +4010,7 @@ inline ::std::string* HelloRequest::mutable_name() {
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* HelloRequest::release_name() {
+  // @@protoc_insertion_point(field_release:helloworld.HelloRequest.name)
   
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3947,6 +4058,7 @@ inline ::std::string* HelloReply::mutable_message() {
   return message_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* HelloReply::release_message() {
+  // @@protoc_insertion_point(field_release:helloworld.HelloReply.message)
   
   return message_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3994,6 +4106,7 @@ inline ::std::string* Image::mutable_name() {
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Image::release_name() {
+  // @@protoc_insertion_point(field_release:helloworld.Image.name)
   
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4037,6 +4150,7 @@ inline ::std::string* Image::mutable_data() {
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Image::release_data() {
+  // @@protoc_insertion_point(field_release:helloworld.Image.data)
   
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4084,6 +4198,7 @@ inline ::std::string* Request::mutable_request_id() {
   return request_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_request_id() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.request_id)
   
   return request_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4127,6 +4242,7 @@ inline ::std::string* Request::mutable_sender() {
   return sender_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_sender() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.sender)
   
   return sender_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4170,6 +4286,7 @@ inline ::std::string* Request::mutable_receiver() {
   return receiver_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_receiver() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.receiver)
   
   return receiver_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4213,6 +4330,7 @@ inline ::std::string* Request::mutable_type() {
   return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_type() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.type)
   
   return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4256,6 +4374,7 @@ inline ::std::string* Request::mutable_content() {
   return content_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_content() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.content)
   
   return content_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4299,6 +4418,7 @@ inline ::std::string* Request::mutable_response() {
   return response_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_response() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.response)
   
   return response_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4342,6 +4462,7 @@ inline ::std::string* Request::mutable_request_date() {
   return request_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_request_date() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.request_date)
   
   return request_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4385,6 +4506,7 @@ inline ::std::string* Request::mutable_response_date() {
   return response_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_response_date() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.response_date)
   
   return response_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4428,6 +4550,7 @@ inline ::std::string* Request::mutable_ignore_from() {
   return ignore_from_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_ignore_from() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.ignore_from)
   
   return ignore_from_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4471,6 +4594,7 @@ inline ::std::string* Request::mutable_ignore_to() {
   return ignore_to_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Request::release_ignore_to() {
+  // @@protoc_insertion_point(field_release:helloworld.Request.ignore_to)
   
   return ignore_to_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4518,6 +4642,7 @@ inline ::std::string* Response::mutable_request_id() {
   return request_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Response::release_request_id() {
+  // @@protoc_insertion_point(field_release:helloworld.Response.request_id)
   
   return request_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4561,6 +4686,7 @@ inline ::std::string* Response::mutable_sender() {
   return sender_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Response::release_sender() {
+  // @@protoc_insertion_point(field_release:helloworld.Response.sender)
   
   return sender_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4604,6 +4730,7 @@ inline ::std::string* Response::mutable_receiver() {
   return receiver_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Response::release_receiver() {
+  // @@protoc_insertion_point(field_release:helloworld.Response.receiver)
   
   return receiver_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4647,6 +4774,7 @@ inline ::std::string* Response::mutable_response() {
   return response_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Response::release_response() {
+  // @@protoc_insertion_point(field_release:helloworld.Response.response)
   
   return response_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4690,6 +4818,7 @@ inline ::std::string* Response::mutable_response_date() {
   return response_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Response::release_response_date() {
+  // @@protoc_insertion_point(field_release:helloworld.Response.response_date)
   
   return response_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4737,6 +4866,7 @@ inline ::std::string* IgnoreMessage::mutable_requestlog_id() {
   return requestlog_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* IgnoreMessage::release_requestlog_id() {
+  // @@protoc_insertion_point(field_release:helloworld.IgnoreMessage.requestLog_id)
   
   return requestlog_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4780,6 +4910,7 @@ inline ::std::string* IgnoreMessage::mutable_user() {
   return user_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* IgnoreMessage::release_user() {
+  // @@protoc_insertion_point(field_release:helloworld.IgnoreMessage.user)
   
   return user_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4827,6 +4958,7 @@ inline ::std::string* BillPayment::mutable_bill_id() {
   return bill_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* BillPayment::release_bill_id() {
+  // @@protoc_insertion_point(field_release:helloworld.BillPayment.bill_id)
   
   return bill_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4870,6 +5002,7 @@ inline ::std::string* BillPayment::mutable_paidstatus() {
   return paidstatus_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* BillPayment::release_paidstatus() {
+  // @@protoc_insertion_point(field_release:helloworld.BillPayment.paidStatus)
   
   return paidstatus_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4987,6 +5120,7 @@ inline ::std::string* Setting::mutable_user_id() {
   return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Setting::release_user_id() {
+  // @@protoc_insertion_point(field_release:helloworld.Setting.user_id)
   
   return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5034,6 +5168,7 @@ inline ::std::string* UserInfo::mutable_user_id() {
   return user_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserInfo::release_user_id() {
+  // @@protoc_insertion_point(field_release:helloworld.UserInfo.user_id)
   
   return user_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5077,6 +5212,7 @@ inline ::std::string* UserInfo::mutable_username() {
   return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserInfo::release_username() {
+  // @@protoc_insertion_point(field_release:helloworld.UserInfo.username)
   
   return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5120,6 +5256,7 @@ inline ::std::string* UserInfo::mutable_password() {
   return password_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserInfo::release_password() {
+  // @@protoc_insertion_point(field_release:helloworld.UserInfo.password)
   
   return password_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5163,6 +5300,7 @@ inline ::std::string* UserInfo::mutable_email() {
   return email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserInfo::release_email() {
+  // @@protoc_insertion_point(field_release:helloworld.UserInfo.email)
   
   return email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5224,6 +5362,7 @@ inline ::std::string* Reply_inf::mutable_status() {
   return status_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Reply_inf::release_status() {
+  // @@protoc_insertion_point(field_release:helloworld.Reply_inf.status)
   
   return status_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5267,6 +5406,7 @@ inline ::std::string* Reply_inf::mutable_information() {
   return information_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Reply_inf::release_information() {
+  // @@protoc_insertion_point(field_release:helloworld.Reply_inf.information)
   
   return information_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }

@@ -44,12 +44,12 @@ find_library(MYSQL_CLIENT NAMES libmysqlclient.a)
 if(MYSQL_CLIENT)
     message(STATUS ${MYSQL_CLIENT})
 target_link_libraries(iShare
-    grpc++_unsecure
+    grpc++_reflection
     protobuf
+    grpc++
     grpc
-    gpr
     pthread
-    ${MYSQL_CLIENT}     
+    ${MYSQL_CLIENT}
     dl
     z
     ssl

@@ -15,8 +15,7 @@
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
 #include <grpc++/server_context.h>
-#include <grpc++/server_credentials.h>
-#include <grpc++/support/status.h>
+#include <grpc++/security/server_credentials.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -146,7 +145,6 @@ Status GreeterServiceImpl::User_inf (ServerContext* context, const Inf* request,
         return Status::CANCELLED;
     }
 
-    log(DEBUG, to_string(reply->friends_lastmodified_size()).c_str());
     log(INFO, "OUT User_inf");
     release_sock_to_sql_pool(sock_node);
     return Status::OK;

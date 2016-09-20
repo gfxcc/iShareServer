@@ -5,13 +5,14 @@
 #include "iShare.pb.h"
 #include "iShare.grpc.pb.h"
 
-#include <grpc++/channel.h>
-#include <grpc++/impl/client_unary_call.h>
-#include <grpc++/impl/rpc_service_method.h>
-#include <grpc++/impl/service_type.h>
-#include <grpc++/support/async_unary_call.h>
-#include <grpc++/support/async_stream.h>
-#include <grpc++/support/sync_stream.h>
+#include <grpc++/impl/codegen/async_stream.h>
+#include <grpc++/impl/codegen/async_unary_call.h>
+#include <grpc++/impl/codegen/channel_interface.h>
+#include <grpc++/impl/codegen/client_unary_call.h>
+#include <grpc++/impl/codegen/method_handler_impl.h>
+#include <grpc++/impl/codegen/rpc_service_method.h>
+#include <grpc++/impl/codegen/service_type.h>
+#include <grpc++/impl/codegen/sync_stream.h>
 namespace helloworld {
 
 static const char* Greeter_method_names[] = {
@@ -45,12 +46,12 @@ static const char* Greeter_method_names[] = {
   "/helloworld.Greeter/Update_user_lastModified",
 };
 
-std::unique_ptr< Greeter::Stub> Greeter::NewStub(const std::shared_ptr< ::grpc::Channel>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< Greeter::Stub> Greeter::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   std::unique_ptr< Greeter::Stub> stub(new Greeter::Stub(channel));
   return stub;
 }
 
-Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
+Greeter::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_SayHello_(Greeter_method_names[0], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Login_(Greeter_method_names[1], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Sign_up_(Greeter_method_names[2], ::grpc::RpcMethod::NORMAL_RPC, channel)
@@ -305,9 +306,148 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::Channel>& channel)
   return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Update_user_lastModified_, context, request);
 }
 
-Greeter::AsyncService::AsyncService() : ::grpc::AsynchronousService(Greeter_method_names, 28) {}
-
 Greeter::Service::Service() {
+  (void)Greeter_method_names;
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[0],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::HelloRequest, ::helloworld::HelloReply>(
+          std::mem_fn(&Greeter::Service::SayHello), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[1],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Login_m, ::helloworld::Reply_inf>(
+          std::mem_fn(&Greeter::Service::Login), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[2],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Sign_m, ::helloworld::Reply_inf>(
+          std::mem_fn(&Greeter::Service::Sign_up), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[3],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::User_detail>(
+          std::mem_fn(&Greeter::Service::User_inf), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[4],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Search_result>(
+          std::mem_fn(&Greeter::Service::Search_username), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[5],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Add_friend), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[6],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Delete_friend), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[7],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Share_inf, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Create_share), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[8],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Share_inf, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Delete_bill), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[9],
+      ::grpc::RpcMethod::BIDI_STREAMING,
+      new ::grpc::BidiStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Syn_data>(
+          std::mem_fn(&Greeter::Service::Syn), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[10],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Bill_request, ::helloworld::Share_inf>(
+          std::mem_fn(&Greeter::Service::Obtain_bills), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[11],
+      ::grpc::RpcMethod::CLIENT_STREAMING,
+      new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::Image, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Send_Img), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[12],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Image>(
+          std::mem_fn(&Greeter::Service::Receive_Img), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[13],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Reset_Status), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[14],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Send_request), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[15],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
+          std::mem_fn(&Greeter::Service::Obtain_request), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[16],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
+          std::mem_fn(&Greeter::Service::Obtain_requestLog), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[17],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
+          std::mem_fn(&Greeter::Service::Obtain_requestLogHistory), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[18],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Response, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Request_response), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[19],
+      ::grpc::RpcMethod::CLIENT_STREAMING,
+      new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::BillPayment, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::MakePayment), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[20],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::IgnoreMessage, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::IgnoreRequestLog), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[21],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Create_requestLog), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[22],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Send_DeviceToken), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[23],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Setting>(
+          std::mem_fn(&Greeter::Service::Obtain_setting), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[24],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Setting, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Reset_setting), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[25],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::UserInfo, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Reset_userInfo), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[26],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::UserInfo>(
+          std::mem_fn(&Greeter::Service::Obtain_userInfo), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Greeter_method_names[27],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
+          std::mem_fn(&Greeter::Service::Update_user_lastModified), this)));
 }
 
 Greeter::Service::~Service() {
@@ -320,19 +460,11 @@ Greeter::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSayHello(::grpc::ServerContext* context, ::helloworld::HelloRequest* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::HelloReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Login(::grpc::ServerContext* context, const ::helloworld::Login_m* request, ::helloworld::Reply_inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestLogin(::grpc::ServerContext* context, ::helloworld::Login_m* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Reply_inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Sign_up(::grpc::ServerContext* context, const ::helloworld::Sign_m* request, ::helloworld::Reply_inf* response) {
@@ -342,19 +474,11 @@ void Greeter::AsyncService::RequestLogin(::grpc::ServerContext* context, ::hello
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSign_up(::grpc::ServerContext* context, ::helloworld::Sign_m* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Reply_inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::User_inf(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::User_detail* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestUser_inf(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::User_detail>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Search_username(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Search_result* response) {
@@ -364,19 +488,11 @@ void Greeter::AsyncService::RequestUser_inf(::grpc::ServerContext* context, ::he
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSearch_username(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Search_result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Add_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestAdd_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Delete_friend(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response) {
@@ -386,19 +502,11 @@ void Greeter::AsyncService::RequestAdd_friend(::grpc::ServerContext* context, ::
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestDelete_friend(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Create_share(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestCreate_share(::grpc::ServerContext* context, ::helloworld::Share_inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Delete_bill(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response) {
@@ -408,18 +516,10 @@ void Greeter::AsyncService::RequestCreate_share(::grpc::ServerContext* context, 
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestDelete_bill(::grpc::ServerContext* context, ::helloworld::Share_inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream) {
   (void) context;
   (void) stream;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestSyn(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestBidiStreaming(9, context, stream, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Obtain_bills(::grpc::ServerContext* context, const ::helloworld::Bill_request* request, ::grpc::ServerWriter< ::helloworld::Share_inf>* writer) {
@@ -429,19 +529,11 @@ void Greeter::AsyncService::RequestSyn(::grpc::ServerContext* context, ::grpc::S
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestObtain_bills(::grpc::ServerContext* context, ::helloworld::Bill_request* request, ::grpc::ServerAsyncWriter< ::helloworld::Share_inf>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Send_Img(::grpc::ServerContext* context, ::grpc::ServerReader< ::helloworld::Image>* reader, ::helloworld::Inf* response) {
   (void) context;
   (void) reader;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestSend_Img(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::Image>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestClientStreaming(11, context, reader, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Receive_Img(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::grpc::ServerWriter< ::helloworld::Image>* writer) {
@@ -451,19 +543,11 @@ void Greeter::AsyncService::RequestSend_Img(::grpc::ServerContext* context, ::gr
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestReceive_Img(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncWriter< ::helloworld::Image>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestServerStreaming(12, context, request, writer, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Reset_Status(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestReset_Status(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Send_request(::grpc::ServerContext* context, const ::helloworld::Request* request, ::helloworld::Inf* response) {
@@ -473,19 +557,11 @@ void Greeter::AsyncService::RequestReset_Status(::grpc::ServerContext* context, 
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSend_request(::grpc::ServerContext* context, ::helloworld::Request* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Obtain_request(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer) {
   (void) context;
   (void) request;
   (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestObtain_request(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestServerStreaming(15, context, request, writer, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Obtain_requestLog(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer) {
@@ -495,19 +571,11 @@ void Greeter::AsyncService::RequestObtain_request(::grpc::ServerContext* context
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestObtain_requestLog(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestServerStreaming(16, context, request, writer, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Obtain_requestLogHistory(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer) {
   (void) context;
   (void) request;
   (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestObtain_requestLogHistory(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestServerStreaming(17, context, request, writer, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Request_response(::grpc::ServerContext* context, const ::helloworld::Response* request, ::helloworld::Inf* response) {
@@ -517,19 +585,11 @@ void Greeter::AsyncService::RequestObtain_requestLogHistory(::grpc::ServerContex
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestRequest_response(::grpc::ServerContext* context, ::helloworld::Response* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::MakePayment(::grpc::ServerContext* context, ::grpc::ServerReader< ::helloworld::BillPayment>* reader, ::helloworld::Inf* response) {
   (void) context;
   (void) reader;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestMakePayment(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::BillPayment>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestClientStreaming(19, context, reader, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::IgnoreRequestLog(::grpc::ServerContext* context, const ::helloworld::IgnoreMessage* request, ::helloworld::Inf* response) {
@@ -539,19 +599,11 @@ void Greeter::AsyncService::RequestMakePayment(::grpc::ServerContext* context, :
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestIgnoreRequestLog(::grpc::ServerContext* context, ::helloworld::IgnoreMessage* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Create_requestLog(::grpc::ServerContext* context, const ::helloworld::Request* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestCreate_requestLog(::grpc::ServerContext* context, ::helloworld::Request* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Send_DeviceToken(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response) {
@@ -561,19 +613,11 @@ void Greeter::AsyncService::RequestCreate_requestLog(::grpc::ServerContext* cont
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestSend_DeviceToken(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Obtain_setting(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Setting* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestObtain_setting(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Setting>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Reset_setting(::grpc::ServerContext* context, const ::helloworld::Setting* request, ::helloworld::Inf* response) {
@@ -583,19 +627,11 @@ void Greeter::AsyncService::RequestObtain_setting(::grpc::ServerContext* context
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestReset_setting(::grpc::ServerContext* context, ::helloworld::Setting* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Reset_userInfo(::grpc::ServerContext* context, const ::helloworld::UserInfo* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestReset_userInfo(::grpc::ServerContext* context, ::helloworld::UserInfo* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
 }
 
 ::grpc::Status Greeter::Service::Obtain_userInfo(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::UserInfo* response) {
@@ -605,167 +641,11 @@ void Greeter::AsyncService::RequestReset_userInfo(::grpc::ServerContext* context
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-void Greeter::AsyncService::RequestObtain_userInfo(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::UserInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
-}
-
 ::grpc::Status Greeter::Service::Update_user_lastModified(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Inf* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-void Greeter::AsyncService::RequestUpdate_user_lastModified(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-  AsynchronousService::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
-}
-
-::grpc::RpcService* Greeter::Service::service() {
-  if (service_) {
-    return service_.get();
-  }
-  service_ = std::unique_ptr< ::grpc::RpcService>(new ::grpc::RpcService());
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[0],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::HelloRequest, ::helloworld::HelloReply>(
-          std::mem_fn(&Greeter::Service::SayHello), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[1],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Login_m, ::helloworld::Reply_inf>(
-          std::mem_fn(&Greeter::Service::Login), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[2],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Sign_m, ::helloworld::Reply_inf>(
-          std::mem_fn(&Greeter::Service::Sign_up), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[3],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::User_detail>(
-          std::mem_fn(&Greeter::Service::User_inf), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[4],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Search_result>(
-          std::mem_fn(&Greeter::Service::Search_username), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[5],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Add_friend), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[6],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Delete_friend), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[7],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Share_inf, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Create_share), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[8],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Share_inf, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Delete_bill), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[9],
-      ::grpc::RpcMethod::BIDI_STREAMING,
-      new ::grpc::BidiStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Syn_data>(
-          std::mem_fn(&Greeter::Service::Syn), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[10],
-      ::grpc::RpcMethod::SERVER_STREAMING,
-      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Bill_request, ::helloworld::Share_inf>(
-          std::mem_fn(&Greeter::Service::Obtain_bills), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[11],
-      ::grpc::RpcMethod::CLIENT_STREAMING,
-      new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::Image, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Send_Img), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[12],
-      ::grpc::RpcMethod::SERVER_STREAMING,
-      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Image>(
-          std::mem_fn(&Greeter::Service::Receive_Img), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[13],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Reset_Status), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[14],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Send_request), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[15],
-      ::grpc::RpcMethod::SERVER_STREAMING,
-      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
-          std::mem_fn(&Greeter::Service::Obtain_request), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[16],
-      ::grpc::RpcMethod::SERVER_STREAMING,
-      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
-          std::mem_fn(&Greeter::Service::Obtain_requestLog), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[17],
-      ::grpc::RpcMethod::SERVER_STREAMING,
-      new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
-          std::mem_fn(&Greeter::Service::Obtain_requestLogHistory), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[18],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Response, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Request_response), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[19],
-      ::grpc::RpcMethod::CLIENT_STREAMING,
-      new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::BillPayment, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::MakePayment), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[20],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::IgnoreMessage, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::IgnoreRequestLog), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[21],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Create_requestLog), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[22],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Send_DeviceToken), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[23],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Setting>(
-          std::mem_fn(&Greeter::Service::Obtain_setting), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[24],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Setting, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Reset_setting), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[25],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::UserInfo, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Reset_userInfo), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[26],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::UserInfo>(
-          std::mem_fn(&Greeter::Service::Obtain_userInfo), this)));
-  service_->AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[27],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
-          std::mem_fn(&Greeter::Service::Update_user_lastModified), this)));
-  return service_.get();
 }
 
 
