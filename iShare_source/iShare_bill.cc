@@ -162,7 +162,6 @@ bool pushNotificationToDevice (string deviceToken, string message);
             //            //cout << "amout " << row[2] << endl;
             //printf("one result\n");
             reply->Write(bill);
-            log(DEBUG, bill.bill_id().c_str());
         }
         mysql_free_result(res);
         sql_command = "UPDATE User SET synchronism_bill = 0 WHERE user_id = " + request->username();

@@ -65,17 +65,17 @@ using namespace std;
 bool pushNotificationToDevice (string deviceToken, string message);
 
 /*
-Status GreeterServiceImpl::TimeTest (ServerContext* context, const Inf* request, ServerWriter<Inf>* reply) {
+   Status GreeterServiceImpl::TimeTest (ServerContext* context, const Inf* request, ServerWriter<Inf>* reply) {
 
-    for (int i = 0; i < 10; i++) {
-        Inf f;
-        f.set_information(to_string(i));
-        reply->Write(f);
-    }
+   for (int i = 0; i < 10; i++) {
+   Inf f;
+   f.set_information(to_string(i));
+   reply->Write(f);
+   }
 
-    return Status::OK;
-}
-*/
+   return Status::OK;
+   }
+   */
 
 Status GreeterServiceImpl::SayHello(ServerContext* context, const HelloRequest* request,
         HelloReply* reply) {
@@ -276,7 +276,8 @@ bool pushNotificationToDevice (string deviceToken, string message) {
 
         MMGAPNSStatusCode response = connection.GetResponse(&notifId);
         if ((int)response != 0) {
-            log(ERROR, to_string((int)response).c_str());
+            string str = "push notification failed:" + to_string((int)response);
+            log(ERROR, str.c_str());
         } else {
             log (INFO, "push OK");
         }
@@ -322,99 +323,36 @@ void Close_sock(SQL_SOCK* sql_sock) {
     mysql_close(sql_sock->sock);
 }
 
+int main(int argc, char** argv) {
 /*
-   void *mySqlHeartBeat(void *ptr)
-   {
-
-   while (1)
-   {
-   for (int i = 0; i != CONN_NUM; i++) {
-   SQL_SOCK_NODE* sock_node = get_sock_from_pool();
-   MYSQL* conn = sock_node->sql_sock->sock;
-   string sql_command = "SELECT * FROM User";
-   if (mysql_query(conn, sql_command.data())) {
-   printf("%s\n", sql_command.data());
-   }
-   release_sock_to_sql_pool(sock_node);
-   }
-
-   sleep(18000);
-   }
-   return 0;
-   }
-   */
-    int main(int argc, char** argv) {
-
-
-        //    mysql_init( &mysql );
-        //    conn = mysql_real_connect(  &mysql, "caoyongs-MacBook-Pro.local", "gfxcc", "19920406Cy", "iShare_data", 0, 0, 0 );
-        //    if( !conn )
-        //    {
-        //        cout << "Couldn't connect to MySQL database server!\n" << endl;
-        //        cout << "Error: %s\n" << mysql_error( &mysql ) << endl;
-        //        return 1;
-        //    }
-        //
-        //
-        //
-
-        /*
-
-        // SLL init only once
-        SSL_load_error_strings();
-        SSL_library_init();
-
-        // Get a list of devices
-        std::vector<MMGDevice*> devices;
-        //get_devices_list(devices);
-        MMGDevice* device1 = new MMGDevice("17a612c5fe84f544ebd0c6aa880a0955ca00084a4488dd633d113ef379292f48", 1);
-        devices.push_back(device1);
-
-        // Create a payload object
-        MMGIOSPayload payload("Push message", "Slider label", 1, "sound.caf");
-
-        // Create the APNS connection, empty string if no password for the private key
-        MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
-        // Open the connection
-        if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
-        return EXIT_FAILURE;
-
-        // Send the payload
-        uint32_t notifId = 1;
-        for (MMGDevice* device : devices)
-        {
-        // Update payload badge number to reflect device's one
-        payload.SetBadgeNumber(device->GetBadge());
-    // Send payload to the device
-    connection.SendPayloadToDevice(payload, *device, notifId++);
+    int opt = 0;
+    while ((opt = getopt(argc, argv, "d")) != -1) {
+        switch (opt) {
+            case 'd':
+                debug_mode = true;
+                break;
+            default:
+                break;
+        }
     }
-
-        // Free up memory
-        for (MMGDevice* device : devices)
-        delete device;
-
-        // Close the connection
-        connection.CloseConnection();
-
 */
+    const char* hostname = "localhost";
+    const char* username = "root";
+    const char* passwd = "19920406Cy";
+    const char* db = "iShare_server";
+    sql_pool_create(CONN_NUM, hostname, username,
+            passwd, db, 3306, NULL, Create_sock, Close_sock);
+    /*
+       pthread_t id;
+       int err = pthread_create(&id, NULL, mySqlHeartBeat, NULL);
+       if (err != 0)
+       {
+       printf("HeatBeat create Fail!\n");
+       printf("%s\n",strerror(err));
+       }*/
+    //0535c68b4f947a854392241d7184a8f6448cc36844e323b0d5a908a0760635f4
+    RunServer();
 
-        const char* hostname = "localhost";
-        const char* username = "root";
-        const char* passwd = "19920406Cy";
-        const char* db = "iShare_server";
-        sql_pool_create(CONN_NUM, hostname, username,
-                passwd, db, 3306, NULL, Create_sock, Close_sock);
-        /*
-           pthread_t id;
-           int err = pthread_create(&id, NULL, mySqlHeartBeat, NULL);
-           if (err != 0)
-           {
-           printf("HeatBeat create Fail!\n");
-           printf("%s\n",strerror(err));
-           }*/
-        //0535c68b4f947a854392241d7184a8f6448cc36844e323b0d5a908a0760635f4
-        RunServer();
-
-        return 0;
-    }
+    return 0;
+}
 
