@@ -55,7 +55,7 @@
 #define MMG_APNS_FEEDBACK_PORT 2196
 /* Certificates paths */
 #define MMG_APNS_CA_PATH "/"
-#define MMG_APNS_CERT_PATH "/home/ubuntu/iShare_alpha/iSharePushCert.pem"
-#define MMG_APNS_PRIVATEKEY_PATH "/home/ubuntu/iShare_alpha/iSharePushKey.pem"
+#define MMG_APNS_CERT_PATH "/home/ubuntu/iShare_new/iSharePushCert.pem"
+#define MMG_APNS_PRIVATEKEY_PATH "/home/ubuntu/iShare_new/iSharePushKey.pem"
 
 #endif /* __MMGGLOBAL_H__ */

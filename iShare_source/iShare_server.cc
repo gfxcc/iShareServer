@@ -262,9 +262,10 @@ bool pushNotificationToDevice (string deviceToken, string message) {
     // Create the APNS connection, empty string if no password for the private key
     MMGAPNSConnection connection(MMG_APNS_CA_PATH, MMG_APNS_CERT_PATH, MMG_APNS_PRIVATEKEY_PATH, "gfxcc", true);
     // Open the connection
-    if (connection.OpenConnection() != MMGConnectionError::MMGNoError)
+    if (connection.OpenConnection() != MMGConnectionError::MMGNoError) {
+        log(ERROR,"MMGConnectionERROR");
         return EXIT_FAILURE;
-
+    }
     // Send the payload
     uint32_t notifId = 1;
     for (MMGDevice* device : devices)
@@ -273,25 +274,24 @@ bool pushNotificationToDevice (string deviceToken, string message) {
         payload.SetBadgeNumber(device->GetBadge());
         // Send payload to the device
         connection.SendPayloadToDevice(payload, *device, notifId);
-
+        /*
         MMGAPNSStatusCode response = connection.GetResponse(&notifId);
+
         if ((int)response != 0) {
             string str = "push notification failed:" + to_string((int)response);
             log(ERROR, str.c_str());
         } else {
             log (INFO, "push OK");
         }
+        */
         notifId++;
 
     }
-
     // Free up memory
     for (MMGDevice* device : devices)
         delete device;
-
     // Close the connection
     connection.CloseConnection();
-
 
     return true;
 }

@@ -55,12 +55,12 @@ bool MMGAPNSConnection::SendPayloadToDevice(MMGPayload& payload, const MMGDevice
 
 	const char* payloadBuffer = payload.GetPayload().c_str();
 	const size_t payloadLen = strlen(payloadBuffer);
-	
+
 	/*** 1: build the frame ***/
 	uint8_t frame[512] = {0x00}; // 512 is just to let room (max length should be 297)
 	uint8_t* framePtr = frame;
 	uint8_t itemId = 1;
-	
+
 	/// Item 1 = token ///
 	*framePtr++ = itemId++;
 	// Item data length
@@ -70,7 +70,7 @@ bool MMGAPNSConnection::SendPayloadToDevice(MMGPayload& payload, const MMGDevice
 	// Token
 	memcpy(framePtr, device.GetBinaryToken(), MMG_DEVICE_BINARY_SIZE);
 	framePtr += MMG_DEVICE_BINARY_SIZE;
-	
+
 	/// Item 2 = payload ///
 	*framePtr++ = itemId++;
 	// Item data length
@@ -127,7 +127,7 @@ bool MMGAPNSConnection::SendPayloadToDevice(MMGPayload& payload, const MMGDevice
 	pl_ptr += sizeof(uint32_t);
 	// Frame
 	memcpy(pl_ptr, frame, frameLength);
-	
+
 	// Send
 	const bool ret = this->SendBuffer(pl, total_length);
 	free(pl);
