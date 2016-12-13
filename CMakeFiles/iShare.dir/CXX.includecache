@@ -363,6 +363,20 @@ string
 -
 sstream
 -
+thread
+-
+iostream
+-
+vector
+-
+unordered_map
+-
+unordered_set
+-
+grpc++/grpc++.h
+-
+grpc/support/log.h
+-
 grpc++/support/async_stream.h
 -
 grpc++/impl/rpc_method.h
@@ -431,6 +445,26 @@ vector
 -
 cstdlib
 -
+
+/home/ubuntu/iShare_alpha/iShare_source/iShare_synchronism.cc
+memory
+-
+iostream
+-
+string
+-
+pthread.h
+-
+grpc++/grpc++.h
+-
+grpc/support/log.h
+-
+iShare.grpc.pb.h
+/home/ubuntu/iShare_alpha/iShare_source/iShare.grpc.pb.h
+iShare_server.h
+/home/ubuntu/iShare_alpha/iShare_source/iShare_server.h
+mysql_pool.h
+/home/ubuntu/iShare_alpha/iShare_source/mysql_pool.h
 
 /home/ubuntu/iShare_alpha/iShare_source/iShare_tools.cc
 stdio.h
@@ -505,4 +539,6 @@ stdio.h
 -
 string.h
 -
+
+/home/ubuntu/iShare_alpha/iShare_source/syn.cc
 
