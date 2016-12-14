@@ -37,7 +37,7 @@ void ServerImpl::SynServer() {
     while (1) {
         string sql_command;
         string msg = to_string(users_.size()) + " user online " + to_string(mp_.size());
-        //log(DEBUG, msg.c_str());
+        log(DEBUG, msg.c_str());
         std::vector<std::string> cancel_users;
         for (auto& i : mp_) {
             if (i.second->ctx_.IsCancelled()) {
@@ -123,7 +123,6 @@ void ServerImpl::SynServer() {
 // There is no shutdown handling in this code.
 void ServerImpl::Run() {
     std::string server_address("0.0.0.0:50053");
-
     ServerBuilder builder;
     // Listen on the given address without any authentication mechanism.
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
@@ -164,6 +163,10 @@ void ServerImpl::CallData::Proceed() {
         // the one for this CallData. The instance will deallocate itself as
         // part of its FINISH state.
 
+        if (first_process_) {
+            new CallData(service_, cq_, users_, mp_);
+            first_process_ = false;
+        }
 
         // The actual processing.
         std::string prefix("Hello ");
@@ -183,10 +186,10 @@ void ServerImpl::CallData::Proceed() {
         status_ = FINISH;
         responder_.Finish(Status::OK, this);
         */
-
+        std::cout << "get request" << std::endl;
         if ((*mp_).find(request_.information()) == (*mp_).end()) {
             std::cout << "get a new client" << std::endl;
-            new CallData(service_, cq_, users_, mp_);
+
             users_->insert(request_.information());
             (*mp_)[request_.information()] = this;
         }

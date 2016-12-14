@@ -108,6 +108,7 @@ namespace helloworld {
                     // with the gRPC runtime.
                     CallData(Synchronism::AsyncService* service, ServerCompletionQueue* cq, std::unordered_set<std::string>* users, std::unordered_map<std::string, CallData*>* mp)
                         : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE), users_(users), mp_(mp) {
+                            first_process_ = true;
                             // Invoke the serving logic right away.
                             Proceed();
                         }
@@ -139,7 +140,7 @@ namespace helloworld {
 
                     std::unordered_set<std::string> *users_;
                     std::unordered_map<std::string, CallData*> *mp_;
-
+                    bool first_process_;
 
             };
 

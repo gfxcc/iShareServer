@@ -111,17 +111,17 @@ int main(int argc, char** argv) {
     //greeter.syn("1");
     pthread_t t1;
     vector<thread*> z;
-    for (int i = 1; i <= 50; i++) {
+    for (int i = 1; i <= 100; i++) {
         //num = i;
         auto p = new thread(task, i);
         if (p) {
             cout << "create succ" << endl;
             z.push_back(p);
         }
-        sleep(0.1);
+        sleep(0.01);
     }
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 100; i++) {
         z[i]->join();
         delete z[i];
     }
