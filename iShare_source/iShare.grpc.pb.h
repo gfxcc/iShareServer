@@ -29,6 +29,97 @@ class ServerContext;
 
 namespace helloworld {
 
+class Synchronism GRPC_FINAL {
+ public:
+  class StubInterface {
+   public:
+    virtual ~StubInterface() {}
+    // do no need update
+    // A server-to-client streaming RPC
+    //
+    // start after terminal finish basic work. keep synchronism with S
+    // input    User.username
+    // output   User.synchronism<friend, bill, delete, request>
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Syn_data>>(SynRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::helloworld::Syn_data>> AsyncSyn(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::helloworld::Syn_data>>(AsyncSynRaw(context, request, cq, tag));
+    }
+  private:
+    virtual ::grpc::ClientReaderInterface< ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+  };
+  class Stub GRPC_FINAL : public StubInterface {
+   public:
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
+    std::unique_ptr< ::grpc::ClientReader< ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::helloworld::Syn_data>>(SynRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::helloworld::Syn_data>> AsyncSyn(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::helloworld::Syn_data>>(AsyncSynRaw(context, request, cq, tag));
+    }
+
+   private:
+    std::shared_ptr< ::grpc::ChannelInterface> channel_;
+    ::grpc::ClientReader< ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request) GRPC_OVERRIDE;
+    ::grpc::ClientAsyncReader< ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq, void* tag) GRPC_OVERRIDE;
+    const ::grpc::RpcMethod rpcmethod_Syn_;
+  };
+  static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
+
+  class Service : public ::grpc::Service {
+   public:
+    Service();
+    virtual ~Service();
+    // do no need update
+    // A server-to-client streaming RPC
+    //
+    // start after terminal finish basic work. keep synchronism with S
+    // input    User.username
+    // output   User.synchronism<friend, bill, delete, request>
+    virtual ::grpc::Status Syn(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Syn_data>* writer);
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_Syn : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_Syn() {
+      ::grpc::Service::MarkMethodAsync(0);
+    }
+    ~WithAsyncMethod_Syn() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Syn(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Syn_data>* writer) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSyn(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Syn_data>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_Syn<Service > AsyncService;
+  template <class BaseClass>
+  class WithGenericMethod_Syn : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_Syn() {
+      ::grpc::Service::MarkMethodGeneric(0);
+    }
+    ~WithGenericMethod_Syn() GRPC_OVERRIDE {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Syn(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Syn_data>* writer) GRPC_FINAL GRPC_OVERRIDE {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+};
+
 // The greeting service definition.
 class Greeter GRPC_FINAL {
  public:
@@ -116,18 +207,6 @@ class Greeter GRPC_FINAL {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncDelete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncDelete_billRaw(context, request, cq));
     }
-    // do no need update
-    // A server-to-client streaming RPC
-    //
-    // start after terminal finish basic work. keep synchronism with S
-    // input    User.username
-    // output   User.synchronism<friend, bill, delete, request>
-    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context) {
-      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>>(SynRaw(context));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>> AsyncSyn(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>>(AsyncSynRaw(context, cq, tag));
-    }
     // updated
     //
     //
@@ -163,8 +242,8 @@ class Greeter GRPC_FINAL {
     }
     // updated
     // set user synchronism_delete = 0
-    // 
-    // 
+    //
+    //
     virtual ::grpc::Status Reset_Status(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncReset_Status(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncReset_StatusRaw(context, request, cq));
@@ -182,8 +261,8 @@ class Greeter GRPC_FINAL {
     }
     // updated
     // Inf contain user_id
-    // 
-    // 
+    //
+    //
     std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>> Obtain_request(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
       return std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>>(Obtain_requestRaw(context, request));
     }
@@ -192,8 +271,8 @@ class Greeter GRPC_FINAL {
     }
     // updated
     //  return requestLog has not been read
-    // 
-    // 
+    //
+    //
     std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>> Obtain_requestLog(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
       return std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>>(Obtain_requestLogRaw(context, request));
     }
@@ -202,8 +281,8 @@ class Greeter GRPC_FINAL {
     }
     // updated
     // return all requestLog
-    // 
-    // 
+    //
+    //
     std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>> Obtain_requestLogHistory(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
       return std::unique_ptr< ::grpc::ClientReaderInterface< ::helloworld::Request>>(Obtain_requestLogHistoryRaw(context, request));
     }
@@ -211,17 +290,17 @@ class Greeter GRPC_FINAL {
       return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::helloworld::Request>>(AsyncObtain_requestLogHistoryRaw(context, request, cq, tag));
     }
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Request_response(::grpc::ClientContext* context, const ::helloworld::Response& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncRequest_response(::grpc::ClientContext* context, const ::helloworld::Response& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncRequest_responseRaw(context, request, cq));
     }
     // do not nedd update
-    // 
-    // 
-    // 
+    //
+    //
+    //
     std::unique_ptr< ::grpc::ClientWriterInterface< ::helloworld::BillPayment>> MakePayment(::grpc::ClientContext* context, ::helloworld::Inf* response) {
       return std::unique_ptr< ::grpc::ClientWriterInterface< ::helloworld::BillPayment>>(MakePaymentRaw(context, response));
     }
@@ -229,24 +308,24 @@ class Greeter GRPC_FINAL {
       return std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::helloworld::BillPayment>>(AsyncMakePaymentRaw(context, response, cq, tag));
     }
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status IgnoreRequestLog(::grpc::ClientContext* context, const ::helloworld::IgnoreMessage& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncIgnoreRequestLog(::grpc::ClientContext* context, const ::helloworld::IgnoreMessage& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncIgnoreRequestLogRaw(context, request, cq));
     }
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Create_requestLog(::grpc::ClientContext* context, const ::helloworld::Request& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncCreate_requestLog(::grpc::ClientContext* context, const ::helloworld::Request& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncCreate_requestLogRaw(context, request, cq));
     }
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Send_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::helloworld::Inf* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>> AsyncSend_DeviceToken(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>>(AsyncSend_DeviceTokenRaw(context, request, cq));
@@ -296,8 +375,6 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::helloworld::Inf>* AsyncDelete_billRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context) = 0;
-    virtual ::grpc::ClientAsyncReaderWriterInterface< ::helloworld::Inf, ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientReaderInterface< ::helloworld::Share_inf>* Obtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) = 0;
     virtual ::grpc::ClientAsyncReaderInterface< ::helloworld::Share_inf>* AsyncObtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientWriterInterface< ::helloworld::Image>* Send_ImgRaw(::grpc::ClientContext* context, ::helloworld::Inf* response) = 0;
@@ -362,12 +439,6 @@ class Greeter GRPC_FINAL {
     ::grpc::Status Delete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::helloworld::Inf* response) GRPC_OVERRIDE;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>> AsyncDelete_bill(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>>(AsyncDelete_billRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>> Syn(::grpc::ClientContext* context) {
-      return std::unique_ptr< ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>>(SynRaw(context));
-    }
-    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>> AsyncSyn(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>>(AsyncSynRaw(context, cq, tag));
     }
     std::unique_ptr< ::grpc::ClientReader< ::helloworld::Share_inf>> Obtain_bills(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) {
       return std::unique_ptr< ::grpc::ClientReader< ::helloworld::Share_inf>>(Obtain_billsRaw(context, request));
@@ -467,8 +538,6 @@ class Greeter GRPC_FINAL {
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncDelete_friendRaw(::grpc::ClientContext* context, const ::helloworld::Repeated_string& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncCreate_shareRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
     ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* AsyncDelete_billRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) GRPC_OVERRIDE;
-    ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* SynRaw(::grpc::ClientContext* context) GRPC_OVERRIDE;
-    ::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* AsyncSynRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) GRPC_OVERRIDE;
     ::grpc::ClientReader< ::helloworld::Share_inf>* Obtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) GRPC_OVERRIDE;
     ::grpc::ClientAsyncReader< ::helloworld::Share_inf>* AsyncObtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request, ::grpc::CompletionQueue* cq, void* tag) GRPC_OVERRIDE;
     ::grpc::ClientWriter< ::helloworld::Image>* Send_ImgRaw(::grpc::ClientContext* context, ::helloworld::Inf* response) GRPC_OVERRIDE;
@@ -503,7 +572,6 @@ class Greeter GRPC_FINAL {
     const ::grpc::RpcMethod rpcmethod_Delete_friend_;
     const ::grpc::RpcMethod rpcmethod_Create_share_;
     const ::grpc::RpcMethod rpcmethod_Delete_bill_;
-    const ::grpc::RpcMethod rpcmethod_Syn_;
     const ::grpc::RpcMethod rpcmethod_Obtain_bills_;
     const ::grpc::RpcMethod rpcmethod_Send_Img_;
     const ::grpc::RpcMethod rpcmethod_Receive_Img_;
@@ -583,13 +651,6 @@ class Greeter GRPC_FINAL {
     //
     // use bill_id to identify bill record
     virtual ::grpc::Status Delete_bill(::grpc::ServerContext* context, const ::helloworld::Share_inf* request, ::helloworld::Inf* response);
-    // do no need update
-    // A server-to-client streaming RPC
-    //
-    // start after terminal finish basic work. keep synchronism with S
-    // input    User.username
-    // output   User.synchronism<friend, bill, delete, request>
-    virtual ::grpc::Status Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream);
     // updated
     //
     //
@@ -610,8 +671,8 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Receive_Img(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::grpc::ServerWriter< ::helloworld::Image>* writer);
     // updated
     // set user synchronism_delete = 0
-    // 
-    // 
+    //
+    //
     virtual ::grpc::Status Reset_Status(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Inf* response);
     // updated
     // # request system rpc
@@ -623,42 +684,42 @@ class Greeter GRPC_FINAL {
     virtual ::grpc::Status Send_request(::grpc::ServerContext* context, const ::helloworld::Request* request, ::helloworld::Inf* response);
     // updated
     // Inf contain user_id
-    // 
-    // 
+    //
+    //
     virtual ::grpc::Status Obtain_request(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer);
     // updated
     //  return requestLog has not been read
-    // 
-    // 
+    //
+    //
     virtual ::grpc::Status Obtain_requestLog(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer);
     // updated
     // return all requestLog
-    // 
-    // 
+    //
+    //
     virtual ::grpc::Status Obtain_requestLogHistory(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Request>* writer);
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Request_response(::grpc::ServerContext* context, const ::helloworld::Response* request, ::helloworld::Inf* response);
     // do not nedd update
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status MakePayment(::grpc::ServerContext* context, ::grpc::ServerReader< ::helloworld::BillPayment>* reader, ::helloworld::Inf* response);
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status IgnoreRequestLog(::grpc::ServerContext* context, const ::helloworld::IgnoreMessage* request, ::helloworld::Inf* response);
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Create_requestLog(::grpc::ServerContext* context, const ::helloworld::Request* request, ::helloworld::Inf* response);
     // updated
-    // 
-    // 
-    // 
+    //
+    //
+    //
     virtual ::grpc::Status Send_DeviceToken(::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* response);
     // send username
     //
@@ -862,32 +923,12 @@ class Greeter GRPC_FINAL {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_Syn : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithAsyncMethod_Syn() {
-      ::grpc::Service::MarkMethodAsync(9);
-    }
-    ~WithAsyncMethod_Syn() GRPC_OVERRIDE {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream) GRPC_FINAL GRPC_OVERRIDE {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestSyn(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncBidiStreaming(9, context, stream, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_Obtain_bills : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_bills() {
-      ::grpc::Service::MarkMethodAsync(10);
+      ::grpc::Service::MarkMethodAsync(9);
     }
     ~WithAsyncMethod_Obtain_bills() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -898,7 +939,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_bills(::grpc::ServerContext* context, ::helloworld::Bill_request* request, ::grpc::ServerAsyncWriter< ::helloworld::Share_inf>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(9, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -907,7 +948,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Send_Img() {
-      ::grpc::Service::MarkMethodAsync(11);
+      ::grpc::Service::MarkMethodAsync(10);
     }
     ~WithAsyncMethod_Send_Img() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -918,7 +959,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSend_Img(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::Image>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncClientStreaming(11, context, reader, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncClientStreaming(10, context, reader, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -927,7 +968,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Receive_Img() {
-      ::grpc::Service::MarkMethodAsync(12);
+      ::grpc::Service::MarkMethodAsync(11);
     }
     ~WithAsyncMethod_Receive_Img() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -938,7 +979,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReceive_Img(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncWriter< ::helloworld::Image>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(12, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(11, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -947,7 +988,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Reset_Status() {
-      ::grpc::Service::MarkMethodAsync(13);
+      ::grpc::Service::MarkMethodAsync(12);
     }
     ~WithAsyncMethod_Reset_Status() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -958,7 +999,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReset_Status(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -967,7 +1008,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Send_request() {
-      ::grpc::Service::MarkMethodAsync(14);
+      ::grpc::Service::MarkMethodAsync(13);
     }
     ~WithAsyncMethod_Send_request() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -978,7 +1019,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSend_request(::grpc::ServerContext* context, ::helloworld::Request* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -987,7 +1028,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_request() {
-      ::grpc::Service::MarkMethodAsync(15);
+      ::grpc::Service::MarkMethodAsync(14);
     }
     ~WithAsyncMethod_Obtain_request() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -998,7 +1039,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_request(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(15, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(14, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1007,7 +1048,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_requestLog() {
-      ::grpc::Service::MarkMethodAsync(16);
+      ::grpc::Service::MarkMethodAsync(15);
     }
     ~WithAsyncMethod_Obtain_requestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1018,7 +1059,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_requestLog(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(16, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(15, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1027,7 +1068,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_requestLogHistory() {
-      ::grpc::Service::MarkMethodAsync(17);
+      ::grpc::Service::MarkMethodAsync(16);
     }
     ~WithAsyncMethod_Obtain_requestLogHistory() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1038,7 +1079,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_requestLogHistory(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncWriter< ::helloworld::Request>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(17, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(16, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1047,7 +1088,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Request_response() {
-      ::grpc::Service::MarkMethodAsync(18);
+      ::grpc::Service::MarkMethodAsync(17);
     }
     ~WithAsyncMethod_Request_response() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1058,7 +1099,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRequest_response(::grpc::ServerContext* context, ::helloworld::Response* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1067,7 +1108,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_MakePayment() {
-      ::grpc::Service::MarkMethodAsync(19);
+      ::grpc::Service::MarkMethodAsync(18);
     }
     ~WithAsyncMethod_MakePayment() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1078,7 +1119,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestMakePayment(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::helloworld::Inf, ::helloworld::BillPayment>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncClientStreaming(19, context, reader, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncClientStreaming(18, context, reader, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1087,7 +1128,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_IgnoreRequestLog() {
-      ::grpc::Service::MarkMethodAsync(20);
+      ::grpc::Service::MarkMethodAsync(19);
     }
     ~WithAsyncMethod_IgnoreRequestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1098,7 +1139,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestIgnoreRequestLog(::grpc::ServerContext* context, ::helloworld::IgnoreMessage* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1107,7 +1148,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Create_requestLog() {
-      ::grpc::Service::MarkMethodAsync(21);
+      ::grpc::Service::MarkMethodAsync(20);
     }
     ~WithAsyncMethod_Create_requestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1118,7 +1159,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCreate_requestLog(::grpc::ServerContext* context, ::helloworld::Request* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1127,7 +1168,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Send_DeviceToken() {
-      ::grpc::Service::MarkMethodAsync(22);
+      ::grpc::Service::MarkMethodAsync(21);
     }
     ~WithAsyncMethod_Send_DeviceToken() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1138,7 +1179,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSend_DeviceToken(::grpc::ServerContext* context, ::helloworld::Repeated_string* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1147,7 +1188,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_setting() {
-      ::grpc::Service::MarkMethodAsync(23);
+      ::grpc::Service::MarkMethodAsync(22);
     }
     ~WithAsyncMethod_Obtain_setting() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1158,7 +1199,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_setting(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Setting>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1167,7 +1208,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Reset_setting() {
-      ::grpc::Service::MarkMethodAsync(24);
+      ::grpc::Service::MarkMethodAsync(23);
     }
     ~WithAsyncMethod_Reset_setting() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1178,7 +1219,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReset_setting(::grpc::ServerContext* context, ::helloworld::Setting* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1187,7 +1228,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Reset_userInfo() {
-      ::grpc::Service::MarkMethodAsync(25);
+      ::grpc::Service::MarkMethodAsync(24);
     }
     ~WithAsyncMethod_Reset_userInfo() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1198,7 +1239,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReset_userInfo(::grpc::ServerContext* context, ::helloworld::UserInfo* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1207,7 +1248,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Obtain_userInfo() {
-      ::grpc::Service::MarkMethodAsync(26);
+      ::grpc::Service::MarkMethodAsync(25);
     }
     ~WithAsyncMethod_Obtain_userInfo() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1218,7 +1259,7 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestObtain_userInfo(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::UserInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1227,7 +1268,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Update_user_lastModified() {
-      ::grpc::Service::MarkMethodAsync(27);
+      ::grpc::Service::MarkMethodAsync(26);
     }
     ~WithAsyncMethod_Update_user_lastModified() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1238,10 +1279,10 @@ class Greeter GRPC_FINAL {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestUpdate_user_lastModified(::grpc::ServerContext* context, ::helloworld::Inf* request, ::grpc::ServerAsyncResponseWriter< ::helloworld::Inf>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_SayHello<WithAsyncMethod_Login<WithAsyncMethod_Sign_up<WithAsyncMethod_User_inf<WithAsyncMethod_Search_username<WithAsyncMethod_Add_friend<WithAsyncMethod_Delete_friend<WithAsyncMethod_Create_share<WithAsyncMethod_Delete_bill<WithAsyncMethod_Syn<WithAsyncMethod_Obtain_bills<WithAsyncMethod_Send_Img<WithAsyncMethod_Receive_Img<WithAsyncMethod_Reset_Status<WithAsyncMethod_Send_request<WithAsyncMethod_Obtain_request<WithAsyncMethod_Obtain_requestLog<WithAsyncMethod_Obtain_requestLogHistory<WithAsyncMethod_Request_response<WithAsyncMethod_MakePayment<WithAsyncMethod_IgnoreRequestLog<WithAsyncMethod_Create_requestLog<WithAsyncMethod_Send_DeviceToken<WithAsyncMethod_Obtain_setting<WithAsyncMethod_Reset_setting<WithAsyncMethod_Reset_userInfo<WithAsyncMethod_Obtain_userInfo<WithAsyncMethod_Update_user_lastModified<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_SayHello<WithAsyncMethod_Login<WithAsyncMethod_Sign_up<WithAsyncMethod_User_inf<WithAsyncMethod_Search_username<WithAsyncMethod_Add_friend<WithAsyncMethod_Delete_friend<WithAsyncMethod_Create_share<WithAsyncMethod_Delete_bill<WithAsyncMethod_Obtain_bills<WithAsyncMethod_Send_Img<WithAsyncMethod_Receive_Img<WithAsyncMethod_Reset_Status<WithAsyncMethod_Send_request<WithAsyncMethod_Obtain_request<WithAsyncMethod_Obtain_requestLog<WithAsyncMethod_Obtain_requestLogHistory<WithAsyncMethod_Request_response<WithAsyncMethod_MakePayment<WithAsyncMethod_IgnoreRequestLog<WithAsyncMethod_Create_requestLog<WithAsyncMethod_Send_DeviceToken<WithAsyncMethod_Obtain_setting<WithAsyncMethod_Reset_setting<WithAsyncMethod_Reset_userInfo<WithAsyncMethod_Obtain_userInfo<WithAsyncMethod_Update_user_lastModified<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_SayHello : public BaseClass {
    private:
@@ -1396,29 +1437,12 @@ class Greeter GRPC_FINAL {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_Syn : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
-   public:
-    WithGenericMethod_Syn() {
-      ::grpc::Service::MarkMethodGeneric(9);
-    }
-    ~WithGenericMethod_Syn() GRPC_OVERRIDE {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream) GRPC_FINAL GRPC_OVERRIDE {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_Obtain_bills : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_bills() {
-      ::grpc::Service::MarkMethodGeneric(10);
+      ::grpc::Service::MarkMethodGeneric(9);
     }
     ~WithGenericMethod_Obtain_bills() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1435,7 +1459,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Send_Img() {
-      ::grpc::Service::MarkMethodGeneric(11);
+      ::grpc::Service::MarkMethodGeneric(10);
     }
     ~WithGenericMethod_Send_Img() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1452,7 +1476,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Receive_Img() {
-      ::grpc::Service::MarkMethodGeneric(12);
+      ::grpc::Service::MarkMethodGeneric(11);
     }
     ~WithGenericMethod_Receive_Img() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1469,7 +1493,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Reset_Status() {
-      ::grpc::Service::MarkMethodGeneric(13);
+      ::grpc::Service::MarkMethodGeneric(12);
     }
     ~WithGenericMethod_Reset_Status() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1486,7 +1510,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Send_request() {
-      ::grpc::Service::MarkMethodGeneric(14);
+      ::grpc::Service::MarkMethodGeneric(13);
     }
     ~WithGenericMethod_Send_request() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1503,7 +1527,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_request() {
-      ::grpc::Service::MarkMethodGeneric(15);
+      ::grpc::Service::MarkMethodGeneric(14);
     }
     ~WithGenericMethod_Obtain_request() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1520,7 +1544,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_requestLog() {
-      ::grpc::Service::MarkMethodGeneric(16);
+      ::grpc::Service::MarkMethodGeneric(15);
     }
     ~WithGenericMethod_Obtain_requestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1537,7 +1561,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_requestLogHistory() {
-      ::grpc::Service::MarkMethodGeneric(17);
+      ::grpc::Service::MarkMethodGeneric(16);
     }
     ~WithGenericMethod_Obtain_requestLogHistory() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1554,7 +1578,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Request_response() {
-      ::grpc::Service::MarkMethodGeneric(18);
+      ::grpc::Service::MarkMethodGeneric(17);
     }
     ~WithGenericMethod_Request_response() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1571,7 +1595,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_MakePayment() {
-      ::grpc::Service::MarkMethodGeneric(19);
+      ::grpc::Service::MarkMethodGeneric(18);
     }
     ~WithGenericMethod_MakePayment() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1588,7 +1612,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_IgnoreRequestLog() {
-      ::grpc::Service::MarkMethodGeneric(20);
+      ::grpc::Service::MarkMethodGeneric(19);
     }
     ~WithGenericMethod_IgnoreRequestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1605,7 +1629,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Create_requestLog() {
-      ::grpc::Service::MarkMethodGeneric(21);
+      ::grpc::Service::MarkMethodGeneric(20);
     }
     ~WithGenericMethod_Create_requestLog() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1622,7 +1646,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Send_DeviceToken() {
-      ::grpc::Service::MarkMethodGeneric(22);
+      ::grpc::Service::MarkMethodGeneric(21);
     }
     ~WithGenericMethod_Send_DeviceToken() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1639,7 +1663,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_setting() {
-      ::grpc::Service::MarkMethodGeneric(23);
+      ::grpc::Service::MarkMethodGeneric(22);
     }
     ~WithGenericMethod_Obtain_setting() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1656,7 +1680,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Reset_setting() {
-      ::grpc::Service::MarkMethodGeneric(24);
+      ::grpc::Service::MarkMethodGeneric(23);
     }
     ~WithGenericMethod_Reset_setting() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1673,7 +1697,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Reset_userInfo() {
-      ::grpc::Service::MarkMethodGeneric(25);
+      ::grpc::Service::MarkMethodGeneric(24);
     }
     ~WithGenericMethod_Reset_userInfo() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1690,7 +1714,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Obtain_userInfo() {
-      ::grpc::Service::MarkMethodGeneric(26);
+      ::grpc::Service::MarkMethodGeneric(25);
     }
     ~WithGenericMethod_Obtain_userInfo() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);
@@ -1707,7 +1731,7 @@ class Greeter GRPC_FINAL {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Update_user_lastModified() {
-      ::grpc::Service::MarkMethodGeneric(27);
+      ::grpc::Service::MarkMethodGeneric(26);
     }
     ~WithGenericMethod_Update_user_lastModified() GRPC_OVERRIDE {
       BaseClassMustBeDerivedFromService(this);

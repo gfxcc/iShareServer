@@ -5,6 +5,13 @@
  * */
 #include <string>
 #include <sstream>
+#include <thread>
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+#include <grpc++/grpc++.h>
+#include <grpc/support/log.h>
 /*
 #include <grpc++/support/async_stream.h>
 #include <grpc++/impl/rpc_method.h>
@@ -36,12 +43,18 @@ std::string convertToString(double d);
 bool pushNotificationToDevice (std::string deviceToken, std::string message);
 
 namespace grpc {
-class CompletionQueue;
-class Channel;
-class RpcService;
-class ServerCompletionQueue;
-class ServerContext;
+    class CompletionQueue;
+    class Channel;
+    class RpcService;
+    class ServerCompletionQueue;
+    class ServerContext;
 }  // namespace grpc
+using grpc::Server;
+using grpc::ServerAsyncResponseWriter;
+using grpc::ServerBuilder;
+using grpc::ServerCompletionQueue;
+using grpc::ServerContext;
+using grpc::ServerAsyncWriter;
 
 namespace helloworld {
 
@@ -53,7 +66,6 @@ namespace helloworld {
         ::grpc::Status Search_username (::grpc::ServerContext* context, const ::helloworld::Inf* request, ::helloworld::Search_result* reply) override;
         ::grpc::Status Add_friend (::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* reply) override;
         ::grpc::Status Delete_friend (::grpc::ServerContext* context, const ::helloworld::Repeated_string* request, ::helloworld::Inf* reply) override;
-        ::grpc::Status Syn (::grpc::ServerContext* context, ::grpc::ServerReaderWriter<::helloworld::Syn_data, ::helloworld::Inf>* stream) override;
         ::grpc::Status Send_Img (::grpc::ServerContext *context, ::grpc::ServerReader<::helloworld::Image>* reader, ::helloworld::Inf* reply) override;
         ::grpc::Status Create_share (::grpc::ServerContext *context, const ::helloworld::Share_inf* request, ::helloworld::Inf* reply) override;
         ::grpc::Status Delete_bill (::grpc::ServerContext *context, const ::helloworld::Share_inf* request, ::helloworld::Inf* reply) override;
@@ -76,4 +88,71 @@ namespace helloworld {
         ::grpc::Status Update_user_lastModified (::grpc::ServerContext* content, const ::helloworld::Inf* request, ::helloworld::Inf* reply) override;
     };
 
+    class ServerImpl final {
+        public:
+            ~ServerImpl() {
+                server_->Shutdown();
+                // Always shutdown the completion queue after the server.
+                cq_->Shutdown();
+            }
+
+            // There is no shutdown handling in this code.
+            void Run();
+
+        private:
+            // Class encompasing the state and logic needed to serve a request.
+            class CallData {
+                public:
+                    // Take in the "service" instance (in this case representing an asynchronous
+                    // server) and the completion queue "cq" used for asynchronous communication
+                    // with the gRPC runtime.
+                    CallData(Synchronism::AsyncService* service, ServerCompletionQueue* cq, std::unordered_set<std::string>* users, std::unordered_map<std::string, CallData*>* mp)
+                        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE), users_(users), mp_(mp) {
+                            first_process_ = true;
+                            // Invoke the serving logic right away.
+                            Proceed();
+                        }
+
+                    void Proceed();
+
+
+                    // The means of communication with the gRPC runtime for an asynchronous
+                    // server.
+                    Synchronism::AsyncService* service_;
+                    // The producer-consumer queue where for asynchronous server notifications.
+                    ServerCompletionQueue* cq_;
+                    // Context for the rpc, allowing to tweak aspects of it such as the use
+                    // of compression, authentication, as well as to send metadata back to the
+                    // client.
+                    ServerContext ctx_;
+
+                    // What we get from the client.
+                    Inf request_;
+                    // What we send back to the client.
+                    //ServerAsyncWriter<Syn_data> reply_;
+
+                    // The means to get back to the client.
+                    ServerAsyncWriter<Syn_data> responder_;
+
+                    // Let's implement a tiny state machine with the following states.
+                    enum CallStatus { CREATE, PROCESS, FINISH };
+                    CallStatus status_;  // The current serving state.
+
+                    std::unordered_set<std::string> *users_;
+                    std::unordered_map<std::string, CallData*> *mp_;
+                    bool first_process_;
+
+            };
+
+            static void* SynServer(void*);
+            void SynServer();
+            // This can be run in multiple threads if needed.
+            void HandleRpcs();
+
+            std::unique_ptr<ServerCompletionQueue> cq_;
+            Synchronism::AsyncService service_;
+            std::unique_ptr<Server> server_;
+            std::unordered_set<std::string> users_;
+            std::unordered_map<std::string, CallData*> mp_;
+    };
 }

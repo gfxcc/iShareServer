@@ -18,9 +18,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/iShare_new/iShare_source/iShare_request.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_server.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_setting.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o"
+  "/home/ubuntu/iShare_new/iShare_source/iShare_synchronism.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_tools.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_user.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/mysql_pool.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.o"
+  "/home/ubuntu/iShare_new/iShare_source/syn.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/syn.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

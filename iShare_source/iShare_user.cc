@@ -450,6 +450,7 @@ Status GreeterServiceImpl::Delete_friend (ServerContext* context, const Repeated
     return Status::OK;
 }
 
+<<<<<<< HEAD
 Status GreeterServiceImpl::Syn (ServerContext* context, ServerReaderWriter<Syn_data, Inf>* stream) {
     log(INFO, "Start SYN");
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
@@ -511,22 +512,9 @@ Status GreeterServiceImpl::Syn (ServerContext* context, ServerReaderWriter<Syn_d
             sock_node = get_sock_from_pool();
             conn = sock_node->sql_sock->sock;
         }
+=======
+>>>>>>> alpha
 
-
-
-        //check write success or not
-        if(!stream->Write(reply)) {
-
-            release_sock_to_sql_pool(sock_node);
-            return Status::OK;
-        }
-
-    }
-
-    log(INFO, "SYN OUT");
-    release_sock_to_sql_pool(sock_node);
-    return Status::OK;
-}
 
 Status GreeterServiceImpl::Reset_Status (ServerContext *context, const Inf* request, Inf* reply) {
     log(INFO, "IN Reset_Status");

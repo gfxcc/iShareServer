@@ -15,6 +15,47 @@
 #include <grpc++/impl/codegen/sync_stream.h>
 namespace helloworld {
 
+static const char* Synchronism_method_names[] = {
+  "/helloworld.Synchronism/Syn",
+};
+
+std::unique_ptr< Synchronism::Stub> Synchronism::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  std::unique_ptr< Synchronism::Stub> stub(new Synchronism::Stub(channel));
+  return stub;
+}
+
+Synchronism::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_Syn_(Synchronism_method_names[0], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  {}
+
+::grpc::ClientReader< ::helloworld::Syn_data>* Synchronism::Stub::SynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request) {
+  return new ::grpc::ClientReader< ::helloworld::Syn_data>(channel_.get(), rpcmethod_Syn_, context, request);
+}
+
+::grpc::ClientAsyncReader< ::helloworld::Syn_data>* Synchronism::Stub::AsyncSynRaw(::grpc::ClientContext* context, const ::helloworld::Inf& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return new ::grpc::ClientAsyncReader< ::helloworld::Syn_data>(channel_.get(), cq, rpcmethod_Syn_, context, request, tag);
+}
+
+Synchronism::Service::Service() {
+  (void)Synchronism_method_names;
+  AddMethod(new ::grpc::RpcServiceMethod(
+      Synchronism_method_names[0],
+      ::grpc::RpcMethod::SERVER_STREAMING,
+      new ::grpc::ServerStreamingHandler< Synchronism::Service, ::helloworld::Inf, ::helloworld::Syn_data>(
+          std::mem_fn(&Synchronism::Service::Syn), this)));
+}
+
+Synchronism::Service::~Service() {
+}
+
+::grpc::Status Synchronism::Service::Syn(::grpc::ServerContext* context, const ::helloworld::Inf* request, ::grpc::ServerWriter< ::helloworld::Syn_data>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
 static const char* Greeter_method_names[] = {
   "/helloworld.Greeter/SayHello",
   "/helloworld.Greeter/Login",
@@ -25,7 +66,6 @@ static const char* Greeter_method_names[] = {
   "/helloworld.Greeter/Delete_friend",
   "/helloworld.Greeter/Create_share",
   "/helloworld.Greeter/Delete_bill",
-  "/helloworld.Greeter/Syn",
   "/helloworld.Greeter/Obtain_bills",
   "/helloworld.Greeter/Send_Img",
   "/helloworld.Greeter/Receive_Img",
@@ -61,25 +101,24 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   , rpcmethod_Delete_friend_(Greeter_method_names[6], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Create_share_(Greeter_method_names[7], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Delete_bill_(Greeter_method_names[8], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Syn_(Greeter_method_names[9], ::grpc::RpcMethod::BIDI_STREAMING, channel)
-  , rpcmethod_Obtain_bills_(Greeter_method_names[10], ::grpc::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_Send_Img_(Greeter_method_names[11], ::grpc::RpcMethod::CLIENT_STREAMING, channel)
-  , rpcmethod_Receive_Img_(Greeter_method_names[12], ::grpc::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_Reset_Status_(Greeter_method_names[13], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Send_request_(Greeter_method_names[14], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Obtain_request_(Greeter_method_names[15], ::grpc::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_Obtain_requestLog_(Greeter_method_names[16], ::grpc::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_Obtain_requestLogHistory_(Greeter_method_names[17], ::grpc::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_Request_response_(Greeter_method_names[18], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_MakePayment_(Greeter_method_names[19], ::grpc::RpcMethod::CLIENT_STREAMING, channel)
-  , rpcmethod_IgnoreRequestLog_(Greeter_method_names[20], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Create_requestLog_(Greeter_method_names[21], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Send_DeviceToken_(Greeter_method_names[22], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Obtain_setting_(Greeter_method_names[23], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reset_setting_(Greeter_method_names[24], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reset_userInfo_(Greeter_method_names[25], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Obtain_userInfo_(Greeter_method_names[26], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Update_user_lastModified_(Greeter_method_names[27], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Obtain_bills_(Greeter_method_names[9], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Send_Img_(Greeter_method_names[10], ::grpc::RpcMethod::CLIENT_STREAMING, channel)
+  , rpcmethod_Receive_Img_(Greeter_method_names[11], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Reset_Status_(Greeter_method_names[12], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Send_request_(Greeter_method_names[13], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Obtain_request_(Greeter_method_names[14], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Obtain_requestLog_(Greeter_method_names[15], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Obtain_requestLogHistory_(Greeter_method_names[16], ::grpc::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Request_response_(Greeter_method_names[17], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_MakePayment_(Greeter_method_names[18], ::grpc::RpcMethod::CLIENT_STREAMING, channel)
+  , rpcmethod_IgnoreRequestLog_(Greeter_method_names[19], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Create_requestLog_(Greeter_method_names[20], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Send_DeviceToken_(Greeter_method_names[21], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Obtain_setting_(Greeter_method_names[22], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reset_setting_(Greeter_method_names[23], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reset_userInfo_(Greeter_method_names[24], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Obtain_userInfo_(Greeter_method_names[25], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Update_user_lastModified_(Greeter_method_names[26], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status Greeter::Stub::SayHello(::grpc::ClientContext* context, const ::helloworld::HelloRequest& request, ::helloworld::HelloReply* response) {
@@ -152,14 +191,6 @@ Greeter::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
 
 ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>* Greeter::Stub::AsyncDelete_billRaw(::grpc::ClientContext* context, const ::helloworld::Share_inf& request, ::grpc::CompletionQueue* cq) {
   return new ::grpc::ClientAsyncResponseReader< ::helloworld::Inf>(channel_.get(), cq, rpcmethod_Delete_bill_, context, request);
-}
-
-::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* Greeter::Stub::SynRaw(::grpc::ClientContext* context) {
-  return new ::grpc::ClientReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>(channel_.get(), rpcmethod_Syn_, context);
-}
-
-::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>* Greeter::Stub::AsyncSynRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-  return new ::grpc::ClientAsyncReaderWriter< ::helloworld::Inf, ::helloworld::Syn_data>(channel_.get(), cq, rpcmethod_Syn_, context, tag);
 }
 
 ::grpc::ClientReader< ::helloworld::Share_inf>* Greeter::Stub::Obtain_billsRaw(::grpc::ClientContext* context, const ::helloworld::Bill_request& request) {
@@ -355,96 +386,91 @@ Greeter::Service::Service() {
           std::mem_fn(&Greeter::Service::Delete_bill), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       Greeter_method_names[9],
-      ::grpc::RpcMethod::BIDI_STREAMING,
-      new ::grpc::BidiStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Syn_data>(
-          std::mem_fn(&Greeter::Service::Syn), this)));
-  AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[10],
       ::grpc::RpcMethod::SERVER_STREAMING,
       new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Bill_request, ::helloworld::Share_inf>(
           std::mem_fn(&Greeter::Service::Obtain_bills), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[11],
+      Greeter_method_names[10],
       ::grpc::RpcMethod::CLIENT_STREAMING,
       new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::Image, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Send_Img), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[12],
+      Greeter_method_names[11],
       ::grpc::RpcMethod::SERVER_STREAMING,
       new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Image>(
           std::mem_fn(&Greeter::Service::Receive_Img), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[13],
+      Greeter_method_names[12],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Reset_Status), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[14],
+      Greeter_method_names[13],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Send_request), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[15],
+      Greeter_method_names[14],
       ::grpc::RpcMethod::SERVER_STREAMING,
       new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
           std::mem_fn(&Greeter::Service::Obtain_request), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[16],
+      Greeter_method_names[15],
       ::grpc::RpcMethod::SERVER_STREAMING,
       new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
           std::mem_fn(&Greeter::Service::Obtain_requestLog), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[17],
+      Greeter_method_names[16],
       ::grpc::RpcMethod::SERVER_STREAMING,
       new ::grpc::ServerStreamingHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Request>(
           std::mem_fn(&Greeter::Service::Obtain_requestLogHistory), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[18],
+      Greeter_method_names[17],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Response, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Request_response), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[19],
+      Greeter_method_names[18],
       ::grpc::RpcMethod::CLIENT_STREAMING,
       new ::grpc::ClientStreamingHandler< Greeter::Service, ::helloworld::BillPayment, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::MakePayment), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[20],
+      Greeter_method_names[19],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::IgnoreMessage, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::IgnoreRequestLog), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[21],
+      Greeter_method_names[20],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Request, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Create_requestLog), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[22],
+      Greeter_method_names[21],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Repeated_string, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Send_DeviceToken), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[23],
+      Greeter_method_names[22],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Setting>(
           std::mem_fn(&Greeter::Service::Obtain_setting), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[24],
+      Greeter_method_names[23],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Setting, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Reset_setting), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[25],
+      Greeter_method_names[24],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::UserInfo, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Reset_userInfo), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[26],
+      Greeter_method_names[25],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::UserInfo>(
           std::mem_fn(&Greeter::Service::Obtain_userInfo), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
-      Greeter_method_names[27],
+      Greeter_method_names[26],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< Greeter::Service, ::helloworld::Inf, ::helloworld::Inf>(
           std::mem_fn(&Greeter::Service::Update_user_lastModified), this)));
@@ -513,12 +539,6 @@ Greeter::Service::~Service() {
   (void) context;
   (void) request;
   (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status Greeter::Service::Syn(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::helloworld::Syn_data, ::helloworld::Inf>* stream) {
-  (void) context;
-  (void) stream;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 

@@ -450,6 +450,30 @@ iShare_source/iShare_setting.cc.s:
 	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.s
 .PHONY : iShare_source/iShare_setting.cc.s
 
+iShare_source/iShare_synchronism.o: iShare_source/iShare_synchronism.cc.o
+.PHONY : iShare_source/iShare_synchronism.o
+
+# target to build an object file
+iShare_source/iShare_synchronism.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o
+.PHONY : iShare_source/iShare_synchronism.cc.o
+
+iShare_source/iShare_synchronism.i: iShare_source/iShare_synchronism.cc.i
+.PHONY : iShare_source/iShare_synchronism.i
+
+# target to preprocess a source file
+iShare_source/iShare_synchronism.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.i
+.PHONY : iShare_source/iShare_synchronism.cc.i
+
+iShare_source/iShare_synchronism.s: iShare_source/iShare_synchronism.cc.s
+.PHONY : iShare_source/iShare_synchronism.s
+
+# target to generate assembly for a file
+iShare_source/iShare_synchronism.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.s
+.PHONY : iShare_source/iShare_synchronism.cc.s
+
 iShare_source/iShare_tools.o: iShare_source/iShare_tools.cc.o
 .PHONY : iShare_source/iShare_tools.o
 
@@ -522,6 +546,30 @@ iShare_source/mysql_pool.cc.s:
 	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/mysql_pool.cc.s
 .PHONY : iShare_source/mysql_pool.cc.s
 
+iShare_source/syn.o: iShare_source/syn.cc.o
+.PHONY : iShare_source/syn.o
+
+# target to build an object file
+iShare_source/syn.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/syn.cc.o
+.PHONY : iShare_source/syn.cc.o
+
+iShare_source/syn.i: iShare_source/syn.cc.i
+.PHONY : iShare_source/syn.i
+
+# target to preprocess a source file
+iShare_source/syn.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/syn.cc.i
+.PHONY : iShare_source/syn.cc.i
+
+iShare_source/syn.s: iShare_source/syn.cc.s
+.PHONY : iShare_source/syn.s
+
+# target to generate assembly for a file
+iShare_source/syn.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/syn.cc.s
+.PHONY : iShare_source/syn.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -573,6 +621,9 @@ help:
 	@echo "... iShare_source/iShare_setting.o"
 	@echo "... iShare_source/iShare_setting.i"
 	@echo "... iShare_source/iShare_setting.s"
+	@echo "... iShare_source/iShare_synchronism.o"
+	@echo "... iShare_source/iShare_synchronism.i"
+	@echo "... iShare_source/iShare_synchronism.s"
 	@echo "... iShare_source/iShare_tools.o"
 	@echo "... iShare_source/iShare_tools.i"
 	@echo "... iShare_source/iShare_tools.s"
@@ -582,6 +633,9 @@ help:
 	@echo "... iShare_source/mysql_pool.o"
 	@echo "... iShare_source/mysql_pool.i"
 	@echo "... iShare_source/mysql_pool.s"
+	@echo "... iShare_source/syn.o"
+	@echo "... iShare_source/syn.i"
+	@echo "... iShare_source/syn.s"
 .PHONY : help
 
 
