@@ -331,7 +331,7 @@ bool pushNotificationToDevice (string deviceToken, string message);
             " OR user_id = " + request->members(3) + " OR user_id = " + request->members(4) +
             " OR user_id = " + request->members(5) + " OR user_id = " + request->members(6) +
             " OR user_id = " + request->members(7) + " OR user_id = " + request->members(8) +
-            " OR user_id = " + request->members(9) + ") AND N_newBill = 1";
+            " OR user_id = " + request->members(9) + " OR user_id = " + request->paidby() + ") AND N_newBill = 1";
         log(INFO, sql_command.data());
         if (mysql_query(conn, sql_command.data())) {
             log(ERROR, sql_command.data());

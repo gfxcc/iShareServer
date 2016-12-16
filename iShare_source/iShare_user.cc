@@ -463,7 +463,6 @@ Status GreeterServiceImpl::Syn (ServerContext* context, ServerReaderWriter<Syn_d
     Syn_data reply;
 
     while (stream->Read(&request)) {
-        log(DEBUG, "get 1");
         //            ostringstream ostr;
         //            ostr << i;
         //            string astr = ostr.str();
