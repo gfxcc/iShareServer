@@ -9,9 +9,9 @@ MESSAGE(STATUS "Project: ${PROJECT_NAME}")
 MESSAGE(STATUS "Project Directory: ${PORJECT_SOURCE_DIR}")
 message(status ${source})
 
-file(GLOB_RECURSE header ${iShare_SOURCE_DIR}/*.h ${iShare_SOURCE_DIR}/iShare_source/*.h
+file(GLOB_RECURSE header ${iShare_SOURCE_DIR}/iShare_source/*.h
     ${iShare_SOURCE_DIR}/MMGAPN/*.hpp)
-file(GLOB_RECURSE source ${iShare_SOURCE_DIR}/*.cc ${iShare_SOURCE_DIR}/iShare_source/*.cc
+file(GLOB_RECURSE source ${iShare_SOURCE_DIR}/iShare_source/*.cc
     ${iShare_SOURCE_DIR}/MMGAPN/*.cpp)
 list(REMOVE_ITEM source ${iShare_SOURCE_DIR}/MMGAPN/feedback.cpp ${iShare_SOURCE_DIR}/MMGAPN/main.cpp)
 
