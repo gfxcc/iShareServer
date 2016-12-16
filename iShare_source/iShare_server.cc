@@ -359,6 +359,7 @@ bool pushNotificationToDevice (string deviceToken, string message) {
         // Send payload to the device
         connection.SendPayloadToDevice(payload, *device, notifId);
 
+        /*
         MMGAPNSStatusCode response = connection.GetResponse(&notifId);
         if ((int)response != 0) {
             string str = "push notification failed:" + to_string((int)response);
@@ -366,6 +367,7 @@ bool pushNotificationToDevice (string deviceToken, string message) {
         } else {
             log (INFO, "push OK");
         }
+        */
         notifId++;
 
     }
