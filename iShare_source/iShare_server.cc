@@ -359,10 +359,6 @@ bool pushNotificationToDevice (string deviceToken, string message) {
         payload.SetBadgeNumber(device->GetBadge());
         // Send payload to the device
         connection.SendPayloadToDevice(payload, *device, notifId);
-<<<<<<< HEAD
-=======
-
->>>>>>> alpha
         /*
         MMGAPNSStatusCode response = connection.GetResponse(&notifId);
 

@@ -37,7 +37,7 @@ void ServerImpl::SynServer() {
     while (1) {
         string sql_command;
         string msg = to_string(users_.size()) + " user online " + to_string(mp_.size());
-        log(DEBUG, msg.c_str());
+        //log(DEBUG, msg.c_str());
         std::vector<std::string> cancel_users;
         for (auto& i : mp_) {
             if (i.second->ctx_.IsCancelled()) {
