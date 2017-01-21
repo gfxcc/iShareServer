@@ -115,6 +115,12 @@ SQL_SOCK_NODE * get_sock_from_pool()
 
             }
 
+            if (mysql_ping(ret->sql_sock->sock) != 0) {
+                ret->sql_state = DB_DISCONN;
+                pthread_mutex_unlock(&ret->sql_lock);
+                continue;
+            }
+
             last_used = ret;
             return ret;
         }
