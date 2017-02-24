@@ -46,7 +46,7 @@
 #include <grpc++/security/credentials.h>
 
 
-#include "iShare.grpc.pb.h"
+#include "../iShare_source/iShare.grpc.pb.h"
 
 using grpc::Channel;
 using grpc::ClientContext;

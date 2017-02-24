@@ -122,7 +122,7 @@ void ServerImpl::SynServer() {
 
 // There is no shutdown handling in this code.
 void ServerImpl::Run() {
-    std::string server_address("0.0.0.0:50053");
+    std::string server_address("0.0.0.0:50056");
     ServerBuilder builder;
     // Listen on the given address without any authentication mechanism.
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());

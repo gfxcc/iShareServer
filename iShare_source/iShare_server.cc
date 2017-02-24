@@ -396,6 +396,8 @@ SQL_SOCK* Create_sock(char* db_host, char* db_user, char* db_passwd, char* db_na
     if (!mysql_real_connect(sock, db_host,
                 db_user, db_passwd, db_name, 0, 0, 0)) {
         cout << "mysql_real_connect fail" << endl;
+        fprintf(stderr, "Failed to connect to database: Error: %s\n",
+                          mysql_error(sock));
         //cout << db_host << endl << db_user << endl << db_passwd << endl << db_name << endl;
         return NULL;
     }
@@ -425,7 +427,7 @@ int main(int argc, char** argv) {
     const char* hostname = "localhost";
     const char* username = "root";
     const char* passwd = "19920406Cy";
-    const char* db = "iShare_server";
+    const char* db = "iShare_data";
     sql_pool_create(CONN_NUM, hostname, username,
             passwd, db, 3306, NULL, Create_sock, Close_sock);
     /*
