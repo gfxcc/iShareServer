@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/iShare_new/iShare_source/iShare.grpc.pb.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare.pb.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare.pb.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_bill.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o"
+  "/home/ubuntu/iShare_new/iShare_source/iShare_mail.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_request.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_server.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o"
   "/home/ubuntu/iShare_new/iShare_source/iShare_setting.cc" "/home/ubuntu/iShare_new/CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o"

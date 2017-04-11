@@ -59,6 +59,9 @@ CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o
  /home/ubuntu/iShare_new/iShare_source/iShare_bill.cc
  /home/ubuntu/iShare_new/iShare_source/iShare_server.h
  /home/ubuntu/iShare_new/iShare_source/mysql_pool.h
+CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o
+ /home/ubuntu/iShare_new/iShare_source/iShare_mail.cc
+ /home/ubuntu/iShare_new/iShare_source/iShare_mail.h
 CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o
  /home/ubuntu/iShare_new/MMGAPN/MMGAPNSConnection.hpp
  /home/ubuntu/iShare_new/MMGAPN/MMGDevice.hpp
@@ -82,6 +85,7 @@ CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o
  /home/ubuntu/iShare_new/MMGAPN/global.hpp
  /home/ubuntu/iShare_new/iShare_source/iShare.grpc.pb.h
  /home/ubuntu/iShare_new/iShare_source/iShare.pb.h
+ /home/ubuntu/iShare_new/iShare_source/iShare_mail.h
  /home/ubuntu/iShare_new/iShare_source/iShare_server.cc
  /home/ubuntu/iShare_new/iShare_source/iShare_server.h
  /home/ubuntu/iShare_new/iShare_source/mysql_pool.h
@@ -101,12 +105,14 @@ CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o
  /home/ubuntu/iShare_new/iShare_source/iShare.grpc.pb.h
  /home/ubuntu/iShare_new/iShare_source/iShare.pb.h
+ /home/ubuntu/iShare_new/iShare_source/iShare_mail.h
  /home/ubuntu/iShare_new/iShare_source/iShare_server.h
  /home/ubuntu/iShare_new/iShare_source/iShare_synchronism.cc
  /home/ubuntu/iShare_new/iShare_source/mysql_pool.h
 CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o
  /home/ubuntu/iShare_new/iShare_source/iShare.grpc.pb.h
  /home/ubuntu/iShare_new/iShare_source/iShare.pb.h
+ /home/ubuntu/iShare_new/iShare_source/iShare_mail.h
  /home/ubuntu/iShare_new/iShare_source/iShare_server.h
  /home/ubuntu/iShare_new/iShare_source/iShare_tools.cc
 CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o

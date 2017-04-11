@@ -262,6 +262,18 @@ vector
 cstdlib
 -
 
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.cc
+fstream
+-
+stdlib.h
+-
+iShare_mail.h
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.h
+
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.h
+string.h
+-
+
 /home/ubuntu/iShare_new/iShare_source/iShare_request.cc
 iostream
 -
@@ -343,6 +355,8 @@ mysql_pool.h
 /home/ubuntu/iShare_new/iShare_source/mysql_pool.h
 iShare_server.h
 /home/ubuntu/iShare_new/iShare_source/iShare_server.h
+iShare_mail.h
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.h
 ../MMGAPN/global.hpp
 /home/ubuntu/iShare_new/MMGAPN/global.hpp
 ../MMGAPN/MMGAPNSConnection.hpp
@@ -463,6 +477,8 @@ iShare.grpc.pb.h
 /home/ubuntu/iShare_new/iShare_source/iShare.grpc.pb.h
 iShare_server.h
 /home/ubuntu/iShare_new/iShare_source/iShare_server.h
+iShare_mail.h
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.h
 mysql_pool.h
 /home/ubuntu/iShare_new/iShare_source/mysql_pool.h
 
@@ -473,6 +489,8 @@ time.h
 -
 iShare_server.h
 /home/ubuntu/iShare_new/iShare_source/iShare_server.h
+iShare_mail.h
+/home/ubuntu/iShare_new/iShare_source/iShare_mail.h
 
 /home/ubuntu/iShare_new/iShare_source/iShare_user.cc
 iostream

@@ -10,8 +10,14 @@
 #include <stdio.h>
 #include <time.h>
 #include "iShare_server.h"
+#include "iShare_mail.h"
 
 using namespace std;
+
+void log (LOG_LEVEL level, const char* msg);
+void tabPrint(std::string str);
+string convertToString(double d);
+string LogLevelToString(LOG_LEVEL level);
 
 void log (LOG_LEVEL level, const char* msg) {
     time_t t = time(NULL);
@@ -34,6 +40,11 @@ void log (LOG_LEVEL level, const char* msg) {
             break;
     }
 
+    if (level >= WARNING) {
+        string subject = "[iShare Server Report: " + LogLevelToString(level) + "]";
+        Mail mail(subject, msg);
+        mail.send();
+    }
 }
 
 // tools function
@@ -62,3 +73,17 @@ string convertToString(double d) {
     return "invalid conversion";
 }
 
+string LogLevelToString(LOG_LEVEL level) {
+    switch (level) {
+        case DEBUG:
+            return "DEBUG";
+        case INFO:
+            return "INFO";
+        case WARNING:
+            return "WARNING";
+        case ERROR:
+            return "ERROR";
+        default:
+            return "UNDEFINED";
+    }
+}

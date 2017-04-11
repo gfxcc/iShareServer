@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/iShare.dir/iShare_source/iShare_user.cc.o"
+  "CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o"
   "CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o"
   "CMakeFiles/iShare.dir/iShare_source/iShare.grpc.pb.cc.o"
   "CMakeFiles/iShare.dir/iShare_source/syn.cc.o"

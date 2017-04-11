@@ -25,7 +25,7 @@
 
 #include "iShare.grpc.pb.h"
 
-#define CONN_NUM 50
+#define CONN_NUM 30
 #define LINE_MAX_LENGTH 50
 
 

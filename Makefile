@@ -378,6 +378,30 @@ iShare_source/iShare_bill.cc.s:
 	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.s
 .PHONY : iShare_source/iShare_bill.cc.s
 
+iShare_source/iShare_mail.o: iShare_source/iShare_mail.cc.o
+.PHONY : iShare_source/iShare_mail.o
+
+# target to build an object file
+iShare_source/iShare_mail.cc.o:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o
+.PHONY : iShare_source/iShare_mail.cc.o
+
+iShare_source/iShare_mail.i: iShare_source/iShare_mail.cc.i
+.PHONY : iShare_source/iShare_mail.i
+
+# target to preprocess a source file
+iShare_source/iShare_mail.cc.i:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.i
+.PHONY : iShare_source/iShare_mail.cc.i
+
+iShare_source/iShare_mail.s: iShare_source/iShare_mail.cc.s
+.PHONY : iShare_source/iShare_mail.s
+
+# target to generate assembly for a file
+iShare_source/iShare_mail.cc.s:
+	$(MAKE) -f CMakeFiles/iShare.dir/build.make CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.s
+.PHONY : iShare_source/iShare_mail.cc.s
+
 iShare_source/iShare_request.o: iShare_source/iShare_request.cc.o
 .PHONY : iShare_source/iShare_request.o
 
@@ -612,6 +636,9 @@ help:
 	@echo "... iShare_source/iShare_bill.o"
 	@echo "... iShare_source/iShare_bill.i"
 	@echo "... iShare_source/iShare_bill.s"
+	@echo "... iShare_source/iShare_mail.o"
+	@echo "... iShare_source/iShare_mail.i"
+	@echo "... iShare_source/iShare_mail.s"
 	@echo "... iShare_source/iShare_request.o"
 	@echo "... iShare_source/iShare_request.i"
 	@echo "... iShare_source/iShare_request.s"

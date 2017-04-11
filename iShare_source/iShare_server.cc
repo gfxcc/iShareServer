@@ -22,6 +22,7 @@
 #include "iShare.grpc.pb.h"
 #include "mysql_pool.h"
 #include "iShare_server.h"
+#include "iShare_mail.h"
 
 // include for MMGAPN
 #include "../MMGAPN/global.hpp"

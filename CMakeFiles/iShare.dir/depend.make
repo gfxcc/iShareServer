@@ -59,6 +59,9 @@ CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare_bill.
 CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/iShare_server.h
 CMakeFiles/iShare.dir/iShare_source/iShare_bill.cc.o: iShare_source/mysql_pool.h
 
+CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o: iShare_source/iShare_mail.cc
+CMakeFiles/iShare.dir/iShare_source/iShare_mail.cc.o: iShare_source/iShare_mail.h
+
 CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGAPNSConnection.hpp
 CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGDevice.hpp
 CMakeFiles/iShare.dir/iShare_source/iShare_request.cc.o: MMGAPN/MMGIOSPayload.hpp
@@ -81,6 +84,7 @@ CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/MMGTools.hpp
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: MMGAPN/global.hpp
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare.grpc.pb.h
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare_mail.h
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare_server.cc
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/iShare_server.h
 CMakeFiles/iShare.dir/iShare_source/iShare_server.cc.o: iShare_source/mysql_pool.h
@@ -100,12 +104,14 @@ CMakeFiles/iShare.dir/iShare_source/iShare_setting.cc.o: iShare_source/mysql_poo
 
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/iShare.grpc.pb.h
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/iShare_mail.h
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/iShare_server.h
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/iShare_synchronism.cc
 CMakeFiles/iShare.dir/iShare_source/iShare_synchronism.cc.o: iShare_source/mysql_pool.h
 
 CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare.grpc.pb.h
 CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare.pb.h
+CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare_mail.h
 CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare_server.h
 CMakeFiles/iShare.dir/iShare_source/iShare_tools.cc.o: iShare_source/iShare_tools.cc
 

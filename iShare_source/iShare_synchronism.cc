@@ -9,6 +9,7 @@
 
 #include "iShare.grpc.pb.h"
 #include "iShare_server.h"
+#include "iShare_mail.h"
 #include "mysql_pool.h"
 using grpc::Server;
 using grpc::ServerAsyncWriter;
@@ -28,6 +29,7 @@ void* ServerImpl::SynServer(void* arg) {
 }
 
 void ServerImpl::SynServer() {
+
     log(INFO, "Start SYN Service");
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
     MYSQL* conn = sock_node->sql_sock->sock;
@@ -48,7 +50,6 @@ void ServerImpl::SynServer() {
             delete mp_[i];
             users_.erase(i);
             mp_.erase(i);
-
         }
 
         for (auto user_id : users_) {
@@ -83,7 +84,7 @@ void ServerImpl::SynServer() {
                         CallData *call_data = mp_[user_id];
                         if (call_data) {
                             call_data->responder_.Finish(Status::CANCELLED, call_data);
-                            std::cout << "tried to cancel" << std::endl;
+                            //std::cout << "tried to cancel" << std::endl;
                         }
                         // get new conn
                         check_sql_sock_normal(sock_node);
@@ -138,8 +139,11 @@ void ServerImpl::Run() {
     server_ = builder.BuildAndStart();
     std::cout << "Server listening on " << server_address << std::endl;
 
+    Mail mail("[iShare Server Start]", "Some fatal error might occured.");
+    mail.send();
+
     pthread_t t1;
-    pthread_create(&t1, NULL,ServerImpl::SynServer, this);
+    pthread_create(&t1, NULL, ServerImpl::SynServer, this);
     // Proceed to the server's main loop.
 
     HandleRpcs();
@@ -186,16 +190,16 @@ void ServerImpl::CallData::Proceed() {
         status_ = FINISH;
         responder_.Finish(Status::OK, this);
         */
-        std::cout << "get request" << std::endl;
+        //std::cout << "get request" << std::endl;
         if ((*mp_).find(request_.information()) == (*mp_).end()) {
-            std::cout << "get a new client" << std::endl;
+            //std::cout << "get a new client" << std::endl;
 
             users_->insert(request_.information());
             (*mp_)[request_.information()] = this;
         }
     } else {
         GPR_ASSERT(status_ == FINISH);
-        std::cout << "finish one request" << std::endl;
+        //std::cout << "finish one request" << std::endl;
         // Once in the FINISH state, deallocate ourselves (CallData).
         users_->erase(request_.information());
         mp_->erase(request_.information());
