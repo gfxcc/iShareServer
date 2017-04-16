@@ -69,6 +69,8 @@ bool pushNotificationToDevice (string deviceToken, string message);
 
 Status GreeterServiceImpl::User_inf (ServerContext* context, const Inf* request, User_detail* reply) {
     log(INFO, "IN User_inf");
+    if (request->information().empty())
+        return Status::OK;
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
     MYSQL* conn = sock_node->sql_sock->sock;
     MYSQL_RES *res;
@@ -300,6 +302,8 @@ Status GreeterServiceImpl::Sign_up (ServerContext* context, const Sign_m* reques
 
 Status GreeterServiceImpl::Search_username (ServerContext* context, const Inf* request, Search_result* reply) {
     log(INFO, "IN Search");
+    if (request->information().empty())
+        return Status::OK;
     SQL_SOCK_NODE* sock_node = get_sock_from_pool();
     MYSQL* conn = sock_node->sql_sock->sock;
     MYSQL_RES *res;
