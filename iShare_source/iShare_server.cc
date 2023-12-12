@@ -424,8 +424,8 @@ int main(int argc, char** argv) {
        }
        */
     const char* hostname = "localhost";
-    const char* username = "root";
-    const char* passwd = "19920406Cy";
+    const char* username = "username";
+    const char* passwd = "dummypasswd";
     const char* db = "iShare_server";
     sql_pool_create(CONN_NUM, hostname, username,
             passwd, db, 3306, NULL, Create_sock, Close_sock);
